@@ -1,10 +1,52 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>CookBuddy Recipe Manager</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">CookBuddy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-4/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1><strong>CookBuddy Recipe Manager</strong></h1></div><div id="content"><div class="sect1">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">CookBuddy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-4/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1><strong>CookBuddy Recipe Manager</strong></h1></div><div id="content"><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>=TABLE OF CONTENTS</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[Introduction](#introduction)</p>
+</li>
+<li>
+<p>[Quick Start](#quick-start)</p>
+</li>
+<li>
+<p>[Features](#features)</p>
+</li>
+</ul>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle"></div>
+<ul class="sectlevel1">
+<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#quick-start">2. Quick Start</a></li>
+<li><a href="#features">3. Features</a>
+<ul class="sectlevel2">
+<li><a href="#help-code-help-v1-4-code">3.1. Help — <code>help (V1.4)</code></a></li>
+<li><a href="#create-a-recipe-code-new-code">3.2. Create a Recipe — <code>new</code></a></li>
+<li><a href="#delete-a-recipe-code-delete-code">3.3. Delete a Recipe — <code>delete</code></a></li>
+<li><a href="#modify-a-recipe-code-modify-code">3.4. Modify a Recipe — <code>modify</code></a></li>
+<li><a href="#add-calories-to-a-recipe-code-add-calories-index-amount-v1-3-code">3.5. Add Calories to a Recipe — <code>add calories &lt;index&gt; &lt;amount&gt; (V1.3)</code></a></li>
+<li><a href="#list-recipes-code-list-code">3.6. List Recipes — <code>list</code></a></li>
+<li><a href="#view-a-recipe-code-view-recipe-v1-3-code">3.7. View a Recipe — <code>view &lt;recipe&gt; (V1.3)</code></a></li>
+<li><a href="#tagging-recipes-code-tag-index-tag_type-tag-v1-3-code">3.8. Tagging Recipes — <code>tag &lt;index&gt; &lt;tag_type&gt; &lt;tag&gt; (V1.3)</code></a></li>
+<li><a href="#search-v1-3">3.9. Search (V1.3)</a></li>
+<li><a href="#clearing-all-entries-code-reset-code">3.10. Clearing all entries - <code>reset</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.11. Exiting the program - <code>exit</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect1">
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>CookBuddy</strong> is for those who prefer to use a desktop app for managing recipes. More importantly, CookBuddy is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CookBuddy can get your recipe management tasks done faster than traditional GUI apps. Interested? Proceed to [Quick Start](#2.-Quick-Start) to get started. Enjoy!</p>
+<p><strong>CookBuddy</strong> is for those who prefer to use a desktop app for managing recipes. More importantly, CookBuddy is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CookBuddy can get your recipe management tasks done faster than traditional GUI apps. Interested? Proceed to [Quick Start](#quick-start) to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -80,7 +122,7 @@ adds a recipe named Chicken Rice to the CookBuddy program.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="help-code-help-code"><a class="link" href="#help-code-help-code">3.1. Help — <code>help</code></a></h3>
+<h3 id="help-code-help-v1-4-code"><a class="link" href="#help-code-help-v1-4-code">3.1. Help — <code>help (V1.4)</code></a></h3>
 <div class="paragraph">
 <p>Lists out all the commands accepted by CookBuddy
 If the command name is specified, it will specify how to use that command.</p>
@@ -130,7 +172,7 @@ Replaces the instructions in the recipe from 'boil eggs' to 'slice apples'</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-calories-to-a-recipe-code-add-calories-index-amount-code"><a class="link" href="#add-calories-to-a-recipe-code-add-calories-index-amount-code">3.5. Add Calories to a Recipe — <code>add calories &lt;index&gt; &lt;amount&gt;</code></a></h3>
+<h3 id="add-calories-to-a-recipe-code-add-calories-index-amount-v1-3-code"><a class="link" href="#add-calories-to-a-recipe-code-add-calories-index-amount-v1-3-code">3.5. Add Calories to a Recipe — <code>add calories &lt;index&gt; &lt;amount&gt; (V1.3)</code></a></h3>
 <div class="paragraph">
 <p>Assigns a calorie value <code>amount</code> to dish number <code>&lt;index&gt;</code>, measured in $\text{kcal} = 4200 \text{ kJ}$.</p>
 </div>
@@ -142,13 +184,13 @@ Replaces the instructions in the recipe from 'boil eggs' to 'slice apples'</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="view-a-recipe-code-view-recipe-code"><a class="link" href="#view-a-recipe-code-view-recipe-code">3.7. View a Recipe — <code>view &lt;recipe&gt;</code></a></h3>
+<h3 id="view-a-recipe-code-view-recipe-v1-3-code"><a class="link" href="#view-a-recipe-code-view-recipe-v1-3-code">3.7. View a Recipe — <code>view &lt;recipe&gt; (V1.3)</code></a></h3>
 <div class="paragraph">
 <p>Opens a recipe to view.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="tagging-recipes-code-tag-index-tag_type-tag-code"><a class="link" href="#tagging-recipes-code-tag-index-tag_type-tag-code">3.8. Tagging Recipes — <code>tag &lt;index&gt; &lt;tag_type&gt; &lt;tag&gt;</code></a></h3>
+<h3 id="tagging-recipes-code-tag-index-tag_type-tag-v1-3-code"><a class="link" href="#tagging-recipes-code-tag-index-tag_type-tag-v1-3-code">3.8. Tagging Recipes — <code>tag &lt;index&gt; &lt;tag_type&gt; &lt;tag&gt; (V1.3)</code></a></h3>
 <div class="paragraph">
 <p>Tags the recipe at the specified index with the tag of tag_type.</p>
 </div>
@@ -157,7 +199,7 @@ Replaces the instructions in the recipe from 'boil eggs' to 'slice apples'</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="search"><a class="link" href="#search">3.9. Search</a></h3>
+<h3 id="search-v1-3"><a class="link" href="#search-v1-3">3.9. Search (V1.3)</a></h3>
 <div class="sect3">
 <h4 id="search-keyword-code-search-keyword-keyword-code"><a class="link" href="#search-keyword-code-search-keyword-keyword-code">3.9.1. Search keyword — <code>search keyword &lt;keyword&gt;</code></a></h4>
 <div class="paragraph">
@@ -187,4 +229,4 @@ Replaces the instructions in the recipe from 'boil eggs' to 'slice apples'</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-15 14:44:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-15 15:50:14 UTC</div></div></div></body></html>
