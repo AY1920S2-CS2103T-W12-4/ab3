@@ -24,9 +24,9 @@ public class Recipe {
     private final Name name;
     private final IngredientList ingredients;
     private final InstructionList instructions;
-    private boolean isDone;
     private final Calorie calorie;
     private final Serving serving;
+    private boolean isDone;
 
     // Data fields
     private final Set<Tag> tags = new HashSet<>();
@@ -40,9 +40,9 @@ public class Recipe {
         this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
-        this.isDone = false;
         this.calorie = calorie;
         this.serving = serving;
+        this.isDone = false;
         this.tags.addAll(tags);
     }
 
