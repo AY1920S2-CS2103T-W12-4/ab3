@@ -16,6 +16,7 @@ import seedu.address.model.recipe.attribute.Calorie;
 import seedu.address.model.recipe.attribute.IngredientList;
 import seedu.address.model.recipe.attribute.InstructionList;
 import seedu.address.model.recipe.attribute.Name;
+import seedu.address.model.recipe.attribute.Rating;
 import seedu.address.model.recipe.attribute.Serving;
 import seedu.address.model.recipe.attribute.Tag;
 
@@ -31,6 +32,7 @@ class JsonAdaptedRecipe {
     private final String instructions;
     private final String calorie;
     private final int serving;
+    private final int rating;
     private final List<JsonAdaptedTag> tagged = new ArrayList<>();
 
     /**
@@ -39,13 +41,14 @@ class JsonAdaptedRecipe {
     @JsonCreator
     public JsonAdaptedRecipe(@JsonProperty("name") String name, @JsonProperty("ingredients") String ingredients,
             @JsonProperty("instructions") String instructions, @JsonProperty("calorie") String calorie,
-                             @JsonProperty("serving") int serving,
+                             @JsonProperty("serving") int serving, @JsonProperty("rating") int rating,
                              @JsonProperty("tagged") List<JsonAdaptedTag> tagged) {
         this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
         this.calorie = calorie;
         this.serving = serving;
+        this.rating = rating;
         if (tagged != null) {
             this.tagged.addAll(tagged);
         }
@@ -60,6 +63,7 @@ class JsonAdaptedRecipe {
         instructions = source.getInstructions().toString();
         calorie = source.getCalorie().calorie;
         serving = source.getServing().serving;
+        rating = source.getRating().rating;
         tagged.addAll(source.getTags().stream().map(JsonAdaptedTag::new).collect(Collectors.toList()));
     }
 
@@ -99,12 +103,14 @@ class JsonAdaptedRecipe {
         }
         // if (!InstructionList.isValidInstructions(instructions)) {
         // throw new IllegalValueException(InstructionList.MESSAGE_CONSTRAINTS);
-        //}
+        // }
         final InstructionList modelInstructions = ParserUtil.parseInstructions(instructions);
 
         final Calorie modelCalorie = new Calorie(calorie);
         final Serving modelServe = new Serving(serving);
+        final Rating modelRating = new Rating(rating);
         final Set<Tag> modelTags = new HashSet<>(recipeTags);
-        return new Recipe(modelName, modelIngredients, modelInstructions, modelCalorie, modelServe, modelTags);
+        return new Recipe(modelName, modelIngredients, modelInstructions, modelCalorie, modelServe,
+                modelRating, modelTags);
     }
 }

@@ -14,7 +14,7 @@ import seedu.address.model.recipe.Recipe;
  * Panel containing the list of recipes.
  */
 public class RecipeListPanel extends UiPart<Region> {
-    private static final String FXML = "PersonListPanel.fxml";
+    private static final String FXML = "RecipeListPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(RecipeListPanel.class);
 
     @FXML

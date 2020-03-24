@@ -14,10 +14,10 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/AY1920S2-CS2103T-W12-4/main/
 
-By: `The CookBuddy Team`      Since: `Jan 2020`      Licence: `MIT`
+By: `The CookBuddy Team`      Since: `Feb 2020`      Licence: `MIT`
 
 == Introduction
-**CookBuddy** is for those who prefer to use a desktop app for managing recipes. More importantly, CookBuddy is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CookBuddy can get your recipe management tasks done faster than traditional GUI apps. Interested? Proceed to [Quick Start](#quick-start) to get started. Enjoy!
+**CookBuddy** is for users who prefer a desktop application for managing recipes. More importantly, CookBuddy is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CookBuddy can get your recipe management tasks done faster than traditional GUI apps. Interested? Proceed to [Quick Start](#quick-start) to get started. Enjoy!
 
 == Quick Start
 1. Ensure you have Java 11 or later installed on your machine.
@@ -58,14 +58,16 @@ If the command name is specified, it will specify how to use that command.
 === Create a Recipe — `new`
 Adds a new recipe to the CookBuddy program.
 
-Format: `new n/[name] ing/[ingredient, quantity; ...] ins/[instruction; ...] [cal/calories] [tags/tag, ...]`
+Format: `new n/[name] ing/[ingredient, quantity; ...] ins/[instruction; ...] [cal/calories] [s/serving size] [r/rating] [tags/tag, ...]`
 
 Example: `new n/Fried Rice ing/<White rice, 1 cup; salt, 1gram> ins/<Fry the rice; add salt>`
 Current options are:
     `n` - name
     `ing` - ingredients
     `ins` - instructions
-	`cal` - calories
+    `cal` - calories
+    `s` - serving size
+    `r` - rating (scale of 0 to 5)
     `tags` - tags
 
 === Delete a Recipe — `delete`
@@ -76,7 +78,7 @@ Format: `delete <index>`
 === Modify a Recipe — `modify`
 Modifies attributes of a recipe.
 
-Format: `modify <index> [ing/<idx. ingredient, quantity> [ins/instruction; ...] [tags/tag, ...]`
+Format: `modify <index> [ing/ingredient, quantity; ...] [ins/instruction; ...] [cal/calories] [s/serving size] [r/rating] [tags/tag, ...]`
 
 Example: `modify 1 ing/3. eggs, 2`
 Replaces the ingredient at index 3 with 2 eggs.

@@ -5,6 +5,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_CALORIE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_INGREDIENTS;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_INSTRUCTIONS;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_RATING;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_SERVING;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 
@@ -13,11 +14,13 @@ import java.util.stream.Stream;
 
 import seedu.address.logic.commands.NewCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+
 import seedu.address.model.recipe.Recipe;
 import seedu.address.model.recipe.attribute.Calorie;
 import seedu.address.model.recipe.attribute.IngredientList;
 import seedu.address.model.recipe.attribute.InstructionList;
 import seedu.address.model.recipe.attribute.Name;
+import seedu.address.model.recipe.attribute.Rating;
 import seedu.address.model.recipe.attribute.Serving;
 import seedu.address.model.recipe.attribute.Tag;
 
@@ -42,7 +45,7 @@ public class NewCommandParser implements Parser<NewCommand> {
      */
     public NewCommand parse(String args) throws ParseException {
         ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_INGREDIENTS,
-                PREFIX_INSTRUCTIONS, PREFIX_CALORIE, PREFIX_SERVING, PREFIX_TAG);
+                PREFIX_INSTRUCTIONS, PREFIX_CALORIE, PREFIX_SERVING, PREFIX_RATING, PREFIX_TAG);
 
         if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_INGREDIENTS, PREFIX_INSTRUCTIONS) || !argMultimap
                 .getPreamble().isEmpty()) {
@@ -54,9 +57,10 @@ public class NewCommandParser implements Parser<NewCommand> {
         InstructionList instructions = ParserUtil.parseInstructions(argMultimap.getValue(PREFIX_INSTRUCTIONS).get());
         Calorie calorie = ParserUtil.parseCalorie(argMultimap.getValue(PREFIX_CALORIE).orElse("0"));
         Serving serving = ParserUtil.parseServing(argMultimap.getValue(PREFIX_SERVING).orElse("1"));
+        Rating rating = ParserUtil.parseRating(argMultimap.getValue(PREFIX_RATING).orElse("0"));
         Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
 
-        Recipe recipe = new Recipe(name, ingredients, instructions, calorie, serving, tagList);
+        Recipe recipe = new Recipe(name, ingredients, instructions, calorie, serving, rating, tagList);
 
         return new NewCommand(recipe);
     }

@@ -14,7 +14,7 @@ import seedu.address.model.recipe.Recipe;
  */
 public class RecipePage extends UiPart<Region> {
 
-    private static final String FXML = "PersonListCard.fxml";
+    private static final String FXML = "RecipeListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -45,9 +45,17 @@ public class RecipePage extends UiPart<Region> {
     @FXML
     private Label instructions1;
     @FXML
+    private Label calorie;
+    @FXML
+    private Label calorie1;
+    @FXML
     private Label serving;
     @FXML
     private Label serving1;
+    @FXML
+    private Label rating;
+    @FXML
+    private Label rating1;
     @FXML
     private FlowPane tags;
     @FXML
@@ -61,7 +69,9 @@ public class RecipePage extends UiPart<Region> {
         name.setText(recipe.getName().name);
         ingredients.setText(recipe.getIngredients().toString());
         instructions.setText(recipe.getInstructions().toString());
-        serving.setText(recipe.getServing().toString());
+        calorie.setText(recipe.getCalorie().toString() + " calories");
+        serving.setText("Serving size: " + recipe.getServing().toString() + " pax");
+        rating.setText("Rating: " + recipe.getRating().toString());
         recipe.getTags().stream()
                 .sorted(Comparator.comparing(tag -> tag.tagName))
                 .forEach(tag -> tags.getChildren().add(new Label(tag.tagName)));
@@ -69,7 +79,9 @@ public class RecipePage extends UiPart<Region> {
         name1.setText(recipe.getName().name);
         ingredients1.setText(recipe.getIngredients().toString());
         instructions1.setText(recipe.getInstructions().toString());
-        serving1.setText(recipe.getServing().toString());
+        calorie1.setText(recipe.getCalorie().toString() + " calories");
+        serving1.setText("Serving size: " + recipe.getServing().toString() + " pax");
+        rating1.setText("Rating: " + recipe.getRating().toString());
         recipe.getTags().stream()
                 .sorted(Comparator.comparing(tag -> tag.tagName))
                 .forEach(tag -> tags1.getChildren().add(new Label(tag.tagName)));

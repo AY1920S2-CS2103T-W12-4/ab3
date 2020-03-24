@@ -30,9 +30,11 @@
         </Label>
         <Label fx:id="name" styleClass="cell_big_label" text="\$first" />
       </HBox>
+         <Label fx:id="rating" styleClass="cell_small_label" text="\$rating" />
       <FlowPane fx:id="tags" />
-      <Label fx:id="ingredients" styleClass="cell_small_label" text="\$phone" />
-      <Label fx:id="instructions" styleClass="cell_small_label" text="\$email" />
+      <Label fx:id="ingredients" styleClass="cell_small_label" text="\$ingredients" />
+      <Label fx:id="instructions" styleClass="cell_small_label" text="\$instructions" />
+         <Label fx:id="calorie" styleClass="cell_small_label" text="\$calorie" />
          <Label fx:id="serving" styleClass="cell_small_label" text="\$serving" />
     </VBox>
       <VBox alignment="CENTER_LEFT" minHeight="105" GridPane.columnIndex="1">
@@ -50,9 +52,11 @@
                   <Label fx:id="name1" styleClass="cell_big_label" text="\$first" />
                </children>
             </HBox>
+            <Label fx:id="rating1" styleClass="cell_small_label" text="\$rating" />
             <FlowPane fx:id="tags1" />
-            <Label fx:id="ingredients1" styleClass="cell_small_label" text="\$phone" />
-            <Label fx:id="instructions1" styleClass="cell_small_label" text="\$email" />
+            <Label fx:id="ingredients1" styleClass="cell_small_label" text="\$ingredients" />
+            <Label fx:id="instructions1" styleClass="cell_small_label" text="\$instructions" />
+            <Label fx:id="calorie1" styleClass="cell_small_label" text="\$calorie" />
             <Label fx:id="serving1" styleClass="cell_small_label" text="\$serving" />
          </children>
       </VBox>
