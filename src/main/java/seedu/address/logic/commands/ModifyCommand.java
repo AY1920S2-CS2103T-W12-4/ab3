@@ -16,14 +16,11 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-<<<<<<< HEAD
 import seedu.address.model.recipe.*;
 import seedu.address.model.recipe.attribute.*;
 import seedu.address.model.recipe.attribute.IngredientList;
 import seedu.address.model.tag.Tag;
-=======
 import seedu.address.model.recipe.Recipe;
->>>>>>> 083a32b4e287ad0b3d96b9159bdda8c48634071c
 
 /**
  * Edits the details of an existing recipe in the recipe book.
