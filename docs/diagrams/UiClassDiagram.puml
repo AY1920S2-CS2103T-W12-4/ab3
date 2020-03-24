@@ -12,7 +12,7 @@ Class MainWindow
 Class HelpWindow
 Class ResultDisplay
 Class RecipeListPanel
-Class PersonCard
+Class RecipeCard
 Class StatusBarFooter
 Class CommandBox
 }
@@ -35,19 +35,21 @@ MainWindow *-down-> CommandBox
 MainWindow *-down-> ResultDisplay
 MainWindow *-down-> RecipeListPanel
 MainWindow *-down-> StatusBarFooter
+RecipeListPanel -down-> RecipeCard
 
 MainWindow -left-|> UiPart
-
 ResultDisplay --|> UiPart
 CommandBox --|> UiPart
 RecipeListPanel --|> UiPart
+RecipeCard --|> UiPart
 StatusBarFooter --|> UiPart
 HelpWindow -down-|> UiPart
 
+RecipeCard ..> Model
 UiManager -right-> Logic
 MainWindow -left-> Logic
 
-PersonListPanel -[hidden]left- HelpWindow
+RecipeListPanel -[hidden]left- HelpWindow
 HelpWindow -[hidden]left- CommandBox
 CommandBox -[hidden]left- ResultDisplay
 ResultDisplay -[hidden]left- StatusBarFooter

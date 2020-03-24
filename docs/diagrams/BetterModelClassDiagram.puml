@@ -13,10 +13,7 @@ UniqueTagList *-right-> "*" Tag
 UniqueRecipeList o-right-> Recipe
 
 Recipe o-up-> "*" Tag
-
-Recipe *--> TagList
+Recipe *--> Name
 Recipe *--> IngredientList
 Recipe *--> InstructionList
-Recipe *--> Calories
-
 @enduml

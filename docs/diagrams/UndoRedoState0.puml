@@ -8,7 +8,7 @@ title Initial state
 package States {
     class State1 as "__ab0:RecipeBook__"
     class State2 as "__ab1:RecipeBook__"
-    class State3 as "__ab2:RecipesBook__"
+    class State3 as "__ab2:RecipeBook__"
 }
 State1 -[hidden]right-> State2
 State2 -[hidden]right-> State3

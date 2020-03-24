@@ -16,17 +16,17 @@ end box
 [-> LogicManager : execute("delete 3")
 activate LogicManager
 
-LogicManager -> RecipeBookParser : parseCommand("delete 3")
+LogicManager -> RecipeBookParser : parseCommand("delete 1")
 activate RecipeBookParser
 
 create DeleteCommandParser
-AddressBookParser -> DeleteCommandParser
+RecipeBookParser -> DeleteCommandParser
 activate DeleteCommandParser
 
 DeleteCommandParser --> RecipeBookParser
 deactivate DeleteCommandParser
 
-RecipeBookParser -> DeleteCommandParser : parse("3")
+RecipeBookParser -> DeleteCommandParser : parse("1")
 activate DeleteCommandParser
 
 create DeleteCommand
@@ -48,7 +48,7 @@ deactivate RecipeBookParser
 LogicManager -> DeleteCommand : execute()
 activate DeleteCommand
 
-DeleteCommand -> Model : deleteRecipe(3)
+DeleteCommand -> Model : deleteRecipe(1)
 activate Model
 
 Model --> DeleteCommand

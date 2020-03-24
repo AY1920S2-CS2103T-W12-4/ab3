@@ -17,11 +17,13 @@ Class ReadOnlyUserPrefs
 
 Package Recipe {
 Class Recipe
-Class InstructionList
 Class IngredientList
 Class Name
-Class Calorie
-Class Quantity
+Class InstructionList
+Class UniqueRecipeList
+}
+
+Package Tag {
 Class Tag
 Class Unit
 Class Serving
@@ -42,15 +44,15 @@ UserPrefs .up.|> ReadOnlyUserPrefs
 
 RecipeBook *--> "1" UniqueRecipeList
 UniqueRecipeList o--> "*" Recipe
-Recipe *--> "*" Tag
-Recipe *--> TagList
-Recipe *--> IngredientList
+Recipe *--> Name
 Recipe *--> InstructionList
-Recipe *--> Calories
+Recipe *--> IngredientList
+Recipe *--> Recipe
+Recipe *--> "*" Tag
 
-Name -[hidden]right-> Calories
-Calories -[hidden]right-> Instruction
-Instruction -[hidden]right-> Ingredient
+Name -[hidden]right-> InstructionList
+InstructionList -[hidden]right-> Recipe
+Recipe -[hidden]right-> IngredientList
 
 ModelManager -->"1" Recipe : filtered list
 @enduml

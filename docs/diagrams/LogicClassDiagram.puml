@@ -36,7 +36,7 @@ HiddenOutside ..> Logic
 
 LogicManager .up.|> Logic
 LogicManager -->"1" RecipeBookParser
-AddressBookParser .left.> XYZCommandParser: creates >
+RecipeBookParser .left.> XYZCommandParser: creates >
 
 XYZCommandParser ..> XYZCommand : creates >
 XYZCommandParser ..|> Parser
