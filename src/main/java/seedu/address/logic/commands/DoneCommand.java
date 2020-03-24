@@ -10,6 +10,9 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.recipe.Recipe;
 
+/**
+ * Marks a recipe identified using it's displayed index from the recipe book as done.
+ */
 public class DoneCommand extends Command {
 
     public static final String COMMAND_WORD = "done";

@@ -9,17 +9,27 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_SERVING;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_RECIPES;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.recipe.*;
-import seedu.address.model.recipe.attribute.*;
-import seedu.address.model.recipe.attribute.IngredientList;
 import seedu.address.model.recipe.Recipe;
+import seedu.address.model.recipe.attribute.Calorie;
+import seedu.address.model.recipe.attribute.Ingredient;
+import seedu.address.model.recipe.attribute.IngredientList;
+import seedu.address.model.recipe.attribute.InstructionList;
+import seedu.address.model.recipe.attribute.Name;
+import seedu.address.model.recipe.attribute.Quantity;
+import seedu.address.model.recipe.attribute.Serving;
+import seedu.address.model.recipe.attribute.Tag;
 
 /**
  * Edits the details of an existing recipe in the recipe book.
@@ -96,12 +106,14 @@ public class ModifyCommand extends Command {
         Calorie updatedCalorie = editRecipeDescriptor.getCalorie().orElse(recipeToEdit.getCalorie());
         Serving updatedServing = editRecipeDescriptor.getServing().orElse(recipeToEdit.getServing());
         Set<Tag> updatedTags = editRecipeDescriptor.getTags().orElse(recipeToEdit.getTags());
-
         return new Recipe(updatedName, updatedIngredients, updatedInstructions, updatedCalorie, updatedServing,
                 updatedTags);
     }
 
-     private static Recipe scaleRecipe(Recipe recipeToScale, int sizeOfScaling) {
+    /**
+     * Creates and returns a {@code Recipe} as the result of scaling {@code recipeToScale}.
+     */
+    private static Recipe scaleRecipe(Recipe recipeToScale, int sizeOfScaling) {
         ArrayList<Ingredient> ingredientData = recipeToScale.getIngredients().getIngredientData();
         for (Ingredient ingredient: ingredientData) {
             Quantity quantity2 = ingredient.getQuantity2();
@@ -109,13 +121,13 @@ public class ModifyCommand extends Command {
             Float updatedValue = value * sizeOfScaling;
             quantity2.setValue(updatedValue);
             ingredient.setQuantity2(quantity2);
-         }
-        //Calorie updatedCalorie =
+        }
+        //updatedCalorie =
         return new Recipe(recipeToScale.getName(), new IngredientList(ingredientData),
-                recipeToScale.getInstructions(), recipeToScale.getCalorie(),
-                recipeToScale.getServing(), recipeToScale.getTags());
-      }
-    
+                 recipeToScale.getInstructions(), recipeToScale.getCalorie(),
+                 recipeToScale.getServing(), recipeToScale.getTags());
+    }
+
     @Override
     public boolean equals(Object other) {
         // short circuit if same object
