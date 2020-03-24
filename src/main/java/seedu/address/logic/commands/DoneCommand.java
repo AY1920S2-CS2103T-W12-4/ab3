@@ -11,7 +11,7 @@ import seedu.address.model.Model;
 import seedu.address.model.recipe.Recipe;
 
 /**
- * Marks a recipe identified using it's displayed index from the recipe book as done.
+ * Marks a recipe identified by it's displayed index as done.
  */
 public class DoneCommand extends Command {
 
