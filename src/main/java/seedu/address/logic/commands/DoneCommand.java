@@ -49,3 +49,4 @@ public class DoneCommand extends Command {
                 && targetIndex.equals(((DoneCommand) other).targetIndex)); // state check
     }
 }
+
