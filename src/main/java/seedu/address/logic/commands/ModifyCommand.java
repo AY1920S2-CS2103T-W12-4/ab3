@@ -19,7 +19,6 @@ import seedu.address.model.Model;
 import seedu.address.model.recipe.*;
 import seedu.address.model.recipe.attribute.*;
 import seedu.address.model.recipe.attribute.IngredientList;
-import seedu.address.model.tag.Tag;
 import seedu.address.model.recipe.Recipe;
 
 /**
@@ -112,8 +111,9 @@ public class ModifyCommand extends Command {
             ingredient.setQuantity2(quantity2);
          }
         //Calorie updatedCalorie =
-        return new Recipe(recipeToScale.getName(), ingredientData, recipeToScale.getInstructions(),
-                recipeToScale.getCalorie(), recipeToScale.getServing(), recipeToScale.getTags());
+        return new Recipe(recipeToScale.getName(), new IngredientList(ingredientData),
+                recipeToScale.getInstructions(), recipeToScale.getCalorie(),
+                recipeToScale.getServing(), recipeToScale.getTags());
       }
     
     @Override

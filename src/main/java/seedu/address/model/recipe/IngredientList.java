@@ -1,5 +1,7 @@
 package seedu.address.model.recipe;
 
+import seedu.address.model.recipe.attribute.Ingredient;
+
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
@@ -38,12 +40,10 @@ public class IngredientList {
         this.ingredients = new ArrayList<Ingredient>();
     }
 
-    /**
-     * public IngredientList(List<Ingredient> ingredients) {
-     *  this.ingredientListString = "";
-     *   this.ingredients = ingredients;
-     * }
-     */
+     public IngredientList(List<Ingredient> ingredients) {
+       this.ingredientListString = "";
+       this.ingredients = ingredients;
+     }
 
     /**
      * Returns true if a given string is a valid ingredient list.
