@@ -6,15 +6,7 @@ import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import seedu.address.logic.commands.Command;
-import seedu.address.logic.commands.DeleteCommand;
-import seedu.address.logic.commands.ExitCommand;
-import seedu.address.logic.commands.FindCommand;
-import seedu.address.logic.commands.HelpCommand;
-import seedu.address.logic.commands.ListCommand;
-import seedu.address.logic.commands.ModifyCommand;
-import seedu.address.logic.commands.NewCommand;
-import seedu.address.logic.commands.ResetCommand;
+import seedu.address.logic.commands.*;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
@@ -44,32 +36,35 @@ public class RecipeBookParser {
         final String arguments = matcher.group("arguments");
         switch (commandWord) {
 
-        case NewCommand.COMMAND_WORD:
-            return new NewCommandParser().parse(arguments);
+            case NewCommand.COMMAND_WORD:
+                return new NewCommandParser().parse(arguments);
 
-        case ModifyCommand.COMMAND_WORD:
-            return new ModifyCommandParser().parse(arguments);
+            case ModifyCommand.COMMAND_WORD:
+                return new ModifyCommandParser().parse(arguments);
 
-        case DeleteCommand.COMMAND_WORD:
-            return new DeleteCommandParser().parse(arguments);
+            case DeleteCommand.COMMAND_WORD:
+                return new DeleteCommandParser().parse(arguments);
 
-        case ResetCommand.COMMAND_WORD:
-            return new ResetCommand();
+            case DoneCommand.COMMAND_WORD:
+                return new DoneCommandParser().parse(arguments);
 
-        case FindCommand.COMMAND_WORD:
-            return new FindCommandParser().parse(arguments);
+            case ResetCommand.COMMAND_WORD:
+                return new ResetCommand();
 
-        case ListCommand.COMMAND_WORD:
-            return new ListCommand();
+            case FindCommand.COMMAND_WORD:
+                return new FindCommandParser().parse(arguments);
 
-        case ExitCommand.COMMAND_WORD:
-            return new ExitCommand();
+            case ListCommand.COMMAND_WORD:
+                return new ListCommand();
 
-        case HelpCommand.COMMAND_WORD:
-            return new HelpCommand();
+            case ExitCommand.COMMAND_WORD:
+                return new ExitCommand();
 
-        default:
-            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
+            case HelpCommand.COMMAND_WORD:
+                return new HelpCommand();
+
+            default:
+                throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
         }
     }
 
