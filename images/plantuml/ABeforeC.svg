@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="126px" preserveAspectRatio="none" style="width:152px;height:126px;" version="1.1" viewBox="0 0 152 126" width="152px" zoomAndPan="magnify"><defs/><g><!--MD5=[a46ee5ce0ceb0380cf446a08a056dce4]
+class A--><rect fill="#1616B0" height="23.9688" id="A" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="8"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="27" y="24.1387">A</text><!--MD5=[69c451c751c414e37549b782190fef46]
+class B--><rect fill="#1616B0" height="23.9688" id="B" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="27" y="108.1387">B</text><!--MD5=[378b18254a1b2429f435e93f5e5cc50c]
+class C--><rect fill="#166800" height="23.9688" id="C" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="8"/><rect fill="#166800" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="112" y="24.1387">C</text><!--MD5=[69b356fec5e4f53d7535011b6fc9d60b]
+class D--><rect fill="#166800" height="23.9688" id="D" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><rect fill="#166800" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="111.5" y="108.1387">D</text><!--MD5=[5e2eec62a50b26b6b0db6c12e4ee289c]
+link A to B--><path d="M31,32.0589 C31,46.1197 31,70.5106 31,86.7039 " fill="none" id="A-&gt;B" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="31,91.8544,35,82.8544,31,86.8544,27,82.8544,31,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[95ca888c4bb7ed1df160562281720a5c]
+link C to D--><path d="M116,32.0589 C116,46.1197 116,70.5106 116,86.7039 " fill="none" id="C-&gt;D" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="116,91.8544,120,82.8544,116,86.8544,112,82.8544,116,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[e0d8961c3e9d70d682960192e829c051]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+
+Class A #1616B0
+Class B #1616B0
+Class C #166800
+Class D #166800
+
+A - -> B
+C - -> D
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

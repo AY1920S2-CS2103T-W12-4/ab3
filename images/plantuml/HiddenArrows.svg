@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="210px" preserveAspectRatio="none" style="width:322px;height:210px;" version="1.1" viewBox="0 0 322 210" width="322px" zoomAndPan="magnify"><defs/><g><!--MD5=[a46ee5ce0ceb0380cf446a08a056dce4]
+class A--><rect fill="#1616B0" height="23.9688" id="A" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="27" y="108.1387">A</text><!--MD5=[69c451c751c414e37549b782190fef46]
+class B--><rect fill="#1616B0" height="23.9688" id="B" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="112" y="108.1387">B</text><!--MD5=[378b18254a1b2429f435e93f5e5cc50c]
+class C--><rect fill="#1616B0" height="23.9688" id="C" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="92"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="197" y="108.1387">C</text><!--MD5=[69b356fec5e4f53d7535011b6fc9d60b]
+class D--><rect fill="#1616B0" height="23.9688" id="D" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="92"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="281.5" y="108.1387">D</text><!--MD5=[eb7362c74a3b2d1e105f05f83a44a725]
+class 1--><rect fill="#7B000E" height="23.9688" id="1" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="176"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="176"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="27" y="192.1387">1</text><!--MD5=[49ee3c525b3ef67192d456685a6b8001]
+class 2--><rect fill="#7B000E" height="23.9688" id="2" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="176"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="176"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="112" y="192.1387">2</text><!--MD5=[553e75b4d7d4ea28935e682d06bd7e3d]
+class 3--><rect fill="#7B000E" height="23.9688" id="3" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="176"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="176"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="197" y="192.1387">3</text><!--MD5=[af7907727909a164f50127c974702c4f]
+class 4--><rect fill="#7B000E" height="23.9688" id="4" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="176"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="176"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="282" y="192.1387">4</text><!--MD5=[826d5a1bf3d673c814a6d61660166b85]
+class Z--><rect fill="#166800" height="23.9688" id="Z" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="133" y="8"/><rect fill="#166800" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="133" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="153.5" y="24.1387">Z</text><!--MD5=[840cc233f0d5702eaf2a3dd2fe4083e2]
+reverse link Z to A--><path d="M136.415,34.937 C111.538,50.999 71.1493,77.077 48.262,91.854 " fill="none" id="Z&lt;-A" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="140.872,32.059,131.1416,33.5822,136.672,34.7719,135.4822,40.3022,140.872,32.059" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d5d6ad6db3217b95bbda0c27bc2f37db]
+reverse link Z to B--><path d="M149.919,36.777 C141.645,52.931 128.995,77.629 121.709,91.854 " fill="none" id="Z&lt;-B" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="152.336,32.059,144.6721,38.2449,150.056,36.5089,151.792,41.8928,152.336,32.059" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[786a8b5939fe50fd0dd8444ced38e648]
+reverse link Z to C--><path d="M166.273,36.777 C174.744,52.931 187.696,77.629 195.155,91.854 " fill="none" id="Z&lt;-C" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="163.799,32.059,164.4372,41.8872,166.1215,36.4869,171.5218,38.1712,163.799,32.059" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b4b87e72b1b2d698d0ac70adec26cccf]
+reverse link Z to D--><path d="M179.755,34.937 C204.828,50.999 245.535,77.077 268.602,91.854 " fill="none" id="Z&lt;-D" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="175.263,32.059,180.6834,40.2821,179.4731,34.7562,184.999,33.5459,175.263,32.059" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a77bef9dd7057329873dd5ab9adbfb82]
+link A to 1--><path d="M31,116.0589 C31,130.1197 31,154.5106 31,170.7039 " fill="none" id="A-&gt;1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="31,175.8544,35,166.8544,31,170.8544,27,166.8544,31,175.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ee78f7fa0f546011a15eed99a19470bf]
+link B to 2--><path d="M116,116.0589 C116,130.1197 116,154.5106 116,170.7039 " fill="none" id="B-&gt;2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="116,175.8544,120,166.8544,116,170.8544,112,166.8544,116,175.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[2cd890d41cd5a757266d6e74c98775a6]
+link C to 3--><path d="M201,116.0589 C201,130.1197 201,154.5106 201,170.7039 " fill="none" id="C-&gt;3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="201,175.8544,205,166.8544,201,170.8544,197,166.8544,201,175.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c6a69fcd154c03ae6d03909caae20245]
+link D to 4--><path d="M286,116.0589 C286,130.1197 286,154.5106 286,170.7039 " fill="none" id="D-&gt;4" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="286,175.8544,290,166.8544,286,170.8544,282,166.8544,286,175.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[5e2eec62a50b26b6b0db6c12e4ee289c]
+link A to B--><!--MD5=[cd25d8247324207f828a4db9f58ed69d]
+link B to C--><!--MD5=[95ca888c4bb7ed1df160562281720a5c]
+link C to D--><!--MD5=[4f638f823c3a813688640a3aa15e18a0]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+
+Class A #1616B0
+Class B #1616B0
+Class C #1616B0
+Class D #1616B0
+
+Class 1 #7B000E
+Class 2 #7B000E
+Class 3 #7B000E
+Class 4 #7B000E
+
+Class Z #166800
+
+A -up-> Z
+B -up-> Z
+C -up-> Z
+D -up-> Z
+
+A - -> 1
+B - -> 2
+C - -> 3
+D - -> 4
+
+A -right[hidden]- B
+B -right[hidden]- C
+C -right[hidden]- D
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

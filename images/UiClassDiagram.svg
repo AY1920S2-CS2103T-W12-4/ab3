@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="515px" preserveAspectRatio="none" style="width:904px;height:515px;" version="1.1" viewBox="0 0 904 515" width="904px" zoomAndPan="magnify"><defs/><g><!--MD5=[9681dc6e01e10c6b4fe06895ae94f592]
+cluster UI--><rect fill="#FFFFFF" height="446" style="stroke: #000000; stroke-width: 1.5;" width="684" x="22" y="57"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="356.5" y="71.9951">UI</text><!--MD5=[15636c1ca4a123c16a2a1a8e90aca7a9]
+cluster Model--><rect fill="#FFFFFF" height="91" style="stroke: #000000; stroke-width: 1.5;" width="155" x="738" y="413"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="47" x="792" y="427.9951">Model</text><!--MD5=[8237f0313b7e89f796726a268ea6fa70]
+cluster Logic--><rect fill="#FFFFFF" height="91" style="stroke: #000000; stroke-width: 1.5;" width="149" x="738" y="154"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="42" x="791.5" y="168.9951">Logic</text><!--MD5=[56c17820b5ec61b985b118caeb6340b1]
+class Ui--><rect fill="#1D8900" height="37.9375" id="Ui" style="stroke: #FFFFFF; stroke-width: 1.0;" width="73" x="376.5" y="92"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="71" x="377.5" y="108.1387">«Interface»</text><text fill="#FFFFFF" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="12" x="407" y="122.1074">Ui</text><!--MD5=[2194e160f11909a32d987932bec8f8fd]
+class UiPart--><rect fill="#1D8900" height="37.9375" id="UiPart" style="stroke: #FFFFFF; stroke-width: 1.0;" width="75" x="277.5" y="449"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="69" x="280.5" y="465.1387">{abstract}</text><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38" x="296" y="479.1074">UiPart</text><!--MD5=[bb31649cd695b383b0a893153f017b1a]
+class UiManager--><rect fill="#1D8900" height="23.9688" id="UiManager" style="stroke: #FFFFFF; stroke-width: 1.0;" width="73" x="484.5" y="99"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="487.5" y="115.1387">UiManager</text><!--MD5=[e6c809820d88acc3564faeb20394ab9d]
+class MainWindow--><rect fill="#1D8900" height="23.9688" id="MainWindow" style="stroke: #FFFFFF; stroke-width: 1.0;" width="82" x="348" y="197"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="351" y="213.1387">MainWindow</text><!--MD5=[6a99d1f66704ead86da80187de9dded6]
+class HelpWindow--><rect fill="#1D8900" height="23.9688" id="HelpWindow" style="stroke: #FFFFFF; stroke-width: 1.0;" width="81" x="469.5" y="281"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="75" x="472.5" y="297.1387">HelpWindow</text><!--MD5=[ea641667e014ba942dc8bca88e7c22f4]
+class ResultDisplay--><rect fill="#1D8900" height="23.9688" id="ResultDisplay" style="stroke: #FFFFFF; stroke-width: 1.0;" width="89" x="219.5" y="281"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="83" x="222.5" y="297.1387">ResultDisplay</text><!--MD5=[33b625072e3650a6e928dbb8856652f0]
+class RecipeListPanel--><rect fill="#1D8900" height="23.9688" id="RecipeListPanel" style="stroke: #FFFFFF; stroke-width: 1.0;" width="104" x="586" y="281"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="98" x="589" y="297.1387">RecipeListPanel</text><!--MD5=[45c75b952c5ea712410573ead5801514]
+class RecipeCard--><rect fill="#1D8900" height="23.9688" id="RecipeCard" style="stroke: #FFFFFF; stroke-width: 1.0;" width="77" x="599.5" y="365"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="71" x="602.5" y="381.1387">RecipeCard</text><!--MD5=[2b60db2fc160c90f3a0ded0376aa3223]
+class StatusBarFooter--><rect fill="#1D8900" height="23.9688" id="StatusBarFooter" style="stroke: #FFFFFF; stroke-width: 1.0;" width="109" x="75.5" y="281"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="103" x="78.5" y="297.1387">StatusBarFooter</text><!--MD5=[bfe415b5c3f0a3f3f66149424b76647d]
+class CommandBox--><rect fill="#1D8900" height="23.9688" id="CommandBox" style="stroke: #FFFFFF; stroke-width: 1.0;" width="90" x="344" y="281"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="84" x="347" y="297.1387">CommandBox</text><!--MD5=[eef5f0b07d2fd263bed9c722d8c1c089]
+class HiddenModel--><rect fill="#FFFFFF" height="23.9688" id="HiddenModel" style="stroke: #FFFFFF; stroke-width: 1.0;" width="87" x="781.5" y="456"/><rect fill="#FFFFFF" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="87" x="781.5" y="456"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="784.5" y="472.1387">HiddenModel</text><!--MD5=[68aa0c86fa78b4986a45cc6cf99a7822]
+class HiddenLogic--><rect fill="#FFFFFF" height="23.9688" id="HiddenLogic" style="stroke: #FFFFFF; stroke-width: 1.0;" width="82" x="781" y="197"/><rect fill="#FFFFFF" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="82" x="781" y="197"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="784" y="213.1387">HiddenLogic</text><!--MD5=[f8dc820cca8808bdb695301f77a92b66]
+class HiddenOutside--><rect fill="#FFFFFF" height="23.9688" id="HiddenOutside" style="stroke: #FFFFFF; stroke-width: 1.0;" width="98" x="364" y="8"/><rect fill="#FFFFFF" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="98" x="364" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="92" x="367" y="24.1387">HiddenOutside</text><!--MD5=[a2825086c9e6423d98970e86c37e1f32]
+link HiddenOutside to Ui--><path d="M413,32.272 C413,45.837 413,68.971 413,86.483 " fill="none" id="HiddenOutside-&gt;Ui" style="stroke: #0E4100; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0E4100" points="413,91.721,417,82.721,413,86.721,409,82.721,413,91.721" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[d23f9412713304e09763acc39549c87b]
+reverse link Ui to UiManager--><path d="M469.938,111 C474.705,111 479.471,111 484.238,111 " fill="none" id="Ui&lt;-UiManager" style="stroke: #0E4100; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="469.703,118,449.703,111,469.703,104,469.703,118" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[f4359266757daa3e145c93b9f63f2a7f]
+link UiManager to MainWindow--><path d="M505.858,123.012 C481.817,140.497 434.933,174.594 408.442,193.86 " fill="none" id="UiManager-&gt;MainWindow" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="404.372,196.82,414.0033,194.7612,408.4156,193.8791,409.2978,188.2914,404.372,196.82" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[86d09801fc7f798f389a693fae28d604]
+link MainWindow to HelpWindow--><path d="M405.319,221.059 C427.059,235.792 465.536,261.867 489.296,277.969 " fill="none" id="MainWindow-&gt;HelpWindow" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="493.554,280.854,488.3471,272.4941,489.4147,278.0493,483.8596,279.1169,493.554,280.854" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[92dc039ae140ba7abbe540b6db158255]
+link MainWindow to CommandBox--><path d="M389,233.059 C389,233.059 389,257.037 389,267.535 " fill="none" id="MainWindow-CommandBox" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="389,280.854,393,271.854,389,275.854,385,271.854,389,280.854" style="stroke: #0E4100; stroke-width: 1.1;"/><line style="stroke: #0E4100; stroke-width: 1.1;" x1="389" x2="389" y1="275.854" y2="267.854"/><polygon fill="#0E4100" points="389,221.059,385,227.059,389,233.059,393,227.059,389,221.059" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[751f32356d036c385cef4d287122ae87]
+link MainWindow to ResultDisplay--><path d="M362.1086,227.6416 C362.1086,227.6416 312.473,260.202 291.874,273.715 " fill="none" id="MainWindow-ResultDisplay" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="280.99,280.854,290.7093,279.2615,285.1706,278.1113,286.3209,272.5726,280.99,280.854" style="stroke: #0E4100; stroke-width: 1.1;"/><line style="stroke: #0E4100; stroke-width: 1.1;" x1="285.1706" x2="291.86" y1="278.1113" y2="273.7235"/><polygon fill="#0E4100" points="372.142,221.059,364.9311,221.0058,362.1086,227.6416,369.3195,227.6948,372.142,221.059" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[1baa358e66f94f5b7465ddea804755c3]
+link MainWindow to RecipeListPanel--><path d="M433.979,224.8122 C433.979,224.8122 547.321,262.138 592.026,276.86 " fill="none" id="MainWindow-RecipeListPanel" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="604.554,280.986,597.2573,274.371,599.805,279.4217,594.7544,281.9694,604.554,280.986" style="stroke: #0E4100; stroke-width: 1.1;"/><line style="stroke: #0E4100; stroke-width: 1.1;" x1="599.805" x2="592.2065" y1="279.4217" y2="276.9195"/><polygon fill="#0E4100" points="422.581,221.059,427.0289,226.7349,433.979,224.8122,429.531,219.1363,422.581,221.059" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[be77818ef8144b1b88291425d82e9084]
+link MainWindow to StatusBarFooter--><path d="M342.6297,224.6812 C342.6297,224.6812 223.854,262.286 177.251,277.04 " fill="none" id="MainWindow-StatusBarFooter" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="164.789,280.986,174.5766,282.0828,169.5558,279.4767,172.1618,274.4559,164.789,280.986" style="stroke: #0E4100; stroke-width: 1.1;"/><line style="stroke: #0E4100; stroke-width: 1.1;" x1="169.5558" x2="177.1825" y1="279.4767" y2="277.062"/><polygon fill="#0E4100" points="354.07,221.059,347.1425,219.0567,342.6297,224.6812,349.5573,226.6835,354.07,221.059" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[f5ad94fdf2ab4616309508789589d9e4]
+link RecipeListPanel to RecipeCard--><path d="M638,305.059 C638,319.12 638,343.511 638,359.704 " fill="none" id="RecipeListPanel-&gt;RecipeCard" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="638,364.854,642,355.854,638,359.854,634,355.854,638,364.854" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[57cdbd9c2a08b96199a6234d10bf0163]
+reverse link UiPart to MainWindow--><path d="M258.085,448.6944 C168.718,419.788 13.1401,358.773 76,281 C110.45,238.376 270.379,220.174 347.716,213.433 " fill="none" id="UiPart&lt;-MainWindow" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="260.398,442.084,277.366,454.7767,256.186,455.4354,260.398,442.084" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[c2b0433d56a858074b2759587ea31389]
+link MainWindow to UiPart--><!--MD5=[6a054d1cbcb280d35d5ed6cf4ddd3c4a]
+link ResultDisplay to UiPart--><path d="M267.268,305.085 C274.519,329.682 292.236,389.78 303.925,429.4332 " fill="none" id="ResultDisplay-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="310.681,427.592,309.622,448.7556,297.252,431.5513,310.681,427.592" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[bbb9937c6b10c921f0d97eaed5a79881]
+link CommandBox to UiPart--><path d="M384.258,305.085 C373.664,329.852 347.674,390.615 330.718,430.2544 " fill="none" id="CommandBox-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="337.106,433.1202,322.804,448.7556,324.234,427.614,337.106,433.1202" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[60df206c81f8bd2bcd7c037f9a2e776e]
+link RecipeListPanel to UiPart--><path d="M617.304,305.085 C567.392,331.818 439.185,400.486 366.783,439.2646 " fill="none" id="RecipeListPanel-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="369.741,445.6211,348.806,448.8934,363.131,433.2798,369.741,445.6211" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[d710ed26d5bf50010ebab6305408a820]
+link RecipeCard to UiPart--><path d="M599.359,388.647 C542.878,404.21 437.401,433.2734 371.998,451.2947 " fill="none" id="RecipeCard-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="373.826,458.0518,352.685,456.6162,370.107,444.5548,373.826,458.0518" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[333db60c48b4ce035180c8fd8b7021d9]
+link StatusBarFooter to UiPart--><path d="M141.854,305.085 C169.433,330.875 238.747,395.693 280.836,435.0519 " fill="none" id="StatusBarFooter-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="285.663,429.9824,295.49,448.7556,276.101,440.208,285.663,429.9824" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[f6ded6870070611f25c393be6d476ca5]
+link HelpWindow to UiPart--><path d="M497.505,305.085 C468.372,330.932 395.053,395.979 350.718,435.3116 " fill="none" id="HelpWindow-&gt;UiPart" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="none" points="355.171,440.7189,335.564,448.7556,345.88,430.2463,355.171,440.7189" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[003ece27009c1b2b86edd1187655e9ea]
+link RecipeCard to Model--><path d="M676.78,383.337 C687.041,386.15 697.589,390.444 706,397 C719.6895,407.6695 729.502,424.4263 735.9815,438.87 C736.3865,439.7727 736.7784,440.6664 737.1575,441.549 C737.347,441.9903 737.5333,442.4289 737.7164,442.8644 C737.808,443.0821 737.8987,443.2991 737.9887,443.5153 " fill="none" id="RecipeCard-&gt;Model" style="stroke: #0E4100; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0E4100" points="737.9887,443.5153,738.2247,433.6693,736.0681,438.8989,730.8384,436.7423,737.9887,443.5153" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[90aba6ec762193f41687f31212656d8f]
+link UiManager to Logic--><path d="M557.787,113.38 C604.683,115.775 682.508,122.078 706,138 C720.3675,147.7375 730.2013,164.4653 736.5224,179.1268 C736.9174,180.0431 737.2988,180.9514 737.6667,181.8494 C737.7586,182.0739 737.8498,182.2977 737.9401,182.5209 " fill="none" id="UiManager-&gt;Logic" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="737.9401,182.5209,738.2728,172.6777,736.0649,177.8858,730.8567,175.6779,737.9401,182.5209" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[07bc7cbf7874720da1634fdfdaf490e2]
+reverse link Logic to MainWindow--><path d="M737.9945,209 C737.1735,209 736.3526,209 735.5317,209 C732.2479,209 728.9641,209 725.6803,209 C719.1127,209 712.5452,209 705.9776,209 C692.8424,209 679.7073,209 666.5721,209 C640.3018,209 614.0314,209 587.761,209 C535.2203,209 482.6795,209 430.139,209 " fill="none" id="Logic&lt;-MainWindow" style="stroke: #0E4100; stroke-width: 1.1;"/><polygon fill="#0E4100" points="737.9945,209,728.9945,205,732.9945,209,728.9945,213,737.9945,209" style="stroke: #0E4100; stroke-width: 1.1;"/><!--MD5=[179a16a3b88928f27bc42f4e1dc1ed62]
+link HelpWindow to RecipeListPanel--><!--MD5=[8655318e6662184a4a769bb45b69b25c]
+link CommandBox to HelpWindow--><!--MD5=[b8f93d5457cb1cca443f250cedc61ee2]
+link ResultDisplay to CommandBox--><!--MD5=[be41e9187af53a708441cf1977ae807e]
+link StatusBarFooter to ResultDisplay--><!--MD5=[60a86848d535a7f78f6f0269bff7315f]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+skinparam arrowThickness 1.1
+skinparam arrowColor #0E4100
+skinparam classBackgroundColor #1D8900
+
+package UI <<Rectangle>>{
+Interface Ui <<Interface>>
+Class "{abstract}\nUiPart" as UiPart
+Class UiManager
+Class MainWindow
+Class HelpWindow
+Class ResultDisplay
+Class RecipeListPanel
+Class RecipeCard
+Class StatusBarFooter
+Class CommandBox
+}
+
+package Model <<Rectangle>> {
+Class HiddenModel #FFFFFF
+}
+
+package Logic <<Rectangle>> {
+Class HiddenLogic #FFFFFF
+}
+
+Class HiddenOutside #FFFFFF
+HiddenOutside ..> Ui
+
+UiManager .left.|> Ui
+UiManager -down-> MainWindow
+MainWindow - -> HelpWindow
+MainWindow *-down-> CommandBox
+MainWindow *-down-> ResultDisplay
+MainWindow *-down-> RecipeListPanel
+MainWindow *-down-> StatusBarFooter
+
+RecipeListPanel -down-> RecipeCard
+
+MainWindow -left-|> UiPart
+
+ResultDisplay - -|> UiPart
+CommandBox - -|> UiPart
+RecipeListPanel - -|> UiPart
+RecipeCard - -|> UiPart
+StatusBarFooter - -|> UiPart
+HelpWindow -down-|> UiPart
+
+RecipeCard ..> Model
+UiManager -right-> Logic
+MainWindow -left-> Logic
+
+RecipeListPanel -[hidden]left- HelpWindow
+HelpWindow -[hidden]left- CommandBox
+CommandBox -[hidden]left- ResultDisplay
+ResultDisplay -[hidden]left- StatusBarFooter
+
+MainWindow -[hidden]-|> UiPart
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

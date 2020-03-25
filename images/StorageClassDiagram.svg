@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="238px" preserveAspectRatio="none" style="width:792px;height:238px;" version="1.1" viewBox="0 0 792 238" width="792px" zoomAndPan="magnify"><defs/><g><!--MD5=[11b747870319a085bc745183e08c5f76]
+class Storage--><rect fill="#A38300" height="37.9375" id="Storage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="73" x="6" y="8"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="71" x="7" y="24.1387">«Interface»</text><text fill="#FFFFFF" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="50" x="17.5" y="38.1074">Storage</text><!--MD5=[8a5ced027b720c99ce7a6d28a509754b]
+class UserPrefsStorage--><rect fill="#A38300" height="37.9375" id="UserPrefsStorage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="114" x="260.5" y="8"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="71" x="282" y="24.1387">«Interface»</text><text fill="#FFFFFF" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="108" x="263.5" y="38.1074">UserPrefsStorage</text><!--MD5=[54d93de8d30492e849128ad916aec170]
+class RecipeBookStorage--><rect fill="#A38300" height="37.9375" id="RecipeBookStorage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="129" x="105" y="106"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="71" x="134" y="122.1387">«Interface»</text><text fill="#FFFFFF" font-family="Arial" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="123" x="108" y="136.1074">RecipeBookStorage</text><!--MD5=[c47c8d4c18673c3c891899ebd374dbd0]
+class StorageManager--><rect fill="#A38300" height="23.9688" id="StorageManager" style="stroke: #FFFFFF; stroke-width: 1.0;" width="111" x="114" y="15"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="105" x="117" y="31.1387">StorageManager</text><!--MD5=[a9c1870f99109ebf18f8c33e121b649f]
+class JsonUserPrefsStorage--><rect fill="#A38300" height="23.9688" id="JsonUserPrefsStorage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="143" x="410" y="15"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="137" x="413" y="31.1387">JsonUserPrefsStorage</text><!--MD5=[fb36cbce39188af854257ba9e73d4d51]
+class JsonRecipeBookStorage--><rect fill="#A38300" height="23.9688" id="JsonRecipeBookStorage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="155" x="269" y="113"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="149" x="272" y="129.1387">JsonRecipeBookStorage</text><!--MD5=[911d8da85e27286f66baf5decdc7086a]
+class JsonSerializableRecipeBookStorage--><rect fill="#A38300" height="23.9688" id="JsonSerializableRecipeBookStorage" style="stroke: #FFFFFF; stroke-width: 1.0;" width="225" x="234" y="204"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="219" x="237" y="220.1387">JsonSerializableRecipeBookStorage</text><!--MD5=[55a5a79007d2f877b788d493cb1e414b]
+class JsonSerializableRecipe--><rect fill="#A38300" height="23.9688" id="JsonSerializableRecipe" style="stroke: #FFFFFF; stroke-width: 1.0;" width="144" x="494.5" y="204"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="138" x="497.5" y="220.1387">JsonSerializableRecipe</text><!--MD5=[3404c0bee4d315985f002a229dd51c60]
+class JsonAdaptedTag--><rect fill="#A38300" height="23.9688" id="JsonAdaptedTag" style="stroke: #FFFFFF; stroke-width: 1.0;" width="108" x="673.5" y="204"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="102" x="676.5" y="220.1387">JsonAdaptedTag</text><!--MD5=[180c583bbd2e63c1867ef033c2cf1303]
+reverse link Storage to StorageManager--><path d="M99.4632,27 C104.2337,27 109.004,27 113.775,27 " fill="none" id="Storage&lt;-StorageManager" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="99.211,34,79.2109,27,99.2109,20,99.211,34" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[ff59db00a5a696110bc25564e9b3cf1a]
+link StorageManager to UserPrefsStorage--><path d="M237.289,27 C237.289,27 244.078,27 246.921,27 " fill="none" id="StorageManager-UserPrefsStorage" style="stroke: #A38300; stroke-width: 1.1;"/><polygon fill="#A38300" points="260.228,27,251.228,23,255.228,27,251.228,31,260.228,27" style="stroke: #A38300; stroke-width: 1.1;"/><line style="stroke: #A38300; stroke-width: 1.1;" x1="255.228" x2="247.228" y1="27" y2="27"/><polygon fill="#FFFFFF" points="225.289,27,231.289,31,237.289,27,231.289,23,225.289,27" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[ee885e461ae900b47f7a7a068e1ced04]
+link StorageManager to RecipeBookStorage--><path d="M169.5,51.012 C169.5,51.012 169.5,79.426 169.5,92.606 " fill="none" id="StorageManager-RecipeBookStorage" style="stroke: #A38300; stroke-width: 1.1;"/><polygon fill="#A38300" points="169.5,105.936,173.5,96.936,169.5,100.936,165.5,96.936,169.5,105.936" style="stroke: #A38300; stroke-width: 1.1;"/><line style="stroke: #A38300; stroke-width: 1.1;" x1="169.5" x2="169.5" y1="100.936" y2="92.936"/><polygon fill="#FFFFFF" points="169.5,39.012,165.5,45.012,169.5,51.012,173.5,45.012,169.5,39.012" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[876da414b8f5f367f7d257bb4bf26450]
+reverse link UserPrefsStorage to JsonUserPrefsStorage--><path d="M394.536,27 C399.564,27 404.592,27 409.62,27 " fill="none" id="UserPrefsStorage&lt;-JsonUserPrefsStorage" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="394.516,34,374.516,27,394.516,20,394.516,34" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[72e70137a9356675b7e98db35ef2733a]
+reverse link RecipeBookStorage to JsonRecipeBookStorage--><path d="M254.191,125 C259.067,125 263.942,125 268.818,125 " fill="none" id="RecipeBookStorage&lt;-JsonRecipeBookStorage" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="254.147,131.9999,234.146,125,254.146,118,254.147,131.9999" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[abc9dc60d7a3c814ad95a185cc641f15]
+link JsonRecipeBookStorage to JsonSerializableRecipeBookStorage--><path d="M346.5,137.2719 C346.5,152.7865 346.5,180.8205 346.5,198.6419 " fill="none" id="JsonRecipeBookStorage-&gt;JsonSerializableRecipeBookStorage" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A38300" points="346.5,203.8196,350.5,194.8196,346.5,198.8196,342.5,194.8196,346.5,203.8196" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[1231996ba2c7d083b4f617c0288332f0]
+link JsonSerializableRecipeBookStorage to JsonSerializableRecipe--><path d="M459.078,216 C469.083,216 479.089,216 489.094,216 " fill="none" id="JsonSerializableRecipeBookStorage-&gt;JsonSerializableRecipe" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A38300" points="494.326,216,485.326,212,489.326,216,485.326,220,494.326,216" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[426fe2011bcda66a1fb4cb2355e53fb3]
+link JsonSerializableRecipe to JsonAdaptedTag--><path d="M638.51,216 C648.377,216 658.244,216 668.112,216 " fill="none" id="JsonSerializableRecipe-&gt;JsonAdaptedTag" style="stroke: #A38300; stroke-width: 1.1; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A38300" points="673.272,216,664.272,212,668.272,216,664.272,220,673.272,216" style="stroke: #A38300; stroke-width: 1.1;"/><!--MD5=[10ea7e708aa0a62824ba867709329f08]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+skinparam arrowThickness 1.1
+skinparam arrowColor #A38300
+skinparam classBackgroundColor #A38300
+
+Interface Storage <<Interface>>
+Interface UserPrefsStorage <<Interface>>
+Interface RecipeBookStorage <<Interface>>
+
+Class StorageManager
+Class JsonUserPrefsStorage
+Class JsonRecipeBookStorage
+
+StorageManager .left.|> Storage
+StorageManager o-right-> UserPrefsStorage
+StorageManager o- -> RecipeBookStorage
+
+JsonUserPrefsStorage .left.|> UserPrefsStorage
+JsonRecipeBookStorage .left.|> RecipeBookStorage
+JsonRecipeBookStorage .down.> JsonSerializableRecipeBookStorage
+JsonSerializableRecipeBookStorage .right.> JsonSerializableRecipe
+JsonSerializableRecipe .right.> JsonAdaptedTag
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

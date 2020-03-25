@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="213px" preserveAspectRatio="none" style="width:467px;height:213px;" version="1.1" viewBox="0 0 467 213" width="467px" zoomAndPan="magnify"><defs/><g><!--MD5=[05f5fba1ff83d42873626e04b4b84faa]
+class RecipeBook--><rect fill="#9D0012" height="23.9688" id="RecipeBook" style="stroke: #FFFFFF; stroke-width: 1.0;" width="79" x="6" y="11"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="73" x="9" y="27.1387">RecipeBook</text><!--MD5=[0db0c73c8eed4bdf2e92c941cd0ea335]
+class UniqueRecipeList--><rect fill="#9D0012" height="23.9688" id="UniqueRecipeList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="113" x="108" y="95"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="107" x="111" y="111.1387">UniqueRecipeList</text><!--MD5=[a97be948b589b73a8e5432e9944b103b]
+class UniqueTagList--><rect fill="#9D0012" height="23.9688" id="UniqueTagList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="94" x="120.5" y="11"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="88" x="123.5" y="27.1387">UniqueTagList</text><!--MD5=[39d6d2ea03de602dbf4d534e70c872a9]
+class Tag--><rect fill="#9D0012" height="23.9688" id="Tag" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="251.5" y="11"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="23" x="265" y="27.1387">Tag</text><!--MD5=[20418cb98520644da1e87dc0310aa74a]
+class Recipe--><rect fill="#9D0012" height="23.9688" id="Recipe" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="256.5" y="95"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="260.5" y="111.1387">Recipe</text><!--MD5=[53f6a92bd21ca2f2960392a061f3a1c6]
+class Name--><rect fill="#9D0012" height="23.9688" id="Name" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="150.5" y="179"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="157.5" y="195.1387">Name</text><!--MD5=[3cdd5f167b4e8ffc8048a8d8c666fa85]
+class IngredientList--><rect fill="#9D0012" height="23.9688" id="IngredientList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="91" x="236" y="179"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="85" x="239" y="195.1387">IngredientList</text><!--MD5=[0ff7f33fb4cfaccd6bcebc094e3b238f]
+class InstructionList--><rect fill="#9D0012" height="23.9688" id="InstructionList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="94" x="362.5" y="179"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="88" x="365.5" y="195.1387">InstructionList</text><!--MD5=[399a5d3003824dd2aaed60fba5076426]
+link RecipeBook to UniqueRecipeList--><path d="M71.43,41.8681 C71.43,41.8681 118.014,73.968 137.469,87.374 " fill="none" id="RecipeBook-UniqueRecipeList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="148.325,94.854,143.183,86.454,144.2076,92.0173,138.6443,93.0419,148.325,94.854" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="144.2076" x2="137.6205" y1="92.0173" y2="87.478"/><polygon fill="#9D0012" points="61.5489,35.059,64.2197,41.7573,71.43,41.8681,68.7592,35.1699,61.5489,35.059" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="132.0028" y="83.8508">1</text><!--MD5=[1d910bc4ee68a759dd4aa6fdef400a03]
+link RecipeBook to UniqueTagList--><path d="M97.0547,23 C97.0547,23 104.1341,23 107.17,23 " fill="none" id="RecipeBook-UniqueTagList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="120.48,23,111.48,19,115.48,23,111.48,27,120.48,23" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="115.48" x2="107.48" y1="23" y2="23"/><polygon fill="#9D0012" points="85.0547,23,91.0547,27,97.0547,23,91.0547,19,85.0547,23" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="8" x="104.3487" y="18.8847">1</text><!--MD5=[f37b41ed81729fedb54e85371a5e6072]
+link UniqueTagList to UniqueRecipeList--><!--MD5=[f37b41ed81729fedb54e85371a5e6072]
+link UniqueTagList to UniqueRecipeList--><!--MD5=[3e504b887fd68e861d06f5e9394b74ec]
+link UniqueTagList to Tag--><path d="M226.762,23 C226.762,23 234.785,23 238.209,23 " fill="none" id="UniqueTagList-Tag" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="251.419,23,242.419,19,246.419,23,242.419,27,251.419,23" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="246.419" x2="238.419" y1="23" y2="23"/><polygon fill="#9D0012" points="214.762,23,220.762,27,226.762,23,220.762,19,214.762,23" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="236.3806" y="17.9806">*</text><!--MD5=[016354eeaf1f2cf03d6b4aa43f02fce5]
+link UniqueRecipeList to Recipe--><path d="M233.172,107 C233.172,107 239.927,107 242.766,107 " fill="none" id="UniqueRecipeList-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="256.049,107,247.049,103,251.049,107,247.049,111,256.049,107" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="251.049" x2="243.049" y1="107" y2="107"/><polygon fill="#FFFFFF" points="221.172,107,227.172,111,233.172,107,227.172,103,221.172,107" style="stroke: #9D0012; stroke-width: 1.1;"/><!--MD5=[39f223dd3abfa2c65be060da92e0d928]
+link Tag to Recipe--><path d="M277.983,48.319 C278.622,58.801 280.0908,82.8762 280.0908,82.8762 " fill="none" id="Tag-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#FFFFFF" points="280.82,94.854,284.448,88.622,280.0908,82.8762,276.4628,89.1082,280.82,94.854" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="277.174,35.059,273.7293,44.2858,277.4784,40.0497,281.7145,43.7988,277.174,35.059" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="277.4784" x2="277.9655" y1="40.0497" y2="48.035"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="269.0083" y="55.2278">*</text><!--MD5=[b238b3902e04b6fb0dff70774213bdd8]
+link Recipe to Name--><path d="M257.7125,126.4013 C257.7125,126.4013 217.565,157.4595 200.645,170.5481 " fill="none" id="Recipe-Name" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="189.908,178.8544,199.4741,176.5114,193.8628,175.7951,194.5791,170.1837,189.908,178.8544" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="193.8628" x2="200.19" y1="175.7951" y2="170.9001"/><polygon fill="#9D0012" points="267.204,119.0589,260.0108,119.5663,257.7125,126.4013,264.9057,125.894,267.204,119.0589" style="stroke: #9D0012; stroke-width: 1.1;"/><!--MD5=[1ffc9816fa0c2433efc0ee7e42589584]
+link Recipe to IngredientList--><path d="M281.5,131.0589 C281.5,131.0589 281.5,155.0367 281.5,165.535 " fill="none" id="Recipe-IngredientList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="281.5,178.8544,285.5,169.8544,281.5,173.8544,277.5,169.8544,281.5,178.8544" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="281.5" x2="281.5" y1="173.8544" y2="165.8544"/><polygon fill="#9D0012" points="281.5,119.0589,277.5,125.0589,281.5,131.0589,285.5,125.0589,281.5,119.0589" style="stroke: #9D0012; stroke-width: 1.1;"/><!--MD5=[17d950f7a9a09a742b3342499805a664]
+link Recipe to InstructionList--><path d="M308.8679,125.5313 C308.8679,125.5313 359.7,158.0967 380.903,171.6798 " fill="none" id="Recipe-InstructionList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="392.102,178.8544,386.6816,170.6313,387.8919,176.1572,382.366,177.3675,392.102,178.8544" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="387.8919" x2="381.1555" y1="176.1572" y2="171.8419"/><polygon fill="#9D0012" points="298.763,119.0589,301.658,125.6634,308.8679,125.5313,305.9729,118.9268,298.763,119.0589" style="stroke: #9D0012; stroke-width: 1.1;"/><!--MD5=[5ebbb55cfe32259907b6fbcff3654325]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+skinparam arrowThickness 1.1
+skinparam arrowColor #9D0012
+skinparam classBackgroundColor #9D0012
+
+RecipeBook *-right-> "1" UniqueRecipeList
+RecipeBook *-right-> "1" UniqueTagList
+UniqueTagList -[hidden]down- UniqueRecipeList
+UniqueTagList -[hidden]down- UniqueRecipeList
+
+UniqueTagList *-right-> "*" Tag
+UniqueRecipeList o-right-> Recipe
+
+Recipe o-up-> "*" Tag
+
+Recipe *- -> Name
+Recipe *- -> IngredientList
+Recipe *- -> InstructionList
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

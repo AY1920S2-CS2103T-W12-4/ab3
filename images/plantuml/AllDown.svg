@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="126px" preserveAspectRatio="none" style="width:407px;height:126px;" version="1.1" viewBox="0 0 407 126" width="407px" zoomAndPan="magnify"><defs/><g><!--MD5=[a46ee5ce0ceb0380cf446a08a056dce4]
+class A--><rect fill="#1616B0" height="23.9688" id="A" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="17" y="8"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="17" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="38" y="24.1387">A</text><!--MD5=[69c451c751c414e37549b782190fef46]
+class B--><rect fill="#1616B0" height="23.9688" id="B" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="102" y="8"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="102" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="123" y="24.1387">B</text><!--MD5=[378b18254a1b2429f435e93f5e5cc50c]
+class C--><rect fill="#1616B0" height="23.9688" id="C" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="229" y="8"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="229" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="250" y="24.1387">C</text><!--MD5=[69b356fec5e4f53d7535011b6fc9d60b]
+class D--><rect fill="#1616B0" height="23.9688" id="D" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="335" y="8"/><rect fill="#1616B0" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="335" y="8"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="355.5" y="24.1387">D</text><!--MD5=[eb7362c74a3b2d1e105f05f83a44a725]
+class 1--><rect fill="#7B000E" height="23.9688" id="1" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="6" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="27" y="108.1387">1</text><!--MD5=[49ee3c525b3ef67192d456685a6b8001]
+class 2--><rect fill="#7B000E" height="23.9688" id="2" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="91" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="112" y="108.1387">2</text><!--MD5=[553e75b4d7d4ea28935e682d06bd7e3d]
+class 3--><rect fill="#7B000E" height="23.9688" id="3" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="92"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="261" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="282" y="108.1387">3</text><!--MD5=[af7907727909a164f50127c974702c4f]
+class 4--><rect fill="#7B000E" height="23.9688" id="4" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="346" y="92"/><rect fill="#7B000E" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="346" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="8" x="367" y="108.1387">4</text><!--MD5=[826d5a1bf3d673c814a6d61660166b85]
+class Z--><rect fill="#166800" height="23.9688" id="Z" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="92"/><rect fill="#166800" height="23.9688" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="176" y="92"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="196.5" y="108.1387">Z</text><!--MD5=[551293a44a2f98867518c53a15ca2bfb]
+link A to Z--><path d="M63.4434,32.0589 C92.3291,46.9559 143.699,73.4483 174.827,89.5021 " fill="none" id="A-&gt;Z" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="179.643,91.9857,173.477,84.3058,175.199,89.6942,169.8106,91.4162,179.643,91.9857" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[03505a4557c7bf5b09b3b1b8bde55127]
+link B to Z--><path d="M136.98,32.0589 C150,46.4865 172.835,71.7902 187.422,87.9541 " fill="none" id="B-&gt;Z" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="190.942,91.8544,187.8812,82.4932,187.5919,88.1427,181.9424,87.8534,190.942,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[53b9c41aff84276f2e5ae67c84e1b149]
+link C to Z--><path d="M246.852,32.0589 C237.606,46.3642 221.449,71.3621 210.992,87.5412 " fill="none" id="C-&gt;Z" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="208.204,91.8544,216.4485,86.4666,210.9179,87.655,209.7295,82.1244,208.204,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[05b401394361e35cb02021c9bdc00603]
+link D to Z--><path d="M338.557,32.0589 C309.671,46.9559 258.301,73.4483 227.173,89.5021 " fill="none" id="D-&gt;Z" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="222.357,91.9857,232.1894,91.4162,226.801,89.6942,228.523,84.3058,222.357,91.9857" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a77bef9dd7057329873dd5ab9adbfb82]
+link A to 1--><path d="M40.5165,32.0589 C38.6303,46.1197 35.3583,70.5106 33.1861,86.7039 " fill="none" id="A-&gt;1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="32.4951,91.8544,37.6563,83.4662,33.1599,86.8988,29.7273,82.4024,32.4951,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ee78f7fa0f546011a15eed99a19470bf]
+link B to 2--><path d="M125.516,32.0589 C123.63,46.1197 120.358,70.5106 118.186,86.7039 " fill="none" id="B-&gt;2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="117.495,91.8544,122.6565,83.4664,118.16,86.8988,114.7276,82.4023,117.495,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[2cd890d41cd5a757266d6e74c98775a6]
+link C to 3--><path d="M258.316,32.0589 C263.851,46.2419 273.487,70.9356 279.805,87.1244 " fill="none" id="C-&gt;3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="281.651,91.8544,282.1057,82.016,279.8334,87.1965,274.653,84.9242,281.651,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c6a69fcd154c03ae6d03909caae20245]
+link D to 4--><path d="M361.484,32.0589 C363.37,46.1197 366.642,70.5106 368.814,86.7039 " fill="none" id="D-&gt;4" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="369.505,91.8544,372.2724,82.4023,368.84,86.8988,364.3435,83.4664,369.505,91.8544" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[09ed9dd75551ab71cef36804cbdcbd4c]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+    FontName Arial
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    FontName Arial
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Rectangle
+
+hide footbox
+hide members
+hide circle
+
+
+Class A #1616B0
+Class B #1616B0
+Class C #1616B0
+Class D #1616B0
+
+Class 1 #7B000E
+Class 2 #7B000E
+Class 3 #7B000E
+Class 4 #7B000E
+
+Class Z #166800
+
+A - -> Z
+B - -> Z
+C - -> Z
+D - -> Z
+
+A - -> 1
+B - -> 2
+C - -> 3
+D - -> 4
+@enduml
+
+PlantUML version 1.2020.03beta11(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
