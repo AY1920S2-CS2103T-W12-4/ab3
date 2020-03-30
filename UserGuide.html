@@ -9,7 +9,11 @@
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#how-to-navigate-this-user-guide">1.1. How to navigate this User Guide</a></li>
+</ul>
+</li>
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#features">3. Features</a>
 <ul class="sectlevel2">
@@ -20,11 +24,8 @@
 <li><a href="#list-recipes-code-list-code">3.5. List Recipes — <code>list</code></a></li>
 <li><a href="#find-recipes-code-find-code">3.6. Find Recipes — <code>find</code></a></li>
 <li><a href="#count-recipes-code-count-code">3.7. Count Recipes — <code>count</code></a></li>
-<li><a href="#view-a-recipe-code-view-recipe-v1-3-code">3.8. View a Recipe — <code>view &lt;recipe&gt; (V1.3)</code></a></li>
-<li><a href="#tag-a-recipe-code-tag-index-tag_type-tag-v1-3-code">3.9. Tag a Recipe — <code>tag &lt;index&gt; &lt;tag_type&gt; &lt;tag&gt; (V1.3)</code></a></li>
-<li><a href="#search-v1-3">3.10. Search (V1.3)</a></li>
-<li><a href="#clearing-all-entries-code-reset-code">3.11. Clearing all entries - <code>reset</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program - <code>exit</code></a></li>
+<li><a href="#deleting-all-recipes-code-reset-code">3.8. Deleting all recipes - <code>reset</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.9. Exiting the program - <code>exit</code></a></li>
 </ul>
 </li>
 </ul>
@@ -34,7 +35,50 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>CookBuddy</strong> is for users who prefer a desktop application for managing recipes. More importantly, CookBuddy is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, CookBuddy can get your recipe management tasks done faster than traditional GUI apps. Interested? Proceed to [Quick Start](#quick-start) to get started. Enjoy!</p>
+<p>This user guide provides documentation on CookBuddy such as a quick start guide and an overview of its features.</p>
+</div>
+<div class="paragraph">
+<p><strong>CookBuddy</strong> is for users who prefer a desktop application for managing recipes.
+More importantly, <strong>CookBuddy</strong> is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
+</div>
+<div class="paragraph">
+<p>If you are a fast typist, <strong>CookBuddy</strong> can manage your recipes faster than applications that use a GUI.
+Interested?
+Proceed to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started!</p>
+</div>
+<div class="sect2">
+<h3 id="how-to-navigate-this-user-guide"><a class="link" href="#how-to-navigate-this-user-guide">1.1. How to navigate this User Guide</a></h3>
+<div class="paragraph">
+<p>Throughout this guide, you may come across a few symbols.
+They are used to draw your attention to important or note-worthy information.</p>
+</div>
+<div class="paragraph">
+<p>Here are the symbols used in this User Guide:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This block displays additional <strong>notes</strong> that contains extra information that you should take note of.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This block displays <strong>tips</strong> that you may find useful.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -48,46 +92,46 @@
 <div class="ulist">
 <ul>
 <li>
-<p>If not, download the latest Java Runtime Environment [here](<a href="https://www.java.com/en/download/" class="bare">https://www.java.com/en/download/</a>).</p>
+<p>If not, download and install the latest Java Runtime Environment from <a href="https://www.java.com/en/download/">here</a>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Download the latest CookBuddy.jar.</p>
+<p>Download the latest CookBuddy.jar from <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your CookBuddy program.</p>
+<p>Copy the file to the folder you want to use as the home folder for <strong>CookBuddy</strong>.</p>
 </li>
 <li>
-<p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
+<p>Double-click the executable to start the app. CookBuddy&#8217;s GUI should appear in a few seconds.</p>
 </li>
 <li>
-<p>Type the command in the command box and press Enter to execute it.
-e.g. typing help and pressing Enter will open the help window.</p>
+<p>Type your command in the command box and press Enter to execute it.
+e.g. typing <code>help</code> and pressing Enter will open the help window.</p>
 </li>
 <li>
 <p>Some example commands you can try:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>list : lists all recipes</p>
+<p><code>list</code> : lists all recipes in the recipe book</p>
 </li>
 <li>
-<p>new recipe n/Chicken Rice ing/&lt;Chicken, 1; &#8230;&#8203;&gt; ins/&lt;Mix Chicken with Rice&gt;:
-adds a recipe named Chicken Rice to the CookBuddy program.</p>
+<p><code>new recipe n/Ham Sandwich ing/bread, 2 slices; ham, 1 slice ins/put ham between bread; serve on plate</code>:
+adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 </li>
 <li>
-<p>delete 3 : deletes the 3rd recipe shown in the current list</p>
+<p><code>delete 3</code> : deletes the 3rd recipe shown in the current list</p>
 </li>
 <li>
-<p>exit : exits the app</p>
+<p><code>exit</code> : exits <strong>CookBuddy</strong></p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Refer to Section 3, [Features](#3.Features) for details of each command.</p>
+<p>Refer to <a href="#features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
 </li>
 </ol>
 </div>
@@ -102,48 +146,96 @@ adds a recipe named Chicken Rice to the CookBuddy program.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Words in angle brackets indicate that they are mandatory. <code>&lt;index&gt;</code> means that <code>index</code> is mandatory.</p>
+<p>Words in <code>UPPER_CASE</code> are the values of the parameters to be supplied by the user.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In <code>find n/RECIPE_NAME</code>, <code>RECIPE_NAME</code> is the value of the <code>n/</code> parameter supplied to the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Words in square brackets indicate that they are optional. <code>[tags/TAG]</code> means the <code>tags</code> parameter is optional.</p>
+<p>Words in square brackets indicate that they are optional. <code>[t/TAG]</code> means the <code>t</code> parameter (tag) is optional.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="help-code-help-v1-4-code"><a class="link" href="#help-code-help-v1-4-code">3.1. Help — <code>help (V1.4)</code></a></h3>
 <div class="paragraph">
-<p>Lists out all the commands accepted by CookBuddy
-If the command name is specified, it will specify how to use that command.</p>
+<p>Lists out all the commands accepted by <strong>CookBuddy</strong>.
+If a command name is specified, it will specify how to use that command.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="create-a-recipe-code-new-code"><a class="link" href="#create-a-recipe-code-new-code">3.2. Create a Recipe — <code>new</code></a></h3>
 <div class="paragraph">
-<p>Adds a new recipe to the CookBuddy program.</p>
+<p>Adds a new recipe to <strong>CookBuddy</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>new n/[name] ing/[ingredient, quantity; &#8230;&#8203;] ins/[instruction; &#8230;&#8203;] [cal/calories] [s/serving size] [r/rating] [tags/tag, &#8230;&#8203;]</code></p>
+<p>Format: <code>new n/NAME ing/INGREDIENT, QUANTITY [; &#8230;&#8203;] ins/INSTRUCTION [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
 </div>
 <div class="paragraph">
-<p>Example: <code>new n/Fried Rice ing/&lt;White rice, 1 cup; salt, 1gram&gt; ins/&lt;Fry the rice; add salt&gt;</code>
-Current options are:
-    <code>n</code> - name
-    <code>ing</code> - ingredients
-    <code>ins</code> - instructions
-    <code>cal</code> - calories
-    <code>s</code> - serving size
-    <code>r</code> - rating (scale of 0 to 5)
-    <code>d</code> - difficulty (scale of 0 to 5)
-    <code>tags</code> - tags</p>
+<p>Example: <code>new n/Fried Rice ing/White rice, 1 cup; salt, 1 gram ins/Fry the rice; add salt</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameters in <strong>bold</strong> indicate they are mandatory.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>CookBuddy</strong> accepts the following parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>n/</code> - <strong>name</strong></p>
+</li>
+<li>
+<p><code>ing/</code> - <strong>ingredients</strong></p>
+</li>
+<li>
+<p><code>ins/</code> - <strong>instructions</strong></p>
+</li>
+<li>
+<p><code>cal/</code> - calories (in kcal)</p>
+</li>
+<li>
+<p><code>s/</code> - serving size (any number greater than 0)</p>
+</li>
+<li>
+<p><code>r/</code> - rating (scale of 0 to 5)</p>
+</li>
+<li>
+<p><code>d/</code> - difficulty (scale of 0 to 5)</p>
+</li>
+<li>
+<p><code>t/</code> - tags (seperated by commas)</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="delete-a-recipe-code-delete-code"><a class="link" href="#delete-a-recipe-code-delete-code">3.3. Delete a Recipe — <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes a recipe from the CookBuddy program.</p>
+<p>Deletes a recipe from <strong>CookBuddy</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>delete &lt;index&gt;</code></p>
+<p>Format: <code>delete INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>delete 1</code></p>
+</div>
+<div class="paragraph">
+<p>Deletes the recipe at index 1 from CookBuddy&#8217;s recipe book.</p>
 </div>
 </div>
 <div class="sect2">
@@ -152,90 +244,88 @@ Current options are:
 <p>Modifies attributes of a recipe.</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>modify &lt;index&gt; [ing/ingredient, quantity; &#8230;&#8203;] [ins/instruction; &#8230;&#8203;] [cal/calories] [s/serving size] [r/rating] [tags/tag, &#8230;&#8203;]</code></p>
+<p>Format: <code>modify INDEX [ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]] [ins/INSTRUCTION [; &#8230;&#8203;]] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
 </div>
 <div class="paragraph">
-<p>Example: <code>modify 1 ing/3. eggs, 2</code>
-Replaces the ingredient at index 3 with 2 eggs.</p>
+<p>Example 1: <code>modify 1 ing/ham, 2 slices</code></p>
 </div>
 <div class="paragraph">
-<p>Example: <code>modify 2 ins/&lt;boil eggs; slice apples&gt;</code>
-Replaces the instructions in the recipe from 'boil eggs' to 'slice apples'</p>
+<p>Modifies the ingredients of the 1st recipe in the list to contain only 2 slices
+of ham.</p>
+</div>
+<div class="paragraph">
+<p>Example 2: <code>modify 2 ins/boil eggs; slice apples</code></p>
+</div>
+<div class="paragraph">
+<p>Modifies the instructions in the 2nd recipe to contain two instructions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>boil eggs</p>
+</li>
+<li>
+<p>slice apples</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="list-recipes-code-list-code"><a class="link" href="#list-recipes-code-list-code">3.5. List Recipes — <code>list</code></a></h3>
 <div class="paragraph">
-<p>Lists out all the recipes with their respective indexes in the CookBuddy program.</p>
+<p>Lists out all the recipes managed by <strong>CookBuddy</strong>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="find-recipes-code-find-code"><a class="link" href="#find-recipes-code-find-code">3.6. Find Recipes — <code>find</code></a></h3>
 <div class="paragraph">
-<p>Find recipes by one attribute.</p>
+<p>Find recipes with a particular parameter.</p>
 </div>
-<div class="paragraph">
-<p>Format: <code>find [n/names [&#8230;&#8203;]] [ing/ingredient [&#8230;&#8203;]] [ins/instruction [&#8230;&#8203;]]</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<strong>CookBuddy</strong> can find recipes from one parameter at a time.
+</td>
+</tr>
+</table>
 </div>
+<div class="sect3">
+<h4 id="find-by-name-code-find-n-name-code"><a class="link" href="#find-by-name-code-find-n-name-code">3.6.1. Find by name - <code>find [n/NAME [&#8230;&#8203;]]</code></a></h4>
 <div class="paragraph">
 <p>Example: <code>find n/sandwich</code>
-Finds recipes that contain the word <code>sandwich</code> in their name</p>
+Finds recipes that contain the word <code>sandwich</code> in their name.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="find-by-ingredient-code-find-ing-ingredient-code"><a class="link" href="#find-by-ingredient-code-find-ing-ingredient-code">3.6.2. Find by ingredient - <code>find [ing/INGREDIENT [&#8230;&#8203;]]</code></a></h4>
 <div class="paragraph">
 <p>Example: <code>find ing/bread</code>
-Finds recipes that contain the word <code>bread</code> in their ingredients</p>
+Finds recipes that contain the word <code>bread</code> in their ingredients.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="count-recipes-code-count-code"><a class="link" href="#count-recipes-code-count-code">3.7. Count Recipes — <code>count</code></a></h3>
 <div class="paragraph">
-<p>Displays the total number of recipes stored in the CookBuddy program.</p>
+<p>Displays the total number of recipes stored in <strong>CookBuddy</strong>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="view-a-recipe-code-view-recipe-v1-3-code"><a class="link" href="#view-a-recipe-code-view-recipe-v1-3-code">3.8. View a Recipe — <code>view &lt;recipe&gt; (V1.3)</code></a></h3>
+<h3 id="deleting-all-recipes-code-reset-code"><a class="link" href="#deleting-all-recipes-code-reset-code">3.8. Deleting all recipes - <code>reset</code></a></h3>
 <div class="paragraph">
-<p>Opens a recipe to view.</p>
+<p>Removes all recipes from <strong>CookBuddy</strong>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="tag-a-recipe-code-tag-index-tag_type-tag-v1-3-code"><a class="link" href="#tag-a-recipe-code-tag-index-tag_type-tag-v1-3-code">3.9. Tag a Recipe — <code>tag &lt;index&gt; &lt;tag_type&gt; &lt;tag&gt; (V1.3)</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.9. Exiting the program - <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Tags a recipe at the specified index with the tag of tag_type.</p>
-</div>
-<div class="paragraph">
-<p>Example: <code>tag 1 cuisine french</code> would assign the tag <code>cuisine: french</code> to the recipe at index 1.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="search-v1-3"><a class="link" href="#search-v1-3">3.10. Search (V1.3)</a></h3>
-<div class="sect3">
-<h4 id="search-keyword-code-search-keyword-keyword-code"><a class="link" href="#search-keyword-code-search-keyword-keyword-code">3.10.1. Search keyword — <code>search keyword &lt;keyword&gt;</code></a></h4>
-<div class="paragraph">
-<p>Search for recipes that contain <code>keyword</code> in their name</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="search-tag-code-search-tag-tag-type-tag-name-code"><a class="link" href="#search-tag-code-search-tag-tag-type-tag-name-code">3.10.2. Search tag — <code>search tag &lt;tag type&gt; &lt;tag name&gt;</code></a></h4>
-<div class="paragraph">
-<p>Search for recipes that are contain the tag <code>tag name</code> from the tag <code>tag type</code></p>
-</div>
-<div class="paragraph">
-<p>Example: <code>search tag meal dinner</code> would return all the recipes which have been tagged under the dinner meal tag.</p>
+<p>Exits <strong>CookBuddy</strong>.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-reset-code"><a class="link" href="#clearing-all-entries-code-reset-code">3.11. Clearing all entries - <code>reset</code></a></h3>
-<div class="paragraph">
-<p>Clears all entries from the <strong>CookBuddy</strong> application.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program - <code>exit</code></a></h3>
-<div class="paragraph">
-<p>Exits the program.</p>
-</div>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-30 07:14:05 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-30 07:29:33 UTC</div></div></div></body></html>
