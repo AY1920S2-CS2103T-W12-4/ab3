@@ -7,20 +7,21 @@
 </div>
 </div>
 <div id="toc" class="toc">
-<div id="toctitle"></div>
+<div id="toctitle">Table Of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#how-to-navigate-this-user-guide">1.1. How to navigate this User Guide</a></li>
+<li><a href="#product-information">1.1. Product Information</a></li>
+<li><a href="#how-to-navigate-this-user-guide">1.2. How to navigate this User Guide</a></li>
 </ul>
 </li>
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#help-code-help-v1-4-code">3.1. Help — <code>help (V1.4)</code></a></li>
-<li><a href="#create-a-recipe-code-new-code">3.2. Create a Recipe — <code>new</code></a></li>
-<li><a href="#delete-a-recipe-code-delete-code">3.3. Delete a Recipe — <code>delete</code></a></li>
-<li><a href="#modify-a-recipe-code-modify-code">3.4. Modify a Recipe — <code>modify</code></a></li>
+<li><a href="#help-code-help-code-v1-4">3.1. Help — <code>help</code> (V1.4)</a></li>
+<li><a href="#adding-a-recipe-code-new-code">3.2. Adding a recipe — <code>new</code></a></li>
+<li><a href="#deleting-a-recipe-code-delete-code">3.3. Deleting a recipe — <code>delete</code></a></li>
+<li><a href="#modifying-a-recipe-code-modify-code">3.4. Modifying a recipe — <code>modify</code></a></li>
 <li><a href="#list-recipes-code-list-code">3.5. List Recipes — <code>list</code></a></li>
 <li><a href="#find-recipes-code-find-code">3.6. Find Recipes — <code>find</code></a></li>
 <li><a href="#count-recipes-code-count-code">3.7. Count Recipes — <code>count</code></a></li>
@@ -47,7 +48,14 @@ Interested?
 Proceed to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started!</p>
 </div>
 <div class="sect2">
-<h3 id="how-to-navigate-this-user-guide"><a class="link" href="#how-to-navigate-this-user-guide">1.1. How to navigate this User Guide</a></h3>
+<h3 id="product-information"><a class="link" href="#product-information">1.1. Product Information</a></h3>
+<div class="paragraph">
+<p>Talk about problems with existing method of storing recipes.
+Introduce CookBuddy and why it is better.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-to-navigate-this-user-guide"><a class="link" href="#how-to-navigate-this-user-guide">1.2. How to navigate this User Guide</a></h3>
 <div class="paragraph">
 <p>Throughout this guide, you may come across a few symbols.
 They are used to draw your attention to important or note-worthy information.</p>
@@ -85,10 +93,13 @@ This block displays <strong>tips</strong> that you may find useful.
 <div class="sect1">
 <h2 id="quick-start"><a class="link" href="#quick-start">2. Quick Start</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The following steps will walk you through getting <strong>CookBuddy</strong> installed on your computer.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ensure you have Java 11 or later installed on your machine.</p>
+<p>Ensure you have Java 11 or later installed on your computer.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -101,21 +112,24 @@ This block displays <strong>tips</strong> that you may find useful.
 <p>Download the latest CookBuddy.jar from <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for <strong>CookBuddy</strong>.</p>
+<p>Copy the executable to the folder you want to use as the home folder for <strong>CookBuddy</strong>.</p>
 </li>
 <li>
-<p>Double-click the executable to start the app. CookBuddy&#8217;s GUI should appear in a few seconds.</p>
+<p>Double-click the executable to start <strong>CookBuddy</strong>. CookBuddy&#8217;s GUI should appear in a few seconds.</p>
+<div class="paragraph">
+<p>Show an image of CookBuddy here.</p>
+</div>
 </li>
 <li>
-<p>Type your command in the command box and press Enter to execute it.
-e.g. typing <code>help</code> and pressing Enter will open the help window.</p>
+<p>Type your command in the command box and press <kbd>Enter</kbd> to execute it.
+e.g. typing <code>help</code> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 <li>
 <p>Some example commands you can try:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code> : lists all recipes in the recipe book</p>
+<p><code>list</code> : lists all the recipes in the recipe book</p>
 </li>
 <li>
 <p><code>new recipe n/Ham Sandwich ing/bread, 2 slices; ham, 1 slice ins/put ham between bread; serve on plate</code>:
@@ -125,7 +139,7 @@ adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 <p><code>delete 3</code> : deletes the 3rd recipe shown in the current list</p>
 </li>
 <li>
-<p><code>exit</code> : exits <strong>CookBuddy</strong></p>
+<p><code>exit</code> : quits <strong>CookBuddy</strong></p>
 </li>
 </ul>
 </div>
@@ -141,43 +155,52 @@ adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 <h2 id="features"><a class="link" href="#features">3. Features</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>COMMAND FORMAT:</p>
+<p>The following sub-sections describes the features you can use in <strong>CookBuddy</strong>.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">COMMAND FORMAT</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the values of the parameters to be supplied by the user.</p>
+<p>Words in <code>UPPER_CASE</code> are values of the parameters to be supplied by the user.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In <code>find n/RECIPE_NAME</code>, <code>RECIPE_NAME</code> is the value of the <code>n/</code> parameter supplied to the <code>find</code> command.</p>
+<p>In <code>find n/RECIPE_NAME</code>, <code>RECIPE_NAME</code> refers to the value of the <code>n/</code> parameter supplied to the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Words in square brackets indicate that they are optional. <code>[t/TAG]</code> means the <code>t</code> parameter (tag) is optional.</p>
+<p>Words in square brackets indicate that they are optional. <code>[t/TAG]</code> means the <code>t/</code> parameter is optional.</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="help-code-help-v1-4-code"><a class="link" href="#help-code-help-v1-4-code">3.1. Help — <code>help (V1.4)</code></a></h3>
-<div class="paragraph">
-<p>Lists out all the commands accepted by <strong>CookBuddy</strong>.
-If a command name is specified, it will specify how to use that command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="create-a-recipe-code-new-code"><a class="link" href="#create-a-recipe-code-new-code">3.2. Create a Recipe — <code>new</code></a></h3>
+<h3 id="help-code-help-code-v1-4"><a class="link" href="#help-code-help-code-v1-4">3.1. Help — <code>help</code> (V1.4)</a></h3>
 <div class="paragraph">
-<p>Adds a new recipe to <strong>CookBuddy</strong>.</p>
+<p>You can list all the commands recognised by <strong>CookBuddy</strong> by typing <code>help</code> into the command box and pressing <kbd>Enter</kbd>.</p>
 </div>
 <div class="paragraph">
-<p>Format: <code>new n/NAME ing/INGREDIENT, QUANTITY [; &#8230;&#8203;] ins/INSTRUCTION [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
-[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
+<p>If you also specify a command, <strong>CookBuddy</strong> will show how to use that specific command.</p>
 </div>
 <div class="paragraph">
-<p>Example: <code>new n/Fried Rice ing/White rice, 1 cup; salt, 1 gram ins/Fry the rice; add salt</code></p>
+<p>Format: <code>help [COMMAND]</code></p>
+</div>
+<div class="paragraph">
+<p>Example 1: You can type <code>help</code> and <strong>CookBuddy</strong> will display the commands that it recognises.</p>
+</div>
+<div class="paragraph">
+<p>Example 2: You can type <code>help delete</code> and <strong>CookBuddy</strong> will display how to use the <code>delete</code> command.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-recipe-code-new-code"><a class="link" href="#adding-a-recipe-code-new-code">3.2. Adding a recipe — <code>new</code></a></h3>
+<div class="paragraph">
+<p>You can add a new recipe to <strong>CookBuddy</strong> using the <code>new</code> command.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -190,6 +213,10 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>Format: <code>new <strong>n/NAME</strong> <strong>ing/INGREDIENT, QUANTITY</strong> [; &#8230;&#8203;] <strong>ins/INSTRUCTION</strong> [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
 </div>
 <div class="paragraph">
 <p><strong>CookBuddy</strong> accepts the following parameters:</p>
@@ -218,47 +245,86 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 <p><code>d/</code> - difficulty (scale of 0 to 5)</p>
 </li>
 <li>
-<p><code>t/</code> - tags (seperated by commas)</p>
+<p><code>t/</code> - tags (separated by commas)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 1: You can enter <code>new n/Fried Rice ing/White rice, 1 cup; salt, 1 gram ins/Fry the rice; add salt</code> into <strong>CookBuddy</strong>, and a new recipe with the following attributes will be added:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: Fried Rice</p>
+</li>
+<li>
+<p>Ingredients:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1 cup of white rice</p>
+</li>
+<li>
+<p>1 gram of salt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Instructions:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fry the rice</p>
+</li>
+<li>
+<p>Add salt</p>
+</li>
+</ol>
+</div>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-a-recipe-code-delete-code"><a class="link" href="#delete-a-recipe-code-delete-code">3.3. Delete a Recipe — <code>delete</code></a></h3>
+<h3 id="deleting-a-recipe-code-delete-code"><a class="link" href="#deleting-a-recipe-code-delete-code">3.3. Deleting a recipe — <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes a recipe from <strong>CookBuddy</strong>.</p>
+<p>You can delete an existing recipe from <strong>CookBuddy</strong> using the <code>delete</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>delete INDEX</code></p>
 </div>
 <div class="paragraph">
-<p>Example: <code>delete 1</code></p>
-</div>
-<div class="paragraph">
-<p>Deletes the recipe at index 1 from CookBuddy&#8217;s recipe book.</p>
+<p>Example: You can type <code>delete 1</code> and <strong>CookBuddy</strong> will delete the recipe at index 1.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="modify-a-recipe-code-modify-code"><a class="link" href="#modify-a-recipe-code-modify-code">3.4. Modify a Recipe — <code>modify</code></a></h3>
+<h3 id="modifying-a-recipe-code-modify-code"><a class="link" href="#modifying-a-recipe-code-modify-code">3.4. Modifying a recipe — <code>modify</code></a></h3>
 <div class="paragraph">
-<p>Modifies attributes of a recipe.</p>
+<p>You can modify the attributes of an existing recipe in <strong>CookBuddy</strong> using the <code>modify</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>modify INDEX [ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]] [ins/INSTRUCTION [; &#8230;&#8203;]] [cal/CALORIES] [s/SERVING_SIZE]
 [r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
 </div>
+<div class="sect3">
+<h4 id="modifying-a-recipe-s-ingredients"><a class="link" href="#modifying-a-recipe-s-ingredients">3.4.1. Modifying a recipe&#8217;s ingredients</a></h4>
 <div class="paragraph">
-<p>Example 1: <code>modify 1 ing/ham, 2 slices</code></p>
+<p>You can modify a recipe&#8217;s ingredients by appending <code>ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]</code> to a <code>modify</code> command.</p>
 </div>
 <div class="paragraph">
-<p>Modifies the ingredients of the 1st recipe in the list to contain only 2 slices
-of ham.</p>
+<p>Example: You can type <code>modify 1 ing/ham, 2 slices</code> and <strong>CookBuddy</strong> will modify the ingredients of the 1st recipe in
+the list to contain only 2 slices of ham.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="modifying-a-recipe-s-instructions"><a class="link" href="#modifying-a-recipe-s-instructions">3.4.2. Modifying a recipe&#8217;s instructions</a></h4>
+<div class="paragraph">
+<p>You can modify a recipe&#8217;s instructions by appending <code>ins/INSTRUCTION [; &#8230;&#8203;]</code> to a <code>modify</code> command.</p>
 </div>
 <div class="paragraph">
-<p>Example 2: <code>modify 2 ins/boil eggs; slice apples</code></p>
-</div>
-<div class="paragraph">
-<p>Modifies the instructions in the 2nd recipe to contain two instructions:</p>
+<p>Example: You can type <code>modify 2 ins/boil eggs; slice apples</code> and <strong>CookBuddy</strong> will modify the instructions in the 2nd
+recipe to contain two instructions:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -269,6 +335,7 @@ of ham.</p>
 <p>slice apples</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -328,4 +395,4 @@ Finds recipes that contain the word <code>bread</code> in their ingredients.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-30 07:29:33 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-31 09:34:47 UTC</div></div></div></body></html>
