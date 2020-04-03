@@ -75,12 +75,19 @@ public class ParserUtil {
         requireNonNull(ingredientString);
 
         if (ingredientString.isBlank()) {
-            throw new ParseException("Recipes need to have ingredients; please enter some ingredients.");
+            throw new ParseException(Ingredient.MESSAGE_CONSTRAINTS);
         }
 
         try {
-            return new IngredientList(Stream.of(ingredientString.trim().split(";"))
-                    .map(String::trim).map(Ingredient::new).collect(Collectors.toList()));
+            List<Ingredient> ingredientList = Stream.of(ingredientString.trim().split(";"))
+                    .map(String::trim).map(Ingredient::new).collect(Collectors.toList());
+
+            if (ingredientList.isEmpty()) {
+                throw new ParseException(Ingredient.MESSAGE_CONSTRAINTS);
+            }
+            return new IngredientList(ingredientList);
+        } catch (IllegalArgumentException e) {
+            throw new ParseException("No ingredient name has been provided for one or more ingredients!");
         } catch (IndexOutOfBoundsException e) {
             throw new ParseException("No quantity has been provided for one or more ingredients!");
         }

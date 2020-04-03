@@ -13,9 +13,10 @@ import java.util.stream.Collectors;
  */
 public class Ingredient {
 
-    public static final String MESSAGE_CONSTRAINTS = "Each ingredient should be of the form:"
-            + "'ing/ing1, ing1qty; ing2, ing2qty;...'."
-            + "Spaces are optional. Valid ingredient quantities are specified in the User Guide. ";
+    public static final String MESSAGE_CONSTRAINTS = "Each ingredient should be of the form: "
+            + "'ing1, ing1qty'.\n"
+            + "Each ingredient-quantity pair must be separated by ';'. Spaces are optional.\n"
+            + "Example: 'ing/bread, 2 slices; ham, 3 slices'";
 
     public final String name;
     private String quantity;
