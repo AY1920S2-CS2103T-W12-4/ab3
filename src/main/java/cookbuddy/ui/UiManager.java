@@ -45,7 +45,9 @@ public class UiManager implements Ui {
             mainWindow = new MainWindow(primaryStage, logic);
             mainWindow.show(); //This should be called before creating other UI parts
             mainWindow.fillInnerParts();
-            viewedRecipe = logic.getFilteredRecipeList().get(0);
+            if (logic.getFilteredRecipeList().size() > 0) {
+                viewedRecipe = logic.getFilteredRecipeList().get(0);
+            }
 
         } catch (Throwable e) {
             logger.severe(StringUtil.getDetails(e));
