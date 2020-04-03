@@ -1,6 +1,7 @@
 package cookbuddy.logic.parser;
 
 import static cookbuddy.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
+import static cookbuddy.commons.core.Messages.MESSAGE_INVALID_RECIPE_DISPLAYED_INDEX;
 
 import cookbuddy.commons.core.index.Index;
 import cookbuddy.logic.commands.ViewCommand;
@@ -25,7 +26,7 @@ public class ViewCommandParser implements Parser<ViewCommand> {
             return new ViewCommand(index);
         } catch (ParseException pe) {
             throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewCommand.MESSAGE_USAGE), pe);
+                    String.format(MESSAGE_INVALID_RECIPE_DISPLAYED_INDEX, ViewCommand.MESSAGE_USAGE), pe);
         }
     }
 
