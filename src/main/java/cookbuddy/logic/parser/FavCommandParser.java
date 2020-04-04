@@ -14,6 +14,7 @@ public class FavCommandParser implements Parser<FavCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the FavCommand
      * and returns a FavCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform the expected format
      */
     public FavCommand parse(String args) throws ParseException {
@@ -21,8 +22,8 @@ public class FavCommandParser implements Parser<FavCommand> {
             Index index = ParserUtil.parseIndex(args);
             return new FavCommand(index);
         } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FavCommand.MESSAGE_USAGE), pe);
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, pe.getLocalizedMessage())
+                + "\nFor a command summary, type \"help modify\"");
         }
     }
 
