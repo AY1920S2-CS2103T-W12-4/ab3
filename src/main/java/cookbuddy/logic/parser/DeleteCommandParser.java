@@ -23,7 +23,7 @@ public class DeleteCommandParser implements Parser<DeleteCommand> {
             return new DeleteCommand(index);
         } catch (ParseException pe) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, pe.getLocalizedMessage())
-                + "\nFor a command summary, type \"help modify\"");
+                + "\nFor a command summary, type \"help delete\"");
         }
     }
 
