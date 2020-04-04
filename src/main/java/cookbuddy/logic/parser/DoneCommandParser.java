@@ -24,7 +24,7 @@ public class DoneCommandParser implements Parser<DoneCommand> {
             return new DoneCommand(index);
         } catch (ParseException pe) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, pe.getLocalizedMessage())
-                + "\nFor a command summary, type \"help modify\"");
+                + "\nFor a command summary, type \"help done\"");
         }
     }
 
