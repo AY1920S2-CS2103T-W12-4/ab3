@@ -22,8 +22,8 @@ public class UnFavCommandParser implements Parser<UnFavCommand> {
             Index index = ParserUtil.parseIndex(args);
             return new UnFavCommand(index);
         } catch (ParseException pe) {
-            throw new ParseException(
-                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, UnFavCommand.MESSAGE_USAGE), pe);
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, pe.getLocalizedMessage())
+                    + "\nFor a command summary, type \"help unfav\"");
         }
     }
 
