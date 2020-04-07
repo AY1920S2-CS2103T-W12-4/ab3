@@ -10,7 +10,9 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>CookBuddy - This is a desktop recipe managing application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.</p>
+<p><strong>CookBuddy</strong> is a desktop recipe manager for students staying in university accommodation who enjoy cooking.
+They can interact with it through a Command Line Interface (CLI), and it has a Graphical User Interface (GUI) created with JavaFX.
+It is written in Java, and has about 10 kLoC.</p>
 </div>
 </div>
 </div>
@@ -20,20 +22,17 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>the ability to undo/redo previous commands</strong></p>
+<p><strong>Major enhancement</strong>: major enhancement 1</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.</p>
+<p>What it does: explain major enhancement 1</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+<p>Justification: justify major enhancement 1</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
-</li>
-<li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p>Highlights: Highlight 1</p>
 </li>
 </ul>
 </div>
@@ -118,9 +117,6 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -136,6 +132,134 @@
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="adding-a-recipe-code-new-code"><a class="link" href="#adding-a-recipe-code-new-code">Adding a recipe — <code>new</code></a></h3>
+<div class="paragraph">
+<p>You can add a new recipe to <strong>CookBuddy</strong> using the <code>new</code> command.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Parameters in <strong>bold</strong> indicate they are mandatory.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Format: <code>new <strong>n/NAME</strong> <strong>ing/INGREDIENT, QUANTITY</strong> [; &#8230;&#8203;] <strong>ins/INSTRUCTION</strong> [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>CookBuddy</strong> accepts the following parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>n/</code> - <strong>name</strong></p>
+</li>
+<li>
+<p><code>ing/</code> - <strong>ingredients</strong></p>
+</li>
+<li>
+<p><code>ins/</code> - <strong>instructions</strong></p>
+</li>
+<li>
+<p><code>cal/</code> - calories (in kcal)</p>
+</li>
+<li>
+<p><code>s/</code> - serving size (any integer greater than 0)</p>
+</li>
+<li>
+<p><code>r/</code> - rating (any integer between 0-5, inclusive)</p>
+</li>
+<li>
+<p><code>d/</code> - difficulty (any integer between 0-5, inclusive)</p>
+</li>
+<li>
+<p><code>t/</code> - tags (separated by commas)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 1: You can enter <code>new n/Fried Rice ing/White rice, 1 cup; salt, 1 gram ins/Fry the rice; add salt</code> into <strong>CookBuddy</strong>, and a new recipe with the following attributes will be added:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Name: Fried Rice</p>
+</li>
+<li>
+<p>Ingredients:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>1 cup of white rice</p>
+</li>
+<li>
+<p>1 gram of salt</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Instructions:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fry the rice</p>
+</li>
+<li>
+<p>Add salt</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-recipes-code-find-code"><a class="link" href="#finding-recipes-code-find-code">Finding recipes — <code>find</code></a></h3>
+<div class="paragraph">
+<p>You can find an existing recipe with a particular parameter from <strong>CookBuddy</strong> using the <code>find</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<strong>CookBuddy</strong> can find recipes from one parameter at a time.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="finding-a-recipe-by-name"><a class="link" href="#finding-a-recipe-by-name">Finding a recipe by name</a></h4>
+<div class="paragraph">
+<p>You can find a recipe by its name by appending <code>n/NAME [&#8230;&#8203;]</code> to a <code>find</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Example: You can type <code>find n/sandwich</code> and <strong>CookBuddy</strong> will display recipes that contain the word <code>sandwich</code> in their name.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-a-recipe-by-ingredient"><a class="link" href="#finding-a-recipe-by-ingredient">Finding a recipe by ingredient</a></h4>
+<div class="paragraph">
+<p>You can find a recipe by its ingredient by appending <code>[ing/INGREDIENT [&#8230;&#8203;]]</code> to a <code>find</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Example: You can type <code>find ing/bread</code> and <strong>CookBuddy</strong> will display the recipes containing bread as an ingredient to you.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -151,229 +275,6 @@
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">[Proposed] Undo/Redo feature</a></h3>
-<div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">Proposed Implementation</a></h4>
-<div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedRecipeBook</code>.
-It extends <code>RecipeBook</code> with an undo/redo history, stored internally as an <code>RecipeBookStateList</code> and <code>currentStatePointer</code>.
-Additionally, it implements the following operations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>VersionedRecipeBook#commit()</code>&#8201;&#8212;&#8201;Saves the current recipe book state in its history.</p>
-</li>
-<li>
-<p><code>VersionedRecipeBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous recipe book state from its history.</p>
-</li>
-<li>
-<p><code>VersionedRecipeBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone recipe book state from its history.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitRecipeBook()</code>, <code>Model#undoRecipeBook()</code> and <code>Model#redoRecipeBook()</code> respectively.</p>
-</div>
-<div class="paragraph">
-<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
-</div>
-<div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedRecipeBook</code> will be initialized with the initial recipe book state, and the <code>currentStatePointer</code> pointing to that single recipe book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState0.svg" alt="UndoRedoState0">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th recipe in the recipe book. The <code>delete</code> command calls <code>Model#commitRecipeBook()</code>, causing the modified state of the recipe book after the <code>delete 5</code> command executes to be saved in the <code>recipeBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted recipe book state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState1.svg" alt="UndoRedoState1">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 3. The user executes <code>new n/Chicken Rice &#8230;&#8203;</code> to add a new recipe. The <code>new</code> command also calls
-<code>Model#commitRecipeBook()</code>, causing another modified Recipe book state to be saved into the <code>RecipeBookStateList</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState2.svg" alt="UndoRedoState2">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If a command fails its execution, it will not call <code>Model#commitRecipeBook()</code>, so the recipe book state will not be saved into the <code>recipeBookStateList</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Step 4. The user now decides that adding the recipe was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoRecipeBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous recipe book state, and restores the recipe book to that state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState3.svg" alt="UndoRedoState3">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial recipe book state, then there are no previous Recipe book states to restore. The <code>undo</code> command uses <code>Model#canUndoRecipeBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following sequence diagram shows how the undo operation works:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoSequenceDiagram.svg" alt="UndoSequenceDiagram">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoRecipeBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the recipe book to that state.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.size() - 1</code>, pointing to the latest recipe book state, then there are no undone Recipe book states to restore. The <code>redo</code> command uses <code>Model#canRedoRecipeBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the Recipe book, such as <code>list</code>, will usually not call <code>Model#commitRecipeBook()</code>, <code>Model#undoRecipeBook()</code> or <code>Model#redoRecipeBook()</code>. Thus, the <code>recipeBookStateList</code> remains unchanged.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState4.svg" alt="UndoRedoState4">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 6. The user executes <code>reset</code>, which calls <code>Model#commitRecipeBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>recipeBookStateList</code>, all recipe book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>new n/Chicken Rice &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/UndoRedoState5.svg" alt="UndoRedoState5">
-</div>
-</div>
-<div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/CommitActivityDiagram.svg" alt="CommitActivityDiagram">
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire recipe book.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement.</p>
-</li>
-<li>
-<p>Cons: May have performance issues in terms of memory usage.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the recipe being deleted).</p>
-</li>
-<li>
-<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="aspect-data-structure-to-support-the-undo-redo-commands"><a class="link" href="#aspect-data-structure-to-support-the-undo-redo-commands">Aspect: Data structure to support the undo/redo commands</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of recipe book states.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
-</li>
-<li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedRecipeBook</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
-</li>
-<li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
-<div class="sectionbody">
 <hr>
-<div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 13:35:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 14:14:17 UTC</div></div></div></body></html>
