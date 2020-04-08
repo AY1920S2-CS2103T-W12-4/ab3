@@ -19,17 +19,19 @@
 <li><a href="#features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#help-code-help-code">3.1. Help — <code>help</code></a></li>
-<li><a href="#view-a-recipe-code-view-code">3.2. View a Recipe — <code>view</code></a></li>
-<li><a href="#deleting-a-recipe-code-delete-code">3.3. Deleting a recipe — <code>delete</code></a></li>
-<li><a href="#modifying-a-recipe-code-modify-code">3.4. Modifying a recipe — <code>modify</code></a></li>
-<li><a href="#favouriting-a-recipe-code-fav-code">3.5. Favouriting a recipe — <code>fav</code></a></li>
-<li><a href="#un-favouriting-a-recipe-code-unfav-code">3.6. Un-Favouriting a recipe — <code>unfav</code></a></li>
-<li><a href="#marking-a-recipe-as-done-code-done-code">3.7. Marking a recipe as done — <code>done</code></a></li>
-<li><a href="#un-marking-a-recipe-as-done-code-undo-code">3.8. Un-Marking a recipe as done — <code>undo</code></a></li>
-<li><a href="#listing-recipes-code-list-code">3.9. Listing recipes — <code>list</code></a></li>
-<li><a href="#counting-recipes-code-count-code">3.10. Counting recipes — <code>count</code></a></li>
-<li><a href="#deleting-all-recipes-code-reset-code">3.11. Deleting all recipes - <code>reset</code></a></li>
-<li><a href="#exiting-strong-cookbuddy-strong-code-exit-code">3.12. Exiting <strong>CookBuddy</strong> - <code>exit</code></a></li>
+<li><a href="#adding-a-recipe-code-new-code">3.2. Adding a recipe — <code>new</code></a></li>
+<li><a href="#viewing-a-recipe-code-view-code">3.3. Viewing a Recipe — <code>view</code></a></li>
+<li><a href="#deleting-a-recipe-code-delete-code">3.4. Deleting a recipe — <code>delete</code></a></li>
+<li><a href="#modifying-a-recipe-code-modify-code">3.5. Modifying a recipe — <code>modify</code></a></li>
+<li><a href="#favouriting-a-recipe-code-fav-code">3.6. Favouriting a recipe — <code>fav</code></a></li>
+<li><a href="#un-favouriting-a-recipe-code-unfav-code">3.7. Un-Favouriting a recipe — <code>unfav</code></a></li>
+<li><a href="#marking-a-recipe-as-done-code-done-code">3.8. Marking a recipe as done — <code>done</code></a></li>
+<li><a href="#un-marking-a-recipe-as-done-code-undo-code">3.9. Un-Marking a recipe as done — <code>undo</code></a></li>
+<li><a href="#listing-recipes-code-list-code">3.10. Listing recipes — <code>list</code></a></li>
+<li><a href="#finding-recipes-code-find-code">3.11. Finding recipes — <code>find</code></a></li>
+<li><a href="#counting-recipes-code-count-code">3.12. Counting recipes — <code>count</code></a></li>
+<li><a href="#deleting-all-recipes-code-reset-code">3.13. Deleting all recipes - <code>reset</code></a></li>
+<li><a href="#exiting-strong-cookbuddy-strong-code-exit-code">3.14. Exiting <strong>CookBuddy</strong> - <code>exit</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -99,7 +101,7 @@ This block displays <strong>tips</strong> that you may find useful.
 <h2 id="quick-start"><a class="link" href="#quick-start">2. Quick Start</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following steps will walk you through getting <strong>CookBuddy</strong> installed on your computer.</p>
+<p>The following steps will walk you through installing <strong>CookBuddy</strong> on your computer.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -136,17 +138,17 @@ e.g. typing <code>help</code> and pressing <kbd>Enter</kbd> will open the help w
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code> : lists all the recipes in the recipe book</p>
+<p><code>list</code> : lists all the recipes stored in CookBuddy.</p>
 </li>
 <li>
 <p><code>new n/Ham Sandwich ing/bread, 2 slices; ham, 1 slice ins/put ham between bread; serve on plate</code>:
 adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 </li>
 <li>
-<p><code>delete 3</code> : deletes the 3rd recipe shown in the current list</p>
+<p><code>delete 3</code> : deletes the 3rd recipe shown in the current list from CookBuddy.</p>
 </li>
 <li>
-<p><code>exit</code> : quits <strong>CookBuddy</strong></p>
+<p><code>exit</code> : quits <strong>CookBuddy</strong>.</p>
 </li>
 </ul>
 </div>
@@ -192,7 +194,7 @@ adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 <p>You can list all the commands recognised by <strong>CookBuddy</strong> by typing <code>help</code> into the command box and pressing <kbd>Enter</kbd>.</p>
 </div>
 <div class="paragraph">
-<p>If you also specify a command, <strong>CookBuddy</strong> will show how to use that specific command.</p>
+<p>If you also specify a command after typing help, <strong>CookBuddy</strong> will show how to use that specific command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>help [COMMAND]</code></p>
@@ -201,12 +203,13 @@ adds a recipe named "Ham Sandwich" to <strong>CookBuddy</strong>.</p>
 <p>Example 1: You can type <code>help</code> and <strong>CookBuddy</strong> will display the commands that it recognises.</p>
 </div>
 <div class="paragraph">
-<p>Example 2: You can type <code>help delete</code> and <strong>CookBuddy</strong> will display how to use the <code>delete</code> command.</p>
+<p>Example 2: You can type <code>help delete</code> and <strong>CookBuddy</strong> will show you how to use the <code>delete</code> command.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-recipe-code-new-code"><a class="link" href="#adding-a-recipe-code-new-code">3.2. Adding a recipe — <code>new</code></a></h3>
 <div class="paragraph">
-<p>tag::AddRecipe[]
-=== Adding a recipe — <code>new</code>
-You can add a new recipe to <strong>CookBuddy</strong> using the <code>new</code> command.</p>
+<p>You can add a new recipe to <strong>CookBuddy</strong> using the <code>new</code> command.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -291,24 +294,21 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>end::AddRecipe[]</p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="view-a-recipe-code-view-code"><a class="link" href="#view-a-recipe-code-view-code">3.2. View a Recipe — <code>view</code></a></h3>
+<h3 id="viewing-a-recipe-code-view-code"><a class="link" href="#viewing-a-recipe-code-view-code">3.3. Viewing a Recipe — <code>view</code></a></h3>
 <div class="paragraph">
-<p>You can view a given recipe on <strong>CookBuddy</strong> using the <code>view</code> command.</p>
+<p>You can view a recipe at the given index on <strong>CookBuddy</strong> using the <code>view</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>view INDEX</code></p>
 </div>
 <div class="paragraph">
-<p>Example: You can type <code>view 2</code> and <strong>CookBuddy</strong> will display the recipe at index 2 on the main page.</p>
+<p>Example: You can type <code>view 2</code> and <strong>CookBuddy</strong> will display you the recipe at index 2 on the main page.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-recipe-code-delete-code"><a class="link" href="#deleting-a-recipe-code-delete-code">3.3. Deleting a recipe — <code>delete</code></a></h3>
+<h3 id="deleting-a-recipe-code-delete-code"><a class="link" href="#deleting-a-recipe-code-delete-code">3.4. Deleting a recipe — <code>delete</code></a></h3>
 <div class="paragraph">
 <p>You can delete an existing recipe from <strong>CookBuddy</strong> using the <code>delete</code> command.</p>
 </div>
@@ -320,7 +320,7 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 </div>
 </div>
 <div class="sect2">
-<h3 id="modifying-a-recipe-code-modify-code"><a class="link" href="#modifying-a-recipe-code-modify-code">3.4. Modifying a recipe — <code>modify</code></a></h3>
+<h3 id="modifying-a-recipe-code-modify-code"><a class="link" href="#modifying-a-recipe-code-modify-code">3.5. Modifying a recipe — <code>modify</code></a></h3>
 <div class="paragraph">
 <p>You can modify the attributes of an existing recipe in <strong>CookBuddy</strong> using the <code>modify</code> command.</p>
 </div>
@@ -329,17 +329,17 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 [r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p>
 </div>
 <div class="sect3">
-<h4 id="modifying-a-recipe-s-ingredients"><a class="link" href="#modifying-a-recipe-s-ingredients">3.4.1. Modifying a recipe&#8217;s ingredients</a></h4>
+<h4 id="modifying-a-recipe-s-ingredients"><a class="link" href="#modifying-a-recipe-s-ingredients">3.5.1. Modifying a recipe&#8217;s ingredients</a></h4>
 <div class="paragraph">
 <p>You can modify a recipe&#8217;s ingredients by appending <code>ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]</code> to a <code>modify</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Example: You can type <code>modify 1 ing/ham, 2 slices</code> and <strong>CookBuddy</strong> will modify the ingredients of the 1st recipe in
-the list to contain only 2 slices of ham.</p>
+the list to contain 2 slices of ham.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="modifying-a-recipe-s-instructions"><a class="link" href="#modifying-a-recipe-s-instructions">3.4.2. Modifying a recipe&#8217;s instructions</a></h4>
+<h4 id="modifying-a-recipe-s-instructions"><a class="link" href="#modifying-a-recipe-s-instructions">3.5.2. Modifying a recipe&#8217;s instructions</a></h4>
 <div class="paragraph">
 <p>You can modify a recipe&#8217;s instructions by appending <code>ins/INSTRUCTION [; &#8230;&#8203;]</code> to a <code>modify</code> command.</p>
 </div>
@@ -359,10 +359,10 @@ recipe to contain two instructions:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="modifying-a-recipe-s-tags"><a class="link" href="#modifying-a-recipe-s-tags">3.4.3. Modifying a recipe&#8217;s tags</a></h4>
+<h4 id="modifying-a-recipe-s-tags"><a class="link" href="#modifying-a-recipe-s-tags">3.5.3. Modifying a recipe&#8217;s tags</a></h4>
 <div class="paragraph">
 <p>You can modify a recipe&#8217;s tags by appending <code>[t/TAG [, &#8230;&#8203;]]</code> to a <code>modify</code> command.
-If you want to remove all tags from the recipe, append <code>t/</code> instead.</p>
+If you want to remove all the tags from the recipe, append <code>t/</code> instead.</p>
 </div>
 <div class="paragraph">
 <p>Example 1: You can type <code>modify 1 t/lunch, dinner</code> and <strong>CookBuddy</strong> will update the tags in the 1st recipe to contain
@@ -379,12 +379,12 @@ two tags:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Example 2: You can type <code>modify 1 t/</code> and <strong>CookBuddy</strong> will remove all existing tags from the 1st recipe.</p>
+<p>Example 2: You can type <code>modify 1 t/</code> and <strong>CookBuddy</strong> will remove all the existing tags from the 1st recipe.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="favouriting-a-recipe-code-fav-code"><a class="link" href="#favouriting-a-recipe-code-fav-code">3.5. Favouriting a recipe — <code>fav</code></a></h3>
+<h3 id="favouriting-a-recipe-code-fav-code"><a class="link" href="#favouriting-a-recipe-code-fav-code">3.6. Favouriting a recipe — <code>fav</code></a></h3>
 <div class="paragraph">
 <p>You can favourite an existing recipe from <strong>CookBuddy</strong> using the <code>fav</code> command.</p>
 </div>
@@ -401,16 +401,16 @@ two tags:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-A favourited recipe is indicated by a red filled heart
+A favourited recipe is indicated by a red filled heart.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="un-favouriting-a-recipe-code-unfav-code"><a class="link" href="#un-favouriting-a-recipe-code-unfav-code">3.6. Un-Favouriting a recipe — <code>unfav</code></a></h3>
+<h3 id="un-favouriting-a-recipe-code-unfav-code"><a class="link" href="#un-favouriting-a-recipe-code-unfav-code">3.7. Un-Favouriting a recipe — <code>unfav</code></a></h3>
 <div class="paragraph">
-<p>You can un-favourite an existing recipe from <strong>CookBuddy</strong> using the <code>fav</code> command.</p>
+<p>You can un-favourite an existing recipe from <strong>CookBuddy</strong> using the <code>unfav</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>unfav INDEX</code></p>
@@ -426,7 +426,7 @@ A favourited recipe is indicated by a red filled heart
 </td>
 <td class="content">
 Recipes are not favourited by default.
-This command is only useful if you wish to un-favourite recipe that is already favourited.
+This command is only useful if you wish to un-favourite a recipe that is already favourited.
 A non-favourited recipe is indicated by a heart with a read outline and no fill.
 </td>
 </tr>
@@ -434,10 +434,10 @@ A non-favourited recipe is indicated by a heart with a read outline and no fill.
 </div>
 </div>
 <div class="sect2">
-<h3 id="marking-a-recipe-as-done-code-done-code"><a class="link" href="#marking-a-recipe-as-done-code-done-code">3.7. Marking a recipe as done — <code>done</code></a></h3>
+<h3 id="marking-a-recipe-as-done-code-done-code"><a class="link" href="#marking-a-recipe-as-done-code-done-code">3.8. Marking a recipe as done — <code>done</code></a></h3>
 <div class="paragraph">
-<p>You can mark an existing recipe from <strong>CookBuddy</strong> as being done using the <code>done</code> command. This indicates that it has
-been attempted.</p>
+<p>You can mark an existing recipe from <strong>CookBuddy</strong> as being done using the <code>done</code> command. This indicates that the recipe
+has been attempted.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>done INDEX</code></p>
@@ -448,7 +448,7 @@ been attempted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="un-marking-a-recipe-as-done-code-undo-code"><a class="link" href="#un-marking-a-recipe-as-done-code-undo-code">3.8. Un-Marking a recipe as done — <code>undo</code></a></h3>
+<h3 id="un-marking-a-recipe-as-done-code-undo-code"><a class="link" href="#un-marking-a-recipe-as-done-code-undo-code">3.9. Un-Marking a recipe as done — <code>undo</code></a></h3>
 <div class="paragraph">
 <p>You can un-mark an existing recipe from <strong>CookBuddy</strong> as being done, using the`undo` command. This indicates that the
 recipe has not been attempted.</p>
@@ -475,17 +475,22 @@ This command is only useful if you wish to un-mark recipe that is already marked
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-recipes-code-list-code"><a class="link" href="#listing-recipes-code-list-code">3.9. Listing recipes — <code>list</code></a></h3>
+<h3 id="listing-recipes-code-list-code"><a class="link" href="#listing-recipes-code-list-code">3.10. Listing recipes — <code>list</code></a></h3>
 <div class="paragraph">
-<p>You can list all the existing recipes from <strong>CookBuddy</strong> using the <code>list</code> command.</p>
+<p>You can list all the existing recipes from <strong>CookBuddy</strong> using the <code>list</code> command. This command also helps to refresh
+the current recipe list.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>list</code></p>
 </div>
 <div class="paragraph">
-<p>tag::find[]
-=== Finding recipes — <code>find</code>
-You can find an existing recipe with a particular parameter from <strong>CookBuddy</strong> using the <code>find</code> command.</p>
+<p>Example: You can type <code>list</code> and <strong>CookBuddy</strong> will display all the recipes that are currently stored in it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-recipes-code-find-code"><a class="link" href="#finding-recipes-code-find-code">3.11. Finding recipes — <code>find</code></a></h3>
+<div class="paragraph">
+<p>You can find an existing recipe with a particular parameter from <strong>CookBuddy</strong> using the <code>find</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code></p>
@@ -503,7 +508,7 @@ You can find an existing recipe with a particular parameter from <strong>CookBud
 </table>
 </div>
 <div class="sect3">
-<h4 id="finding-a-recipe-by-name"><a class="link" href="#finding-a-recipe-by-name">3.9.1. Finding a recipe by name</a></h4>
+<h4 id="finding-a-recipe-by-name"><a class="link" href="#finding-a-recipe-by-name">3.11.1. Finding a recipe by name</a></h4>
 <div class="paragraph">
 <p>You can find a recipe by its name by appending <code>n/NAME [&#8230;&#8203;]</code> to a <code>find</code> command.</p>
 </div>
@@ -512,43 +517,49 @@ You can find an existing recipe with a particular parameter from <strong>CookBud
 </div>
 </div>
 <div class="sect3">
-<h4 id="finding-a-recipe-by-ingredient"><a class="link" href="#finding-a-recipe-by-ingredient">3.9.2. Finding a recipe by ingredient</a></h4>
+<h4 id="finding-a-recipe-by-ingredient"><a class="link" href="#finding-a-recipe-by-ingredient">3.11.2. Finding a recipe by ingredient</a></h4>
 <div class="paragraph">
 <p>You can find a recipe by its ingredient by appending <code>[ing/INGREDIENT [&#8230;&#8203;]]</code> to a <code>find</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Example: You can type <code>find ing/bread</code> and <strong>CookBuddy</strong> will display the recipes containing bread as an ingredient to you.</p>
 </div>
-<div class="paragraph">
-<p>end::find[]</p>
-</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="counting-recipes-code-count-code"><a class="link" href="#counting-recipes-code-count-code">3.10. Counting recipes — <code>count</code></a></h3>
+<h3 id="counting-recipes-code-count-code"><a class="link" href="#counting-recipes-code-count-code">3.12. Counting recipes — <code>count</code></a></h3>
 <div class="paragraph">
 <p>You can count the total number of recipes stored in <strong>CookBuddy</strong> using the <code>count</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>count</code></p>
 </div>
+<div class="paragraph">
+<p>Example: You can type <code>count</code> and <strong>CookBuddy</strong> will display the total number of recipes stored in it.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="deleting-all-recipes-code-reset-code"><a class="link" href="#deleting-all-recipes-code-reset-code">3.11. Deleting all recipes - <code>reset</code></a></h3>
+<h3 id="deleting-all-recipes-code-reset-code"><a class="link" href="#deleting-all-recipes-code-reset-code">3.13. Deleting all recipes - <code>reset</code></a></h3>
 <div class="paragraph">
-<p>You can remove all recipes stored in <strong>CookBuddy</strong> using the `reset`command.</p>
+<p>You can remove all the recipes stored in <strong>CookBuddy</strong> using the `reset`command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>reset</code></p>
 </div>
+<div class="paragraph">
+<p>Example: You can type <code>reset</code> and <strong>CookBuddy</strong> will clear all the recipes stored in it.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="exiting-strong-cookbuddy-strong-code-exit-code"><a class="link" href="#exiting-strong-cookbuddy-strong-code-exit-code">3.12. Exiting <strong>CookBuddy</strong> - <code>exit</code></a></h3>
+<h3 id="exiting-strong-cookbuddy-strong-code-exit-code"><a class="link" href="#exiting-strong-cookbuddy-strong-code-exit-code">3.14. Exiting <strong>CookBuddy</strong> - <code>exit</code></a></h3>
 <div class="paragraph">
 <p>You can exit from <strong>CookBuddy</strong> using the <code>exit</code> command.</p>
 </div>
 <div class="paragraph">
 <p>Format: <code>exit</code></p>
+</div>
+<div class="paragraph">
+<p>Example: You can type <code>exit</code> and <strong>CookBuddy</strong> will terminate.</p>
 </div>
 </div>
 </div>
@@ -577,19 +588,19 @@ A: Download the jar in the other computer and copy the entire data folder over t
 <p><code>count</code>: <strong>Counts the total number of recipes stored in CookBuddy</strong></p>
 </li>
 <li>
-<p><code>delete <strong>INDEX</strong></code>: <strong>Deletes the recipe at given <code>INDEX</code></strong></p>
+<p><code>delete <strong>INDEX</strong></code>: <strong>Deletes the recipe at the given <code>INDEX</code></strong></p>
 </li>
 <li>
-<p><code>done <strong>INDEX</strong></code>: <strong>Marks the recipe at given <code>INDEX</code> as <code>done</code></strong></p>
+<p><code>done <strong>INDEX</strong></code>: <strong>Marks the recipe at the given <code>INDEX</code> as <code>done</code></strong></p>
 </li>
 <li>
 <p><code>exit</code>: <strong>Exits CookBuddy</strong></p>
 </li>
 <li>
-<p><code>fav <strong>INDEX</strong></code>: <strong>Favourites the recipe at given <code>INDEX</code></strong></p>
+<p><code>fav <strong>INDEX</strong></code>: <strong>Favourites the recipe at the given <code>INDEX</code></strong></p>
 </li>
 <li>
-<p><code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code>: <strong>Finds an existing recipe with the given parameter from CookBuddy</strong></p>
+<p><code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code>: <strong>Finds an existing recipe with the given parameter(s) from CookBuddy</strong></p>
 </li>
 <li>
 <p><code>help</code>: <strong>Lists all the commands recognised by CookBuddy</strong></p>
@@ -612,15 +623,15 @@ A: Download the jar in the other computer and copy the entire data folder over t
 <p><code>reset</code>: <strong>Removes all the recipes from CookBuddy</strong></p>
 </li>
 <li>
-<p><code>undo <strong>INDEX</strong></code>: <strong>Undoes the recipe at given <code>INDEX</code></strong></p>
+<p><code>undo <strong>INDEX</strong></code>: <strong>Undoes the recipe at the given <code>INDEX</code></strong></p>
 </li>
 <li>
-<p><code>unfav <strong>INDEX</strong></code>: <strong>UnFavourites the recipe at given <code>INDEX</code></strong></p>
+<p><code>unfav <strong>INDEX</strong></code>: <strong>Un-favourites the recipe at the given <code>INDEX</code></strong></p>
 </li>
 <li>
-<p><code>view <strong>INDEX</strong></code>: <strong>Displays the recipe at given <code>INDEX</code> on CookBuddy</strong></p>
+<p><code>view <strong>INDEX</strong></code>: <strong>Displays the recipe at the given <code>INDEX</code> on CookBuddy</strong></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 15:36:38 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 13:20:00 UTC</div></div></div></body></html>
