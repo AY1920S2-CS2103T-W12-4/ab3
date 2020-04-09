@@ -7,13 +7,13 @@ import cookbuddy.logic.commands.ScaleCommand;
 import cookbuddy.logic.parser.exceptions.ParseException;
 
 /**
- * Parses input arguments and creates a new DuplicateCommand object
+ * Parses input arguments and creates a new ScaleCommand object
  */
 public class ScaleCommandParser implements Parser<ScaleCommand> {
 
     /**
-     * Parses the given {@code String} of arguments in the context of the DuplicateCommand
-     * and returns a DuplicateCommand object for execution.
+     * Parses the given {@code String} of arguments in the context of the ScaleCommand
+     * and returns a ScaleCommand object for execution.
      *
      * @throws ParseException if the user input does not conform the expected format
      */

@@ -16,15 +16,15 @@ import cookbuddy.model.recipe.attribute.Name;
 import cookbuddy.model.recipe.attribute.Quantity;
 
 /**
- * Adds a duplicate of the recipe identified using it's displayed index from the recipe book.
+ * Adds a scaled copy of the recipe identified using it's displayed index by the size given.
  */
 public class ScaleCommand extends Command {
 
     public static final String COMMAND_WORD = "scale";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": A duplicate of the recipe identified by the index number is added to the recipe list.\n"
-            + "Parameters: INDEX (must be a positive integer)\n"
+            + ": A scaled copy of the recipe identified by the index number is added to the recipe list.\n"
+            + "Parameters: INDEX (must be a positive integer), SIZE (of scaling)\n"
             + "Example: " + COMMAND_WORD + " 1" + " 2";
 
     public static final String MESSAGE_SCALE_RECIPE_SUCCESS = "Recipe scaled: %1$s %1$s";
