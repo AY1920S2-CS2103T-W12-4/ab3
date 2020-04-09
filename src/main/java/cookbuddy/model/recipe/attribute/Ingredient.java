@@ -61,6 +61,26 @@ public class Ingredient {
         // new Quantity(quantityString);
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public Unit getUnit() {
+        String unit = this.quantity.split(" ")[1];
+        return new Unit(unit);
+    }
+
+    public float getValue() {
+        Float value = Float.parseFloat(this.quantity.split(" ")[0]);
+        return value;
+    }
+
+    public Quantity getQuantity2() {
+        float value = this.getValue();
+        Unit unit = this.getUnit();
+        return new Quantity(value, unit);
+    }
+
     @Override
     public String toString() {
         return this.name + ", " + this.quantity;

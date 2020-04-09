@@ -286,4 +286,13 @@ public class ParserUtil {
 
         return tagSet;
     }
+
+    /**
+     * Parses {@code String size} into a {@code int}.
+     */
+    public static int parseSize (String size) {
+        requireNonNull(size);
+        return Integer.parseInt(size);
+    }
+
 }

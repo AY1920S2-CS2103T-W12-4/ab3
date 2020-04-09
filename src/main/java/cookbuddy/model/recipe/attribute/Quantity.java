@@ -30,7 +30,26 @@ public class Quantity {
         checkArgument(isValidQuantity(quantityString), MESSAGE_CONSTRAINTS);
 
         this.value = Float.parseFloat(VALID_NUMERIC_PATTERN.matcher(quantityString).group(1));
-        this.unit = new Unit();
+        //this.unit = new Unit();
+    }
+
+    public Quantity(float value, Unit unit) {
+        this.value = value;
+        this.unit = unit;
+    }
+
+    /**
+     * Returns a scaled quantity according to the given size.
+     * @param size size of scaling.
+     * @return scaled quantity.
+     */
+    public Quantity scaledQuantity(int size) {
+        float scaledValue = (float) size * this.value;
+        return new Quantity(scaledValue, this.unit);
+    }
+
+    public String stringRep() {
+        return this.value + ", " + this.unit;
     }
 
     /**
