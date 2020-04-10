@@ -21,7 +21,7 @@ public class RandomCommand extends Command {
     public static final String COMMAND_WORD = "random";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-        + ": Views a random recipe \n"
+        + ": Displays a random recipe \n"
         + "Example: " + COMMAND_WORD;
 
 

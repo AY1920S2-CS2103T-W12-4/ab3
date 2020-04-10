@@ -20,7 +20,7 @@ public class ViewCommand extends Command {
     public static final String COMMAND_WORD = "view";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-        + ": Views the recipe identified by the index number used in the displayed recipe list.\n"
+        + ": Views the recipe identified by the index number shown in the displayed recipe list.\n"
         + "Parameters: INDEX (must be a positive integer)\n"
         + "Example: " + COMMAND_WORD + " 1";
 

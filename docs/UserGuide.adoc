@@ -58,7 +58,9 @@ The following steps will walk you through installing *CookBuddy* on your compute
 
 . Double-click the executable to start *CookBuddy*. CookBuddy's GUI should appear in a few seconds.
 +
-image::Ui.png[width="800"]
+[caption=]
+.Home page of *CookBuddy*
+image::Ui.png[width="790"]
 +
 . Type your command in the command box and press kbd:[Enter] to execute it.
    e.g. typing `help` and pressing kbd:[Enter] will open the help window.
@@ -76,6 +78,30 @@ image::Ui.png[width="800"]
 
 . Refer to <<Features>> for details of each command.
 
+== Understanding CookBuddy’s GUI
+
+This section teaches you on how to utilise *CookBuddy’s* GUI.
+
+[caption=]
+.The different components in CookBuddy's GUI
+image::user-guide/ui-components.png[width="600"]
+
+There are four major components that you will be using in *CookBuddy*, which will be referenced in the upcoming sections.
+
+. *Menu bar* +
+The menu bar contains clickable buttons that you can use to execute certain commands, such as help, `help` to open the help window.
+
+. *Command Line* +
+_The command line is where you enter all your commands in *CookBuddy*._ +
++
+After entering your command, you can execute it by simply using the kbd:[Enter] key on your keyboard!
+
+. *Result Display* +
+The result display displays feedback from *CookBuddy* to you after you have executed a command in *CookBuddy*.
+
+. *Status bar* +
+The status bar shows you the path where your data is saved when you are using the features of *CookBuddy*.
+
 ==  Features
 
 The following sub-sections describes the features you can use in *CookBuddy*.
@@ -88,6 +114,7 @@ The following sub-sections describes the features you can use in *CookBuddy*.
 * Words in square brackets indicate that they are optional. `[t/TAG]` means the `t/` parameter is optional.
 ****
 
+
 ===  Help — `help`
 You can list all the commands recognised by *CookBuddy* by typing `help` into the command box and pressing kbd:[Enter].
 
@@ -95,9 +122,23 @@ If you also specify a command after typing help, *CookBuddy* will show how to us
 
 Format: `help [COMMAND]`
 
+TIP: You can also execute this command by using the kbd:[F1] key on your keyboard.
+
 Example 1: You can type `help` and *CookBuddy* will display the commands that it recognises.
 
+*Expected Outcome*
+
+A separate help window will appear.
+
+image::user-guide/helpwindow.png[width="600"]
+
 Example 2: You can type `help delete` and *CookBuddy* will show you how to use the `delete` command.
+
+*Expected Outcome*
+
+A separate help window will appear with details on the delete command's usage.
+
+image::user-guide/helpwindowdelete.png[width="600"]
 
 
 === Adding a recipe — `new`
@@ -131,13 +172,38 @@ Example 1: You can enter `new n/Fried Rice ing/White rice, 1 cup; salt, 1 gram i
         . Fry the rice
         . Add salt
 
+*Expected Outcome*
+
+[caption=]
+.1) If you would like to add a recipe to *CookBuddy*, enter the `new` command including the attributes of the recipe
+image::user-guide/new-before.png[width="300"]
+
+[caption=]
+.2) After using the `new` command, the new recipe will be added to *CookBuddy* and will be displayed.
+image::user-guide/new-after.png[width="600"]
+
 
 === Viewing a Recipe — `view`
 You can view a recipe at the given index on *CookBuddy* using the `view` command.
 
 Format: `view INDEX`
 
+[NOTE]
+====
+* `INDEX` must be a positive integer value, within the range of the number of recipes in your CookBuddy.
+====
+
 Example: You can type `view 2` and *CookBuddy* will display you the recipe at index 2 on the main page.
+
+*Expected Outcome*
+
+[caption=]
+.1) You want to view the second recipe in *CookBuddy*
+image::user-guide/view-before.png[width="600"]
+
+[caption=]
+.2) After using the `view` command, the recipe will be displayed to you
+image::user-guide/view-after.png[width="300"]
 
 
 === Deleting a recipe — `delete`
@@ -147,6 +213,29 @@ Format: `delete INDEX`
 
 Example: You can type `delete 1` and *CookBuddy* will delete the recipe at index 1.
 
+[NOTE]
+====
+* `INDEX` must be a positive integer value, within the range of the number of recipes in *CookBuddy*.
+====
+
+*Expected Outcome*
+
+[caption=]
+.1) You want to delete the first recipe in *CookBuddy*
+image::user-guide/delete-before.png[width="600"]
+
+[caption=]
+.2) After using the `delete` command, the recipe will be removed from *CookBuddy*
+image::user-guide/delete-after.png[width="300"]
+
+[IMPORTANT]
+====
+This command cannot be undone. Once a `recipe` has been deleted, its respective data entry in the save file will be permanently deleted.
++
+
+//See <<data-storage>> for more details.
+//
+====
 
 === Modifying a recipe — `modify`
 You can modify the attributes of an existing recipe in *CookBuddy* using the `modify` command.
@@ -154,11 +243,27 @@ You can modify the attributes of an existing recipe in *CookBuddy* using the `mo
 Format: `modify INDEX [ing/INGREDIENT, QUANTITY [; ...]] [ins/INSTRUCTION [; ...]] [cal/CALORIES] [s/SERVING_SIZE]
 [r/RATING] [t/TAG [, ...]]`
 
+[NOTE]
+====
+* `INDEX` must be a positive integer value, within range of the number of recipes in *CookBuddy*.
+====
+
+
 ==== Modifying a recipe's ingredients
 You can modify a recipe's ingredients by appending `ing/INGREDIENT, QUANTITY [; ...]` to a `modify` command.
 
 Example: You can type `modify 1 ing/ham, 2 slices` and *CookBuddy* will modify the ingredients of the 1st recipe in
 the list to contain 2 slices of ham.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to modify the `recipe ingredients` in your CookBuddy
+//image::user-guide/modifyingredient-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe ingredients` will be changed accordingly
+//image::user-guide/modifyingredient-after.png[width="600"]
 
 
 ==== Modifying a recipe's instructions
@@ -170,18 +275,48 @@ recipe to contain two instructions:
     * boil eggs
     * slice apples
 
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
+
 
 ==== Modifying a recipe's tags
 You can modify a recipe's tags by appending `[t/TAG [, ...]]` to a `modify` command.
 If you want to remove all the tags from the recipe, append `t/` instead.
 
-Example 1: You can type `modify 1 t/lunch, dinner` and *CookBuddy* will update the tags in the 1st recipe to contain
+Example 1: You can type `modify 2 t/lunch, dinner` and *CookBuddy* will update the tags in the 1st recipe to contain
 two tags:
 
     * lunch
     * dinner
 
+*Expected Outcome*
+
+[caption=]
+.1) You want to modify a recipe's tags in *CookBuddy*
+image::user-guide/modifytag-before.png[width="600"]
+
+[caption=]
+.2) After using the `modify` command, the recipe's tags will be changed accordingly
+image::user-guide/modifytag-after.png[width="600"]
+
 Example 2: You can type `modify 1 t/` and *CookBuddy* will remove all the existing tags from the 1st recipe.
+
+*Expected Outcome*
+
+[caption=]
+.1) You want to remove all the tags from a recipe in *CookBuddy*
+image::user-guide/modifyremovetag-before.png[width="600"]
+
+[caption=]
+.2) After using the `modify` command, the recipe's tags will be removed accordingly
+image::user-guide/modifyremovetag-after.png[width="600"]
 
 
 === Favouriting a recipe — `fav`
@@ -189,9 +324,23 @@ You can favourite an existing recipe from *CookBuddy* using the `fav` command.
 
 Format: `fav INDEX`
 
-Example: You can type `fav 1` and *CookBuddy* will favourite the recipe at index 1.
 [NOTE]
-A favourited recipe is indicated by a red filled heart.
+====
+* `INDEX` must be a positive integer value, within range of the number of recipes in *CookBuddy*.
+* A favourited recipe is indicated by a red filled heart.
+====
+
+Example: You can type `fav 1` and *CookBuddy* will favourite the recipe at index 1.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 
 
 === Un-Favouriting a recipe — `unfav`
@@ -199,11 +348,23 @@ You can un-favourite an existing recipe from *CookBuddy* using the `unfav` comma
 
 Format: `unfav INDEX`
 
-Example: You can type `unfav 1` and *CookBuddy* will un-favourite the recipe at index 1.
 [NOTE]
-Recipes are not favourited by default.
-This command is only useful if you wish to un-favourite a recipe that is already favourited.
+====
+* `INDEX` must be a positive integer value, within range of the number of recipes in your CookBuddy.
+* Recipes are not favourited by default.
+* This command is only useful if you wish to un-favourite a recipe that is already favourited.
 A non-favourited recipe is indicated by a heart with a read outline and no fill.
+====
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 
 
 === Marking a recipe as done — `done`
@@ -212,8 +373,23 @@ has been attempted.
 
 Format: `done INDEX`
 
+[NOTE]
+====
+* `INDEX` must be a positive integer value, within the range of the number of recipes in your CookBuddy.
+====
+
 Example: You can type `done 1` and *CookBuddy* will mark the recipe at index 1 as being done, indicating that it has
 been attempted.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 
 
 === Un-Marking a recipe as done — `undo`
@@ -222,11 +398,25 @@ recipe has not been attempted.
 
 Format: `undo INDEX`
 
+[NOTE]
+====
+* `INDEX` must be a positive integer value, within range of the number of recipes in your CookBuddy.
+* Recipes are marked as not attempted by default.
+This command is only useful if you wish to un-mark recipe that is already marked as done.
+====
+
 Example: You can type `undo 1` and *CookBuddy* will un-mark the recipe at index 1 as done, indicating that it has not
 been attempted.
-[NOTE]
-Recipes are marked as not attempted by default.
-This command is only useful if you wish to un-mark recipe that is already marked as done.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 
 
 === Listing recipes — `list`
@@ -237,6 +427,16 @@ Format: `list`
 
 Example: You can type `list` and *CookBuddy* will display all the recipes that are currently stored in it.
 
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
+
 
 === Finding recipes — `find`
 You can find an existing recipe with a particular parameter from *CookBuddy* using the `find` command.
@@ -244,18 +444,40 @@ You can find an existing recipe with a particular parameter from *CookBuddy* usi
 Format: `find [n/NAME [...]] [ing/INGREDIENT [...]]`
 
 [NOTE]
-*CookBuddy* can find recipes from one parameter at a time.
+====
+* *CookBuddy* can find recipes from one parameter at a time.
+====
 
 ==== Finding a recipe by name
 You can find a recipe by its name by appending `n/NAME [...]` to a `find` command.
 
 Example: You can type `find n/sandwich` and *CookBuddy* will display recipes that contain the word `sandwich` in their name.
 
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
+
 
 ==== Finding a recipe by ingredient
 You can find a recipe by its ingredient by appending `[ing/INGREDIENT [...]]` to a `find` command.
 
 Example: You can type `find ing/bread` and *CookBuddy* will display the recipes containing bread as an ingredient to you.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 
 
 === Counting recipes — `count`
@@ -264,6 +486,16 @@ You can count the total number of recipes stored in *CookBuddy* using the `count
 Format: `count`
 
 Example: You can type `count` and *CookBuddy* will display the total number of recipes stored in it.
+
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
 //
 //
 // === Duplicate Recipe — `dup <index>`
@@ -278,6 +510,16 @@ Format: `reset`
 
 Example: You can type `reset` and *CookBuddy* will clear all the recipes stored in it.
 
+//*Expected Outcome*
+//
+//[caption=]
+//.1) You want to favourite the first `recipe` in your CookBuddy
+//image::user-guide/fav-before.png[width="600"]
+//
+//[caption=]
+//.2) After using the `modify` command, the `recipe tags` will be changed accordingly
+//image::user-guide/modifytag-after.png[width="600"]
+
 
 === Exiting *CookBuddy* - `exit`
 You can exit from *CookBuddy* using the `exit` command.
@@ -291,8 +533,23 @@ Example: You can type `exit` and *CookBuddy* will terminate.
 
 The following section answers some questions you might have regarding *CookBuddy*.
 
-Q: How do I transfer my data to another Computer?
-A: Download the jar in the other computer and copy the entire data folder over to the same directory. Run CookBuddy and update the preferences.json if necessary.
+*Q: Is *CookBuddy* safe to use?* +
+*A*: Yes, *CookBuddy* is safe to use. We regularly review our code to ensure that there are no vulnerabilities for hackers to exploit.
+
+*Q: Is *CookBuddy* secure?* +
+*A*: Yes, *CookBuddy* is secure. Your data is stored only on your computer. No data is sent to any online server.
+
+*Q: Do I need an Internet connection to use *CookBuddy*?* +
+*A*: No. *CookBuddy* works 100% offline.
+
+*Q: Will *CookBuddy* receive updates?* +
+*A*: Yes. We are a dedicated team of software developers who are constantly collating feedback and running tests on the app. We are also working towards delivering additional features for our users.
+
+*Q: Can I use *CookBuddy* on a mobile device?* +
+*A*: *CookBuddy* is designed to work best on a desktop/ laptop computer. We are currently working on releasing *CookBuddy* on mobile platforms.
+
+*Q: How do I transfer my data to another computer?
+*A*: Download the jar in the other computer and copy the entire data folder over to the same directory. Run *CookBuddy* and update the preferences.json if necessary.
 
 == Command Summary
 
@@ -329,3 +586,15 @@ The following section gives a quick summary of all the commands you can use in C
 * `unfav *INDEX*`: *Un-favourites the recipe at the given `INDEX`*
 
 * `view *INDEX*`: *Displays the recipe at the given `INDEX` on CookBuddy*
+
+== Glossary
+This section will cover and explain certain technical/CookBuddy specific terms used in this user guide.
+
+[cols="1, 3", options="header"]
+|==============
+|Term                           | Explanation
+|Command Line Interface (CLI)   | A user interface where a user is required to use the program by entering commands into a text box.
+|Graphical User Interface (GUI) | A user interface that includes visuals such as buttons, icons, images, menus etc.
+|Metadata                       | Details associated with  an entity. For example, metadata of a `recipe` include the `name`, `ingredients`, `instructions` etc.
+
+|==============

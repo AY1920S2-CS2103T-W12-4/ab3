@@ -22,17 +22,17 @@ public class NewCommand extends Command {
 
     public static final String COMMAND_WORD = "new";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a recipe to the recipe book. "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a recipe to the recipe book.\n"
         + "Parameters: "
         + PREFIX_NAME + "NAME "
         + PREFIX_INGREDIENTS + "INGREDIENT 1, QUANTITY; INGREDIENT 2, QUANTITY... "
-        + PREFIX_INSTRUCTIONS + "INSTRUCTION 1, INSTRUCTION 2 "
+        + PREFIX_INSTRUCTIONS + "INSTRUCTION 1, INSTRUCTION 2... "
         + "[" + PREFIX_IMAGEFILEPATH + "PATH] "
         + "[" + PREFIX_CALORIE + "CALORIES] "
         + "[" + PREFIX_SERVING + "SERVING SIZE] "
         + "[" + PREFIX_RATING + "RATING] "
         + "[" + PREFIX_DIFFICULTY + "DIFFICULTY] "
-        + "[" + PREFIX_TAG + "TAG]...\n"
+        + "[" + PREFIX_TAG + "TAG [TAG]...]\n"
         + "Example: " + COMMAND_WORD + " "
         + PREFIX_NAME + "Ham Sandwich "
         + PREFIX_INGREDIENTS + "bread, 2 slices; ham, 1 slice "

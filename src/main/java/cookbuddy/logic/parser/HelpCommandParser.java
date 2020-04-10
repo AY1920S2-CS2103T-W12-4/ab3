@@ -5,6 +5,7 @@ import static cookbuddy.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 import cookbuddy.logic.commands.CountCommand;
 import cookbuddy.logic.commands.DeleteCommand;
 import cookbuddy.logic.commands.DoneCommand;
+import cookbuddy.logic.commands.DuplicateCommand;
 import cookbuddy.logic.commands.ExitCommand;
 import cookbuddy.logic.commands.FavCommand;
 import cookbuddy.logic.commands.FindCommand;
@@ -45,6 +46,9 @@ public class HelpCommandParser implements Parser<HelpCommand> {
 
             case ModifyCommand.COMMAND_WORD:
                 return new HelpCommand(preface + ModifyCommand.MESSAGE_USAGE + ending);
+
+            case DuplicateCommand.COMMAND_WORD:
+                return new HelpCommand(preface + DuplicateCommand.MESSAGE_USAGE + ending);
 
             case DeleteCommand.COMMAND_WORD:
                 return new HelpCommand(preface + DeleteCommand.MESSAGE_USAGE + ending);

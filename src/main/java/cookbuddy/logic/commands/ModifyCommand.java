@@ -43,22 +43,21 @@ public class ModifyCommand extends Command {
     public static final String COMMAND_WORD = "modify";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the details of the recipe identified "
-
         + "by the index number used in the displayed recipe list. "
         + "Existing values will be overwritten by the input values.\n"
         + "Parameters: INDEX (must be a positive integer) "
         + "[" + PREFIX_NAME + "NAME] "
-        + "[" + PREFIX_INGREDIENTS + "INGREDIENTS] "
-        + "[" + PREFIX_INSTRUCTIONS + "INSTRUCTIONS] "
+        + "[" + PREFIX_INGREDIENTS + "INGREDIENT 1, QUANTITY; INGREDIENT 2, QUANTITY] "
+        + "[" + PREFIX_INSTRUCTIONS + "INSTRUCTION 1; INSTRUCTION 2] "
         + "[" + PREFIX_IMAGEFILEPATH + "PATH] "
         + "[" + PREFIX_CALORIE + "CALORIES] "
         + "[" + PREFIX_SERVING + "SERVING] "
         + "[" + PREFIX_RATING + "RATING] "
         + "[" + PREFIX_DIFFICULTY + "DIFFICULTY] "
-        + "[" + PREFIX_TAG + "TAG]...\n"
+        + "[" + PREFIX_TAG + "TAG [TAG]...]\n"
         + "Example: " + COMMAND_WORD + " 1 "
-        + PREFIX_INGREDIENTS + "toast,2;eggs,1 "
-        + PREFIX_INSTRUCTIONS + "put egg on toast;put bread on egg";
+        + PREFIX_INGREDIENTS + "toast, 2; eggs, 1 "
+        + PREFIX_INSTRUCTIONS + "put egg on toast; put bread on egg";
 
     public static final String MESSAGE_EDIT_RECIPE_SUCCESS = "Edited Recipe: %1$s";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";

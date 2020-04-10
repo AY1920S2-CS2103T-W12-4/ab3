@@ -12,7 +12,7 @@ public class ListCommand extends Command {
 
     public static final String COMMAND_WORD = "list";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Lists out all recipes in CookBuddy.\n"
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Displays all the recipes in CookBuddy.\n"
             + "Example: " + COMMAND_WORD;
 
     public static final String MESSAGE_SUCCESS = "Listed all available recipes.";

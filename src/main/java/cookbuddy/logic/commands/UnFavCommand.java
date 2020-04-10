@@ -18,7 +18,7 @@ public class UnFavCommand extends Command {
     public static final String COMMAND_WORD = "unfav";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Un-favourites the recipe identified by the index number used in the displayed recipe list.\n"
+            + ": Un-favourites the recipe identified by the index number shown in the displayed recipe list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
 

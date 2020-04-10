@@ -16,6 +16,20 @@ endif::[]
 
 By: `AY1920S2-CS2103T-W12-4`      Since: `Feb 2020`      Licence: `MIT`
 
+== Introduction
+
+This document is a Developer Guide written for developers who wish to contribute to or extend our CookBuddy project.
+It is technical, and explains the inner workings of CookBuddy and how the different components of our
+application work together.
+
+====
+*Reading this Developer Guide*
+
+TIP: This icon denotes useful tips to note of during development.
+
+NOTE: This icon denotes important details to take note of during development.
+====
+
 == Setting up
 
 Refer to the guide <<SettingUp#, here>>.
@@ -286,13 +300,19 @@ Refer to the guide <<DevOps#, here>>.
 *Target user profile*:
 
 * cooks for oneself on a nearly daily basis, and hence:
-   - needs to manage multiple recipes
-   - needs to have a clean interface to view and read dishes
-   _ experiments with dishes
+   - needs to manage many recipes
+   - needs to have a clean interface to view and read recipes
+   - experiments with dishes
+
+* prefers desktop apps over other types
+
+* can type fast
+
+* prefers typing over mouse input
 
 * is reasonably familiar with the command-line
 
-* requires a straightforward means to catalogue and codify dishes and meals without using spreadsheets
+* requires a straightforward means to catalogue and codify recipes and meals without using spreadsheets
 
 *Value proposition*:
 
@@ -301,7 +321,7 @@ Refer to the guide <<DevOps#, here>>.
 * Present a unified interface for recipe management.
 
 * When managing recipes:
-   - allow easier and faster retrieval with attributes like tags, time, difficulty, etc;
+   - allow easier and faster retrieval with attributes like tags, time, difficulty, rating etc;
 
    - present a straightforward interface to edit, duplicate and combine recipes into meals
 
@@ -465,7 +485,7 @@ Use case ends.
 .  Should work on any <<mainstream-os,mainstream OS>> as long as it has Java `11` or above installed.
 .  Should be able to hold up to 1000 recipes without noticeable sluggishness in performance for typical usage.
 .  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
-
+.  Commands should be <<one-shot-c,one-shot>> commands as opposed to <<multi-level-c, multi-level commands>>.
 _{More to be added}_
 
 [appendix]
@@ -473,6 +493,12 @@ _{More to be added}_
 
 [[mainstream-os]] Mainstream OS::
 Windows, macOS, Linux, UNIX
+
+[[one-shot-c]] One-shot Commands::
+Commands that are executed using only a single line of user input.
+
+[[multi-level-c]] Multi-level Commands::
+Commands that require multiple lines of user input for execution.
 
 [[recipe]] Recipe::
 A list of ingredients followed by a list of instructions, detailing how to prepare a dish.
