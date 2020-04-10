@@ -1,9 +1,12 @@
 package cookbuddy.logic.commands;
 
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_CALORIE;
+import static cookbuddy.logic.parser.CliSyntax.PREFIX_DIFFICULTY;
+import static cookbuddy.logic.parser.CliSyntax.PREFIX_IMAGEFILEPATH;
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_INGREDIENTS;
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_INSTRUCTIONS;
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_NAME;
+import static cookbuddy.logic.parser.CliSyntax.PREFIX_RATING;
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_SERVING;
 import static cookbuddy.logic.parser.CliSyntax.PREFIX_TAG;
 import static cookbuddy.testutil.Assert.assertThrows;
@@ -20,8 +23,6 @@ import cookbuddy.model.Model;
 import cookbuddy.model.RecipeBook;
 import cookbuddy.model.recipe.NameContainsKeywordsPredicate;
 import cookbuddy.model.recipe.Recipe;
-import cookbuddy.model.recipe.attribute.Ingredient;
-import cookbuddy.model.recipe.attribute.Instruction;
 import cookbuddy.testutil.EditRecipeDescriptorBuilder;
 
 /**
@@ -34,16 +35,12 @@ public class CommandTestUtil {
 
     public static final String VALID_NAME_HAM_SANDWICH = "Ham Sandwich";
     public static final String VALID_NAME_EGGS_ON_TOAST = "Eggs on Toast";
-    public static final List<Ingredient> VALID_INGREDIENTS_HAM_SANDWICH = List.of(new Ingredient("bread, 2 slices"),
-            new Ingredient("ham, 1 slice"), new Ingredient(("cheese spread, 10g")));
-    public static final List<Ingredient> VALID_INGREDIENTS_EGGS_ON_TOAST = List.of(new Ingredient("bread, 2 slices"),
-            new Ingredient("egg, 1"), new Ingredient("pepper, 1/16 tsp"));
-    public static final List<Instruction> VALID_INSTRUCTIONS_HAM_SANDWICH = List.of(
-            new Instruction("spread cheese on both slices of bread"),
-            new Instruction("put the slice of ham between bread"), new Instruction("serve on plate"));
-    public static final List<Instruction> VALID_INSTRUCTIONS_EGGS_ON_TOAST = List.of(
-            new Instruction("toast the 2 slices of bread"), new Instruction("scramble the eggs with the pepper"),
-            new Instruction("put egg between bread"), new Instruction("serve on plate"));
+    public static final String VALID_INGREDIENTS_HAM_SANDWICH = "bread, 2 slices; ham, 1 slice";
+    public static final String VALID_INGREDIENTS_EGGS_ON_TOAST = "bread, 2 slices; egg, 1";
+    public static final String VALID_INSTRUCTIONS_HAM_SANDWICH = "spread cheese on both slides of bread; put slice of "
+            + "ham between bread; serve on plate";
+    public static final String VALID_INSTRUCTIONS_EGGS_ON_TOAST = "toast the 2 slices of bread; scramble the eggs; "
+            + "put eggs on toasted bread; serve";
     public static final String VALID_CALORIE_HAM_SANDWICH = "300";
     public static final String VALID_CALORIE_EGGS_ON_TOAST = "200";
     public static final int VALID_SERVING_HAM_SANDWICH = 2;
@@ -55,6 +52,9 @@ public class CommandTestUtil {
     public static final String VALID_TAG_BREAKFAST = "breakfast";
     public static final String VALID_TAG_LUNCH = "lunch";
     public static final String VALID_TAG_DINNER = "dinner";
+    public static final String PLACEHOLDER_IMAGE_PATH_STRING = "/images/recipe_placeholder.jpg";
+    public static final String VALID_PHOTOGRAPH_EGGS_ON_TOAST = PLACEHOLDER_IMAGE_PATH_STRING;
+    public static final String VALID_PHOTOGRAPH_HAM_SANDWICH = PLACEHOLDER_IMAGE_PATH_STRING;
 
     public static final int VALID_HOUR_HAM_SANDWICH = 2;
     public static final int VALID_MIN_HAM_SANDWICH = 0;
@@ -77,8 +77,16 @@ public class CommandTestUtil {
             " " + PREFIX_INSTRUCTIONS + VALID_INSTRUCTIONS_EGGS_ON_TOAST;
     public static final String CALORIE_DESC_HAM_SANDWICH = " " + PREFIX_CALORIE + VALID_CALORIE_HAM_SANDWICH;
     public static final String CALORIE_DESC_EGGS_ON_TOAST = " " + PREFIX_CALORIE + VALID_CALORIE_EGGS_ON_TOAST;
-    public static final String SERVING_DESC_HAM_SANDWICH = " " + PREFIX_SERVING + VALID_CALORIE_HAM_SANDWICH;
-    public static final String SERVING_DESC_EGGS_ON_TOAST = " " + PREFIX_SERVING + VALID_CALORIE_EGGS_ON_TOAST;
+    public static final String SERVING_DESC_HAM_SANDWICH = " " + PREFIX_SERVING + VALID_SERVING_HAM_SANDWICH;
+    public static final String SERVING_DESC_EGGS_ON_TOAST = " " + PREFIX_SERVING + VALID_SERVING_EGGS_ON_TOAST;
+    public static final String RATING_DESC_EGGS_ON_TOAST = " " + PREFIX_RATING + VALID_RATING_EGGS_ON_TOAST;
+    public static final String RATING_DESC_HAM_SANDWICH = " " + PREFIX_RATING + VALID_RATING_HAM_SANDWICH;
+    public static final String DIFFICULTY_DESC_EGGS_ON_TOAST = " " + PREFIX_DIFFICULTY + VALID_DIFFICULTY_EGGS_ON_TOAST;
+    public static final String DIFFICULTY_DESC_HAM_SANDWICH = " " + PREFIX_DIFFICULTY + VALID_DIFFICULTY_HAM_SANDWICH;
+    public static final String PHOTOGRAPH_DESC_HAM_SANDWICH =
+            " " + PREFIX_IMAGEFILEPATH + VALID_PHOTOGRAPH_HAM_SANDWICH;
+    public static final String PHOTOGRAPH_DESC_EGGS_ON_TOAST = " " + PREFIX_IMAGEFILEPATH
+            + VALID_PHOTOGRAPH_EGGS_ON_TOAST;
 
     // TODO: add RATING_DESC once Rating has been merged
 
@@ -88,7 +96,8 @@ public class CommandTestUtil {
 
     public static final String INVALID_NAME_DESC = " " + PREFIX_NAME + "Ham Sandwich&"; // '&' not allowed in names
     public static final String INVALID_INGREDIENTS_DESC = " " + PREFIX_INGREDIENTS + " "; // ingredients can't be blank
-    public static final String INVALID_INSTRUCTIONS_DESC = " " + PREFIX_INSTRUCTIONS + " "; // ingredients can't be " "
+    public static final String BLANK_INSTRUCTIONS_DESC = " " + PREFIX_INSTRUCTIONS + ""; // ingredients can't be
+    // " "
     public static final String INVALID_CALORIE_DESC = " " + PREFIX_CALORIE + "abc"; // calorie can't be numeric
     public static final String INVALID_SERVING_DESC = " " + PREFIX_SERVING + "xyz"; // serving can't be numeric
 

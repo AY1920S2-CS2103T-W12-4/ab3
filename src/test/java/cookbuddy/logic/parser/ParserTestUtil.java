@@ -14,8 +14,10 @@ import org.junit.jupiter.api.Test;
 import cookbuddy.logic.parser.ParserUtil;
 import cookbuddy.logic.parser.exceptions.ParseException;
 import cookbuddy.model.recipe.attribute.Name;
+import cookbuddy.model.recipe.attribute.Rating;
 import cookbuddy.model.recipe.attribute.Tag;
 import cookbuddy.model.recipe.attribute.Time;
+
 
 
 
@@ -34,10 +36,13 @@ public class ParserTestUtil {
     private static final String INVALID_TIME = "-1:-1:-1";
 
     //TODO: Remove fields referencing person.
-    private static final String VALID_NAME = "Rachel Walker";
-    private static final String VALID_PHONE = "123456";
-    private static final String VALID_ADDRESS = "123 Main Street #0505";
-    private static final String VALID_EMAIL = "rachel@example.com";
+    private static final String VALID_NAME = "Special Sandwich";
+    private static final String VALID_INGREDIENTS = "ham, 2slices; cheese, 1 slice; bread, 2 slices";
+    private static final String VALID_INSTRUCTIONS = "add ham to bread; add cheese; eat";
+    private static final String VALID_RATING = "5";
+    private static final String VALID_SERVING = "2";
+    private static final String VALID_CALORIE = "1000";
+    private static final String VALID_DIFFICULTY = "2";
     private static final String VALID_TAG_1 = "easy";
     private static final String VALID_TAG_2 = "snack";
     private static final String VALID_TIME = "12:00:00";
@@ -84,15 +89,33 @@ public class ParserTestUtil {
     }
 
     @Test
-    public void parseTiming_invalidValue_throwsParseException() {
+    public void parseTiming_invalidFormat_throwsNumberFormatException() {
         assertThrows(NumberFormatException.class, () -> ParserUtil.parseTime("abc"));
     }
 
     @Test
-    public void parseTiming_validValid_returnsTime() throws Exception {
+    public void parseTiming_invalidValue_throwsParseException() {
+        assertThrows(ParseException.class, () -> ParserUtil.parseTime(INVALID_TIME));
+    }
+
+    @Test
+    public void parseTiming_validValue_returnsTime() throws Exception {
         Time time = new Time(12, 00, 00);
         assertEquals(time, (ParserUtil.parseTime(VALID_TIME)));
     }
+
+    @Test
+    public void parseRating_validValue_returnsRating() throws Exception {
+        Rating testRating = new Rating(5);
+        assertEquals(testRating, (ParserUtil.parseRating(VALID_RATING)));
+    }
+
+    @Test
+    public void parseRating_invalidType_throwsParseException() {
+        assertThrows(ParseException.class, () -> ParserUtil.parseRating("abc"));
+    }
+
+
 
     @Test
     public void parseName_validValueWithoutWhitespace_returnsName() throws Exception {
