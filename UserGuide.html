@@ -44,27 +44,41 @@
 <div class="sect1">
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>This user guide provides documentation on CookBuddy such as a quick start guide and an overview of its features.</p>
-</div>
-<div class="paragraph">
-<p><strong>CookBuddy</strong> is for users who prefer a desktop application for managing recipes.
-More importantly, <strong>CookBuddy</strong> is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).</p>
-</div>
-<div class="paragraph">
-<p>If you are a fast typist, <strong>CookBuddy</strong> can manage your recipes faster than applications that use a GUI.
-Interested?
-Proceed to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started!</p>
-</div>
 <div class="sect2">
 <h3 id="product-information"><a class="link" href="#product-information">1.1. Product Information</a></h3>
 <div class="paragraph">
-<p>Talk about problems with existing method of storing recipes.
-Introduce CookBuddy and why it is better.</p>
+<p>Greetings, and welcome to CookBuddy!</p>
+</div>
+<div class="paragraph">
+<p>Looking for an all-in-one solution to manage your recipe? Look no further!</p>
+</div>
+<div class="paragraph">
+<p><strong>CookBuddy</strong> is an integrated platform fully customized for users with the aim of helping you manage your recipes effectively. The application allows you to keep track of your recipes.
+It looks like you will never have to worry about finding your recipe anymore!</p>
+</div>
+<div class="paragraph">
+<p>All your recipe information is comfortably compartmentalized on our simple and clean Graphical User Interface (GUI) and we are optimized for users who are very comfortable
+working on the Command Line Interface (CLI).</p>
+</div>
+<div class="paragraph">
+<p>If you are looking for a way to easily manage your recipes and have quick fingers, then CookBuddy is definitely for you!</p>
+</div>
+<div class="paragraph">
+<p>Interested?
+Proceed to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started!</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="how-to-navigate-this-user-guide"><a class="link" href="#how-to-navigate-this-user-guide">1.2. How to navigate this User Guide</a></h3>
+<div class="paragraph">
+<p>This user guide provides documentation on CookBuddy such as a quick start guide and an overview of its features for you to fully utilise CookBuddy.</p>
+</div>
+<div class="paragraph">
+<p>If you want to find out more about CookBuddy&#8217;s features and commands, you can go to the <a href="#features">Section 4, &#8220;Features&#8221;</a> section.</p>
+</div>
+<div class="paragraph">
+<p>If you need an overview regarding the usage of CookBuddy&#8217;s commands, head on to the <a href="#command-summary">Section 6, &#8220;Command Summary&#8221;</a> section.</p>
+</div>
 <div class="paragraph">
 <p>Throughout this guide, you may come across a few symbols.
 They are used to draw your attention to important or note-worthy information.</p>
@@ -317,6 +331,9 @@ Parameters in <strong>bold</strong> indicate they are mandatory.
 </li>
 <li>
 <p><code>ins/</code> - <strong>instructions</strong></p>
+</li>
+<li>
+<p><code>p/</code> - absolute image path</p>
 </li>
 <li>
 <p><code>cal/</code> - calories (in kcal)</p>
@@ -844,28 +861,37 @@ the current recipe list.</p>
 <p>The following section answers some questions you might have regarding <strong>CookBuddy</strong>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: Is *CookBuddy</strong> safe to use?*<br>
+<p><strong>Q: Is CookBuddy safe to use?</strong><br>
 <strong>A</strong>: Yes, <strong>CookBuddy</strong> is safe to use. We regularly review our code to ensure that there are no vulnerabilities for hackers to exploit.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: Is *CookBuddy</strong> secure?*<br>
+<p><strong>Q: Is CookBuddy secure?</strong><br>
 <strong>A</strong>: Yes, <strong>CookBuddy</strong> is secure. Your data is stored only on your computer. No data is sent to any online server.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: Do I need an Internet connection to use *CookBuddy</strong>?*<br>
+<p><strong>Q: Do I need an Internet connection to use CookBuddy?</strong><br>
 <strong>A</strong>: No. <strong>CookBuddy</strong> works 100% offline.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: Will *CookBuddy</strong> receive updates?*<br>
+<p><strong>Q: Will CookBuddy receive updates?</strong><br>
 <strong>A</strong>: Yes. We are a dedicated team of software developers who are constantly collating feedback and running tests on the app. We are also working towards delivering additional features for our users.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: Can I use *CookBuddy</strong> on a mobile device?*<br>
+<p><strong>Q: Can I use CookBuddy on a mobile device?</strong><br>
 <strong>A</strong>: <strong>CookBuddy</strong> is designed to work best on a desktop/ laptop computer. We are currently working on releasing <strong>CookBuddy</strong> on mobile platforms.</p>
 </div>
 <div class="paragraph">
-<p><strong>Q: How do I transfer my data to another computer?
-*A</strong>: Download the jar in the other computer and copy the entire data folder over to the same directory. Run <strong>CookBuddy</strong> and update the preferences.json if necessary.</p>
+<p><strong>Q: How do I transfer my data to another Computer?</strong><br>
+<strong>A</strong>: Download the jar in the other computer and copy the entire data folder over to the same directory. Run CookBuddy and update the preferences.json if necessary.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q: How do I retrieve back all the recipes in CookBuddy if I accidentally reset CookBuddy?</strong><br>
+<strong>A</strong>: Right now CookBuddy does not support a backup feature. Thus, it would be best if you do not accidentally use the <code>reset</code>
+command. The backup feature will be released soon in the near future.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q: CookBuddy is not working on my computer. How do I fix it?</strong><br>
+<strong>A</strong>:Ensure that your computer is running on Java 11 and not other versions. CookBuddy does not support other versions of Java.</p>
 </div>
 </div>
 </div>
@@ -875,57 +901,83 @@ the current recipe list.</p>
 <div class="paragraph">
 <p>The following section gives a quick summary of all the commands you can use in CookBuddy arranged in an alphabetical order.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>count</code>: <strong>Counts the total number of recipes stored in CookBuddy</strong></p>
-</li>
-<li>
-<p><code>delete <strong>INDEX</strong></code>: <strong>Deletes the recipe at the given <code>INDEX</code></strong></p>
-</li>
-<li>
-<p><code>done <strong>INDEX</strong></code>: <strong>Marks the recipe at the given <code>INDEX</code> as <code>done</code></strong></p>
-</li>
-<li>
-<p><code>exit</code>: <strong>Exits CookBuddy</strong></p>
-</li>
-<li>
-<p><code>fav <strong>INDEX</strong></code>: <strong>Favourites the recipe at the given <code>INDEX</code></strong></p>
-</li>
-<li>
-<p><code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code>: <strong>Finds an existing recipe with the given parameter(s) from CookBuddy</strong></p>
-</li>
-<li>
-<p><code>help</code>: <strong>Lists all the commands recognised by CookBuddy</strong></p>
-</li>
-<li>
-<p><code>help [COMMAND]</code>: <strong>Displays how to use the <code>COMMAND</code> command</strong></p>
-</li>
-<li>
-<p><code>list</code>: <strong>Lists all the recipes</strong></p>
-</li>
-<li>
-<p><code>modify INDEX [ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]] [ins/INSTRUCTION [; &#8230;&#8203;]] [cal/CALORIES] [s/SERVING_SIZE]
-[r/RATING] [t/TAG [, &#8230;&#8203;]]</code>: <strong>Modifies the given parameter(s) of the recipe</strong></p>
-</li>
-<li>
-<p><code>new <strong>n/NAME</strong> <strong>ing/INGREDIENT, QUANTITY</strong> [; &#8230;&#8203;] <strong>ins/INSTRUCTION</strong> [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
-[r/RATING] [t/TAG [, &#8230;&#8203;]]</code>: <strong>Adds a new recipe</strong></p>
-</li>
-<li>
-<p><code>reset</code>: <strong>Removes all the recipes from CookBuddy</strong></p>
-</li>
-<li>
-<p><code>undo <strong>INDEX</strong></code>: <strong>Undoes the recipe at the given <code>INDEX</code></strong></p>
-</li>
-<li>
-<p><code>unfav <strong>INDEX</strong></code>: <strong>Un-favourites the recipe at the given <code>INDEX</code></strong></p>
-</li>
-<li>
-<p><code>view <strong>INDEX</strong></code>: <strong>Displays the recipe at the given <code>INDEX</code> on CookBuddy</strong></p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Various commands of CookBuddy.</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Counts the total number of recipes stored in CookBuddy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the recipe at the given <code>INDEX</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>done <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks the recipe at the given <code>INDEX</code> as <code>done</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exits CookBuddy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fav <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Favourites the recipe at the given <code>INDEX</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>find [n/NAME [&#8230;&#8203;]] [ing/INGREDIENT [&#8230;&#8203;]]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finds an existing recipe with the given parameter(s) from CookBuddy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all the commands recognised by CookBuddy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help [COMMAND]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays how to use the <code>COMMAND</code> command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all the recipes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modify INDEX [ing/INGREDIENT, QUANTITY [; &#8230;&#8203;]] [ins/INSTRUCTION [; &#8230;&#8203;]] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modifies the given parameter(s) of the recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>new <strong>n/NAME</strong> <strong>ing/INGREDIENT, QUANTITY</strong> [; &#8230;&#8203;] <strong>ins/INSTRUCTION</strong> [; &#8230;&#8203;] [cal/CALORIES] [s/SERVING_SIZE]
+[r/RATING] [t/TAG [, &#8230;&#8203;]]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a new recipe.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes all the recipes from CookBuddy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>undo <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undoes the recipe at the given <code>INDEX</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>unfav <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un-favourites the recipe at the given <code>INDEX</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>view <strong>INDEX</strong></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the recipe at the given <code>INDEX</code> on CookBuddy.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -935,6 +987,7 @@ the current recipe list.</p>
 <p>This section will cover and explain certain technical/CookBuddy specific terms used in this user guide.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Explanation of various terms used in this user guide.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -961,4 +1014,4 @@ the current recipe list.</p>
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-10 11:16:34 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-10 12:13:56 UTC</div></div></div></body></html>
