@@ -24,7 +24,7 @@ import cookbuddy.model.recipe.attribute.Time;
 /**
  * Contains helper methods for testing commands.
  */
-public class ParserTestUtil {
+public class ParserUtilTest {
     private static final String INVALID_NAME = "";
     private static final String INVALID_INGREDIENTS = "";
     private static final String INVALID_INSTRUCTIONS = "";

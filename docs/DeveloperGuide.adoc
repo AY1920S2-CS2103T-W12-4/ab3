@@ -18,17 +18,42 @@ By: `AY1920S2-CS2103T-W12-4`      Since: `Feb 2020`      Licence: `MIT`
 
 == Introduction
 
+Welcome to CookBuddy!
+
+image::Ui.png[width="790"]
+
+CookBuddy is an integrated platform fully customized for users who wish to manage their recipes easily and effectively.
+
+All your recipe information is stored on our simple and clean Graphical User Interface (GUI) with optimization for users who prefer working on a Command Line Interface (CLI).
+
+If you are looking for a way to easily manage your recipes and have quick fingers, then CookBuddy is definitely for you!
+
+== About this Document
+
 This document is a Developer Guide written for developers who wish to contribute to or extend our CookBuddy project.
 It is technical, and explains the inner workings of CookBuddy and how the different components of our
 application work together.
 
-====
-*Reading this Developer Guide*
+We have adopted a "top-down" approach in structuring our Developer Guide with first focusing at the high-level architecture of CookBuddy and then delving into the implementation details of each feature that makes up our application.
+
+Take note of the following symbols and formatting used in this document:
 
 TIP: This icon denotes useful tips to note of during development.
 
 NOTE: This icon denotes important details to take note of during development.
-====
+
+== Overview of Features
+
+This section will provide you a short overview of CookBuddy's features.
+
+. Manage your recipes easily
+.. Include recipe information e.g. ingredients, instructions, calories, difficulty, rating, serving, tags etc.
+
+. Various icons to find information easily and quickly
+.. Various icons display short information such as difficulty, serving size, tags etc of a recipe.
+
+. Data is saved onto your disk automatically
+.. Any changes made will be saved onto your device so you dont have to worry about the data being lost.
 
 == Setting up
 
@@ -325,9 +350,9 @@ Refer to the guide <<DevOps#, here>>.
 
    - present a straightforward interface to edit, duplicate and combine recipes into meals
 
-* Export recipes to a printable, human-readable and consistent format
+* Overall increase in productivity.
 
-
+//* Export recipes to a printable, human-readable and consistent format
 
 [appendix]
 == User Stories
@@ -486,19 +511,25 @@ Use case ends.
 .  Should be able to hold up to 1000 recipes without noticeable sluggishness in performance for typical usage.
 .  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 .  Commands should be <<one-shot-c,one-shot>> commands as opposed to <<multi-level-c, multi-level commands>>.
+.  CookBuddy should be able to function without internet access.
+.  A user should be able to familiarise herself with less than 30 minutes of usage.
+
 _{More to be added}_
 
 [appendix]
 == Glossary
 
+[[attributes]] Attributes::
+The information of a recipe. For example, calories, ingredients or instructions etc.
+
 [[mainstream-os]] Mainstream OS::
 Windows, macOS, Linux, UNIX
 
-[[one-shot-c]] One-shot Commands::
-Commands that are executed using only a single line of user input.
-
 [[multi-level-c]] Multi-level Commands::
 Commands that require multiple lines of user input for execution.
+
+[[one-shot-c]] One-shot Commands::
+Commands that are executed using only a single line of user input.
 
 [[recipe]] Recipe::
 A list of ingredients followed by a list of instructions, detailing how to prepare a dish.
@@ -506,23 +537,33 @@ A list of ingredients followed by a list of instructions, detailing how to prepa
 [[tag]] Tag::
 A (possibly custom) text marker that users can use to organise their recipes; examples include `vegetarian`, `spicy`, `Indian`. Tags can themselves be organised into groups, such as `cuisines`, `diet`, `ingredients`, `mealtime`, etc.
 
-//[appendix]
-//== Product Survey
-//
-//*Product Name*
-//
-//Author: ...
-//
-//Pros:
-//
-//* ...
-//* ...
-//
-//Cons:
-//
-//* ...
-//* ...
-//
+[appendix]
+== Product Survey
+
+*CookBuddy*
+
+Author: Zain Alam
+
+Pros:
+
+** Functionality
+* Ease of recipe management
+* Tracks calories, rating and diffculty
+
+** Non-funtional requirements
+* Well-designed GUI
+* Cross platform
+
+Cons:
+
+** Functionality
+* Unable to find a recipe with more than one parameters at a time
+* Unable to pin recipes when working with multiple meals
+* Unable to translate a recipe from one language to another language
+
+** Non-functional requirements
+* slightly GUI-dependent, some buttons need to be clicked and screens traversed to perform a task
+
 [appendix]
 == Instructions for Manual Testing
 

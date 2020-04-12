@@ -19,7 +19,7 @@ import cookbuddy.Main;
 public class FileUtil {
 
     public static final String CORRUPTED = "Your JAR file is corrupt, and possibly missing files. "
-            + "Please re-download from the source.";
+        + "Please re-download from the source.";
     private static final String CHARSET = "UTF-8";
 
     public static boolean isFileExists(Path file) {

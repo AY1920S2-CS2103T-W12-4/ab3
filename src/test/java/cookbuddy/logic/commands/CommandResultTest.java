@@ -1,4 +1,4 @@
-package seedu.address.logic.commands;
+package cookbuddy.logic.commands;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -33,6 +33,7 @@ public class CommandResultTest {
 
         // different exit value -> returns false
         assertFalse(commandResult.equals(new CommandResult("feedback", false, true)));
+
     }
 
     @Test
@@ -50,5 +51,16 @@ public class CommandResultTest {
 
         // different exit value -> returns different hashcode
         assertNotEquals(commandResult.hashCode(), new CommandResult("feedback", false, true).hashCode());
+    }
+
+    @Test
+    public void getters() {
+        CommandResult commandResult = new CommandResult("feedback");
+        CommandResult helperCommand = new CommandResult("feedback", true, false);
+        CommandResult exitCommand = new CommandResult("feedback", false, true);
+
+        assertEquals(helperCommand.isShowHelp(), true);
+        assertEquals(exitCommand.isExit(), true);
+        assertEquals(commandResult.getFeedbackToUser(), "feedback");
     }
 }

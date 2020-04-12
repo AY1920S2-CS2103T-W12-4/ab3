@@ -57,6 +57,10 @@ public class RandomCommand extends Command {
         return new CommandResult(String.format(MESSAGE_VIEW_RECIPE_SUCCESS, recipeToView.getName()));
     }
 
+    public Index getTargetIndex() {
+        return targetIndex;
+    }
+
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object

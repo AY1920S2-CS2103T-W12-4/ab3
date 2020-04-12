@@ -1,10 +1,10 @@
-package seedu.address.logic.commands;
+package cookbuddy.logic.commands;
 
+import static cookbuddy.testutil.Assert.assertThrows;
 import static java.util.Objects.requireNonNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.address.testutil.Assert.assertThrows;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -13,47 +13,49 @@ import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
+import cookbuddy.commons.core.GuiSettings;
+import cookbuddy.logic.commands.exceptions.CommandException;
+import cookbuddy.model.Model;
+import cookbuddy.model.ReadOnlyRecipeBook;
+import cookbuddy.model.ReadOnlyUserPrefs;
+import cookbuddy.model.RecipeBook;
+import cookbuddy.model.recipe.Recipe;
+import cookbuddy.model.recipe.attribute.Time;
+import cookbuddy.testutil.RecipeBuilder;
 import javafx.collections.ObservableList;
-import seedu.address.commons.core.GuiSettings;
-import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.Model;
-import seedu.address.model.ReadOnlyRecipeBook;
-import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.RecipeBook;
-import seedu.address.model.recipe.Recipe;
-import seedu.address.testutil.PersonBuilder;
+
 
 public class NewCommandTest {
 
     @Test
-    public void constructor_nullPerson_throwsNullPointerException() {
+    public void constructor_nullRecipe_throwsNullPointerException() {
         assertThrows(NullPointerException.class, () -> new NewCommand(null));
     }
 
     @Test
-    public void execute_personAcceptedByModel_addSuccessful() throws Exception {
-        ModelStubAcceptingPersonAdded modelStub = new ModelStubAcceptingPersonAdded();
-        Recipe validRecipe = new PersonBuilder().build();
+    public void execute_recipeAcceptedByModel_addSuccessful() throws Exception {
+        ModelStubAcceptingRecipeAdded modelStub = new ModelStubAcceptingRecipeAdded();
+        Recipe validRecipe = new RecipeBuilder().build();
 
         CommandResult commandResult = new NewCommand(validRecipe).execute(modelStub);
 
         assertEquals(String.format(NewCommand.MESSAGE_SUCCESS, validRecipe), commandResult.getFeedbackToUser());
-        assertEquals(Arrays.asList(validRecipe), modelStub.personsAdded);
+        assertEquals(Arrays.asList(validRecipe), modelStub.recipesAdded);
     }
 
     @Test
-    public void execute_duplicatePerson_throwsCommandException() {
-        Recipe validRecipe = new PersonBuilder().build();
+    public void execute_duplicateRecipe_throwsCommandException() {
+        Recipe validRecipe = new RecipeBuilder().build();
         NewCommand newCommand = new NewCommand(validRecipe);
-        ModelStub modelStub = new ModelStubWithPerson(validRecipe);
+        ModelStub modelStub = new ModelStubWithRecipe(validRecipe);
 
-        assertThrows(CommandException.class, NewCommand.MESSAGE_DUPLICATE_PERSON, () -> newCommand.execute(modelStub));
+        assertThrows(CommandException.class, NewCommand.MESSAGE_DUPLICATE_RECIPE, () -> newCommand.execute(modelStub));
     }
 
     @Test
     public void equals() {
-        Recipe alice = new PersonBuilder().withName("Alice").build();
-        Recipe bob = new PersonBuilder().withName("Bob").build();
+        Recipe alice = new RecipeBuilder().withName("Alice").build();
+        Recipe bob = new RecipeBuilder().withName("Bob").build();
         NewCommand addAliceCommand = new NewCommand(alice);
         NewCommand addBobCommand = new NewCommand(bob);
 
@@ -129,6 +131,37 @@ public class NewCommandTest {
         }
 
         @Override
+        public long count() {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void attemptRecipe(Recipe recipe) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void unAttemptRecipe(Recipe recipe) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void favRecipe(Recipe recipe) {
+            throw new AssertionError("This method should not be called.");
+
+        }
+
+        @Override
+        public void unFavRecipe(Recipe recipe) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void setTime(Recipe recipe, Time time) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
         public void deleteRecipe(Recipe target) {
             throw new AssertionError("This method should not be called.");
         }
@@ -152,10 +185,10 @@ public class NewCommandTest {
     /**
      * A Model stub that contains a single recipe.
      */
-    private class ModelStubWithPerson extends ModelStub {
+    private class ModelStubWithRecipe extends ModelStub {
         private final Recipe recipe;
 
-        ModelStubWithPerson(Recipe recipe) {
+        ModelStubWithRecipe(Recipe recipe) {
             requireNonNull(recipe);
             this.recipe = recipe;
         }
@@ -170,19 +203,19 @@ public class NewCommandTest {
     /**
      * A Model stub that always accept the recipe being added.
      */
-    private class ModelStubAcceptingPersonAdded extends ModelStub {
-        final ArrayList<Recipe> personsAdded = new ArrayList<>();
+    private class ModelStubAcceptingRecipeAdded extends ModelStub {
+        final ArrayList<Recipe> recipesAdded = new ArrayList<>();
 
         @Override
         public boolean hasRecipe(Recipe recipe) {
             requireNonNull(recipe);
-            return personsAdded.stream().anyMatch(recipe::isSameRecipe);
+            return recipesAdded.stream().anyMatch(recipe::isSameRecipe);
         }
 
         @Override
         public void addRecipe(Recipe recipe) {
             requireNonNull(recipe);
-            personsAdded.add(recipe);
+            recipesAdded.add(recipe);
         }
 
         @Override

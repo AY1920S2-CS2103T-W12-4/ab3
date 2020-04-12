@@ -1,16 +1,16 @@
-package seedu.address.logic.commands;
+package cookbuddy.logic.commands;
 
-import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
-import static seedu.address.logic.commands.CommandTestUtil.showPersonAtIndex;
-import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
-import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
+import static cookbuddy.logic.commands.CommandTestUtil.assertCommandSuccess;
+import static cookbuddy.logic.commands.CommandTestUtil.showRecipeAtIndex;
+import static cookbuddy.testutil.TypicalIndexes.INDEX_FIRST_RECIPE;
+import static cookbuddy.testutil.TypicalRecipes.getTypicalRecipeBook;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.Model;
-import seedu.address.model.ModelManager;
-import seedu.address.model.UserPrefs;
+import cookbuddy.model.Model;
+import cookbuddy.model.ModelManager;
+import cookbuddy.model.UserPrefs;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for ListCommand.
@@ -22,7 +22,7 @@ public class ListCommandTest {
 
     @BeforeEach
     public void setUp() {
-        model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
+        model = new ModelManager(getTypicalRecipeBook(), new UserPrefs());
         expectedModel = new ModelManager(model.getRecipeBook(), new UserPrefs());
     }
 
@@ -33,7 +33,7 @@ public class ListCommandTest {
 
     @Test
     public void execute_listIsFiltered_showsEverything() {
-        showPersonAtIndex(model, INDEX_FIRST_PERSON);
+        showRecipeAtIndex(model, INDEX_FIRST_RECIPE);
         assertCommandSuccess(new ListCommand(), model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }
 }
