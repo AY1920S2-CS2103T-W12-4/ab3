@@ -2,6 +2,8 @@ https://travis-ci.org/AY1920S2-CS2103T-W12-4/main[image:https://travis-ci.org/AY
 https://coveralls.io/github/AY1920S2-CS2103T-W12-4/main?branch=master[image:https://coveralls.io/repos/github/AY1920S2-CS2103T-W12-4/main/badge.svg?branch=master[Coverage Status]]
 
 = CookBuddy Recipe Manager
+
+image:https://api.codacy.com/project/badge/Grade/26ab505f4302490cb6160c093889381c[link="https://app.codacy.com/gh/AY1920S2-CS2103T-W12-4/main?utm_source=github.com&utm_medium=referral&utm_content=AY1920S2-CS2103T-W12-4/main&utm_campaign=Badge_Grade_Dashboard"]
 ifdef::env-github,env-browser[:relfileprefix: docs/]
 
 ifdef::env-github[]
