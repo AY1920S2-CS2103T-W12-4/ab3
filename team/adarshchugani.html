@@ -30,24 +30,37 @@ It is written in Java, and has about 10 kLoC.</p>
 default, but the user can change this using the <code>fav</code> command. If a user wants to un-favourite a recipe, they may do
 so using the <code>unfav</code> command.</p>
 </li>
-<li>
-<p>Justification: This feature improves the product significantly because it provides the user with an easy way to
-identify the recipes they like.</p>
+</ul>
+</div>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
-</li>
+<p><strong>Major enhancement #2</strong>: implemented the <code>view</code> command</p>
+<div class="ulist">
+<ul>
 <li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p>What it does: allows users to view any recipe on the GUI. Before this feature was implemented, the displayed
+recipe would always be the first recipe added in the application.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
+<p><strong>Minor enhancement</strong>: Added the <code>done</code> and <code>undo</code> features, which behave similarly to the <code>fav</code> and <code>unfav</code> commands.
+They are used to mark recipes as attempted and not attempted, respoectively.</p>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=AdarshChugani&amp;tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D">Summary of code contributed</a>]</p>
+<p><strong>Minor enhancement #2</strong>: implemented the <code>time</code> command</p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows users to assign a time to a recipe. Users may exclude hours and seconds when inputting the
+time, and these fields will be set to 0 if they are omitted.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=AdarshChugani&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false">Code Contribution</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -58,7 +71,7 @@ identify the recipes they like.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Managed releases <code>v1.1</code> - <code>v1.4</code> (4 releases) on GitHub</p>
 </li>
 </ul>
 </div>
@@ -68,10 +81,10 @@ identify the recipes they like.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
+<p>Updated the GUI color scheme <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/issues/71">Pull Request #71</a></p>
 </li>
 <li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>Wrote additional tests for existing features to increase coverage from 27% to 51%: Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/issues/299">#299</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/issues/300">#300</a></p>
 </li>
 </ul>
 </div>
@@ -81,7 +94,9 @@ identify the recipes they like.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com">#14</a></p>
+<p>Did many changes to the User Guide and Developer Guide: Pull Requests
+<a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/20">#20</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/22">#22</a>,
+<a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/89">#89</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/193">#193</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/327">#327</a> as well as many more.</p>
 </li>
 </ul>
 </div>
@@ -91,16 +106,14 @@ identify the recipes they like.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+<p>Approved many team-members PRs, often providing feedback if it did not meet standards.</p>
 </li>
 <li>
-<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
+<p>Contributed to forum discussions</p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
-</li>
-<li>
-<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
+<p>Created the vast majority of the issues on the Issue Tracker
+<a href="https://github.com/AY1920S2-CS2103T-W12-4/main/issues/">here</a></p>
 </li>
 </ul>
 </div>
@@ -110,10 +123,7 @@ identify the recipes they like.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
-</li>
-<li>
-<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+<p>Integrated Codacy as well as Coveralls.</p>
 </li>
 </ul>
 </div>
@@ -122,9 +132,6 @@ identify the recipes they like.</p>
 </div>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
 </div>
 </div>
 </div>
@@ -141,6 +148,228 @@ identify the recipes they like.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="favouriting-a-recipe-code-fav-code-done-by-adarsh-chugani"><a class="link" href="#favouriting-a-recipe-code-fav-code-done-by-adarsh-chugani">Favouriting a recipe — <code>fav</code> [Done by: Adarsh Chugani]</a></h3>
+<div class="paragraph">
+<p>You can favourite an existing recipe from <strong>CookBuddy</strong> using the <code>fav</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>fav INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>INDEX</code> must be a positive integer value, within range of the number of recipes in <strong>CookBuddy</strong>.</p>
+</li>
+<li>
+<p>A favourited recipe is indicated by a red filled heart.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example: You can type <code>fav 1</code> and <strong>CookBuddy</strong> will favourite the recipe at index 1.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="coming-in-v2-0-done-by-adarsh-chugani"><a class="link" href="#coming-in-v2-0-done-by-adarsh-chugani">Coming in v2.0 [Done by: Adarsh Chugani]</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Look forward to these features coming up in version 2.0 of CookBuddy!</p>
+</div>
+<div class="sect2">
+<h3 id="adding-price-strong-coming-in-v2-0-strong-code-price-code"><a class="link" href="#adding-price-strong-coming-in-v2-0-strong-code-price-code">Adding price <strong>(coming in v2.0)</strong>: <code>price</code></a></h3>
+<div class="paragraph">
+<p>Adds the price attribute to recipes.
+With this, to can assign every recipe a specific price.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>price INDEX PRICE</code></p>
+</div>
+<div class="paragraph">
+<p>Inputs from user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX: the index of the recipe you wish to assign a price to</p>
+</li>
+<li>
+<p>PRICE: the price that you wish to assign to the recipe (accepts both integer and decimal values)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example: <code>price 1 10.50</code></p>
+</div>
+<div class="paragraph">
+<p>This would assign the recipe at index a price of $10.50</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-statistics-strong-coming-in-v2-0-strong-code-stats-code"><a class="link" href="#viewing-statistics-strong-coming-in-v2-0-strong-code-stats-code">Viewing statistics <strong>(coming in v2.0)</strong>: <code>stats</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>stats</code></p>
+</div>
+<div class="paragraph">
+<p>Displays your statistics: such as percentage of recipes attempted, difficulty breakdown of attempted recipes, amongst many others.
+With this feature, you will be able to analyse your cooking preferences!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="suggestions-strong-coming-in-v2-0-strong-code-suggest-code"><a class="link" href="#suggestions-strong-coming-in-v2-0-strong-code-suggest-code">Suggestions <strong>(coming in v2.0)</strong>: <code>suggest</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>suggest</code></p>
+</div>
+<div class="paragraph">
+<p>This feature suggests a recipe from your CookBuddy application for you to attempt.
+You will be suggested a recipe based on your statistics, namely the difficulty and ratings of the recipes you have attempted.
+The suggested recipe is more likely to be a recipe that you have not attempted, as we do not want you to constantly cook the same recipes.
+Additionally, the suggested recipe is more likely to have a difficulty similar to, or slightly higher than the recipes you have attempted, as we want you to grow as a budding cook!</p>
+</div>
+<div class="sect3">
+<h4 id="scale-the-recipe-strong-coming-in-v2-0-strong-code-scale-code"><a class="link" href="#scale-the-recipe-strong-coming-in-v2-0-strong-code-scale-code">Scale the recipe <strong>(coming in v2.0)</strong>: <code>scale</code></a></h4>
+<div class="paragraph">
+<p>This feature scales a recipe to your intended size.
+The quantities of the ingredients used, as well as the prep time required will be adjusted for your use.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>scale INDEX SIZE</code></p>
+</div>
+<div class="paragraph">
+<p>Inputs from user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX: The index of the recipe you wish to scale</p>
+</li>
+<li>
+<p>SIZE: The size that you wish to scale the recipe to</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example: scale 1 3</p>
+</div>
+<div class="paragraph">
+<p>This would scale the recipe at index 1 to be able to serve 3 people.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="import-and-export-strong-coming-in-v2-0-strong-code-import-code-code-export-code"><a class="link" href="#import-and-export-strong-coming-in-v2-0-strong-code-import-code-code-export-code">Import and export <strong>(coming in v2.0)</strong>: <code>import</code>, <code>export</code></a></h3>
+<div class="sect3">
+<h4 id="import-a-file-code-import-code"><a class="link" href="#import-a-file-code-import-code">Import a file: <code>import</code></a></h4>
+<div class="paragraph">
+<p>Imports recipes from the file at the given path.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>import PATH</code></p>
+</div>
+<div class="paragraph">
+<p>Inputs from user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PATH: the file path at which the desired file is</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example: import "/docs/recipebook.json"</p>
+</div>
+<div class="paragraph">
+<p>This would import the "recipebook" JSON file from the docs folder.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="export-transactions-code-export-code"><a class="link" href="#export-transactions-code-export-code">Export transactions: <code>export</code></a></h4>
+<div class="paragraph">
+<p>Exports all transactions to the given path.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>export PATH</code></p>
+</div>
+<div class="paragraph">
+<p>Inputs from user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PATH: the file path at which the desired file is</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Exports the recipes from cookbuddy into the given path</p>
+</div>
+<div class="paragraph">
+<p>Example: export "/docs/"</p>
+</div>
+<div class="paragraph">
+<p>This would export the recipes from CookBuddy into a file in the docs folder.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="printing-strong-coming-in-v2-0-strong-code-print-code"><a class="link" href="#printing-strong-coming-in-v2-0-strong-code-print-code">Printing <strong>(coming in v2.0)</strong>: <code>print</code></a></h3>
+<div class="paragraph">
+<p>Prints out the recipe.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>print INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Key-Words:
+* INDEX: the index of the recipe you wish to print.</p>
+</div>
+<div class="paragraph">
+<p>Example: <code>print 1</code></p>
+</div>
+<div class="paragraph">
+<p>This would print out the recipe at index 1.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sharing-recipes-strong-coming-in-v2-0-strong-code-share-code"><a class="link" href="#sharing-recipes-strong-coming-in-v2-0-strong-code-share-code">Sharing Recipes <strong>(coming in v2.0)</strong>: <code>share</code></a></h3>
+<div class="paragraph">
+<p>Prints out the recipe.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>share INDEX SITE</code></p>
+</div>
+<div class="paragraph">
+<p>Key-Words:
+* INDEX: the index of the recipe you wish to share.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SITE: the website you wish to share the recipe to</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example: <code>share 1 facebook</code></p>
+</div>
+<div class="paragraph">
+<p>This would share the recipe at index 1 on the user&#8217;s facebook account.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -156,14 +385,265 @@ identify the recipes they like.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="favouriting-recipes-adarsh"><a class="link" href="#favouriting-recipes-adarsh">Favouriting recipes [Adarsh]</a></h3>
+<div class="paragraph">
+<p>The following section describes how the <code>fav</code> command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the <code>fav</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The <code>fav</code> command is implemented in the <em>FavCommand</em> class.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram shows the possible paths <strong>CookBuddy</strong> can take when a <code>fav</code> command is run.</p>
+</div>
+<div class="imageblock" style="text-align: "center">
+<div class="content">
+<img src="../images/FavActivityDiagram.svg" alt="FavActivityDiagram">
+</div>
+<div class="title">Figure 1. Activity diagram of the <code>fav</code> command</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the <code>fav</code> command, the user will specify the index of the recipe to be favourited.</p>
+</li>
+<li>
+<p><em>FavCommandParser</em> ensures that index specified is valid and returns a <em>FavCommand</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes the execution of the <code>fav</code> command</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/FavSequenceDiagram.svg" alt="FavSequenceDiagram">
+</div>
+<div class="title">Figure 2. Sequence diagram for the execution of a <code>fav</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-many-indexes-should-be-taken-in"><a class="link" href="#aspect-how-many-indexes-should-be-taken-in">Aspect: How many indexes should be taken in?</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Chosen): Only 1 index to be specified per use of the command</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Less error-prone</p>
+</li>
+<li>
+<p>Cons: Less efficient</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Multiple indexes can be specified per use of the command</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More efficient</p>
+</li>
+<li>
+<p>Cons: More error prone</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possible-improvements"><a class="link" href="#possible-improvements">Possible improvements</a></h4>
+<div class="paragraph">
+<p>In the current implementation, you are able to favourite recipes, even if they have already been favourited.
+A possible improvement would be to notify users if the recipe they are trying to favourite has already been favourited.
+This would greatly enhance the usefulness of the <code>fav</code> function in <strong>CookBuddy</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="assigning-a-time-to-a-recipe-adarsh"><a class="link" href="#assigning-a-time-to-a-recipe-adarsh">Assigning a time to a recipe [Adarsh]</a></h3>
+<div class="paragraph">
+<p>The following section describes how the <code>time</code> command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the <code>time</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The <code>time</code> command is implemented in the <em>TimeCommand</em> class.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram shows the possible paths <strong>CookBuddy</strong> can take when a <code>time</code> command is run.</p>
+</div>
+<div class="imageblock" style="text-align: "center">
+<div class="content">
+<img src="../images/TimeActivityDiagram.svg" alt="TimeActivityDiagram">
+</div>
+<div class="title">Figure 3. Activity diagram of the <code>time</code> command</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the <code>time</code> command, the user will input the index of the recipe they wish to assign a time, as well as the time they wish to assign to the recipe. The time is to be in the following format (hh:MM:ss). Minutes and seconds are optional, and would be set to 0 if no values are provided for them.</p>
+</li>
+<li>
+<p><em>TimeCommandParser</em> ensures that index specified is valid and returns a <em>TimeCommand</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes the execution of the <code>time</code> command</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/TimeSequenceDiagram.svg" alt="TimeSequenceDiagram">
+</div>
+<div class="title">Figure 4. Sequence diagram for the execution of a <code>time</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-should-the-minutes-and-seconds-be-mandatory-inputs"><a class="link" href="#aspect-should-the-minutes-and-seconds-be-mandatory-inputs">Aspect: Should the minutes and seconds be mandatory inputs</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Chosen): No, they can be optional inputs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More efficient</p>
+</li>
+<li>
+<p>Cons: -</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Yes, they should be mandatory inputs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: -</p>
+</li>
+<li>
+<p>Cons: Much less efficient</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possible-improvements-2"><a class="link" href="#possible-improvements-2">Possible improvements</a></h4>
+<div class="paragraph">
+<p>In the current implementation, we are parsing the hours, minutes and seconds as integers.
+A possible improvement would be to use the java.util.time class.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-recipes-adarsh"><a class="link" href="#viewing-recipes-adarsh">Viewing recipes [Adarsh]</a></h3>
+<div class="paragraph">
+<p>The following section describes how the <code>view</code> command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the <code>view</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The <code>view</code> command is implemented in the <em>ViewCommand</em> class.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram shows the possible paths <strong>CookBuddy</strong> can take when a <code>view</code> command is run.</p>
+</div>
+<div class="imageblock" style="text-align: "center">
+<div class="content">
+<img src="../images/ViewActivityDiagram.svg" alt="ViewActivityDiagram">
+</div>
+<div class="title">Figure 5. Activity diagram of the <code>view</code> command</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the <code>view</code> command, the user will specify the index of the recipe that they wish to view.</p>
+</li>
+<li>
+<p><em>ViewCommandParser</em> ensures that index specified is valid and returns a <em>ViewCommand</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes the execution of the <code>view</code> command</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/ViewSequenceDiagram.svg" alt="ViewSequenceDiagram">
+</div>
+<div class="title">Figure 6. Sequence diagram for the execution of a <code>view</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-should-the-user-specify-the-recipe-they-want-to-view"><a class="link" href="#aspect-how-should-the-user-specify-the-recipe-they-want-to-view">Aspect: How should the user specify the recipe they want to view</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 (Chosen): Using the index of the recipe</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easily identified from the GUI</p>
+</li>
+<li>
+<p>Cons: -</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Alternative 2: Using the name of the recipe</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Users may know the name of the recipe better than the index</p>
+</li>
+<li>
+<p>Cons: Less efficient</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possible-improvements-3"><a class="link" href="#possible-improvements-3">Possible improvements</a></h4>
+<div class="paragraph">
+<p>In the current implementation, the <code>view</code> command only takes in the index of the recipe.
+A possible improvement would be to allow users to input the recipe name they want viewed.
+That way, users can input either the recipe name or index.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
 <div class="sectionbody">
-<hr>
-<div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
+
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:33:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:39:47 UTC</div></div></div></body></html>
