@@ -1,13 +1,7 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>CookBuddy Recipe Manager - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>CookBuddy Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">CookBuddy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-4/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>CookBuddy Recipe Manager - Developer Guide</h1></div><div id="content"><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>By: <code>AY1920S2-CS2103T-W12-4</code>      Since: <code>Feb 2020</code>      Licence: <code>MIT</code></p>
-</div>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle"></div>
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">CookBuddy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-4/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>CookBuddy Developer Guide</h1><div id="toc" class="toc"><div id="toctitle">Contents</div><ul class="sectlevel0">
+<li><a href="#overview">Overview</a>
 <ul class="sectlevel1">
 <li><a href="#introduction-done-by-zain-alam">1. Introduction [Done by Zain Alam]</a></li>
 <li><a href="#about-this-document-done-by-zain-alam">2. About this Document [Done by Zain Alam]</a></li>
@@ -23,19 +17,20 @@
 <li><a href="#Design-Commons">5.6. Common classes</a></li>
 </ul>
 </li>
-<li><a href="#implementation">6. Implementation</a>
+<li><a href="#implementation-details-and-future-work">6. Implementation Details, and Future Work</a>
 <ul class="sectlevel2">
-<li><a href="#count-feature-done-by-zain-alam">6.1. Count feature [Done by Zain Alam]</a></li>
-<li><a href="#proposed-undo-redo-feature">6.2. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#counting-recipes-done-by-zain-alam">6.1. Counting recipes [Done by Zain Alam]</a></li>
+<li><a href="#image-management-done-by-sharadh-rajaraman">6.2. Image Management [Done by Sharadh Rajaraman]</a></li>
 <li><a href="#logging">6.3. Logging</a></li>
 <li><a href="#Implementation-Configuration">6.4. Configuration</a></li>
+<li><a href="#Implementation-Future">6.5. Features coming in <code>v2.0</code></a></li>
 </ul>
 </li>
 <li><a href="#documentation">7. Documentation</a></li>
 <li><a href="#testing">8. Testing</a></li>
 <li><a href="#dev-ops">9. Dev Ops</a></li>
 <li><a href="#product-scope-done-by-zain-alam-sharadh-rajaraman">Appendix A: Product Scope [Done by Zain Alam &amp; Sharadh Rajaraman]</a></li>
-<li><a href="#user-stories-done-by">Appendix B: User Stories [Done by ]</a></li>
+<li><a href="#user-stories-done-by-sharadh-rajaraman-and-adarsh-chugani">Appendix B: User Stories [Done by Sharadh Rajaraman and Adarsh Chugani]</a></li>
 <li><a href="#use-cases-done-by-sharadh-rajaraman">Appendix C: Use Cases [Done by Sharadh Rajaraman]</a></li>
 <li><a href="#non-functional-requirements-done-by-zain-alam">Appendix D: Non Functional Requirements [Done by Zain Alam &amp; ]</a></li>
 <li><a href="#glossary-done-by-zain-alam">Appendix E: Glossary [Done by Zain Alam]</a></li>
@@ -54,18 +49,19 @@
 </ul>
 </li>
 </ul>
-</div>
+</li>
+</ul></div></div><div id="content"><h1 id="overview" class="sect0"><a class="link" href="#overview">Overview</a></h1>
+<div class="paragraph">
+<p>By: <code>AY1920S2-CS2103T-W12-4</code>      Since: <code>Feb 2020</code>      Licence: <code>MIT</code></p>
 </div>
 <div class="sect1">
 <h2 id="introduction-done-by-zain-alam"><a class="link" href="#introduction-done-by-zain-alam">1. Introduction [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Welcome to CookBuddy!</p>
+<p>CookBuddy helps users familiar with the command-line and are fast typists, to easily manage their recipes. Features include adding, editing, and deleting recipes, as well as adding recipe images, tags, and setting various recipe attributes like serving size, cooking time, and personal management like ratings and favourites.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="images/Ui.png" alt="Ui" width="790">
-</div>
+<div class="paragraph">
+<p>For more information about using CookBuddy, consult the <a href="UserGuide.html">CookBuddy User Guide</a>.</p>
 </div>
 <div class="paragraph">
 <p>CookBuddy is an integrated platform fully customized for users who wish to manage their recipes easily and effectively.</p>
@@ -253,24 +249,15 @@ The following class plays an important role at the architecture level:</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>For example, the <code>Logic</code> component (see the class diagram given below) defines it&#8217;s API in the <code>Logic.java</code> interface and exposes its functionality using the <code>LogicManager.java</code> class.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/LogicClassDiagram.svg" alt="LogicClassDiagram">
-</div>
-<div class="title">Figure 2. Class Diagram of the Logic Component</div>
-</div>
 <h4 id="how-the-architecture-components-interact-with-each-other" class="discrete">How the architecture components interact with each other</h4>
 <div class="paragraph">
 <p>The <em>Sequence Diagram</em> below shows how the components interact with each other for the scenario where the user issues the command <code>delete 1</code>.</p>
 </div>
-<div class="imageblock">
+<div id="bleep" class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/ArchitectureSequenceDiagram.svg" alt="ArchitectureSequenceDiagram">
 </div>
-<div class="title">Figure 3. Component interactions for <code>delete 1</code> command</div>
+<div class="title">Figure 2. Component interactions for <code>delete 1</code> command</div>
 </div>
 <div class="paragraph">
 <p>The sections below give more details of each component.</p>
@@ -282,7 +269,7 @@ The following class plays an important role at the architecture level:</p>
 <div class="content">
 <img src="images/UiClassDiagram.svg" alt="UiClassDiagram">
 </div>
-<div class="title">Figure 4. Structure of the UI Component</div>
+<div class="title">Figure 3. Structure of the UI Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/tree/master/src/main/java/cookbuddy/ui/Ui.java"><code>Ui.java</code></a></p>
@@ -309,14 +296,31 @@ For example, the layout of the <a href="https://github.com/AY1920S2-CS2103T-W12-
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>UI</code> component uses the JMetro library to apply a theme to the default JavaFX interface. The resulting product presents a neat, Windows 10-style UI to the user, that employs <a href="https://www.microsoft.com/design/fluent/#/">Microsoft&#8217;s Fluent Design patterns</a>.</p>
+</div>
+<div class="paragraph">
+<p>For more information on JMetro, refer to the <a href="https://pixelduke.com/java-javafx-theme-jmetro/">JMetro home page</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="Design-Logic"><a class="link" href="#Design-Logic">5.3. Logic component</a></h3>
-<div id="fig-LogicClassDiagram" class="imageblock">
+<div id="fig-LogicClassDiagram" class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/LogicClassDiagram.svg" alt="LogicClassDiagram">
 </div>
-<div class="title">Figure 5. Structure of the Logic Component</div>
+<div class="title">Figure 4. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -348,7 +352,7 @@ For example, the layout of the <a href="https://github.com/AY1920S2-CS2103T-W12-
 <div class="content">
 <img src="images/DeleteSequenceDiagram.svg" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 6. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 5. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -365,11 +369,11 @@ The lifeline for <code>DeleteCommandParser</code> should end at the destroy mark
 </div>
 <div class="sect2">
 <h3 id="Design-Model"><a class="link" href="#Design-Model">5.4. Model component</a></h3>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/ModelClassDiagram.svg" alt="ModelClassDiagram">
 </div>
-<div class="title">Figure 7. Structure of the Model Component</div>
+<div class="title">Figure 6. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/tree/master/src/main/java/cookbuddy/model/Model.java"><code>Model.java</code></a></p>
@@ -407,10 +411,22 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Recipe Book</
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="the-code-attribute-code-package"><a class="link" href="#the-code-attribute-code-package">5.4.1. The <code>attribute</code> package</a></h4>
+<div id="attrib-package" class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/AttributeClassDiagram.svg" alt="AttributeClassDiagram">
+</div>
+<div class="title">Figure 7. Structure of the <code>attribute</code> package, defining each <code>Recipe</code> 's key attributes</div>
+</div>
+<div class="paragraph">
+<p><code>attribute</code> defines common attributes for each recipe, such as time taken to cook, serving size, an image of the recipe, and so on.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="Design-Storage"><a class="link" href="#Design-Storage">5.5. Storage component</a></h3>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/StorageClassDiagram.svg" alt="StorageClassDiagram">
 </div>
@@ -420,15 +436,18 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Recipe Book</
 <p><strong>API</strong> : <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/tree/master/src/main/java/cookbuddy/storage/Storage.java"><code>Storage.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The <code>Storage</code> component,</p>
+<p>The <code>Storage</code> component manages the recipe data, the user configuration, preferences, and the image data. To be specific, it:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>can save <code>UserPref</code> objects in JSON format and read it back.</p>
+<p>reads and writes <code>UserPref</code> objects to and from disk, as <code>.json</code> format;</p>
 </li>
 <li>
-<p>can save the Recipe Book data in JSON format and read it back.</p>
+<p>serialises, reads and writes recipe data to and from disk, <em>also</em> as <code>.json</code> format;</p>
+</li>
+<li>
+<p>passes on the file path for the user-entered image into methods in the <code>ImageUtil</code> class. More details are given in <a href="#Img-considerations">Section 6.2.3, &#8220;Design Considerations&#8221;</a>.</p>
 </li>
 </ul>
 </div>
@@ -436,24 +455,42 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Recipe Book</
 <div class="sect2">
 <h3 id="Design-Commons"><a class="link" href="#Design-Commons">5.6. Common classes</a></h3>
 <div class="paragraph">
-<p>Classes used by multiple components are in the <code>cookbuddy.commons</code> package.</p>
+<p>Classes used by multiple components are in the <code>cookbuddy.commons</code> package; the three over-arching sub-packages are <code>core</code>, <code>exceptions</code>, and <code>util</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="code-core-code"><a class="link" href="#code-core-code">5.6.1. <code>core</code></a></h4>
+<div class="paragraph">
+<p>This package defines classes for user configuration, GUI settings, and even a version number.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-exceptions-code"><a class="link" href="#code-exceptions-code">5.6.2. <code>exceptions</code></a></h4>
+<div class="paragraph">
+<p>This package defines exceptions thrown by CookBuddy when it encounters an error state.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="code-util-code"><a class="link" href="#code-util-code">5.6.3. <code>util</code></a></h4>
+<div class="paragraph">
+<p>This package defines utility classes for certain operations, like file I/O, argument validation, and image processing.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="implementation"><a class="link" href="#implementation">6. Implementation</a></h2>
+<h2 id="implementation-details-and-future-work"><a class="link" href="#implementation-details-and-future-work">6. Implementation Details, and Future Work</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes some noteworthy details on how certain features are implemented.</p>
+<p>This section right nowdescribes some noteworthy details on how certain features are implemented, as well as alternatives. Some possible future components are briefly covered, and these may be released in <code>v2.0</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="count-feature-done-by-zain-alam"><a class="link" href="#count-feature-done-by-zain-alam">6.1. Count feature [Done by Zain Alam]</a></h3>
+<h3 id="counting-recipes-done-by-zain-alam"><a class="link" href="#counting-recipes-done-by-zain-alam">6.1. Counting recipes [Done by Zain Alam]</a></h3>
 <div class="paragraph">
 <p>We allow users to count the total number of recipes stored in CookBuddy. This section shows how we handle this request from the user.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-2"><a class="link" href="#implementation-2">6.1.1. Implementation</a></h4>
+<h4 id="implementation"><a class="link" href="#implementation">6.1.1. Implementation</a></h4>
 <div class="paragraph">
 <p>We store every single <code>Recipe</code> added by the user into an <code>ObservableList&lt;Recipe&gt;</code>, which is a list object in <code>UniqueRecipeList</code>. We used an <code>ObservableList</code> to easily reflect changes to the list by any other component of CookBuddy using the list.</p>
 </div>
@@ -519,217 +556,87 @@ the <code>count</code> command is successfully executed and the total number of 
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">6.2. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="image-management-done-by-sharadh-rajaraman"><a class="link" href="#image-management-done-by-sharadh-rajaraman">6.2. Image Management [Done by Sharadh Rajaraman]</a></h3>
+<div class="paragraph">
+<p>CookBuddy allows users to add images to their recipes, which are then saved into the <code>data/images</code> folder created by CookBuddy (at least, using the default settings). This section elaborates on implementation.</p>
+</div>
+<div class="paragraph">
+<p>The two key classes allowing image and photo management are <code>ImageUtil</code> and <code>Photograph</code>; the former is a utility class written in the <a href="https://en.wikipedia.org/wiki/Singleton_pattern">singleton pattern</a>; the latter is the attribute that each <code>Recipe</code> directly contains, as <a href="#attrib-package">Figure 7, &#8220;Structure of the <code>attribute</code> package, defining each <code>Recipe</code> 's key attributes&#8221;</a> details.</p>
+</div>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">6.2.1. Proposed Implementation</a></h4>
-<div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedRecipeBook</code>.
-It extends <code>RecipeBook</code> with an undo/redo history, stored internally as an <code>RecipeBookStateList</code> and <code>currentStatePointer</code>.
-Additionally, it implements the following operations:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>VersionedRecipeBook#commit()</code>&#8201;&#8212;&#8201;Saves the current recipe book state in its history.</p>
-</li>
-<li>
-<p><code>VersionedRecipeBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous recipe book state from its history.</p>
-</li>
-<li>
-<p><code>VersionedRecipeBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone recipe book state from its history.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitRecipeBook()</code>, <code>Model#undoRecipeBook()</code> and <code>Model#redoRecipeBook()</code> respectively.</p>
-</div>
-<div class="paragraph">
-<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
-</div>
-<div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedRecipeBook</code> will be initialized with the initial recipe book state, and the <code>currentStatePointer</code> pointing to that single recipe book state.</p>
-</div>
-<div class="imageblock">
+<h4 id="from-user-command-to-image-on-screen"><a class="link" href="#from-user-command-to-image-on-screen">6.2.1. From User Command to Image On Screen</a></h4>
+<div id="img-seq" class="imageblock" style="text-align: "center">
 <div class="content">
-<img src="images/UndoRedoState0.svg" alt="UndoRedoState0">
+<img src="images/PhotoSequenceDiagram.svg" alt="PhotoSequenceDiagram">
 </div>
+<div class="title">Figure 11. Sequence Diagram of image retrieval from disk</div>
 </div>
 <div class="paragraph">
-<p>Step 2. The user executes <code>delete 5</code> command to delete the 5th recipe in the recipe book. The <code>delete</code> command calls <code>Model#commitRecipeBook()</code>, causing the modified state of the recipe book after the <code>delete 5</code> command executes to be saved in the <code>recipeBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted recipe book state.</p>
+<p>The above sequence diagram details how a user-entered command is translated to an image file as displayed on screen. Some initial details are omitted, such as the calls to <code>RecipeBookParser#parseCommand()</code> (which have already been demonstrated in <a href="#Design-Model">Section 5.4, &#8220;Model component&#8221;</a>).</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>The steps taken are also described step-by-step in the activity diagram below:</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/UndoRedoState1.svg" alt="UndoRedoState1">
+<img src="images/PhotoReadActivityDiagram.svg" alt="PhotoReadActivityDiagram">
 </div>
-</div>
-<div class="paragraph">
-<p>Step 3. The user executes <code>new n/Chicken Rice &#8230;&#8203;</code> to add a new recipe. The <code>new</code> command also calls
-<code>Model#commitRecipeBook()</code>, causing another modified Recipe book state to be saved into the <code>RecipeBookStateList</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState2.svg" alt="UndoRedoState2">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If a command fails its execution, it will not call <code>Model#commitRecipeBook()</code>, so the recipe book state will not be saved into the <code>recipeBookStateList</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Step 4. The user now decides that adding the recipe was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoRecipeBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous recipe book state, and restores the recipe book to that state.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState3.svg" alt="UndoRedoState3">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial recipe book state, then there are no previous Recipe book states to restore. The <code>undo</code> command uses <code>Model#canUndoRecipeBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The following sequence diagram shows how the undo operation works:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoSequenceDiagram.svg" alt="UndoSequenceDiagram">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoRecipeBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the recipe book to that state.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.size() - 1</code>, pointing to the latest recipe book state, then there are no undone Recipe book states to restore. The <code>redo</code> command uses <code>Model#canRedoRecipeBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the Recipe book, such as <code>list</code>, will usually not call <code>Model#commitRecipeBook()</code>, <code>Model#undoRecipeBook()</code> or <code>Model#redoRecipeBook()</code>. Thus, the <code>recipeBookStateList</code> remains unchanged.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState4.svg" alt="UndoRedoState4">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 6. The user executes <code>reset</code>, which calls <code>Model#commitRecipeBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>recipeBookStateList</code>, all recipe book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>new n/Chicken Rice &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState5.svg" alt="UndoRedoState5">
-</div>
-</div>
-<div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/CommitActivityDiagram.svg" alt="CommitActivityDiagram">
-</div>
+<div class="title">Figure 12. Activity diagram of <a href="#img-seq">Figure 11, &#8220;Sequence Diagram of image retrieval from disk&#8221;</a></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">6.2.2. Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<h4 id="saving-images-into-the-data-folder"><a class="link" href="#saving-images-into-the-data-folder">6.2.2. Saving Images Into the Data Folder</a></h4>
+<div class="paragraph">
+<p>When saving images, there were a few considerations that needed to be taken into account:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire recipe book.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement.</p>
+<p>The image on disk <strong>must</strong> contain the recipe name, so as to be reasonably understandable;</p>
 </li>
 <li>
-<p>Cons: May have performance issues in terms of memory usage.</p>
+<p>The image on disk must be stored <em>losslessly</em>, so that repeated read-write cycles do not deplete the quality;</p>
+</li>
+<li>
+<p>If an image already exists on disk, then read/write cycles must not be wasted in overwriting an image with the same data;</p>
+</li>
+<li>
+<p>Even if recipes have the same name, the image file names must be distinct, and yet always resolve to the same.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Will use less memory (e.g. for <code>delete</code>, just save the recipe being deleted).</p>
-</li>
-<li>
-<p>Cons: We must ensure that the implementation of each individual command are correct.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Therefore, a hashcode is appended to each image file name, and the resulting data is saved to disk as a <code>.png</code> image, which is lossless. <code>jpeg</code> formats would require lossy compression at each save, which would progressively degrade image quality.</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>This entire process is also demonstrated in the activity diagram below:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/PhotoSaveActivityDiagram.svg" alt="PhotoSaveActivityDiagram" width="400">
+</div>
+<div class="title">Figure 13. Activity diagram representing image save process</div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="aspect-data-structure-to-support-the-undo-redo-commands"><a class="link" href="#aspect-data-structure-to-support-the-undo-redo-commands">Aspect: Data structure to support the undo/redo commands</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of recipe book states.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
-</li>
-<li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedRecipeBook</code>.</p>
-</li>
-</ul>
+<div class="sect3">
+<h4 id="Img-considerations"><a class="link" href="#Img-considerations">6.2.3. Design Considerations</a></h4>
+<div class="paragraph">
+<p><code>ImageUtil</code> is implemented as a singleton class. In other words, its constructor is declared <code>private</code>, and the object can only be retrieved by the <code>public static</code> factory method, <code>ImageUtil.imageUtil()</code>. Given the class defines <em>several</em> constants using methods, we believed this was the most straightforward direction possible.</p>
 </div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
-</li>
-<li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><code>ImageUtil</code> also declares <code>PLACEHOLDER_IMAGE</code> as several static constant types: a <code>BufferedImage</code>, an <code>InputStream</code>, and even as a <code>Path</code>. The <em>actual</em> image is bundled with the <code>JAR</code> file, which can be explored at will using an extractor tool like <code>7zip</code>.</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>These constants are loaded when the Photograph class is first called, thus adhering to Java&#8217;s Just-In-Time (JIT) principle.</p>
 </div>
+<div class="paragraph">
+<p>Furthermore, the initial <code>ImageUtil</code> written as an ordinary static utility class led to the JVM throwing <code>ExceptionInInitializerError</code> when the built <code>.jar</code> was run. There were no issues running this from the IDE; hence the singleton pattern.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possible-improvements"><a class="link" href="#possible-improvements">6.2.4. Possible Improvements</a></h4>
+<div class="paragraph">
+<p>As it is, image processing spans <em>several</em> classes: <code>FileUtil</code>, <code>ImageUtil</code>, <code>Photograph</code>. We would like to simplify this. Furthermore, <em>saving</em> image data requires returning a file path through several methods, which have little relation to one another.</p>
 </div>
 </div>
 </div>
@@ -774,7 +681,42 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <div class="sect2">
 <h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">6.4. Configuration</a></h3>
 <div class="paragraph">
-<p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
+<p>Certain properties of the application may be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Implementation-Future"><a class="link" href="#Implementation-Future">6.5. Features coming in <code>v2.0</code></a></h3>
+<div class="paragraph">
+<p>We have some exciting features in line for <code>v2.0</code>, and some of these include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Converting between units: American users of our application might be more comfortable with pounds, quarts, gallons and such. Therefore, we aim to implement a seamless conversion between US customary and metric units, with a one-command (or click) way to switch between the two.</p>
+</li>
+<li>
+<p>We also note that users may prefer some advanced UNIX-style compressed syntax; hence, we are exploring using the <a href="https://picocli.info/">PicoCLI</a> library to implement <em>both</em> the current Windows-style slash-based syntax, as well as UNIX-style dash-based syntax. This is a <em>single</em> class that can either be imported as a dependency, or directly included as source.</p>
+<div class="paragraph">
+<p>We expect that this change would also drastically decrease code length and improve stability and testability, given the current implementation spans not just several <em>classes</em>, but two entire <em>packages</em>: <code>cookbuddy.logic.parser</code>, and <code>cookbuddy.logic.command</code>. As it is now, we have needless object-orientation for the sake of doing so, and we believe in simplicity as much as possible.</p>
+</div>
+</li>
+<li>
+<p>We understand users who cook love to share their creations with friends and family; therefore, we intend to use social media APIs from Facebook, Google, Twitter, Reddit, Instagram, and Snapchat, to allow users to share their recipes to the world.</p>
+</li>
+<li>
+<p>Users might not be comfortable with keeping their computers near the stove, hence, we plan to offer two solutions in <code>v2.0</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>We plan to release mobile apps for the two major platforms, Android and iOS.</p>
+</li>
+<li>
+<p>For users more comfortable with paper, we plan to allow <em>printing</em> of recipes to PDF, and directly to printers. This engine is intended to be powered by <code>LaTeX</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -816,31 +758,20 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <div class="ulist">
 <ul>
 <li>
-<p>needs to manage many recipes</p>
+<p>needs to manage multiple recipes</p>
 </li>
 <li>
-<p>needs to have a clean interface to view and read recipes</p>
-</li>
-<li>
-<p>experiments with dishes</p>
+<p>needs to have a clean interface to view and read dishes
+_ experiments with dishes</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>prefers desktop apps over other types</p>
-</li>
-<li>
-<p>can type fast</p>
-</li>
-<li>
-<p>prefers typing over mouse input</p>
-</li>
-<li>
 <p>is reasonably familiar with the command-line</p>
 </li>
 <li>
-<p>requires a straightforward means to catalogue and codify recipes and meals without using spreadsheets</p>
+<p>requires a straightforward means to catalogue and codify dishes and meals without using spreadsheets</p>
 </li>
 </ul>
 </div>
@@ -860,7 +791,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <div class="ulist">
 <ul>
 <li>
-<p>allow easier and faster retrieval with attributes like tags, time, difficulty, rating etc;</p>
+<p>allow easier and faster retrieval with attributes like tags, time, difficulty, etc;</p>
 </li>
 <li>
 <p>present a straightforward interface to edit, duplicate and combine recipes into meals</p>
@@ -869,14 +800,14 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </li>
 <li>
-<p>Overall increase in productivity.</p>
+<p>Export recipes to a printable, human-readable and consistent format</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="user-stories-done-by"><a class="link" href="#user-stories-done-by">Appendix B: User Stories [Done by ]</a></h2>
+<h2 id="user-stories-done-by-sharadh-rajaraman-and-adarsh-chugani"><a class="link" href="#user-stories-done-by-sharadh-rajaraman-and-adarsh-chugani">Appendix B: User Stories [Done by Sharadh Rajaraman and Adarsh Chugani]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Priorities: <strong>High</strong> (must have), <strong>Medium</strong> (nice to have), <strong>Low</strong> (unlikely to have)</p>
@@ -1343,16 +1274,10 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <li>
 <p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
 </li>
-<li>
-<p>Commands should be <a href="#one-shot-c">one-shot</a> commands as opposed to <a href="#multi-level-c">multi-level commands</a>.</p>
-</li>
-<li>
-<p>CookBuddy should be able to function without internet access.</p>
-</li>
-<li>
-<p>A user should be able to familiarise herself with less than 30 minutes of usage.</p>
-</li>
 </ol>
+</div>
+<div class="paragraph">
+<p><em>{More to be added}</em></p>
 </div>
 </div>
 </div>
@@ -1361,21 +1286,9 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a id="attributes"></a> Attributes</dt>
-<dd>
-<p>The information of a recipe. For example, calories, ingredients or instructions etc.</p>
-</dd>
 <dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
 <dd>
 <p>Windows, macOS, Linux, UNIX</p>
-</dd>
-<dt class="hdlist1"><a id="multi-level-c"></a> Multi-level Commands</dt>
-<dd>
-<p>Commands that require multiple lines of user input for execution.</p>
-</dd>
-<dt class="hdlist1"><a id="one-shot-c"></a> One-shot Commands</dt>
-<dd>
-<p>Commands that are executed using only a single line of user input.</p>
 </dd>
 <dt class="hdlist1"><a id="recipe"></a> Recipe</dt>
 <dd>
@@ -1894,6 +1807,9 @@ Expected: No recipe is deleted. An error message prompting the user to provide a
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="saving-data"><a class="link" href="#saving-data">G.9. Saving data</a></h3>
@@ -1929,4 +1845,4 @@ Expected: No recipe is deleted. An error message prompting the user to provide a
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 07:07:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:02:07 UTC</div></div></div></body></html>

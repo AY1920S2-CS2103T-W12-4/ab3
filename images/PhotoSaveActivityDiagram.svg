@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="551px" preserveAspectRatio="none" style="width:650px;height:551px;" version="1.1" viewBox="0 0 650 551" width="650px" zoomAndPan="magnify"><defs/><g><ellipse cx="299.5" cy="20" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="143" x="228" y="50"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="123" x="238" y="71.2559">User inputs command</text><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="209" x="195" y="103.7988"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="189" x="205" y="125.0547">Recipe book attempts to save data</text><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="247" x="176" y="157.5977"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="227" x="186" y="178.8535">Recipe book attempts to save image data</text><polygon fill="#FEFECE" points="299.5,211.3965,299.5,211.3965,311.5,223.3965,299.5,235.3965,299.5,235.3965,287.5,223.3965,299.5,211.3965" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="153" x="134.5" y="221.0654">[Image is the placeholder image]</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="311.5" y="221.0654">[else]</text><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="262" x="10" y="245.3965"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="20" y="266.9043">Write</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="51" y="266.3594">placeholder</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="131" y="266.9043">to recipe data</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="208" y="266.3594">.json</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="16" x="246" y="266.9043">file</text><rect fill="#FEFECE" height="48.1016" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="312" x="302" y="293.7209"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="108" x="314.5" y="315.2288">Write byte data from</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="425.5" y="314.6838">Photograph</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="9" x="495.5" y="315.2288">'s</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="91" x="507.5" y="314.6838">BufferedImage</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="0" x="601.5" y="315.2288"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="125" x="315" y="329.2795">attribute to a file, called</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="161" x="443" y="328.7346">recipename_hashcode.png</text><rect fill="#FEFECE" height="48.1016" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="310" x="303" y="376.8225"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="123" x="313" y="398.3303">Write image file name,</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="161" x="439" y="397.7854">recipename_hashcode.png</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="0" x="603" y="398.3303"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="394" y="412.3811">to recipe data</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="471" y="411.8362">.json</text><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="16" x="509" y="412.3811">file</text><polygon fill="#FEFECE" points="458,245.3965,458,245.3965,470,257.3965,458,269.3965,458,269.3965,446,257.3965,458,245.3965" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="462" y="279.7144">[else]</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="470" y="255.0654">[Image file already exists on disk]</text><polygon fill="#FEFECE" points="458,444.9241,470,456.9241,458,468.9241,446,456.9241,458,444.9241" style="stroke: #A80036; stroke-width: 1.5;"/><polygon fill="#FEFECE" points="299.5,474.9241,311.5,486.9241,299.5,498.9241,287.5,486.9241,299.5,474.9241" style="stroke: #A80036; stroke-width: 1.5;"/><ellipse cx="299.5" cy="529.9241" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="299.5" cy="529.9241" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="299.5" x2="299.5" y1="30" y2="50"/><polygon fill="#A80036" points="295.5,40,299.5,50,303.5,40,299.5,44" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="299.5" x2="299.5" y1="83.7988" y2="103.7988"/><polygon fill="#A80036" points="295.5,93.7988,299.5,103.7988,303.5,93.7988,299.5,97.7988" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="299.5" x2="299.5" y1="137.5977" y2="157.5977"/><polygon fill="#A80036" points="295.5,147.5977,299.5,157.5977,303.5,147.5977,299.5,151.5977" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="458" y1="341.8225" y2="376.8225"/><polygon fill="#A80036" points="454,366.8225,458,376.8225,462,366.8225,458,370.8225" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="458" y1="269.3965" y2="293.7209"/><polygon fill="#A80036" points="454,283.7209,458,293.7209,462,283.7209,458,287.7209" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="470" x2="624" y1="257.3965" y2="257.3965"/><polygon fill="#A80036" points="620,349.3225,624,359.3225,628,349.3225,624,353.3225" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="624" x2="624" y1="257.3965" y2="456.9241"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="624" x2="470" y1="456.9241" y2="456.9241"/><polygon fill="#A80036" points="480,452.9241,470,456.9241,480,460.9241,476,456.9241" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="458" y1="424.9241" y2="444.9241"/><polygon fill="#A80036" points="454,434.9241,458,444.9241,462,434.9241,458,438.9241" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="287.5" x2="141" y1="223.3965" y2="223.3965"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="141" x2="141" y1="223.3965" y2="245.3965"/><polygon fill="#A80036" points="137,235.3965,141,245.3965,145,235.3965,141,239.3965" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="311.5" x2="458" y1="223.3965" y2="223.3965"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="458" y1="223.3965" y2="245.3965"/><polygon fill="#A80036" points="454,235.3965,458,245.3965,462,235.3965,458,239.3965" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="141" x2="141" y1="279.4473" y2="486.9241"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="141" x2="287.5" y1="486.9241" y2="486.9241"/><polygon fill="#A80036" points="277.5,482.9241,287.5,486.9241,277.5,490.9241,281.5,486.9241" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="458" y1="468.9241" y2="486.9241"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458" x2="311.5" y1="486.9241" y2="486.9241"/><polygon fill="#A80036" points="321.5,482.9241,311.5,486.9241,321.5,490.9241,317.5,486.9241" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="299.5" x2="299.5" y1="191.3965" y2="211.3965"/><polygon fill="#A80036" points="295.5,201.3965,299.5,211.3965,303.5,201.3965,299.5,205.3965" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="299.5" x2="299.5" y1="498.9241" y2="518.9241"/><polygon fill="#A80036" points="295.5,508.9241,299.5,518.9241,303.5,508.9241,299.5,512.9241" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[fb2898361f59e7e2029a1531342451c0]
+@startuml
+
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+
+start
+
+:User inputs command;
+:Recipe book attempts to save data;
+:Recipe book attempts to save image data;
+
+if () then ([Image is the placeholder image])
+    :Write ""placeholder"" to recipe data "".json"" file;
+else ([else])
+    if () then ([Image file already exists on disk])
+    else ([else])
+    :Write byte data from ""Photograph""'s ""BufferedImage"" \n attribute to a file, called ""recipename_hashcode.png"";
+    :Write image file name, ""recipename_hashcode.png"" \n to recipe data "".json"" file;
+    endif
+endif
+
+stop
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 20:38:32 SGT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: SG
+--></g></svg>
