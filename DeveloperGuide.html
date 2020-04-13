@@ -58,7 +58,7 @@
 <h2 id="introduction-done-by-zain-alam"><a class="link" href="#introduction-done-by-zain-alam">1. Introduction [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>CookBuddy helps users familiar with the command-line and are fast typists, to easily manage their recipes. Features include adding, editing, and deleting recipes, as well as adding recipe images, tags, and setting various recipe attributes like serving size, cooking time, and personal management like ratings and favourites.</p>
+<p>Welcome to CookBuddy!</p>
 </div>
 <div class="paragraph">
 <p>For more information about using CookBuddy, consult the <a href="UserGuide.html">CookBuddy User Guide</a>.</p>
@@ -253,7 +253,7 @@ The following class plays an important role at the architecture level:</p>
 <div class="paragraph">
 <p>The <em>Sequence Diagram</em> below shows how the components interact with each other for the scenario where the user issues the command <code>delete 1</code>.</p>
 </div>
-<div id="bleep" class="imageblock" style="text-align: center">
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/ArchitectureSequenceDiagram.svg" alt="ArchitectureSequenceDiagram">
 </div>
@@ -758,14 +758,25 @@ the <code>count</code> command is successfully executed and the total number of 
 <div class="ulist">
 <ul>
 <li>
-<p>needs to manage multiple recipes</p>
+<p>needs to manage many recipes</p>
 </li>
 <li>
-<p>needs to have a clean interface to view and read dishes
-_ experiments with dishes</p>
+<p>needs to have a clean interface to view and read recipes</p>
+</li>
+<li>
+<p>experiments with dishes</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>prefers desktop apps over other types</p>
+</li>
+<li>
+<p>can type fast</p>
+</li>
+<li>
+<p>prefers typing over mouse input</p>
 </li>
 <li>
 <p>is reasonably familiar with the command-line</p>
@@ -800,7 +811,7 @@ _ experiments with dishes</p>
 </div>
 </li>
 <li>
-<p>Export recipes to a printable, human-readable and consistent format</p>
+<p>Overall increase in productivity.</p>
 </li>
 </ul>
 </div>
@@ -1274,10 +1285,16 @@ _ experiments with dishes</p>
 <li>
 <p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
 </li>
+<li>
+<p>Commands should be <a href="#one-shot-c">one-shot</a> commands as opposed to <a href="#multi-level-c">multi-level commands</a>.</p>
+</li>
+<li>
+<p>CookBuddy should be able to function without internet access.</p>
+</li>
+<li>
+<p>A user should be able to familiarise herself with less than 30 minutes of usage.</p>
+</li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
 </div>
 </div>
 </div>
@@ -1286,9 +1303,21 @@ _ experiments with dishes</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><a id="attributes"></a> Attributes</dt>
+<dd>
+<p>The information of a recipe. For example, calories, ingredients or instructions etc.</p>
+</dd>
 <dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
 <dd>
 <p>Windows, macOS, Linux, UNIX</p>
+</dd>
+<dt class="hdlist1"><a id="multi-level-c"></a> Multi-level Commands</dt>
+<dd>
+<p>Commands that require multiple lines of user input for execution.</p>
+</dd>
+<dt class="hdlist1"><a id="one-shot-c"></a> One-shot Commands</dt>
+<dd>
+<p>Commands that are executed using only a single line of user input.</p>
 </dd>
 <dt class="hdlist1"><a id="recipe"></a> Recipe</dt>
 <dd>
@@ -1845,4 +1874,4 @@ Expected: No recipe is deleted. An error message prompting the user to provide a
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:52:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 09:05:22 UTC</div></div></div></body></html>
