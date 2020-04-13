@@ -10,9 +10,10 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>CookBuddy</strong> is a desktop recipe manager for students staying in university accommodation who enjoy cooking.
-They can interact with it through a Command Line Interface (CLI), and it has a Graphical User Interface (GUI) created with JavaFX.
-It is written in Java, and has about 10 kLoC.</p>
+<p><strong>CookBuddy</strong> is a personal desktop recipe manager application for students staying in university accommodation who enjoy cooking.
+The user can interact with it through a Command Line Interface (CLI) along with a Graphical User Interface (GUI) created with JavaFX.
+It is written in Java and only supports Java 11. It also has close to 10 kLoC. With that being said, there are future plans to expand
+the application to an online version as well as for different platforms.</p>
 </div>
 </div>
 </div>
@@ -22,29 +23,40 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>the ability for a recipe to have a calorie</strong></p>
+<p><strong>Major enhancement</strong>:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>added a count command that allows the user to count the total number of recipes stored in CookBuddy.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to add a caloric amount to a recipe.</p>
+<p>What it does: It gives the user an ability to keep track of total number of recipes stored in CookBuddy.</p>
 </li>
 <li>
-<p>Justification: This feature improves the product significantly because a user can know the amount of calories in a recipe to meet his/ her daily caloric requirements.</p>
+<p>Justification: This feature improves the product significantly because a user can know the number of recipes he/ she has. When a user have highly differentiated tastes and needs, knowing how many he/ she has can let him/ her satisfy his/ her own particular wants.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
-</li>
-<li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+<p>Highlights: The user is able to view the number of recipes he/ she has. This enhancement also affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
 </li>
 </ul>
 </div>
 </li>
-<li>
-<p><strong>Minor enhancement</strong>: added a count command that allows the user to count the total number of recipes stored in CookBuddy.</p>
+</ol>
+</div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=muhd97&amp;tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D">Code Contributed</a>]</p>
+<p><strong>Minor enhancement</strong>:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Added a calorie attribute to a recipe class with the necessary restraints.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=muhd97&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false">Functional code and Test code contributed</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -55,7 +67,13 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Helped in managing the team&#8217;s repository and pull requests.</p>
+</li>
+<li>
+<p>Helped teammates with testing errors.</p>
+</li>
+<li>
+<p>Explained to teammates the flow of AB3 to better help them understand the code and therefore aiding them in implementing their own features.</p>
 </li>
 </ul>
 </div>
@@ -65,10 +83,7 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Updated the GUI color scheme (Pull requests <a href="https://github.com">#33</a>, <a href="https://github.com">#34</a>)</p>
-</li>
-<li>
-<p>Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests <a href="https://github.com">#36</a>, <a href="https://github.com">#38</a>)</p>
+<p>Wrote additional tests for existing features to increase coverage (Pull requests <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/301">#301</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/306">#306</a>)</p>
 </li>
 </ul>
 </div>
@@ -78,7 +93,16 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com">#14</a></p>
+<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/295">#295</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/309">#309</a></p>
+</li>
+<li>
+<p>Updated User Guide to include Product Information and Understanding CookBuddy GUI</p>
+</li>
+<li>
+<p>Updated User Guide with FAQs, Command Summary and the Glossary</p>
+</li>
+<li>
+<p>Updated Developer Guide to include Introduction, About this Document, Overview of Features, Value Proposition, Appendix D, Glossary and Product Survey</p>
 </li>
 </ul>
 </div>
@@ -88,29 +112,10 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com">#12</a>, <a href="https://github.com">#32</a>, <a href="https://github.com">#19</a>, <a href="https://github.com">#42</a></p>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/113">#113</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/114">#114</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/125">#125</a>, <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/pull/170">#170</a></p>
 </li>
 <li>
-<p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
-</li>
-<li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
-</li>
-<li>
-<p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Tools:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Integrated a third party library (Natty) to the project (<a href="https://github.com">#42</a>)</p>
-</li>
-<li>
-<p>Integrated a new Github plugin (CircleCI) to the team repo</p>
+<p>Reported bugs and suggestions for other teams (examples: <a href="https://github.com/muhd97/ped">Practical Exam Dry Run</a></p>
 </li>
 </ul>
 </div>
@@ -119,9 +124,6 @@ It is written in Java, and has about 10 kLoC.</p>
 </div>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><em>{you can add/remove categories in the list above}</em></p>
 </div>
 </div>
 </div>
@@ -369,13 +371,4 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
-<div class="sectionbody">
-<hr>
-<div class="paragraph">
-<p><em>{Optionally, you may include other projects in your portfolio.}</em></p>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 02:35:26 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 03:03:16 UTC</div></div></div></body></html>
