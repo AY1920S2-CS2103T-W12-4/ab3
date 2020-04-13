@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="713px" preserveAspectRatio="none" style="width:892px;height:713px;" version="1.1" viewBox="0 0 892 713" width="892px" zoomAndPan="magnify"><defs/><g><rect fill="#C8C8FA" height="691.5771" style="stroke: #A80036; stroke-width: 1.0;" width="343" x="29" y="4"/><text fill="#FFFFFF" font-family="Arial" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="34" x="181.5" y="18.0698">logic</text><rect fill="#FFE374" height="691.5771" style="stroke: #A80036; stroke-width: 1.0;" width="354" x="388" y="4"/><text fill="#FFFFFF" font-family="Arial" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="22" x="552" y="18.0698">util</text><rect fill="#F97181" height="691.5771" style="stroke: #A80036; stroke-width: 1.0;" width="120" x="744" y="4"/><text fill="#FFFFFF" font-family="Arial" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="43" x="780.5" y="18.0698">model</text><rect fill="#FFFFFF" height="569.9097" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="113" y="113.6675"/><rect fill="#FFFFFF" height="46.0474" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="127.6675"/><rect fill="#FFFFFF" height="53.1704" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="232.1582"/><rect fill="#FFFFFF" height="87.665" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="545.9634"/><rect fill="#FFFFFF" height="459.6406" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="438.5" y="202.9365"/><rect fill="#FFFFFF" height="53.1704" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="653.5" y="314.5503"/><rect fill="#FFFFFF" height="29.2217" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="653.5" y="575.1851"/><rect fill="#FFFFFF" height="15.877" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="799" y="450.54"/><rect fill="#FFFFFF" height="423.4189" style="stroke: #000000; stroke-width: 2.0;" width="867" x="13" y="247.1582"/><rect fill="#FFFFFF" height="173.8154" style="stroke: #000000; stroke-width: 2.0;" width="847" x="23" y="329.5503"/><rect fill="#FFFFFF" height="98.6963" style="stroke: none; stroke-width: 1.0;" width="847" x="23" y="404.6694"/><rect fill="#FFFFFF" height="160.2114" style="stroke: none; stroke-width: 1.0;" width="867" x="13" y="510.3657"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="118" x2="118" y1="72.4458" y2="701.5771"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="290" x2="290" y1="142.2168" y2="701.5771"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="443" x2="443" y1="72.4458" y2="701.5771"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="658" x2="658" y1="72.4458" y2="701.5771"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="804" x2="804" y1="449.8677" y2="701.5771"/><rect fill="#3333C4" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="43" y="41.3472"/><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="50" y="61.479">:NewCommandParser</text><rect fill="#A38300" height="46.1973" style="stroke: #A80036; stroke-width: 1.5;" width="83" x="402" y="25.2485"/><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="409.5" y="45.3804">&lt;&lt;class&gt;&gt;</text><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="413" y="61.479">:ParserUtil</text><rect fill="#A38300" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="139" x="589" y="41.3472"/><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="596" y="61.479">&lt;&lt;class&gt;&gt;:ImageUtil</text><rect fill="#FFFFFF" height="569.9097" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="113" y="113.6675"/><rect fill="#FFFFFF" height="46.0474" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="127.6675"/><rect fill="#FFFFFF" height="53.1704" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="232.1582"/><rect fill="#FFFFFF" height="87.665" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="285.5" y="545.9634"/><rect fill="#FFFFFF" height="459.6406" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="438.5" y="202.9365"/><rect fill="#FFFFFF" height="53.1704" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="653.5" y="314.5503"/><rect fill="#FFFFFF" height="29.2217" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="653.5" y="575.1851"/><rect fill="#FFFFFF" height="15.877" style="stroke: #A80036; stroke-width: 1.0;" width="10" x="799" y="450.54"/><polygon fill="#A80036" points="106,99.6675,116,103.6675,106,107.6675,110,103.6675" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="3" x2="112" y1="103.6675" y2="103.6675"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="36" x="26.5" y="98.9126">parse(</text><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="28" x="62.5" y="98.3223">args</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4" x="90.5" y="98.9126">)</text><polygon fill="#A80036" points="211,113.6675,221,117.6675,211,121.6675,215,117.6675" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="123" x2="217" y1="117.6675" y2="117.6675"/><rect fill="#3333C4" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="135" x="223" y="111.6675"/><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="121" x="230" y="131.7993">:ArgumentMultiMap</text><polygon fill="#A80036" points="134,169.7148,124,173.7148,134,177.7148,130,173.7148" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="128" x2="289.5" y1="173.7148" y2="173.7148"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="107" x="153.25" y="168.96">argumentMultiMap</text><polygon fill="#A80036" points="426.5,198.9365,436.5,202.9365,426.5,206.9365,430.5,202.9365" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="123" x2="432.5" y1="202.9365" y2="202.9365"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="118" x="188.25" y="198.1816">parsePhotoFilePath(</text><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="63" x="306.25" y="197.5913">arguments</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4" x="369.25" y="198.1816">)</text><polygon fill="#A80036" points="306.5,228.1582,296.5,232.1582,306.5,236.1582,302.5,232.1582" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="300.5" x2="437.5" y1="232.1582" y2="232.1582"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="55" x="330.5" y="227.4033">getValue(</text><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="14" x="385.5" y="226.813">\p</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4" x="399.5" y="227.4033">)</text><path d="M13,247.1582 L74,247.1582 L74,253.1582 L64,263.1582 L13,263.1582 L13,247.1582 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="423.4189" style="stroke: #000000; stroke-width: 2.0;" width="867" x="13" y="247.1582"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="16" x="28" y="260.3521">alt</text><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="89" y="259.707">[Argument parameters for</text><text fill="#000000" font-family="Consolas" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="12" x="239" y="259.2075">p/</text><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="31" x="254" y="259.707">exist]</text><polygon fill="#A80036" points="426.5,281.3286,436.5,285.3286,426.5,289.3286,430.5,285.3286" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="290.5" x2="432.5" y1="285.3286" y2="285.3286"/><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="63" x="333" y="279.9834">arguments</text><polygon fill="#A80036" points="641.5,310.5503,651.5,314.5503,641.5,318.5503,645.5,314.5503" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="448.5" x2="647.5" y1="314.5503" y2="314.5503"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="458" y="309.7954">isPlaceHolderImage(</text><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="63" x="577" y="309.2051">arguments</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4" x="640" y="309.7954">)</text><path d="M23,329.5503 L84,329.5503 L84,335.5503 L74,345.5503 L23,345.5503 L23,329.5503 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="173.8154" style="stroke: #000000; stroke-width: 2.0;" width="847" x="23" y="329.5503"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="16" x="38" y="342.7441">alt</text><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="171" x="99" y="341.8682">[Is the placeholder image path]</text><polygon fill="#A80036" points="459.5,363.7207,449.5,367.7207,459.5,371.7207,455.5,367.7207" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="453.5" x2="657.5" y1="367.7207" y2="367.7207"/><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="494" y="362.3755">PLACEHOLDER_IMAGE</text><polygon fill="#A80036" points="134,392.6694,124,396.6694,134,400.6694,130,396.6694" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="128" x2="437.5" y1="396.6694" y2="396.6694"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="248.75" y="391.9146">photograph</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="23" x2="870" y1="405.6694" y2="405.6694"/><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="28" y="415.9873">[Is not the placeholder image path]</text><polygon fill="#A80036" points="746,436.54,756,440.54,746,444.54,750,440.54" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="448.5" x2="752" y1="440.54" y2="440.54"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="70" x="552.25" y="435.7852">Photograph(</text><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="28" x="622.25" y="435.1948">path</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="4" x="650.25" y="435.7852">)</text><rect fill="#9D0012" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="758" y="419.3184"/><text fill="#FFFFFF" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="765" y="439.4502">:Photograph</text><polygon fill="#A80036" points="459.5,462.417,449.5,466.417,459.5,470.417,455.5,466.417" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="453.5" x2="803" y1="466.417" y2="466.417"/><polygon fill="#A80036" points="134,491.3657,124,495.3657,134,499.3657,130,495.3657" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="128" x2="437.5" y1="495.3657" y2="495.3657"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="248.75" y="490.6108">photograph</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="880" y1="511.3657" y2="511.3657"/><text fill="#000000" font-family="Arial" font-size="11" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="18" y="521.6836">[No argument parameters]</text><polygon fill="#A80036" points="306.5,541.9634,296.5,545.9634,306.5,549.9634,302.5,545.9634" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="300.5" x2="437.5" y1="545.9634" y2="545.9634"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="344.5" y="541.2085">orElse()</text><polygon fill="#A80036" points="641.5,571.1851,651.5,575.1851,641.5,579.1851,645.5,575.1851" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="295.5" x2="647.5" y1="575.1851" y2="575.1851"/><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="415" y="569.8398">PLACEHOLDER_IMAGE</text><polygon fill="#A80036" points="306.5,600.4067,296.5,604.4067,306.5,608.4067,302.5,604.4067" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="300.5" x2="657.5" y1="604.4067" y2="604.4067"/><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="417.5" y="599.0615">PLACEHOLDER_IMAGE</text><polygon fill="#A80036" points="426.5,629.6284,436.5,633.6284,426.5,637.6284,430.5,633.6284" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="290.5" x2="432.5" y1="633.6284" y2="633.6284"/><text fill="#000000" font-family="Consolas" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="119" x="305" y="628.2832">PLACEHOLDER_IMAGE</text><polygon fill="#A80036" points="134,658.5771,124,662.5771,134,666.5771,130,662.5771" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="128" x2="442.5" y1="662.5771" y2="662.5771"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="251.25" y="657.8223">photograph</text><polygon fill="#A80036" points="14,679.5771,4,683.5771,14,687.5771,10,683.5771" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="8" x2="117" y1="683.5771" y2="683.5771"/><!--MD5=[3491bbe873d0d8f4846d1e21c58858e1]
+@startuml PhotoSequenceDiagram
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+
+box logic #C8C8FA
+participant ":NewCommandParser" as NewCommandParser #3333C4
+participant ":ArgumentMultiMap" as ArgumentMultiMap #3333C4
+
+end box
+
+box util #FFE374
+participant "<<class>> \n :ParserUtil" as ParserUtil #A38300
+participant "<<class>>:ImageUtil" as ImageUtil #A38300
+end box
+
+box model #F97181
+participant ":Photograph" as Photograph #9D0012
+end box
+
+create NewCommandParser
+[-> NewCommandParser : parse(""args"")
+activate NewCommandParser
+
+create ArgumentMultiMap
+NewCommandParser -> ArgumentMultiMap
+activate ArgumentMultiMap
+return argumentMultiMap
+
+NewCommandParser -> ParserUtil : parsePhotoFilePath(""arguments"")
+activate ParserUtil
+
+ParserUtil -> ArgumentMultiMap : getValue(""\p"")
+activate ArgumentMultiMap
+
+alt Argument parameters for ""p/"" exist
+    ArgumentMultiMap - -> ParserUtil : ""arguments""
+    deactivate ArgumentMultiMap
+
+    ParserUtil -> ImageUtil : isPlaceHolderImage(""arguments"")
+    activate ImageUtil
+
+    alt Is the placeholder image path
+        return ""PLACEHOLDER_IMAGE""
+        NewCommandParser <- - ParserUtil : photograph
+    else Is not the placeholder image path
+        create Photograph
+        ParserUtil -> Photograph : Photograph(""path"")
+        activate Photograph
+        ParserUtil <- - Photograph
+        deactivate Photograph
+        NewCommandParser <- - ParserUtil : photograph
+    end
+else No argument parameters
+    ParserUtil -> ArgumentMultiMap : orElse()
+    activate ArgumentMultiMap
+    ArgumentMultiMap -> ImageUtil : ""PLACEHOLDER_IMAGE""
+    activate ImageUtil
+    return ""PLACEHOLDER_IMAGE""
+    return ""PLACEHOLDER_IMAGE""
+    return photograph
+end
+
+[<-NewCommandParser
+deactivate NewCommandParser
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 20:38:32 SGT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: SG
+--></g></svg>

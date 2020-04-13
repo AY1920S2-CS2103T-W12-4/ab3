@@ -5,7 +5,6 @@
 
 == PROJECT: CookBuddy
 
----
 
 == Overview
 
@@ -15,35 +14,48 @@ It is written in Java, and has about 10 kLoC.
 
 == Summary of contributions
 
-* *Major enhancement*: major enhancement 1
-** What it does: explain major enhancement 1
-** Justification: justify major enhancement 1
-** Highlights: Highlight 1
+* *Major enhancement*: Morphed addressbook-level3 into a basic version of *CookBuddy*.
+** What it does: allows my teammates to start working on features to extend *CookBuddy*.
+** Justification: *CookBuddy* does not make use of the Person class or its fields like _Email_ & _Address_.
+** Highlights: This enhancement affects the commands *CookBuddy* can respond to. For instance, *CookBuddy* responds to `new` instead of `add`.
 
-* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys.
+* *Major enhancement*: Created the test framework for *CookBuddy*.
+** What is does: It sets the foundation for my teammates to create test classes for *CookBuddy*.
+** Justification: This enhancement makes it a bit easier for my teammates to write test classes for *CookBuddy*.
+** Highlights: The test framework has some sample recipes with initialised attributes to make creating test recipes a bit easier.
 
-* *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false&tabOpen=true&tabType=authorship&tabAuthor=kevinswk94&tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D[Code Contributed]]
+* *Minor enhancement*: added a Command History feature that allows the user to navigate to previous commands using the page up / page down keys.
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/289[#289]
+
+* *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=kevinswk94&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false&tabOpen=true&tabType=authorship&tabAuthor=kevinswk94&tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D[Code Contributed]]
 
 * *Other contributions*:
 
 ** Project management:
-*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub
+*** Reviewed pull requests opened by teammates for code quality and bugs (ex1, ex2)
+
 ** Enhancements to existing features:
-*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])
-*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])
+*** Refactored the _AddCommand_ command into _NewCommand_. https://github.com/AY1920S2-CS2103T-W12-4/main/pull/77[#77]
+*** Added a command history to the _Command Box_ so that users can reuse previously entered commands. https://github.com/AY1920S2-CS2103T-W12-4/main/pull/289[#289]
+
 ** Documentation:
-*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]
+*** Updated the instructions for the `new` and `modify` commands. https://github.com/AY1920S2-CS2103T-W12-4/main/pull/170[#170]
+*** Added instructions on how to use the `find` command in the User Guide. https://github.com/AY1920S2-CS2103T-W12-4/main/pull/164/[#164]
+*** Added an explanation of how the `find` command works into the Developer Guide.
+
 ** Community:
-*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]
-*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])
-*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])
-*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])
-** Tools:
-*** Integrated a third party library (Natty) to the project (https://github.com[#42])
-*** Integrated a new Github plugin (CircleCI) to the team repo
+*** PRs reviewed (with non-trivial review comments):
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/295[#295],
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/293[#293],
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/171[#171],
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/124[#124],
+https://github.com/AY1920S2-CS2103T-W12-4/main/pull/113[#113]
+
+*** Reported bugs and suggestions for other teams during the Practical Exam Dry-Run
+    (examples:  https://github.com/kevinswk94/ped/issues/4[1], https://github.com/kevinswk94/ped/issues/1[2], https://github.com/kevinswk94/ped/issues/6[3])
+
 
 == Contributions to the User Guide
-
 
 |===
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
@@ -51,7 +63,8 @@ It is written in Java, and has about 10 kLoC.
 
 include::../UserGuide.adoc[tag=AddRecipe]
 
-include::../UserGuide.adoc[tag=find]
+include::../UserGuide.adoc[tag=FindRecipe]
+
 
 == Contributions to the Developer Guide
 
@@ -59,6 +72,6 @@ include::../UserGuide.adoc[tag=find]
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
 
+include::../DeveloperGuide.adoc[tag=FindCommandImpl]
 
-
----
+include::../DeveloperGuide.adoc[tag=ManualTesting]

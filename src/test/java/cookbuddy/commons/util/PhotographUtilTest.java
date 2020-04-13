@@ -1,7 +1,9 @@
 package cookbuddy.commons.util;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static cookbuddy.testutil.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.nio.file.InvalidPathException;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +15,7 @@ public class PhotographUtilTest {
         assertTrue(PhotographUtil.isPlaceHolderImage("/images/recipe_placeholder.jpg"));
 
         // invalid path
-        assertFalse(PhotographUtil.isPlaceHolderImage("a\0"));
+        assertThrows(InvalidPathException.class, () -> PhotographUtil.isPlaceHolderImage("a\0"));
     }
 
 }

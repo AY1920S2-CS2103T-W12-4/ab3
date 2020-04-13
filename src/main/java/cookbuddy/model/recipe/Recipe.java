@@ -177,9 +177,9 @@ public class Recipe {
     public String toString() {
         final StringBuilder builder = new StringBuilder();
         builder.append(getName()).append(" Ingredients: ").append(getIngredients()).append(
-            " Instructions: ").append(getInstructions()).append("Path: ").append(getPhotograph()).append(
-            " Calories: ").append(getCalorie()).append(" Serving size: ").append(getServing()).append(
-            " Rating: ").append(getRating()).append(" Difficulty ").append(getDifficulty()).append(
+            " Instructions: ").append(getInstructions()).append(" Path: ").append(getPhotograph()).append(
+            " Calories: ").append(getCalorie()).append(" Serving size: ").append(getServing().serving).append(
+            " Rating: ").append(getRating().rating).append(" Difficulty ").append(getDifficulty().difficulty).append(
             " Tags" + ": ");
         getTags().forEach(builder::append);
         return builder.toString();

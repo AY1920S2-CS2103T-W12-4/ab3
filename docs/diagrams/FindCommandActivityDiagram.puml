@@ -1,0 +1,22 @@
+@startuml
+!include style.puml
+
+start
+:User enters input;
+:Parse user input;
+
+if () then ([input contains only 1 prefix])
+    :Break search string into single keywords;
+    if () then ([keywords exist])
+        :Filter recipe book for recipes containing keywords;
+        :Update GUI with recipes found;
+    else ([else])
+        :Throw "invalid search term" error message;
+    endif
+else ([else])
+    :Throw "incorrect number of prefixes detected" error message;
+endif
+
+:Display results to user;
+stop
+@enduml

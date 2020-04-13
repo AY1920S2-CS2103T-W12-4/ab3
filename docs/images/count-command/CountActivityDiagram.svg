@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="562.5px" preserveAspectRatio="none" style="width:552px;height:562px;" version="1.1" viewBox="0 0 552 562" width="552px" zoomAndPan="magnify"><defs/><g><ellipse cx="280.125" cy="30" fill="#000000" rx="15" ry="15" style="stroke: none; stroke-width: 1.5;"/><rect fill="#FEFECE" height="50.6982" rx="18.75" ry="18.75" style="stroke: #A80036; stroke-width: 2.25;" width="268.5" x="145.875" y="75"/><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="238.5" x="160.875" y="106.8838">User inputs Count command</text><polygon fill="#FEFECE" points="280.125,155.6982,280.125,155.6982,298.125,173.6982,280.125,191.6982,280.125,191.6982,262.125,173.6982,280.125,155.6982" style="stroke: #A80036; stroke-width: 2.25;"/><text fill="#000000" font-family="Arial" font-size="16.5" lengthAdjust="spacingAndGlyphs" textLength="183" x="79.125" y="170.2017">[command is valid format]</text><text fill="#000000" font-family="Arial" font-size="16.5" lengthAdjust="spacingAndGlyphs" textLength="39" x="298.125" y="170.2017">[else]</text><rect fill="#FEFECE" height="50.6982" rx="18.75" ry="18.75" style="stroke: #A80036; stroke-width: 2.25;" width="199.5" x="42.75" y="206.6982"/><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="169.5" x="57.75" y="238.582">Count all the recipes</text><rect fill="#FEFECE" height="50.6982" rx="18.75" ry="18.75" style="stroke: #A80036; stroke-width: 2.25;" width="255" x="15" y="308.0947"/><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="225" x="30" y="339.9785">Returns success message</text><rect fill="#FEFECE" height="71.3965" rx="18.75" ry="18.75" style="stroke: #A80036; stroke-width: 2.25;" width="235.5" x="300" y="206.6982"/><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="205.5" x="315" y="238.582">Returns failure message</text><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="157.5" x="339" y="259.2803">(Invalid Command)</text><polygon fill="#FEFECE" points="280.125,367.793,298.125,385.793,280.125,403.793,262.125,385.793,280.125,367.793" style="stroke: #A80036; stroke-width: 2.25;"/><rect fill="#FEFECE" height="50.6982" rx="18.75" ry="18.75" style="stroke: #A80036; stroke-width: 2.25;" width="343.5" x="108.375" y="433.793"/><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="313.5" x="123.375" y="465.6768">LogicManager prints message to user</text><ellipse cx="280.125" cy="530.9912" fill="#FFFFFF" rx="16.5" ry="16.5" style="stroke: #000000; stroke-width: 1.5;"/><ellipse cx="280.125" cy="530.9912" fill="#000000" rx="9" ry="9" style="stroke: #7F7F7F; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="280.125" x2="280.125" y1="45" y2="75"/><polygon fill="#A80036" points="274.125,60,280.125,75,286.125,60,280.125,66" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="142.5" x2="142.5" y1="257.3965" y2="308.0947"/><polygon fill="#A80036" points="136.5,293.0947,142.5,308.0947,148.5,293.0947,142.5,299.0947" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="262.125" x2="142.5" y1="173.6982" y2="173.6982"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="142.5" x2="142.5" y1="173.6982" y2="206.6982"/><polygon fill="#A80036" points="136.5,191.6982,142.5,206.6982,148.5,191.6982,142.5,197.6982" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="298.125" x2="417.75" y1="173.6982" y2="173.6982"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="417.75" x2="417.75" y1="173.6982" y2="206.6982"/><polygon fill="#A80036" points="411.75,191.6982,417.75,206.6982,423.75,191.6982,417.75,197.6982" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="142.5" x2="142.5" y1="358.793" y2="385.793"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="142.5" x2="262.125" y1="385.793" y2="385.793"/><polygon fill="#A80036" points="247.125,379.793,262.125,385.793,247.125,391.793,253.125,385.793" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="417.75" x2="417.75" y1="278.0947" y2="385.793"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="417.75" x2="298.125" y1="385.793" y2="385.793"/><polygon fill="#A80036" points="313.125,379.793,298.125,385.793,313.125,391.793,307.125,385.793" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="280.125" x2="280.125" y1="125.6982" y2="155.6982"/><polygon fill="#A80036" points="274.125,140.6982,280.125,155.6982,286.125,140.6982,280.125,146.6982" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="280.125" x2="280.125" y1="403.793" y2="433.793"/><polygon fill="#A80036" points="274.125,418.793,280.125,433.793,286.125,418.793,280.125,424.793" style="stroke: #A80036; stroke-width: 1.5;"/><line style="stroke: #A80036; stroke-width: 2.25;" x1="280.125" x2="280.125" y1="484.4912" y2="514.4912"/><polygon fill="#A80036" points="274.125,499.4912,280.125,514.4912,286.125,499.4912,280.125,505.4912" style="stroke: #A80036; stroke-width: 1.5;"/><!--MD5=[2db42831a596ed4e8155f3c337dff959]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+
+start
+:User inputs Count command;
+
+If () then ([command is valid format])
+    :Count all the recipes;
+    :Returns success message;
+else ([else])
+    :Returns failure message
+    (Invalid Command);
+endif
+:LogicManager prints message to user;
+
+stop
+@enduml
+
+PlantUML version 1.2020.03beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.5+10-b520.30
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: SG
+--></g></svg>

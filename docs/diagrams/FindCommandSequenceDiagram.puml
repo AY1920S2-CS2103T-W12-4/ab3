@@ -1,0 +1,67 @@
+@startuml FindSequenceDiagram
+!include style.puml
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":RecipeBookParser" as RecipeBookParser LOGIC_COLOR
+participant ":FindCommandParser" as FindCommandParser LOGIC_COLOR
+participant ":FindCommand" as FindCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T2
+participant ":Model" as Model MODEL_COLOR
+end box
+
+box Storage MODEL_COLOR_T1
+participant ":Storage" as Storage STORAGE_COLOR
+end box
+
+[-> LogicManager : execute("find n/Ham")
+activate LogicManager
+
+LogicManager -> RecipeBookParser : parseCommand("find")
+activate RecipeBookParser
+
+create FindCommandParser
+RecipeBookParser -> FindCommandParser : parse("n/Ham")
+activate FindCommandParser
+
+FindCommandParser --> RecipeBookParser : Command
+deactivate FindCommandParser
+[<-[hidden]-FindCommandParser
+destroy FindCommandParser
+
+RecipeBookParser --> LogicManager : Command
+deactivate RecipeBookParser
+
+create FindCommand
+LogicManager -> FindCommand : execute()
+activate FindCommand
+
+FindCommand -> Model : updateFilteredRecipeList()
+activate Model
+
+Model --> FindCommand
+deactivate Model
+
+create CommandResult
+FindCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> FindCommand : result
+deactivate CommandResult
+
+FindCommand --> LogicManager : result
+deactivate FindCommand
+[<-[hidden]-FindCommand
+destroy FindCommand
+
+LogicManager -> Storage : saveRecipeBook(recipeBook)
+activate Storage
+
+Storage --> LogicManager
+deactivate Storage
+
+[<--LogicManager : result
+@enduml

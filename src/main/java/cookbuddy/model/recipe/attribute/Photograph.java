@@ -112,7 +112,9 @@ public class Photograph {
 
     @Override
     public String toString() {
-        return "Photograph@" + Integer.toHexString(this.photoData.hashCode()) + ": image =" + this.photoData.toString();
+        //return "Photograph@" + Integer.toHexString(this.photoData.hashCode()) + ": image =" + this.photoData
+        // .toString();
+        return "Photograph successfully added from path";
     }
 
     @Override

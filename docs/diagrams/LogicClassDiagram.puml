@@ -4,31 +4,30 @@ skinparam arrowThickness 1.1
 skinparam arrowColor LOGIC_COLOR_T4
 skinparam classBackgroundColor LOGIC_COLOR
 
-package Logic {
+package logic {
+    package parser {
+        Interface Parser <<Interface>>
+        Class RecipeBookParser
+        Class XYZCommandParser
+        Class CliSyntax
+        Class ParserUtil
+        Class ArgumentMultimap
+        Class ArgumentTokenizer
+        Class Prefix
+    }
 
-package Parser {
-Interface Parser <<Interface>>
-Class RecipeBookParser
-Class XYZCommandParser
-Class CliSyntax
-Class ParserUtil
-Class ArgumentMultimap
-Class ArgumentTokenizer
-Class Prefix
+    package command {
+        Class XYZCommand
+        Class CommandResult
+        Class "{abstract}\nCommand" as Command
+    }
+
+    Interface Logic <<Interface>>
+    Class LogicManager
 }
 
-package Command {
-Class XYZCommand
-Class CommandResult
-Class "{abstract}\nCommand" as Command
-}
-
-Interface Logic <<Interface>>
-Class LogicManager
-}
-
-package Model{
-Class HiddenModel #FFFFFF
+package model {
+    Class HiddenModel #FFFFFF
 }
 
 Class HiddenOutside #FFFFFF
@@ -51,9 +50,9 @@ ArgumentTokenizer .down.> Prefix
 XYZCommand -up-|> Command
 LogicManager .left.> Command : executes >
 
-LogicManager --> Model
-Command .right.> Model
-note right of XYZCommand: XYZCommand = NewCommand,\nModifyCommand, DeleteCommand etc
+LogicManager --> model
+Command -right-> model
+note right of XYZCommand: XYZCommand = ""/new"" , ""/modify"", ""/list"", etc
 
 Logic ..> CommandResult
 LogicManager .down.> CommandResult

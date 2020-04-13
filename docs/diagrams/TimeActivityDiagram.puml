@@ -1,0 +1,31 @@
+@startuml
+!include style.puml
+
+start
+:User inputs time command;
+
+:Parser parses command;
+
+If () then ([Command is valid format])
+
+If () then ([Recipe index exists])
+    :Marks the recipe at specified index as attempted;
+    :Returns success message;
+else ([else])
+    :Returns failure message
+    (Invalid index);
+endif
+:LogicManager prints message to user;
+
+else ([else])
+
+    :Returns failure message
+    (invalid command format);
+
+endif
+
+:Results are displayed to user;
+
+
+stop
+@enduml

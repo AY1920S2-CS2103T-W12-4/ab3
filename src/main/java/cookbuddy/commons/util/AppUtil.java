@@ -1,19 +1,10 @@
 package cookbuddy.commons.util;
 
-import static java.util.Objects.requireNonNull;
-
-import cookbuddy.MainApp;
-import javafx.scene.image.Image;
-
 /**
  * A container for App specific utility functions
  */
 public class AppUtil {
 
-    public static Image getImage(String imagePath) {
-        requireNonNull(imagePath);
-        return new Image(MainApp.class.getResourceAsStream(imagePath));
-    }
 
     /**
      * Checks that {@code condition} is true. Used for validating arguments to methods.

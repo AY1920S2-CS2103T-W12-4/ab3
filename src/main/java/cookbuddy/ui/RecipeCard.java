@@ -40,6 +40,8 @@ public class RecipeCard extends UiPart<Region> {
     @FXML
     private Label instructions;
     @FXML
+    private Label calorie;
+    @FXML
     private Label fav;
     @FXML
     private Label done;
@@ -63,6 +65,7 @@ public class RecipeCard extends UiPart<Region> {
 
         id.setText(displayedIndex + ". ");
         name.setText(recipe.getName().toString());
+        calorie.setText("Calorie: " + recipe.getCalorie().toString() + " kcal");
         fav.setText(recipe.getFavStatus().toString());
         done.setText("Attempted: " + recipe.getDoneStatus().toString());
         timing.setText("\uD83D\uDD52: " + recipe.getPrepTime().toString());

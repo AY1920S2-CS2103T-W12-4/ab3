@@ -1,5 +1,7 @@
 https://travis-ci.org/AY1920S2-CS2103T-W12-4/main[image:https://travis-ci.org/AY1920S2-CS2103T-W12-4/main.svg?branch=master[Build Status]]
+https://ci.appveyor.com/project/AdarshChugani/main[image:https://ci.appveyor.com/api/projects/status/coce69u02f8j3qte?svg=true[Build Status]]
 https://coveralls.io/github/AY1920S2-CS2103T-W12-4/main?branch=master[image:https://coveralls.io/repos/github/AY1920S2-CS2103T-W12-4/main/badge.svg?branch=master[Coverage Status]]
+https://app.codacy.com/gh/AY1920S2-CS2103T-W12-4/main?utm_source=github.com&utm_medium=referral&utm_content=AY1920S2-CS2103T-W12-4/main&utm_campaign=Badge_Grade_Dashboard[image:https://api.codacy.com/project/badge/Grade/26ab505f4302490cb6160c093889381c[Code Quality]]
 
 = CookBuddy Recipe Manager
 ifdef::env-github,env-browser[:relfileprefix: docs/]

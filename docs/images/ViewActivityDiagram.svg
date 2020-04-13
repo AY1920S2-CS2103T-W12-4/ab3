@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="343.2px" preserveAspectRatio="none" style="width:415px;height:343px;" version="1.1" viewBox="0 0 415 343" width="415.2px" zoomAndPan="magnify"><defs/><g><ellipse cx="240" cy="16" fill="#000000" rx="8" ry="8" style="stroke: none; stroke-width: 0.8;"/><rect fill="#FEFECE" height="27.0391" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="136" x="172" y="40"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="120" x="180" y="57.0047">User inputs view command</text><rect fill="#FEFECE" height="27.0391" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="103.2" x="188.4" y="83.0391"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="87.2" x="196.4" y="100.0438">Parser parses input</text><polygon fill="#FEFECE" points="240,126.0781,240,126.0781,249.6,135.6781,240,145.2781,240,145.2781,230.4,135.6781,240,126.0781" style="stroke: #A80036; stroke-width: 1.2000000000000002;"/><text fill="#000000" font-family="Arial" font-size="8.8" lengthAdjust="spacingAndGlyphs" textLength="80" x="150.4" y="133.8133">[Recipe index exists]</text><text fill="#000000" font-family="Arial" font-size="8.8" lengthAdjust="spacingAndGlyphs" textLength="111.2" x="249.6" y="133.8133">[Recipe index does not exist]</text><rect fill="#FEFECE" height="27.0391" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="256.8" x="8" y="153.2781"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="240.8" x="16" y="170.2828">Updates the GUI to display the recipe at specified index</text><rect fill="#FEFECE" height="27.0391" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="136" x="68.4" y="207.3563"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="120" x="76.4" y="224.3609">Returns success message</text><rect fill="#FEFECE" height="38.0781" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="125.6" x="280.8" y="153.2781"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="109.6" x="288.8" y="170.2828">Returns failure message</text><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="60" x="313.6" y="181.3219">(Invalid index)</text><polygon fill="#FEFECE" points="240,239.1953,249.6,248.7953,240,258.3953,230.4,248.7953,240,239.1953" style="stroke: #A80036; stroke-width: 1.2000000000000002;"/><rect fill="#FEFECE" height="27.0391" rx="10" ry="10" style="stroke: #A80036; stroke-width: 1.2000000000000002;" width="183.2" x="148.4" y="274.3953"/><text fill="#000000" font-family="Arial" font-size="9.6" lengthAdjust="spacingAndGlyphs" textLength="167.2" x="156.4" y="291.4">LogicManager prints message to user</text><ellipse cx="240" cy="326.2344" fill="#FFFFFF" rx="8.8" ry="8.8" style="stroke: #000000; stroke-width: 0.8;"/><ellipse cx="240" cy="326.2344" fill="#000000" rx="4.8" ry="4.8" style="stroke: #7F7F7F; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="240" x2="240" y1="24" y2="40"/><polygon fill="#A80036" points="236.8,32,240,40,243.2,32,240,35.2" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="240" x2="240" y1="67.0391" y2="83.0391"/><polygon fill="#A80036" points="236.8,75.0391,240,83.0391,243.2,75.0391,240,78.2391" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="136.4" x2="136.4" y1="180.3172" y2="207.3563"/><polygon fill="#A80036" points="133.2,199.3563,136.4,207.3563,139.6,199.3563,136.4,202.5563" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="230.4" x2="136.4" y1="135.6781" y2="135.6781"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="136.4" x2="136.4" y1="135.6781" y2="153.2781"/><polygon fill="#A80036" points="133.2,145.2781,136.4,153.2781,139.6,145.2781,136.4,148.4781" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="249.6" x2="343.6" y1="135.6781" y2="135.6781"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="343.6" x2="343.6" y1="135.6781" y2="153.2781"/><polygon fill="#A80036" points="340.4,145.2781,343.6,153.2781,346.8,145.2781,343.6,148.4781" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="136.4" x2="136.4" y1="234.3953" y2="248.7953"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="136.4" x2="230.4" y1="248.7953" y2="248.7953"/><polygon fill="#A80036" points="222.4,245.5953,230.4,248.7953,222.4,251.9953,225.6,248.7953" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="343.6" x2="343.6" y1="191.3563" y2="248.7953"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="343.6" x2="249.6" y1="248.7953" y2="248.7953"/><polygon fill="#A80036" points="257.6,245.5953,249.6,248.7953,257.6,251.9953,254.4,248.7953" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="240" x2="240" y1="110.0781" y2="126.0781"/><polygon fill="#A80036" points="236.8,118.0781,240,126.0781,243.2,118.0781,240,121.2781" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="240" x2="240" y1="258.3953" y2="274.3953"/><polygon fill="#A80036" points="236.8,266.3953,240,274.3953,243.2,266.3953,240,269.5953" style="stroke: #A80036; stroke-width: 0.8;"/><line style="stroke: #A80036; stroke-width: 1.2000000000000002;" x1="240" x2="240" y1="301.4344" y2="317.4344"/><polygon fill="#A80036" points="236.8,309.4344,240,317.4344,243.2,309.4344,240,312.6344" style="stroke: #A80036; stroke-width: 0.8;"/><!--MD5=[a3c74067ce5a61e9f2563e70c59ee802]
+@startuml
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+
+start
+:User inputs view command;
+
+:Parser parses input;
+
+If () then ([Recipe index exists])
+    :Updates the GUI to display the recipe at specified index;
+    :Returns success message;
+else ([Recipe index does not exist])
+    :Returns failure message
+    (Invalid index);
+endif
+:LogicManager prints message to user;
+
+stop
+@enduml
+
+PlantUML version 1.2020.03beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.5+10-b520.17
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: SG
+--></g></svg>

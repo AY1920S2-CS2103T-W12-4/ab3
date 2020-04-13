@@ -1,21 +1,11 @@
 package cookbuddy.commons.util;
 
 import static cookbuddy.testutil.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
 public class AppUtilTest {
 
-    @Test
-    public void getImage_exitingImage() {
-        assertNotNull(AppUtil.getImage("/images/recipe_book_32.png"));
-    }
-
-    @Test
-    public void getImage_nullGiven_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> AppUtil.getImage(null));
-    }
 
     @Test
     public void checkArgument_true_nothingHappens() {

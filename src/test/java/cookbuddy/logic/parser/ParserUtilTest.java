@@ -90,7 +90,7 @@ public class ParserUtilTest {
 
     @Test
     public void parseTiming_invalidFormat_throwsNumberFormatException() {
-        assertThrows(NumberFormatException.class, () -> ParserUtil.parseTime("abc"));
+        assertThrows(ParseException.class, () -> ParserUtil.parseTime("abc"));
     }
 
     @Test

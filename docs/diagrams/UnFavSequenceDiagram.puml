@@ -1,0 +1,71 @@
+@startuml UnfavSequenceDiagram
+!include style.puml
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":RecipeBookParser" as RecipeBookParser LOGIC_COLOR
+participant ":UnfavCommandParser" as UnfavCommandParser LOGIC_COLOR
+participant "d:UnfavCommand" as UnfavCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+
+[-> LogicManager : execute("unfav 1")
+activate LogicManager
+
+LogicManager -> RecipeBookParser : parseCommand("unfav 1")
+activate RecipeBookParser
+
+create UnfavCommandParser
+RecipeBookParser -> UnfavCommandParser
+activate UnfavCommandParser
+
+UnfavCommandParser --> RecipeBookParser
+deactivate UnfavCommandParser
+
+RecipeBookParser -> UnfavCommandParser : parse("1")
+activate UnfavCommandParser
+
+create UnfavCommand
+UnfavCommandParser -> UnfavCommand
+activate UnfavCommand
+
+UnfavCommand --> UnfavCommandParser : d
+
+deactivate UnfavCommand
+
+UnfavCommandParser --> RecipeBookParser : d
+deactivate UnfavCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+UnfavCommandParser -[hidden]-> RecipeBookParser
+destroy UnfavCommandParser
+
+RecipeBookParser --> LogicManager : d
+deactivate RecipeBookParser
+
+LogicManager -> UnfavCommand : execute()
+activate UnfavCommand
+
+UnfavCommand -> Model : unFavRecipe(r)
+activate Model
+
+Model --> UnfavCommand
+deactivate Model
+
+create CommandResult
+UnfavCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> UnfavCommand
+deactivate CommandResult
+
+UnfavCommand --> LogicManager : result
+deactivate UnfavCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

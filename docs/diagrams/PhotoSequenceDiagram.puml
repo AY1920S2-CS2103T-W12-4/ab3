@@ -1,0 +1,65 @@
+@startuml PhotoSequenceDiagram
+!include style.puml
+
+box logic LOGIC_COLOR_T1
+participant ":NewCommandParser" as NewCommandParser LOGIC_COLOR
+participant ":ArgumentMultiMap" as ArgumentMultiMap LOGIC_COLOR
+
+end box
+
+box util STORAGE_COLOR_T1
+participant "<<class>> \n :ParserUtil" as ParserUtil STORAGE_COLOR
+participant "<<class>>:ImageUtil" as ImageUtil STORAGE_COLOR
+end box
+
+box model MODEL_COLOR_T1
+participant ":Photograph" as Photograph MODEL_COLOR
+end box
+
+create NewCommandParser
+[-> NewCommandParser : parse(""args"")
+activate NewCommandParser
+
+create ArgumentMultiMap
+NewCommandParser -> ArgumentMultiMap
+activate ArgumentMultiMap
+return argumentMultiMap
+
+NewCommandParser -> ParserUtil : parsePhotoFilePath(""arguments"")
+activate ParserUtil
+
+ParserUtil -> ArgumentMultiMap : getValue(""\p"")
+activate ArgumentMultiMap
+
+alt Argument parameters for ""p/"" exist
+    ArgumentMultiMap --> ParserUtil : ""arguments""
+    deactivate ArgumentMultiMap
+
+    ParserUtil -> ImageUtil : isPlaceHolderImage(""arguments"")
+    activate ImageUtil
+
+    alt Is the placeholder image path
+        return ""PLACEHOLDER_IMAGE""
+        NewCommandParser <-- ParserUtil : photograph
+    else Is not the placeholder image path
+        create Photograph
+        ParserUtil -> Photograph : Photograph(""path"")
+        activate Photograph
+        ParserUtil <-- Photograph
+        deactivate Photograph
+        NewCommandParser <-- ParserUtil : photograph
+    end
+else No argument parameters
+    ParserUtil -> ArgumentMultiMap : orElse()
+    activate ArgumentMultiMap
+    ArgumentMultiMap -> ImageUtil : ""PLACEHOLDER_IMAGE""
+    activate ImageUtil
+    return ""PLACEHOLDER_IMAGE""
+    return ""PLACEHOLDER_IMAGE""
+    return photograph
+end
+
+[<-NewCommandParser
+deactivate NewCommandParser
+
+@enduml

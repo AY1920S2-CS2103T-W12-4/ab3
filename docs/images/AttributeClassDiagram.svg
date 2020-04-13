@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="294px" preserveAspectRatio="none" style="width:1148px;height:294px;" version="1.1" viewBox="0 0 1148 294" width="1148px" zoomAndPan="magnify"><defs/><g><!--MD5=[ef07b3aba6dead893f58a6ac812a8ba7]
+cluster attribute--><polygon fill="#FFFFFF" points="22,123,88,123,95,145.0986,1126,145.0986,1126,282,22,282,22,123" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="95" y1="145.0986" y2="145.0986"/><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="60" x="26" y="138.1318">attribute</text><!--MD5=[dc96b4f243af77830faaa10a462a89e2]
+cluster recipe--><polygon fill="#FFFFFF" points="548,24,599,24,606,46.0986,630,46.0986,630,99,548,99,548,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="548" x2="606" y1="46.0986" y2="46.0986"/><text fill="#000000" font-family="Arial" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="45" x="552" y="39.1318">recipe</text><!--MD5=[53f6a92bd21ca2f2960392a061f3a1c6]
+class Name--><rect fill="#9D0012" height="23.7988" id="Name" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="615" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="623" y="174.2559">Name</text><!--MD5=[3cdd5f167b4e8ffc8048a8d8c666fa85]
+class IngredientList--><rect fill="#9D0012" height="23.7988" id="IngredientList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="81" x="498.5" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="75" x="501.5" y="174.2559">IngredientList</text><!--MD5=[0ff7f33fb4cfaccd6bcebc094e3b238f]
+class InstructionList--><rect fill="#9D0012" height="23.7988" id="InstructionList" style="stroke: #FFFFFF; stroke-width: 1.0;" width="83" x="380.5" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="383.5" y="174.2559">InstructionList</text><!--MD5=[91ffdd76f1c8795364bfc7c752e5da6a]
+class Ingredient--><rect fill="#9D0012" height="23.7988" id="Ingredient" style="stroke: #FFFFFF; stroke-width: 1.0;" width="61" x="508.5" y="242"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="511.5" y="258.2559">Ingredient</text><!--MD5=[818ce9cd1eb68477d70117a0a20ac581]
+class Instruction--><rect fill="#9D0012" height="23.7988" id="Instruction" style="stroke: #FFFFFF; stroke-width: 1.0;" width="63" x="390.5" y="242"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="57" x="393.5" y="258.2559">Instruction</text><!--MD5=[37b1713fbddd25bf4cca619143e755c7]
+class Calorie--><rect fill="#9D0012" height="23.7988" id="Calorie" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="295" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="300" y="174.2559">Calorie</text><!--MD5=[333d89b52782613fb9adcb244b1d0895]
+class Difficulty--><rect fill="#9D0012" height="23.7988" id="Difficulty" style="stroke: #FFFFFF; stroke-width: 1.0;" width="51" x="208.5" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="211.5" y="174.2559">Difficulty</text><!--MD5=[8f218bb5b076b45ee70f0e71d3e36658]
+class Done--><rect fill="#9D0012" height="23.7988" id="Done" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="123" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="133" y="174.2559">Done</text><!--MD5=[4c4ea6e9d9cf4629fc7f9eb99faba48a]
+class Fav--><rect fill="#9D0012" height="23.7988" id="Fav" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="38" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="53.5" y="174.2559">Fav</text><!--MD5=[ba2ab84a6b6c7ee6393422b1dcce25cc]
+class Photograph--><rect fill="#9D0012" height="23.7988" id="Photograph" style="stroke: #FFFFFF; stroke-width: 1.0;" width="70" x="1040" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="1043" y="174.2559">Photograph</text><!--MD5=[0a8a9a553ad28d76d3a1fd3918a25a86]
+class Rating--><rect fill="#9D0012" height="23.7988" id="Rating" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="955" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="962" y="174.2559">Rating</text><!--MD5=[d7a175801c7751fb719f2545215a2693]
+class Serving--><rect fill="#9D0012" height="23.7988" id="Serving" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="870" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="874.5" y="174.2559">Serving</text><!--MD5=[39d6d2ea03de602dbf4d534e70c872a9]
+class Tag--><rect fill="#9D0012" height="23.7988" id="Tag" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="785" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="21" x="799.5" y="174.2559">Tag</text><!--MD5=[2e42295458bb0bec21c9622a623eb29e]
+class Time--><rect fill="#9D0012" height="23.7988" id="Time" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="700" y="158"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="711" y="174.2559">Time</text><!--MD5=[20418cb98520644da1e87dc0310aa74a]
+class Recipe--><rect fill="#9D0012" height="23.7988" id="Recipe" style="stroke: #FFFFFF; stroke-width: 1.0;" width="50" x="564" y="59"/><text fill="#FFFFFF" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="39" x="569.5" y="75.2559">Recipe</text><!--MD5=[b238b3902e04b6fb0dff70774213bdd8]
+link Recipe to Name--><path d="M600.4349,93.7482 C600.4349,93.7482 619.788,130.558 627.934,146.05 " fill="none" id="Recipe-Name" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="634.061,157.704,633.4127,147.8765,631.734,153.2785,626.332,151.5998,634.061,157.704" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="631.734" x2="628.011" y1="153.2785" y2="146.1975"/><polygon fill="#9D0012" points="594.85,83.127,594.1021,90.2992,600.4349,93.7482,601.1828,86.576,594.85,83.127" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="622.6955" y="147.2394">1</text><!--MD5=[1ffc9816fa0c2433efc0ee7e42589584]
+link Recipe to IngredientList--><path d="M577.766,93.7934 C577.766,93.7934 558.815,130.558 550.83,146.05 " fill="none" id="Recipe-IngredientList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="544.823,157.704,552.502,151.5369,547.1138,153.2597,545.3911,147.8715,544.823,157.704" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="547.1138" x2="550.779" y1="153.2597" y2="146.1485"/><polygon fill="#9D0012" points="583.264,83.127,576.9595,86.6275,577.766,93.7934,584.0704,90.2929,583.264,83.127" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="538.8974" y="147.2394">1</text><!--MD5=[17d950f7a9a09a742b3342499805a664]
+link Recipe to InstructionList--><path d="M552.3603,82.9026 C552.3603,82.9026 502.806,101.328 481,115 C466.379,124.167 452.049,137.161 441.173,148.105 " fill="none" id="Recipe-InstructionList" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="431.908,157.777,441.0222,154.0444,435.3666,154.1662,435.2449,148.5106,431.908,157.777" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="435.3666" x2="440.9" y1="154.1662" y2="148.3895"/><polygon fill="#9D0012" points="563.767,79.176,556.8215,77.2371,552.3603,82.9026,559.3059,84.8415,563.767,79.176" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="427.8717" y="147.3461">1</text><!--MD5=[677b06dac1b6e4309025c82976bff559]
+link IngredientList to Ingredient--><path d="M539,194.059 C539,194.059 539,218.0367 539,228.535 " fill="none" id="IngredientList-Ingredient" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="539,241.8544,543,232.8544,539,236.8544,535,232.8544,539,241.8544" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="539" x2="539" y1="236.8544" y2="228.8544"/><polygon fill="#9D0012" points="539,182.059,535,188.059,539,194.059,543,188.059,539,182.059" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="20" x="514.375" y="231.4593">1..*</text><!--MD5=[e00d98c2eb25bb350222e629e9ede289]
+link InstructionList to Instruction--><path d="M422,194.059 C422,194.059 422,218.0367 422,228.535 " fill="none" id="InstructionList-Instruction" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="422,241.8544,426,232.8544,422,236.8544,418,232.8544,422,241.8544" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="422" x2="422" y1="236.8544" y2="228.8544"/><polygon fill="#9D0012" points="422,182.059,418,188.059,422,194.059,426,188.059,422,182.059" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="20" x="397.375" y="231.4593">1..*</text><!--MD5=[576d84be776654c1bee81d2b6aec8431]
+link Recipe to Calorie--><path d="M551.9414,71.3772 C551.9414,71.3772 421.69,79.566 363,115 C350.342,122.642 339.898,135.46 332.473,146.69 " fill="none" id="Recipe-Calorie" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="325.64,157.933,333.7325,152.3195,328.2368,153.6602,326.8961,148.1646,325.64,157.933" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="328.2368" x2="332.392" y1="153.6602" y2="146.824"/><polygon fill="#9D0012" points="563.941,71.277,557.9078,67.3272,551.9414,71.3772,557.9746,75.327,563.941,71.277" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="301.027" y="147.112">0..1</text><!--MD5=[35e0e6a46408bd28dab803506c5d7ba9]
+link Recipe to Difficulty--><path d="M551.6596,73.7627 C551.6596,73.7627 323.878,89.203 278,115 C264.995,122.313 254.306,135.119 246.721,146.425 " fill="none" id="Recipe-Difficulty" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="239.746,157.774,247.8663,152.2008,242.3641,153.5142,241.0507,148.0119,239.746,157.774" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="242.3641" x2="246.5525" y1="153.5142" y2="146.6985"/><polygon fill="#9D0012" points="563.643,73.131,557.4408,69.4524,551.6596,73.7627,557.8619,77.4413,563.643,73.131" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="215.316" y="147.3417">0..1</text><!--MD5=[5dd29b46d3adc5ea79dbb7166d36be37]
+link Recipe to Done--><path d="M551.7645,72.4142 C551.7645,72.4142 252.277,81.287 191,115 C178.046,122.127 167.59,134.927 160.234,146.276 " fill="none" id="Recipe-Done" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="153.497,157.685,161.5175,151.969,156.0393,153.3796,154.6287,147.9014,153.497,157.685" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="156.0393" x2="160.107" y1="153.3796" y2="146.4905"/><polygon fill="#9D0012" points="563.763,72.223,557.7,68.3191,551.7645,72.4142,557.8275,76.3181,563.763,72.223" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="128.9519" y="147.2116">0..1</text><!--MD5=[80626a2c68a25ee26fefa3aa358d455d]
+link Recipe to Fav--><path d="M551.7144,71.5354 C551.7144,71.5354 181.574,73.249 105,115 C92.135,122.015 81.9152,134.81 74.7791,146.185 " fill="none" id="Recipe-Fav" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="68.2666,157.63,76.1945,151.7863,70.7396,153.2844,69.2415,147.8295,68.2666,157.63" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="70.7396" x2="74.6959" y1="153.2844" y2="146.3315"/><polygon fill="#9D0012" points="563.714,71.633,557.7467,67.5843,551.7144,71.5354,557.6817,75.5841,563.714,71.633" style="stroke: #9D0012; stroke-width: 1.1;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="43.6149" y="147.1311">0..1</text><!--MD5=[dc67fc69b9896c4d2fad0f567c6ecdc9]
+link Photograph to Recipe--><path d="M1059.81,146.903 C1050.58,135.348 1037.76,122.155 1023,115 C953.581,81.337 626.0396,72.4186 626.0396,72.4186 " fill="none" id="Photograph-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="614.041,72.234,619.9788,76.3258,626.0396,72.4186,620.1018,68.3268,614.041,72.234" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="1067.77,157.626,1065.6202,148.0146,1064.791,153.6104,1059.1952,152.7811,1067.77,157.626" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="1064.791" x2="1060.015" y1="153.6104" y2="147.1875"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="1037.3386" y="147.1253">0..1</text><!--MD5=[f6ac4d66936a2f4c5b18f6e82e672c4d]
+link Rating to Recipe--><path d="M968.123,146.36 C960.959,135.035 950.744,122.232 938,115 C885.596,85.261 626.1016,73.0143 626.1016,73.0143 " fill="none" id="Rating-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="614.108,72.624,619.9747,76.8171,626.1016,73.0143,620.2349,68.8213,614.108,72.624" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="974.675,157.735,973.6488,147.9398,972.1793,153.4024,966.7166,151.9329,974.675,157.735" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="972.1793" x2="968.1865" y1="153.4024" y2="146.47"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="945.1247" y="147.2847">0..1</text><!--MD5=[8a2be38104ac1b4d22177603f9c45304]
+link Serving to Recipe--><path d="M883.008,146.559 C875.811,135.291 865.601,122.478 853,115 C815.517,92.755 626.2926,74.7168 626.2926,74.7168 " fill="none" id="Serving-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="614.33,73.77,619.9957,78.2309,626.2926,74.7168,620.6269,70.2559,614.33,73.77" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="889.606,157.854,888.5205,148.0651,887.0841,153.5366,881.6127,152.1002,889.606,157.854" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="887.0841" x2="883.049" y1="153.5366" y2="146.629"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="860.0238" y="147.4587">0..1</text><!--MD5=[39f223dd3abfa2c65be060da92e0d928]
+link Tag to Recipe--><path d="M797.285,146.178 C790.056,135.197 780.039,122.763 768,115 C724.94,87.232 626.142,73.8043 626.142,73.8043 " fill="none" id="Tag-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="614.178,72.876,619.8506,77.3282,626.142,73.8043,620.4695,69.3521,614.178,72.876" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="804.22,157.632,802.9794,147.8616,801.6299,153.3551,796.1364,152.0057,804.22,157.632" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="801.6299" x2="797.487" y1="153.3551" y2="146.512"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="20" x="776.9218" y="147.1341">0..*</text><!--MD5=[04dcd7a0f75464742dc8679f82c6a38a]
+link Time to Recipe--><path d="M711.34,146.734 C703.964,136.087 694.098,123.781 683,115 C666.272,101.764 625.6094,84.0252 625.6094,84.0252 " fill="none" id="Time-Recipe" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="614.361,79.845,618.5918,85.6846,625.6094,84.0252,621.3786,78.1857,614.361,79.845" style="stroke: #9D0012; stroke-width: 1.1;"/><polygon fill="#9D0012" points="718.544,157.773,716.9755,148.0498,715.8116,153.5856,710.2758,152.4217,718.544,157.773" style="stroke: #9D0012; stroke-width: 1.1;"/><line style="stroke: #9D0012; stroke-width: 1.1;" x1="715.8116" x2="711.4395" y1="153.5856" y2="146.8855"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="22" x="688.4706" y="147.3403">0..1</text><!--MD5=[c255307680a17aa378eea19255738b7b]
+@startuml AttributeClassDiagram
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+skinparam arrowThickness 1.1
+skinparam arrowColor #9D0012
+skinparam classBackgroundColor #9D0012
+
+package attribute {
+    Class Name
+    Class IngredientList
+    Class InstructionList
+
+    Class Ingredient
+    Class Instruction
+
+    Class Calorie
+    Class Difficulty
+    Class Done
+    Class Fav
+    Class Photograph
+    Class Rating
+    Class Serving
+    Class Tag
+    Class Time
+}
+
+package recipe {
+    Class Recipe
+}
+
+Recipe *-d-> "1" Name
+Recipe *-d-> "1" IngredientList
+Recipe *-d-> "1" InstructionList
+
+IngredientList *-d-> "1..*" Ingredient
+InstructionList *-d-> "1..*" Instruction
+
+Recipe *- -> "0..1" Calorie
+Recipe *- -> "0..1" Difficulty
+Recipe *- -> "0..1" Done
+Recipe *- -> "0..1" Fav
+Recipe *-l-> "0..1" Photograph
+Recipe *-l-> "0..1" Rating
+Recipe *-l-> "0..1" Serving
+Recipe *-l-> "0..*" Tag
+Recipe *-l-> "0..1" Time
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 20:38:32 SGT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Windows 10
+Default Encoding: Cp1252
+Language: en
+Country: SG
+--></g></svg>

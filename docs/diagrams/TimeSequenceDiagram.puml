@@ -1,0 +1,71 @@
+@startuml TimeSequenceDiagram
+!include style.puml
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":RecipeBookParser" as RecipeBookParser LOGIC_COLOR
+participant ":TimeCommandParser" as TimeCommandParser LOGIC_COLOR
+participant "d:TimeCommand" as TimeCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant ":Model" as Model MODEL_COLOR
+end box
+
+
+[-> LogicManager : execute("time 1 01:00:00")
+activate LogicManager
+
+LogicManager -> RecipeBookParser : parseCommand("time 1 01:00:00")
+activate RecipeBookParser
+
+create TimeCommandParser
+RecipeBookParser -> TimeCommandParser
+activate TimeCommandParser
+
+TimeCommandParser --> RecipeBookParser
+deactivate TimeCommandParser
+
+RecipeBookParser -> TimeCommandParser : parse("1 01:00:00")
+activate TimeCommandParser
+
+create TimeCommand
+TimeCommandParser -> TimeCommand
+activate TimeCommand
+
+TimeCommand --> TimeCommandParser : d
+
+deactivate TimeCommand
+
+TimeCommandParser --> RecipeBookParser : d
+deactivate TimeCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+TimeCommandParser -[hidden]-> RecipeBookParser
+destroy TimeCommandParser
+
+RecipeBookParser --> LogicManager : d
+deactivate RecipeBookParser
+
+LogicManager -> TimeCommand : execute()
+activate TimeCommand
+
+TimeCommand -> Model : setTime(r, 01:00:00)
+activate Model
+
+Model --> TimeCommand
+deactivate Model
+
+create CommandResult
+TimeCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> TimeCommand
+deactivate CommandResult
+
+TimeCommand --> LogicManager : result
+deactivate TimeCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml

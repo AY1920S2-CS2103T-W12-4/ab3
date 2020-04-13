@@ -1,0 +1,25 @@
+@startuml PhotoReadActivityDiagram
+
+!include style.puml
+
+start
+
+:User enters inputs;
+:User input is parsed;
+
+if() then ([""p/"" prefix has arguments ""args""])
+    :Attempt to read image file from ""args"";
+    if () then ([""args"" is a valid file path])
+        :Read the file from ""args"";
+        :Return the image at ""args"";
+    else ([else])
+        :Return the placeholder image;
+    endif
+else ([else])
+    :Return the placeholder image;
+endif
+
+:Wrap the returned image in a ""Photograph"";
+:Return the ""Photograph"";
+stop
+@enduml

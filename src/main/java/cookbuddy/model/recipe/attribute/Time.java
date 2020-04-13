@@ -17,9 +17,9 @@ public class Time {
 
 
 
-    private static int hour;
-    private static int min;
-    private static int sec;
+    private int hour;
+    private int min;
+    private int sec;
 
     /**
      * Constructs a {@code Time}.
@@ -57,20 +57,20 @@ public class Time {
     }
 
     public void setTime(Time preptime) {
-        this.hour = preptime.getHour();
-        this.min = preptime.getMin();
-        this.sec = preptime.getSec();
+        hour = preptime.getHour();
+        min = preptime.getMin();
+        sec = preptime.getSec();
     }
 
-    public static int getHour() {
+    public int getHour() {
         return hour;
     }
 
-    public static int getMin() {
+    public int getMin() {
         return min;
     }
 
-    public static int getSec() {
+    public int getSec() {
         return sec;
     }
 

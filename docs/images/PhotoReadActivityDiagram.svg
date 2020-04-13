@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="588px" preserveAspectRatio="none" style="width:596px;height:588px;" version="1.1" viewBox="0 0 596 588" width="596px" zoomAndPan="magnify"><defs/><g><ellipse cx="339.25" cy="20" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="278.25" y="50"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="102" x="288.25" y="71.2559">User enters inputs</text><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="132" x="273.25" y="103.7988"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="112" x="283.25" y="125.0547">User input is parsed</text><polygon fill="#FEFECE" points="339.25,157.5977,339.25,157.5977,351.25,169.5977,339.25,181.5977,339.25,181.5977,327.25,169.5977,339.25,157.5977" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="3" x="176.25" y="167.2666">[</text><text fill="#000000" font-family="Consolas" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="12" x="179.25" y="166.7671">p/</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="194.25" y="167.2666">prefix has arguments</text><text fill="#000000" font-family="Consolas" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="24" x="300.25" y="166.7671">args</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="3" x="324.25" y="167.2666">]</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="351.25" y="167.2666">[else]</text><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="218" x="76" y="191.5977"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="167" x="86" y="213.1055">Attempt to read image file from</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="256" y="212.5605">args</text><polygon fill="#FEFECE" points="185,245.6484,185,245.6484,197,257.6484,185,269.6484,185,269.6484,173,257.6484,185,245.6484" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="3" x="57" y="255.3174">[</text><text fill="#000000" font-family="Consolas" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="24" x="60" y="254.8179">args</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="86" x="87" y="255.3174">is a valid file path]</text><text fill="#000000" font-family="Arial" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="26" x="197" y="255.3174">[else]</text><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="148" x="15.5" y="279.6484"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="25.5" y="301.1563">Read the file from</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="125.5" y="300.6113">args</text><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="159" x="10" y="333.6992"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="108" x="20" y="355.207">Return the image at</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="28" x="131" y="354.6621">args</text><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="183" x="189" y="279.6484"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="163" x="199" y="300.9043">Return the placeholder image</text><polygon fill="#FEFECE" points="185,373.75,197,385.75,185,397.75,173,385.75,185,373.75" style="stroke: #A80036; stroke-width: 1.5;"/><rect fill="#FEFECE" height="33.7988" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="183" x="402" y="191.5977"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="163" x="412" y="212.8535">Return the placeholder image</text><polygon fill="#FEFECE" points="339.25,403.75,351.25,415.75,339.25,427.75,327.25,415.75,339.25,403.75" style="stroke: #A80036; stroke-width: 1.5;"/><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="252" x="213.25" y="447.75"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="159" x="223.25" y="469.2578">Wrap the returned image in a</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="385.25" y="468.7129">Photograph</text><rect fill="#FEFECE" height="34.0508" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="264.25" y="501.8008"/><text fill="#000000" font-family="Arial" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="57" x="274.25" y="523.3086">Return the</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="334.25" y="522.7637">Photograph</text><ellipse cx="339.25" cy="566.8516" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="339.25" cy="566.8516" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="30" y2="50"/><polygon fill="#A80036" points="335.25,40,339.25,50,343.25,40,339.25,44" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="83.7988" y2="103.7988"/><polygon fill="#A80036" points="335.25,93.7988,339.25,103.7988,343.25,93.7988,339.25,97.7988" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="89.5" x2="89.5" y1="313.6992" y2="333.6992"/><polygon fill="#A80036" points="85.5,323.6992,89.5,333.6992,93.5,323.6992,89.5,327.6992" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="173" x2="89.5" y1="257.6484" y2="257.6484"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="89.5" x2="89.5" y1="257.6484" y2="279.6484"/><polygon fill="#A80036" points="85.5,269.6484,89.5,279.6484,93.5,269.6484,89.5,273.6484" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="197" x2="280.5" y1="257.6484" y2="257.6484"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="280.5" x2="280.5" y1="257.6484" y2="279.6484"/><polygon fill="#A80036" points="276.5,269.6484,280.5,279.6484,284.5,269.6484,280.5,273.6484" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="89.5" x2="89.5" y1="367.75" y2="385.75"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="89.5" x2="173" y1="385.75" y2="385.75"/><polygon fill="#A80036" points="163,381.75,173,385.75,163,389.75,167,385.75" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="280.5" x2="280.5" y1="313.4473" y2="385.75"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="280.5" x2="197" y1="385.75" y2="385.75"/><polygon fill="#A80036" points="207,381.75,197,385.75,207,389.75,203,385.75" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="185" x2="185" y1="225.6484" y2="245.6484"/><polygon fill="#A80036" points="181,235.6484,185,245.6484,189,235.6484,185,239.6484" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="327.25" x2="185" y1="169.5977" y2="169.5977"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="185" x2="185" y1="169.5977" y2="191.5977"/><polygon fill="#A80036" points="181,181.5977,185,191.5977,189,181.5977,185,185.5977" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="351.25" x2="493.5" y1="169.5977" y2="169.5977"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="493.5" x2="493.5" y1="169.5977" y2="191.5977"/><polygon fill="#A80036" points="489.5,181.5977,493.5,191.5977,497.5,181.5977,493.5,185.5977" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="185" x2="185" y1="397.75" y2="415.75"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="185" x2="327.25" y1="415.75" y2="415.75"/><polygon fill="#A80036" points="317.25,411.75,327.25,415.75,317.25,419.75,321.25,415.75" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="493.5" x2="493.5" y1="225.3965" y2="415.75"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="493.5" x2="351.25" y1="415.75" y2="415.75"/><polygon fill="#A80036" points="361.25,411.75,351.25,415.75,361.25,419.75,357.25,415.75" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="137.5977" y2="157.5977"/><polygon fill="#A80036" points="335.25,147.5977,339.25,157.5977,343.25,147.5977,339.25,151.5977" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="427.75" y2="447.75"/><polygon fill="#A80036" points="335.25,437.75,339.25,447.75,343.25,437.75,339.25,441.75" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="481.8008" y2="501.8008"/><polygon fill="#A80036" points="335.25,491.8008,339.25,501.8008,343.25,491.8008,339.25,495.8008" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="339.25" x2="339.25" y1="535.8516" y2="555.8516"/><polygon fill="#A80036" points="335.25,545.8516,339.25,555.8516,343.25,545.8516,339.25,549.8516" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[e90f553baa9bdcf55795eac97b42a76f]
+@startuml PhotoReadActivityDiagram
+
+
+
+
+
+
+
+
+
+skinparam BackgroundColor #FFFFFFF
+
+skinparam Shadowing false
+
+skinparam Class {
+    FontColor #FFFFFF
+    BorderThickness 1
+    BorderColor #FFFFFF
+    StereotypeFontColor #FFFFFF
+}
+
+skinparam Actor {
+    BorderColor #000000
+    Color #000000
+}
+
+skinparam Sequence {
+    MessageAlign center
+    BoxFontSize 15
+    BoxPadding 0
+    BoxFontColor #FFFFFF
+    SequenceBoxFontName Segoe UI
+}
+
+skinparam Participant {
+    FontColor #FFFFFFF
+    Padding 20
+}
+
+skinparam MinClassWidth 50
+skinparam ParticipantPadding 10
+skinparam Shadowing false
+skinparam DefaultTextAlignment center
+skinparam packageStyle Folder
+
+skinparam DefaultFontName Arial
+skinparam defaultMonospacedFontName Consolas
+
+hide footbox
+hide members
+hide circle
+
+start
+
+:User enters inputs;
+:User input is parsed;
+
+if() then ([""p/"" prefix has arguments ""args""])
+    :Attempt to read image file from ""args"";
+    if () then ([""args"" is a valid file path])
+        :Read the file from ""args"";
+        :Return the image at ""args"";
+    else ([else])
+        :Return the placeholder image;
+    endif
+else ([else])
+    :Return the placeholder image;
+endif
+
+:Wrap the returned image in a ""Photograph"";
+:Return the ""Photograph"";
+stop
+@enduml
+
+PlantUML version 1.2020.03beta8(Unknown compile time)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 13.0.2+8
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: SG
+--></g></svg>

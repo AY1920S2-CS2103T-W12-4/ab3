@@ -4,57 +4,42 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
-Package Model <<Rectangle>>{
-Interface ReadOnlyRecipeBook <<Interface>>
-Interface Model <<Interface>>
-Interface ObservableList <<Interface>>
-Class RecipeBook
-Class ReadOnlyRecipeBook
-Class Model
-Class ModelManager
-Class UserPrefs
-Class ReadOnlyUserPrefs
+Package model {
+    Interface ReadOnlyRecipeBook <<Interface>>
+    Interface Model <<Interface>>
+    Interface ObservableList <<Interface>>
+    Class RecipeBook
+    Class ReadOnlyRecipeBook
+    Class Model
+    Class ModelManager
+    Class UserPrefs
+    Class ReadOnlyUserPrefs
 
-Package Recipe {
-Class Calorie
-Class IngredientList
-Class InstructionList
-Class Name
-Class Recipe
-Class Rating
-Class Serving
-Class UniqueRecipeList
+    Package recipe {
+        Class Recipe
+        Class UniqueRecipeList
+    }
+
+    Package attribute {
+        Class HiddenInside #FFFFFF
+    }
+
+    Class HiddenOutside #FFFFFF
+    HiddenOutside ..> Model
+
+    RecipeBook .up.|> ReadOnlyRecipeBook
+
+    ModelManager .up.|> Model
+    Model .right.> ObservableList
+    ModelManager o--> "1" RecipeBook
+    ModelManager o-left-> "1" UserPrefs
+    UserPrefs .up.|> ReadOnlyUserPrefs
+
+    RecipeBook *--> "1" UniqueRecipeList
+    UniqueRecipeList o-down-> "*" Recipe
+
+    Recipe -r-> HiddenInside
+
+    ModelManager -->"1" Recipe : filtered list
 }
-
-Package Tag {
-Class Tag
-}
-}
-
-Class HiddenOutside #FFFFFF
-HiddenOutside ..> Model
-
-RecipeBook .up.|> ReadOnlyRecipeBook
-
-ModelManager .up.|> Model
-Model .right.> ObservableList
-ModelManager o--> "1" RecipeBook
-ModelManager o-left-> "1" UserPrefs
-UserPrefs .up.|> ReadOnlyUserPrefs
-
-RecipeBook *--> "1" UniqueRecipeList
-UniqueRecipeList o--> "*" Recipe
-Recipe *-left-> Name
-Recipe *-left-> InstructionList
-Recipe *-left-> IngredientList
-Recipe *-down-> Calorie
-Recipe *--> Serving
-Recipe *--> Rating
-Recipe *--> "*" Tag
-
-Name -[hidden]right-> InstructionList
-InstructionList -[hidden]right-> Recipe
-Recipe -[hidden]right-> IngredientList
-
-ModelManager -->"1" Recipe : filtered list
-@enduml
+    @enduml

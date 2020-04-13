@@ -19,7 +19,7 @@ public class DuplicateCommand extends Command {
     public static final String COMMAND_WORD = "duplicate";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": A duplicate of the recipe identified by the index number is added to the recipe list.\n"
+            + ": Adds a duplicate of the recipe identified by the index number to the recipe list.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
 
@@ -51,6 +51,13 @@ public class DuplicateCommand extends Command {
             throw new CommandException(MESSAGE_DUPLICATE_RECIPE_FAIL);
         } else {
             model.addRecipe(duplicatedRecipe);
+            duplicatedRecipe.setTime(recipeToDuplicate.getPrepTime());
+            if (recipeToDuplicate.getFavStatus().getfavStatus()) {
+                duplicatedRecipe.favRecipe();
+            }
+            if (recipeToDuplicate.getDoneStatus().getDoneStatus()) {
+                duplicatedRecipe.attemptRecipe();
+            }
             return new CommandResult(String.format(MESSAGE_DELETE_RECIPE_SUCCESS, recipeToDuplicate));
         }
     }

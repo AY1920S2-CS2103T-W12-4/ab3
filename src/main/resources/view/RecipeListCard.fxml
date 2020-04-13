@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="cardPane" alignment="CENTER_LEFT" minWidth="174.0" prefHeight="150.0" prefWidth="174.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="cardPane" alignment="CENTER_LEFT" minWidth="174.0" prefHeight="170.0" prefWidth="174.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <!--was originally minHeight = 105.0 -->
 <padding>
   <Insets bottom="5" left="15" right="5" top="5" />
@@ -38,13 +38,19 @@
             <URL value="@DarkTheme.css" />
          </stylesheets>
       </Label>
+      <Label fx:id="calorie" styleClass="cell_big_label" text="\$calorie">
+         <stylesheets>
+            <URL value="@Extensions.css" />
+            <URL value="@DarkTheme.css" />
+         </stylesheets>
+      </Label>
       <Label fx:id="timing" styleClass="cell_small_label" text="\$timing">
          <stylesheets>
             <URL value="@Extensions.css" />
             <URL value="@DarkTheme.css" />
          </stylesheets>
       </Label>
-      <Label fx:id="serving" styleClass="cell_big_label" text="\$serving">
+      <Label fx:id="serving" styleClass="cell_small_label" text="\$serving">
          <stylesheets>
             <URL value="@Extensions.css" />
             <URL value="@DarkTheme.css" />

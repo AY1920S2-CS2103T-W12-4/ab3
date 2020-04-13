@@ -1,0 +1,29 @@
+@startuml
+!include style.puml
+
+start
+:User inputs unfav command;
+
+:Parser parses input;
+
+If () then ([Command is valid format])
+
+If () then ([Recipe index exists])
+    :Marks the recipe at specified index as not favourited
+    :Returns success message;
+else ([else])
+    :Returns failure message
+    (Invalid index);
+endif
+:LogicManager prints message to user;
+
+else ([else])
+    :Returns failure message
+    (invalid command format);
+
+endif
+
+:Results are displayed to user;
+
+stop
+@enduml

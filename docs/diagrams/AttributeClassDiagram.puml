@@ -1,0 +1,63 @@
+@startuml AttributeClassDiagram
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+package attribute {
+    Class Name
+    Class IngredientList
+    Class InstructionList
+
+    Class Ingredient
+    Class Instruction
+
+    Class Calorie
+    Class Difficulty
+    Class Done
+    Class Fav
+    Class Photograph
+    Class Rating
+    Class Serving
+    Class Tag
+    Class Time
+}
+
+package recipe {
+    Class Recipe
+}
+
+Recipe *-d-> "1" Name
+Recipe *-d-> "1" IngredientList
+Recipe *-d-> "1" InstructionList
+
+IngredientList *-d-> "1..*" Ingredient
+InstructionList *-d-> "1..*" Instruction
+
+Recipe *--> "0..1" Calorie
+Recipe *--> "0..1" Difficulty
+Recipe *--> "0..1" Done
+Recipe *--> "0..1" Fav
+Recipe *-l-> "0..1" Photograph
+Recipe *-l-> "0..1" Rating
+Recipe *-l-> "0..1" Serving
+Recipe *-l-> "0..*" Tag
+Recipe *-l-> "0..1" Time
+
+' recipe-[hidden]-attribute
+
+' Name-[hidden]-IngredientList
+' IngredientList-[hidden]-InstructionList
+' InstructionList-[hidden]-Calorie
+
+' Calorie-[hidden]-Difficulty
+' Difficulty-[hidden]-Done
+' Done-[hidden]-Fav
+' Fav-[hidden]-Photograph
+' Photograph-[hidden]-Rating
+' Rating-[hidden]-Serving
+' Serving-[hidden]-Tag
+' Tag-[hidden]-Time
+
+
+@enduml

@@ -169,7 +169,6 @@ public class RecipeBuilder {
     public Recipe build() {
         Recipe toReturn = new Recipe(name, ingredients, instructions, photograph, calorie, serving, rating, difficulty,
                 tags);
-        toReturn.setTime(timing);
         return toReturn;
     }
 

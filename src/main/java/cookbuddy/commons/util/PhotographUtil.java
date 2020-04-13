@@ -38,8 +38,7 @@ public class PhotographUtil {
     public final InputStream placeHolderImageStream;
     public final BufferedImage placeholderImage;
     public final Path defaultStoragePath = FileUtil.relativePathFrom("data", "images");
-    public final String messageConstraints = "Image not found, or invalid image path given. "
-        + "Placeholder image used instead.";
+    public final String messageConstraints = "Image not found, or invalid image path given.";
     private final Logger logger = LogsCenter.getLogger(MainApp.class);
 
     private PhotographUtil() {

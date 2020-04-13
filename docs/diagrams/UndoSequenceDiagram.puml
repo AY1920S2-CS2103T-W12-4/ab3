@@ -4,49 +4,67 @@
 box Logic LOGIC_COLOR_T1
 participant ":LogicManager" as LogicManager LOGIC_COLOR
 participant ":RecipeBookParser" as RecipeBookParser LOGIC_COLOR
-participant "u:UndoCommand" as UndoCommand LOGIC_COLOR
+participant ":UndoCommandParser" as UndoCommandParser LOGIC_COLOR
+participant "d:UndoCommand" as UndoCommand LOGIC_COLOR
+participant ":CommandResult" as CommandResult LOGIC_COLOR
 end box
 
 box Model MODEL_COLOR_T1
 participant ":Model" as Model MODEL_COLOR
-participant ":VersionedRecipeBook" as VersionedRecipeBook MODEL_COLOR
 end box
-[-> LogicManager : execute(undo)
+
+
+[-> LogicManager : execute("undo 1")
 activate LogicManager
 
-LogicManager -> RecipeBookParser : parseCommand(undo)
+LogicManager -> RecipeBookParser : parseCommand("undo 1")
 activate RecipeBookParser
 
+create UndoCommandParser
+RecipeBookParser -> UndoCommandParser
+activate UndoCommandParser
+
+UndoCommandParser --> RecipeBookParser
+deactivate UndoCommandParser
+
+RecipeBookParser -> UndoCommandParser : parse("1")
+activate UndoCommandParser
+
 create UndoCommand
-RecipeBookParser -> UndoCommand
+UndoCommandParser -> UndoCommand
 activate UndoCommand
 
-UndoCommand --> RecipeBookParser
+UndoCommand --> UndoCommandParser : d
+
 deactivate UndoCommand
 
-RecipeBookParser --> LogicManager : u
+UndoCommandParser --> RecipeBookParser : d
+deactivate UndoCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+UndoCommandParser -[hidden]-> RecipeBookParser
+destroy UndoCommandParser
+
+RecipeBookParser --> LogicManager : d
 deactivate RecipeBookParser
 
 LogicManager -> UndoCommand : execute()
 activate UndoCommand
 
-UndoCommand -> Model : undoRecipeBook()
+UndoCommand -> Model : unAttemptRecipe(r)
 activate Model
-
-Model -> VersionedRecipeBook : undo()
-activate VersionedRecipeBook
-
-VersionedRecipeBook -> VersionedRecipeBook :resetData(ReadOnlyRecipeBook)
-VersionedRecipeBook --> Model :
-deactivate VersionedRecipeBook
 
 Model --> UndoCommand
 deactivate Model
 
+create CommandResult
+UndoCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> UndoCommand
+deactivate CommandResult
+
 UndoCommand --> LogicManager : result
 deactivate UndoCommand
-UndoCommand -[hidden]-> LogicManager : result
-destroy UndoCommand
 
 [<--LogicManager
 deactivate LogicManager

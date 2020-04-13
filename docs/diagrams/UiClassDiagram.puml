@@ -4,25 +4,25 @@ skinparam arrowThickness 1.1
 skinparam arrowColor UI_COLOR_T4
 skinparam classBackgroundColor UI_COLOR
 
-package UI <<Rectangle>>{
-Interface Ui <<Interface>>
-Class "{abstract}\nUiPart" as UiPart
-Class UiManager
-Class MainWindow
-Class HelpWindow
-Class ResultDisplay
-Class RecipeListPanel
-Class RecipeCard
-Class StatusBarFooter
-Class CommandBox
+package UI {
+    Interface Ui <<Interface>>
+    Class "{abstract}\nUiPart" as UiPart
+    Class UiManager
+    Class MainWindow
+    Class HelpWindow
+    Class ResultDisplay
+    Class RecipeListPanel
+    Class RecipeCard
+    Class StatusBarFooter
+    Class CommandBox
 }
 
-package Model <<Rectangle>> {
-Class HiddenModel #FFFFFF
+package Model {
+    Class HiddenModel #FFFFFF
 }
 
-package Logic <<Rectangle>> {
-Class HiddenLogic #FFFFFF
+package Logic {
+    Class HiddenLogic #FFFFFF
 }
 
 Class HiddenOutside #FFFFFF

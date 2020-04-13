@@ -1,0 +1,17 @@
+@startuml
+!include style.puml
+
+start
+:User inputs Count command;
+
+If () then ([command is valid format])
+    :Count all the recipes;
+    :Returns success message;
+else ([else])
+    :Returns failure message
+    (Invalid Command);
+endif
+:LogicManager prints message to user;
+
+stop
+@enduml

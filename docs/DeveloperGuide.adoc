@@ -1,12 +1,13 @@
-= CookBuddy Recipe Manager - Developer Guide
+= CookBuddy Developer Guide
 :site-section: DeveloperGuide
 :toc:
-:toc-title:
-:toc-placement: preamble
+:toc-title: Contents
+:toc-placement: auto
 :sectnums:
 :imagesDir: images
 :stylesDir: stylesheets
 :xrefstyle: full
+:experimental:
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -14,13 +15,15 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/AY1920S2-CS2103T-W12-4/main/tree/master
 
+= Overview
+
 By: `AY1920S2-CS2103T-W12-4`      Since: `Feb 2020`      Licence: `MIT`
 
-== Introduction
+== Introduction [Done by Zain Alam]
 
 Welcome to CookBuddy!
 
-image::Ui.png[width="790"]
+For more information about using CookBuddy, consult the <<UserGuide#, CookBuddy User Guide>>.
 
 CookBuddy is an integrated platform fully customized for users who wish to manage their recipes easily and effectively.
 
@@ -28,7 +31,7 @@ All your recipe information is stored on our simple and clean Graphical User Int
 
 If you are looking for a way to easily manage your recipes and have quick fingers, then CookBuddy is definitely for you!
 
-== About this Document
+== About this Document [Done by Zain Alam]
 
 This document is a Developer Guide written for developers who wish to contribute to or extend our CookBuddy project.
 It is technical, and explains the inner workings of CookBuddy and how the different components of our
@@ -42,7 +45,7 @@ TIP: This icon denotes useful tips to note of during development.
 
 NOTE: This icon denotes important details to take note of during development.
 
-== Overview of Features
+== Overview of Features [Done by Zain Alam]
 
 This section will provide you a short overview of CookBuddy's features.
 
@@ -97,18 +100,13 @@ Each of the four components
 * Defines its _API_ in an `interface` with the same name as the Component.
 * Exposes its functionality using a `{Component Name}Manager` class.
 
-For example, the `Logic` component (see the class diagram given below) defines it's API in the `Logic.java` interface and exposes its functionality using the `LogicManager.java` class.
-
-.Class Diagram of the Logic Component
-image::LogicClassDiagram.svg[]
-
 [discrete]
 ==== How the architecture components interact with each other
 
 The _Sequence Diagram_ below shows how the components interact with each other for the scenario where the user issues the command `delete 1`.
 
 .Component interactions for `delete 1` command
-image::ArchitectureSequenceDiagram.svg[]
+image::ArchitectureSequenceDiagram.svg[align="center"]
 
 The sections below give more details of each component.
 
@@ -132,12 +130,19 @@ The `UI` component,
 * Executes user commands using the `Logic` component.
 * Listens for changes to `Model` data so that the UI can be updated with the modified data.
 
+[NOTE]
+====
+The `UI` component uses the JMetro library to apply a theme to the default JavaFX interface. The resulting product presents a neat, Windows 10-style UI to the user, that employs https://www.microsoft.com/design/fluent/#/[Microsoft's Fluent Design patterns].
+
+For more information on JMetro, refer to the https://pixelduke.com/java-javafx-theme-jmetro/[JMetro home page].
+====
+
 [[Design-Logic]]
 === Logic component
 
 [[fig-LogicClassDiagram]]
 .Structure of the Logic Component
-image::LogicClassDiagram.svg[]
+image::LogicClassDiagram.svg[align="center"]
 
 *API* :
 link:{repoURL}/src/main/java/cookbuddy/logic/Logic.java[`Logic.java`]
@@ -159,7 +164,7 @@ NOTE: The lifeline for `DeleteCommandParser` should end at the destroy marker (X
 === Model component
 
 .Structure of the Model Component
-image::ModelClassDiagram.svg[]
+image::ModelClassDiagram.svg[align="center"]
 
 *API* : link:{repoURL}/src/main/java/cookbuddy/model/Model.java[`Model.java`]
 
@@ -175,117 +180,469 @@ As a more OOP model, we can store a `Tag` list in `Recipe Book`, which `Recipe` 
  +
 image:BetterModelClassDiagram.svg[]
 
+==== The `attribute` package
+[[attrib-package]]
+.Structure of the `attribute` package, defining each `Recipe` 's key attributes
+image::AttributeClassDiagram.svg[align="center"]
+`attribute` defines common attributes for each recipe, such as time taken to cook, serving size, an image of the recipe, and so on.
+
 [[Design-Storage]]
 === Storage component
 
 .Structure of the Storage Component
-image::StorageClassDiagram.svg[]
+image::StorageClassDiagram.svg[align="center"]
 
 *API* : link:{repoURL}/src/main/java/cookbuddy/storage/Storage.java[`Storage.java`]
 
-The `Storage` component,
+The `Storage` component manages the recipe data, the user configuration, preferences, and the image data. To be specific, it:
 
-* can save `UserPref` objects in JSON format and read it back.
-* can save the Recipe Book data in JSON format and read it back.
+* reads and writes `UserPref` objects to and from disk, as `.json` format;
+* serialises, reads and writes recipe data to and from disk, _also_ as `.json` format;
+* passes on the file path for the user-entered image into methods in the `ImageUtil` class. More details are given in <<Img-considerations>>.
 
 [[Design-Commons]]
 === Common classes
 
-Classes used by multiple components are in the `cookbuddy.commons` package.
+Classes used by multiple components are in the `cookbuddy.commons` package; the three over-arching sub-packages are `core`, `exceptions`, and `util`.
 
-== Implementation
+==== `core`
+This package defines classes for user configuration, GUI settings, and even a version number.
+
+==== `exceptions`
+This package defines exceptions thrown by CookBuddy when it encounters an error state.
+
+==== `util`
+This package defines utility classes for certain operations, like file I/O, argument validation, and image processing.
+
+
+
+
+== Implementation details and Possible Enhancements
 
 This section describes some noteworthy details on how certain features are implemented.
+Some possible future components are briefly covered, and these may be released in `v2.0`.
 
-// tag::undoredo[]
-=== [Proposed] Undo/Redo feature
-==== Proposed Implementation
 
-The undo/redo mechanism is facilitated by `VersionedRecipeBook`.
-It extends `RecipeBook` with an undo/redo history, stored internally as an `RecipeBookStateList` and `currentStatePointer`.
-Additionally, it implements the following operations:
+=== Counting recipes [Done by Zain Alam]
 
-* `VersionedRecipeBook#commit()` -- Saves the current recipe book state in its history.
-* `VersionedRecipeBook#undo()` -- Restores the previous recipe book state from its history.
-* `VersionedRecipeBook#redo()` -- Restores a previously undone recipe book state from its history.
+We allow users to count the total number of recipes stored in CookBuddy. This section shows how we handle this request from the user.
 
-These operations are exposed in the `Model` interface as `Model#commitRecipeBook()`, `Model#undoRecipeBook()` and `Model#redoRecipeBook()` respectively.
+==== Implementation
 
-Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.
+We store every single `Recipe` added by the user into an `ObservableList<Recipe>`, which is a list object in `UniqueRecipeList`. We used an `ObservableList` to easily reflect changes to the list by any other component of CookBuddy using the list.
 
-Step 1. The user launches the application for the first time. The `VersionedRecipeBook` will be initialized with the initial recipe book state, and the `currentStatePointer` pointing to that single recipe book state.
+The `count` command was implemented as a `CountCommand` in the `bookbuddy/logic/commands` package.
 
-image::UndoRedoState0.svg[]
+The `count` has the following input format: `count`
 
-Step 2. The user executes `delete 5` command to delete the 5th recipe in the recipe book. The `delete` command calls `Model#commitRecipeBook()`, causing the modified state of the recipe book after the `delete 5` command executes to be saved in the `recipeBookStateList`, and the `currentStatePointer` is shifted to the newly inserted recipe book state.
+The following sequence diagram shows how the count operation works:
 
-image::UndoRedoState1.svg[]
+:figure-caption: Figure
+.Sequence diagram of how `count` command is processed.
 
-Step 3. The user executes `new n/Chicken Rice ...` to add a new recipe. The `new` command also calls
-`Model#commitRecipeBook()`, causing another modified Recipe book state to be saved into the `RecipeBookStateList`.
+image::count-command/CountSequenceDiagram.svg[align="center"]
 
-image::UndoRedoState2.svg[]
+An incorrect syntax will cause a `ParseException` to be thrown by the parser.
 
 [NOTE]
-If a command fails its execution, it will not call `Model#commitRecipeBook()`, so the recipe book state will not be saved into the `recipeBookStateList`.
+Incorrect user input will display Unknown command message.
 
-Step 4. The user now decides that adding the recipe was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoRecipeBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous recipe book state, and restores the recipe book to that state.
+We will now demonstrate how a `count` command works in `CookBuddy`:
 
-image::UndoRedoState3.svg[]
+Step 1. The user executes the command **count** to count the total number of recipes stored in CookBuddy.
 
-[NOTE]
-If the `currentStatePointer` is at index 0, pointing to the initial recipe book state, then there are no previous Recipe book states to restore. The `undo` command uses `Model#canUndoRecipeBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+Step 2. The input is now checked and an attempt to parse the parameter occurs. The `CountCommand#execute(Model model)` method is executed.
 
-The following sequence diagram shows how the undo operation works:
+Step 3. The method `Model#count()` will then be called to calculate the total number of recipes stored in CookBuddy.
 
-image::UndoSequenceDiagram.svg[]
+Step 4. If successful, a success message will be generated by `CommandResult` and it will be returned with the generated
+success message. Otherwise, an error message is thrown as `ParseException`.
 
-NOTE: The lifeline for `UndoCommand` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+Since the user, input in this case, is valid,
+the `count` command is successfully executed and the total number of recipes currently stored in CookBuddy is displayed.
 
-The `redo` command does the opposite -- it calls `Model#redoRecipeBook()`, which shifts the `currentStatePointer` once to the right, pointing to the previously undone state, and restores the recipe book to that state.
+The following activity diagram summarizes what happens when the user executes `count` command to count the total number of recipes:
 
-[NOTE]
-If the `currentStatePointer` is at index `RecipeBookStateList.size() - 1`, pointing to the latest recipe book state, then there are no undone Recipe book states to restore. The `redo` command uses `Model#canRedoRecipeBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+:figure-caption: Figure
+.Activity diagram of executing the `count`command.
+image::count-command/CountActivityDiagram.svg[align="center",650]
 
-Step 5. The user then decides to execute the command `list`. Commands that do not modify the Recipe book, such as `list`, will usually not call `Model#commitRecipeBook()`, `Model#undoRecipeBook()` or `Model#redoRecipeBook()`. Thus, the `recipeBookStateList` remains unchanged.
+=== Image Management [Done by Sharadh Rajaraman]
+CookBuddy allows users to add images to their recipes, which are then saved into the `data/images` folder created by CookBuddy (at least, using the default settings). This section elaborates on implementation.
 
-image::UndoRedoState4.svg[]
+The two key classes allowing image and photo management are `ImageUtil` and `Photograph`; the former is a utility class written in the https://en.wikipedia.org/wiki/Singleton_pattern[singleton pattern]; the latter is the attribute that each `Recipe` directly contains, as <<attrib-package>> details.
 
-Step 6. The user executes `reset`, which calls `Model#commitRecipeBook()`. Since the `currentStatePointer` is not pointing at the end of the `recipeBookStateList`, all recipe book states after the `currentStatePointer` will be purged. We designed it this way because it no longer makes sense to redo the `new n/Chicken Rice ...` command. This is the behavior that most modern desktop applications follow.
+==== From User Command to Image On Screen
 
-image::UndoRedoState5.svg[]
+[[img-seq]]
+.Sequence Diagram of image retrieval from disk
+image::PhotoSequenceDiagram.svg[align="center]
 
-The following activity diagram summarizes what happens when a user executes a new command:
+The above sequence diagram details how a user-entered command is translated to an image file as displayed on screen. Some initial details are omitted, such as the calls to `RecipeBookParser#parseCommand()` (which have already been demonstrated in <<Design-Model>>).
 
-image::CommitActivityDiagram.svg[]
+The steps taken are also described step-by-step in the activity diagram below:
+
+.Activity diagram of <<img-seq>>
+image::PhotoReadActivityDiagram.svg[align="center"]
+
+==== Saving Images Into the Data Folder
+When saving images, there were a few considerations that needed to be taken into account:
+
+* The image on disk *must* contain the recipe name, so as to be reasonably understandable;
+
+* The image on disk must be stored _losslessly_, so that repeated read-write cycles do not deplete the quality;
+
+* If an image already exists on disk, then read/write cycles must not be wasted in overwriting an image with the same data;
+
+* Even if recipes have the same name, the image file names must be distinct, and yet always resolve to the same.
+
+Therefore, a hashcode is appended to each image file name, and the resulting data is saved to disk as a `.png` image, which is lossless. `jpeg` formats would require lossy compression at each save, which would progressively degrade image quality.
+
+This entire process is also demonstrated in the activity diagram below:
+
+.Activity diagram representing image save process
+image::PhotoSaveActivityDiagram.svg[align="center"]
+
+[[Img-considerations]]
+==== Design Considerations
+`ImageUtil` is implemented as a singleton class. In other words, its constructor is declared `private`, and the object can only be retrieved by the `public static` factory method, `ImageUtil.imageUtil()`. Given the class defines _several_ constants using methods, we believed this was the most straightforward direction possible.
+
+`ImageUtil` also declares `PLACEHOLDER_IMAGE` as several static constant types: a `BufferedImage`, an `InputStream`, and even as a `Path`. The _actual_ image is bundled with the `JAR` file, which can be explored at will using an extractor tool like `7zip`.
+
+These constants are loaded when the Photograph class is first called, thus adhering to Java's Just-In-Time (JIT) principle.
+
+Furthermore, the initial `ImageUtil` written as an ordinary static utility class led to the JVM throwing `ExceptionInInitializerError` when the built `.jar` was run. There were no issues running this from the IDE; hence the singleton pattern.
+
+
+==== Possible Improvements
+As it is, image processing spans _several_ classes: `FileUtil`, `ImageUtil`, `Photograph`. We would like to simplify this. Furthermore, _saving_ image data requires returning a file path through several methods, which have little relation to one another.
+
+
+// tag::FindCommandImpl[]
+=== Finding recipes [Done by Kevin]
+
+The following section describes how the `find` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `find` command.
+
+The `find` command is implemented in the _FindCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `find` command is run.
+
+.Activity diagram of finding recipes
+image::FindCommandActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `find` command, the user will specify one attribute to search within as well as the search terms. +
+   Possible attributes to search within are _name_ (`n/`), _ingredients_ (`ing/`) and _instructions_ (`ins/`).
+
+. _FindCommandParser_ ensures that only one attribute is specified and returns a _FindCommand_ with the relevant _ContainsKeywordPredicate_ class.
+
+The following sequence diagram summarizes the execution of the `find` command
+
+.Sequence diagram for the execution of a `find` command
+image::FindCommandSequenceDiagram.svg[align="center"]
 
 ==== Design Considerations
 
-===== Aspect: How undo & redo executes
+As the _FindCommand_ class only takes in a single _ContainsKeywordsPredicate_ object,
+CookBuddy can only search within a single attribute at a time.
 
-* **Alternative 1 (current choice):** Saves the entire recipe book.
-** Pros: Easy to implement.
-** Cons: May have performance issues in terms of memory usage.
-* **Alternative 2:** Individual command knows how to undo/redo by itself.
-** Pros: Will use less memory (e.g. for `delete`, just save the recipe being deleted).
-** Cons: We must ensure that the implementation of each individual command are correct.
+==== Possible improvements
 
-===== Aspect: Data structure to support the undo/redo commands
+As it is currently implemented, the `find` command only accepts finding via one attribute at a time.
+A possible future improvement would enable it to search for recipes using multiple attributes.
+This would greatly enhance the usefulness of the `find` function in *CookBuddy*.
 
-* **Alternative 1 (current choice):** Use a list to store the history of recipe book states.
-** Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.
-** Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both `HistoryManager` and `VersionedRecipeBook`.
-* **Alternative 2:** Use `HistoryManager` for undo/redo
-** Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.
-** Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as `HistoryManager` now needs to do two different things.
-// end::undoredo[]
+For example, running `find n/Ham ing/toast` will make *CookBuddy* search for recipes with _Ham_ in its name, or _toast_ in its ingredients.
 
-// tag::dataencryption[]
-// === [Proposed] Data Encryption
+// end::FindCommandImpl[]
 
-// _{Explain here how the data encryption feature will be implemented}_
 
-// end::dataencryption[]
+// tag::FavCommandImpl[]
+=== Favouriting recipes [Adarsh]
+
+The following section describes how the `fav` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `fav` command.
+
+The `fav` command is implemented in the _FavCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `fav` command is run.
+
+.Activity diagram of the `fav` command
+image::FavActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `fav` command, the user will specify the index of the recipe to be favourited.
+
+. _FavCommandParser_ ensures that index specified is valid and returns a _FavCommand_.
+
+The following sequence diagram summarizes the execution of the `fav` command
+
+.Sequence diagram for the execution of a `fav` command
+image::FavSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: How many indexes should be taken in?
+
+* Alternative 1 (Chosen): Only 1 index to be specified per use of the command
+
+** Pros: Less error-prone
+** Cons: Less efficient
+
+* Alternative 2: Multiple indexes can be specified per use of the command
+
+** Pros: More efficient
+** Cons: More error prone
+
+
+
+
+==== Possible improvements
+
+In the current implementation, you are able to favourite recipes, even if they have already been favourited.
+A possible improvement would be to notify users if the recipe they are trying to favourite has already been favourited.
+This would greatly enhance the usefulness of the `fav` function in *CookBuddy*.
+
+// end::FavCommandImpl[]
+
+
+// tag::UnfavCommandImpl[]
+=== Un-favouriting recipes [Adarsh]
+
+The following section describes how the `unfav` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `unfav` command.
+
+The `unfav` command is implemented in the _UnFavCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `unfav` command is run.
+
+.Activity diagram of the `unfav` command
+image::UnfavActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `unfav` command, the user will specify the index of the recipe to be un-favourited.
+
+. _UnFavCommandParser_ ensures that index specified is valid and returns a _UnFavCommand_.
+
+The following sequence diagram summarizes the execution of the `unfav` command
+
+.Sequence diagram for the execution of a `unfav` command
+image::UnfavSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: How many indexes should be taken in?
+
+* Alternative 1 (Chosen): Only 1 index to be specified per use of the command
+
+** Pros: Less error-prone
+** Cons: Less efficient
+
+* Alternative 2: Multiple indexes can be specified per use of the command
+
+** Pros: More efficient
+** Cons: More error prone
+
+==== Possible improvements
+
+In the current implementation, you are able to un-favourite recipes, even if they are not favourited.
+A possible improvement would be to notify users if the recipe they are trying to favourite has not been favourited.
+This would greatly enhance the usefulness of the `find` function in *CookBuddy*.
+
+// end::UnFavCommandImpl[]
+
+
+// tag::DoneCommandImpl[]
+=== Marking recipes as done [Adarsh]
+
+The following section describes how the `done` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `done` command.
+
+The `done` command is implemented in the _DoneCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `done` command is run.
+
+.Activity diagram of the `done` command
+image::DoneActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `done` command, the user will specify the index of the recipe to be mared as done.
+
+. _DoneCommandParser_ ensures that index specified is valid and returns a _DoneCommand_.
+
+The following sequence diagram summarizes the execution of the `done` command
+
+.Sequence diagram for the execution of a `done` command
+image::DoneSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: How many indexes should be taken in?
+
+* Alternative 1 (Chosen): Only 1 index to be specified per use of the command
+
+** Pros: Less error-prone
+** Cons: Less efficient
+
+* Alternative 2: Multiple indexes can be specified per use of the command
+
+** Pros: More efficient
+** Cons: More error prone
+
+==== Possible improvements
+
+In the current implementation, you are able to mark recipes as done, even if they are already marked as done.
+A possible improvement would be to notify users if the recipe they are trying to favourite has already been marked as done.
+This would greatly enhance the usefulness of the `done` function in *CookBuddy*.
+
+// end::DoneCommandImpl[]
+
+
+// tag::UndoCommandImpl[]
+=== Un-marking recipes as done [Adarsh]
+
+The following section describes how the `undo` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `undo` command.
+
+The `undo` command is implemented in the _UndoCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `undo` command is run.
+
+.Activity diagram of the `undo` command
+image::UndoActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `undo` command, the user will specify the index of the recipe to be un-favourited.
+
+. _UndoCommandParser_ ensures that index specified is valid and returns a _UndoCommand_.
+
+The following sequence diagram summarizes the execution of the `undo` command
+
+.Sequence diagram for the execution of a `undo` command
+image::UndoSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: How many indexes should be taken in?
+
+* Alternative 1 (Chosen): Only 1 index to be specified per use of the command
+
+** Pros: Less error-prone
+** Cons: Less efficient
+
+* Alternative 2: Multiple indexes can be specified per use of the command
+
+** Pros: More efficient
+** Cons: More error prone
+
+==== Possible improvements
+
+In the current implementation, you are able to mark recipes as not attempted, even if they have not been marked as attempted.
+A possible improvement would be to notify users if the recipe they are trying to unmark as done has not been attempted.
+This would greatly enhance the usefulness of the `undo` function in *CookBuddy*.
+
+// end::UndoCommandImpl[]
+
+
+// tag::ViewCommandImpl[]
+=== Viewing recipes [Adarsh]
+
+The following section describes how the `view` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `view` command.
+
+The `view` command is implemented in the _ViewCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `view` command is run.
+
+.Activity diagram of the `view` command
+image::ViewActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `view` command, the user will specify the index of the recipe that they wish to view.
+
+. _ViewCommandParser_ ensures that index specified is valid and returns a _ViewCommand_.
+
+The following sequence diagram summarizes the execution of the `view` command
+
+.Sequence diagram for the execution of a `view` command
+image::ViewSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: How should the user specify the recipe they want to view
+
+* Alternative 1 (Chosen): Using the index of the recipe
+
+** Pros: Easily identified from the GUI
+** Cons: -
+
+* Alternative 2: Using the name of the recipe
+
+** Pros: Users may know the name of the recipe better than the index
+** Cons: Less efficient
+
+==== Possible improvements
+
+In the current implementation, the `view` command only takes in the index of the recipe.
+A possible improvement would be to allow users to input the recipe name they want viewed.
+That way, users can input either the recipe name or index.
+
+// end::ViewCommandImpl[]
+
+
+// tag::TimeCommandImpl[]
+=== Assigning a time to a recipe [Adarsh]
+
+The following section describes how the `time` command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the `time` command.
+
+The `time` command is implemented in the _TimeCommand_ class.
+
+The following activity diagram shows the possible paths *CookBuddy* can take when a `time` command is run.
+
+.Activity diagram of the `time` command
+image::TimeActivityDiagram.svg[align="center]
+
+==== Implementation
+
+. When entering the `time` command, the user will input the index of the recipe they wish to assign a time, as well as the time they wish to assign to the recipe. The time is to be in the following format (hh:MM:ss). Minutes and seconds are optional, and would be set to 0 if no values are provided for them.
+
+. _TimeCommandParser_ ensures that index specified is valid and returns a _TimeCommand_.
+
+The following sequence diagram summarizes the execution of the `time` command
+
+.Sequence diagram for the execution of a `time` command
+image::TimeSequenceDiagram.svg[align="center"]
+
+==== Design Considerations
+
+===== Aspect: Should the minutes and seconds be mandatory inputs
+
+* Alternative 1 (Chosen): No, they can be optional inputs
+
+** Pros: More efficient
+** Cons: -
+
+* Alternative 2: Yes, they should be mandatory inputs
+
+** Pros: -
+** Cons: Much less efficient
+
+==== Possible improvements
+
+In the current implementation, we are parsing the hours, minutes and seconds as integers.
+A possible improvement would be to use the java.util.time class.
+
+// end::TimeCommandImpl[]
+
+
 
 === Logging
 
@@ -305,7 +662,23 @@ We are using `java.util.logging` package for logging. The `LogsCenter` class is 
 [[Implementation-Configuration]]
 === Configuration
 
-Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: `config.json`).
+Certain properties of the application may be controlled (e.g user prefs file location, logging level) through the configuration file (default: `config.json`).
+
+[[Implementation-Future]]
+=== Features coming in `v2.0`
+We have some exciting features in line for `v2.0`, and some of these include:
+
+* Converting between units: American users of our application might be more comfortable with pounds, quarts, gallons and such. Therefore, we aim to implement a seamless conversion between US customary and metric units, with a one-command (or click) way to switch between the two.
+
+* We also note that users may prefer some advanced UNIX-style compressed syntax; hence, we are exploring using the https://picocli.info/[PicoCLI] library to implement _both_ the current Windows-style slash-based syntax, as well as UNIX-style dash-based syntax. This is a _single_ class that can either be imported as a dependency, or directly included as source.
++
+We expect that this change would also drastically decrease code length and improve stability and testability, given the current implementation spans not just several _classes_, but two entire _packages_: `cookbuddy.logic.parser`, and `cookbuddy.logic.command`. As it is now, we have needless object-orientation for the sake of doing so, and we believe in simplicity as much as possible.
+
+* We understand users who cook love to share their creations with friends and family; therefore, we intend to use social media APIs from Facebook, Google, Twitter, Reddit, Instagram, and Snapchat, to allow users to share their recipes to the world.
+
+* Users might not be comfortable with keeping their computers near the stove, hence, we plan to offer two solutions in `v2.0`:
+** We plan to release mobile apps for the two major platforms, Android and iOS.
+** For users more comfortable with paper, we plan to allow _printing_ of recipes to PDF, and directly to printers. This engine is intended to be powered by `LaTeX`.
 
 == Documentation
 
@@ -320,9 +693,9 @@ Refer to the guide <<Testing#, here>>.
 Refer to the guide <<DevOps#, here>>.
 
 [appendix]
-== Product Scope
+== Product Scope [Done by Zain Alam & Sharadh Rajaraman]
 
-*Target user profile*:
+*Target user profile*: [Done by Sharadh Rajaraman]
 
 * cooks for oneself on a nearly daily basis, and hence:
    - needs to manage many recipes
@@ -337,91 +710,82 @@ Refer to the guide <<DevOps#, here>>.
 
 * is reasonably familiar with the command-line
 
-* requires a straightforward means to catalogue and codify recipes and meals without using spreadsheets
+* requires a straightforward means to catalogue and codify dishes and meals without using spreadsheets
 
-*Value proposition*:
+*Value proposition*: [Done by Zain Alam]
 
 * Store, retrieve, manage and display recipes faster than navigating through websites and bookmarks, with command-line input, but GUI responses.
 
 * Present a unified interface for recipe management.
 
 * When managing recipes:
-   - allow easier and faster retrieval with attributes like tags, time, difficulty, rating etc;
+   - allow easier and faster retrieval with attributes like tags, time, difficulty, etc;
 
    - present a straightforward interface to edit, duplicate and combine recipes into meals
 
 * Overall increase in productivity.
 
-//* Export recipes to a printable, human-readable and consistent format
 
 [appendix]
-== User Stories
+== User Stories [Done by Sharadh Rajaraman and Adarsh Chugani]
 
-[width="100%",cols="1%,30%,60%",options="header",]
+Priorities: *High* (must have), *Medium* (nice to have), *Low* (unlikely to have)
+
+[width="100%",cols="10%, 30%, 30%, 30%", options="header",]
 |===
-|Rating|Priority|Difficulty
-|1|Basic functionality—*MUST HAVE*                      | *Easy*—Java basics + minor modifications to existing code
-|2|Secondary functionality—*VERY IMPORTANT*             | *Some effort needed*—Moderate Java concepts (`Collections`, `Streams`, etc); < 5 _new_ classes needed
-|3|Recommended functionality                            | *More effort needed*—Obscure Java classes (`java.nio`, `java.time`, etc); new _package_ of classes needed
-|4|Nice to have                                         | *Difficult*—Time-consuming, >500+ LoC _just_ for this feature
-|5|Quality of life features, and all unfeasible options | *Nearly impossible*—not only everything in (4), but algorithmically challenging too, and approaching 1K LOC
+| Priority | As a/an …                                           | I want to …                                                                        | So that…
+|   *High* | Regular user                                        | add a recipe                                                                       | I can keep track of the recipe
+|   *High* | Regular user                                        | delete a recipe                                                                    | I can stop keeping track of the recipe
+|   *High* | Regular user                                        | list out all the recipes I have                                                    | I can easily see what recipies I have
+|   *High* | Regular user                                        | view the recipe                                                                    | I can use the recipe
+|   *High* | More experienced user                               | duplicate a recipe                                                                 | I can modify a copy and keep the original
+|   *High* | User who is inexperienced with software             | use a helper command                                                               | I can see all the commands and how to use them
+|   *High* | Regular user                                        | add instructions for the recipe                                                    | I know how to cook the dish
+|   *High* | Regular user                                        | add ingredient to recipe                                                           | I know how much ingredients to use
+|   *High* | Health-focused user                                 | track the amount of calories a dish has                                            | I know how healthy a dish is
+|   *High* | Regular user                                        | add time it takes to prepare / cook recipe                                         | I know how long it takes to cook the recipe
+|   *High* | Organized user                                      | tag recipes based on meal time (breakfast/lunch/dinner)                            | I can easily refer to them
+|   *High* | User who likes experimenting                        | modify a recipe                                                                    | I can change the components of the recipe
+|   *High* | Regular user                                        | add a serving size of a dish                                                       | I know the serving size of the recipe
+|   *High* | Time-strapped user                                  | see the preparation and cooking time for each recipe                               | I can plan my schedule around the time needed
+|   *High* | Health-focused user                                 | search for a dish based on how many calories i want to consume                     | I can eat healthily
+|   *High* | User who is new to cooking                          | tag recipes based on difficulty (beginner/intermediate/master)                     | I can check if I am skilled enough to cook the dish
+|   *High* | User with many recipes                              | tag recipes based on their cuisine (western, chinese, indian etc)                  | I can find them easily
+| *Medium* | User who wants to be efficient                      | favourite recipes/dishes                                                           | I can easily refer back to them
+| *Medium* | User who wants to get rid of ingredients            | search for dishes based on ingredients                                             | I can use up the ingredients that I want to get rid of
+| *Medium* | User with many recipes                              | search for recipes based on a word in the dish name                                | I can find it easily
+| *Medium* | Organized user                                      | mark recipe as successfully done                                                   | I can keep track of the recipes I have successfully attempted
+| *Medium* | Inexperienced user                                  | view the recipe in a GUI                                                           | I have more visual feedback to work with
+| *Medium* | Inexperienced user                                  | view an image of the final dish                                                    | I know what dish I am cooking
+| *Medium* | Organized user                                      | have a counter of total recipes in the book                                        | I can know how many recipes I have
+| *Medium* | User who likes experimenting                        | give me a random recipe that i have added                                          | I can challenge myself to cook what has been given
+| *Medium* | Regular user                                        | give a rating for the dish                                                         | I can tag, search for and sort dishes based on my rating of the dish
+| *Medium* | User with a limited budget                          | find recipes within my budget                                                      | I do not overspend
+| *Medium* | User with allergies                                 | tag the dish as dangerous for allergies                                            | I can avoid cooking the dish
+| *Medium* | User who not experienced                            | highlight instructions in the recipe                                               | I can follow the recipe more easily
+| *Medium* | Organized user                                      | sort my recipes based on criteria (tags)                                           | I can choose what order to view them
+| *Medium* | Regular user                                        | add ingredient prices                                                              | I can tabulate the total cost of cooking dishes
+|    *Low* | User with a limited budget                          | view the price of a specific ingredient                                            | I know how much a ingredient costs
+|    *Low* | User with many friends                              | import and combine my friend's recipes from a file (.txt perhaps)                  | I can have access to their recipies
+|    *Low* | User who enjoys challenging themselves              | suggest dish to attempt based on my previous successful attempts                   | I can become more skillful
+|    *Low* | Regular user                                        | choose to only see the basic information for the recipe                            | I can easily skim through the instructions and ingredients
+|    *Low* | User on a budget                                    | check the total price of the dish                                                  | I can check if it is within my budget
+|    *Low* | User cooking for a group / occasion                 | scale up/down the recipe                                                           | I can prepare food for different group sizes
+|    *Low* | User cooking for a group / occasion                 | find out how much of each ingredient i need                                        | I can get the ingredients at one go
+|    *Low* | Health-focused user                                 | add nutrition facts                                                                | I can see how much sugar, salt, fat etc is in the dish prepared
+|    *Low* | User who is more familiar with the metric system    | Convert between metric and imperial sizes.                                         | I can use the tools I have without needing to convert elsewhere
+|    *Low* | User who usually prepares multiple dishes as sets   | group dishes into sets                                                             | I can be more organised when cooking
+|    *Low* | User who is experienced with the software           | use shorthand commands                                                             | I can navigate the software more efficiently
+|    *Low* | User who wants to challenge myself                  | have a timer/stopwatch                                                             | I can time myself when I cook dishes and have a "best time" feature
+|    *Low* | User who doesn't like screens and prefers paper     | print recipes as pdf/paper                                                         | I can refer to it more easily
+|    *Low* | User who likes sharing my cooking                   | post my recipes and dishes on social media                                         | I can share recipes and images for others to use
+|    *Low* | User who appreciates efficiency                     | add a recipe directly from online                                                  | I can be efficient
 |===
 
-[width="100%",cols="1%,1%,30%,30%,30%",options="header",]
-|===
-| Priority | Difficulty |                       As a…                       |                                      I can…                                      |                                So that…
-|        1 |          1 | Regular user                                      | add a recipe                                                                     | I can keep track of the recipe
-|        1 |          1 | Regular user                                      | delete a recipe                                                                  | stop keeping track of the recipe
-|        1 |          1 | Regular user                                      | list out all the recipies I have (names)                                         | easily see what recipies I have
-|        1 |          1 | Regular user                                      | view the recipe                                                                  | use the recipe
-|        1 |          1 | More experienced user                             | duplicate a recipe                                                               | modify a copy and keep the original
-|        1 |          1 | User who is inexperienced with software           | use a helper command                                                             | I can see all the commands and how to use them
-|        1 |          2 | Regular user                                      | add instructions for the recipe                                                  | I know how to cook the dish
-|        1 |          2 | Regular user                                      | add ingredient to recipe                                                         | I know how much ingredients to use
-|        1 |          2 | Health-focused user                               | track the amount of calories a dish has                                          | I know how healthy a dish is
-|        1 |          2 | Regular user                                      | add time it takes to prepare / cook recipe                                       | I know how long it takes to cook the recipe
-|        1 |          2 | Organized user                                    | tag recipes based on meal time (breakfast/lunch/dinner)                          | I can easily refer to them
-|        1 |          2 | User who likes experimenting                      | modify a recipe                                                                  | the recipe will be updated
-|        2 |          1 | User cooking for a group                          | find out how much of each ingredient i need                                      | I can get the ingredients at one go
-|        2 |          1 | Regular user                                      | add a serving size of a dish                                                     | I know the serving size of the recipe
-|        2 |          2 | Time-strapped user                                | see the preparation and cooking time for each recipe                             | plan my schedule around the time needed
-|        2 |          2 | Health-focused user                               | search for a dish based on how many calories i want to consume                   | eat healthily
-|        2 |          2 | User who is new to cooking                        | tag recipes based on difficulty (beginner/intermediate/master)                   | check if I am skilled enough to cook the dish
-|        2 |          2 | User with many recipes                            | tag and search for recipes based on their cuisine (western, chinese, indian etc) | find them easily
-|        2 |          2 | User who wants to be efficient                    | favourite recipes/dishes                                                         | I can easily refer back to them
-|        2 |          2 | User who wants to get rid of ingredients          | search for dishes based on ingredients                                           | I can use up the ingredients that I want to get rid of
-|        2 |          2 | Organized user                                    | tag and search dishes based on course (starter/main/dessert)                     | I can easily search for them
-|        2 |          2 | User with many recipes                            | search for recipes based on a word in the dish name                              | I can find it easily
-|        2 |          2 | Organized user                                    | mark recipe as successfully done                                                 | keep track of the recipes I have successfully attempted
-|        2 |          2 | User cooking for a group/ occassion               | scale up/down the recipe                                                         | I can prepare food for different group sizes
-|        2 |          2 | User on a budget                                  | check the total price of the dish                                                | check if it is within my budget
-|        2 |          2 | User with a limited budget                        | find recipes within my budget                                                    | I do not overspend
-|        2 |          2 | User with allergies                               | tag the dish as dangerous for allergies                                          | avoid cooking the dish
-|        2 |          3 | User who not experienced                          | highlight instructions in the recipe                                             | It is easier to follow the recipe
-|        2 |          3 | Organized user                                    | sort my recipies based on criteria (tags)                                        | I can choose what order to view them
-|        2 |          4 | Inexperienced user                                | view an image of the final dish                                                  | I know what dish I am cooking
-|        3 |          1 | Regular user                                      | add ingredient prices                                                            | I can tabulate the total cost of cooking dishes
-|        3 |          1 | Health-focused user                               | tag a dish e.g (Paleo/Keto/Vegan)                                                | I can check if the dish matches my dietary requirements
-|        3 |          1 | Organized user                                    | have a counter of total recipies in the book                                     | I can know how many recipes I have
-|        3 |          1 | User with a limited budget                        | view the price of a specific ingredient                                          | I know how much a ingredient costs
-|        3 |          2 | User with many friends                            | import and combine my friend's recipes from a file (.txt perhaps)                | I can have access to their recipies
-|        3 |          2 | User who enjoys challenging themselves            | suggest dish to attempt based on my previous successful attempts                 | I can become more skillful
-|        3 |          2 | Regular user                                      | give a rating for the dish                                              | tag, search for and sort dishes based on my rating of the dish
-|        3 |          2 | Regular user                                      | choose to only see the basic information for the recipe                          | easily skim through the instructions and ingredients
-|        3 |          2 | User who likes experimenting                      | give me a random recipe that i have added                                        | I can challenge myself to cook what has been given
-|        3 |          3 | Health-focused user                               | add nutrition facts                                                              | I can see how much sugar, salt, fat etc is in the dish prepared
-|        4 |          3 | User who is more familiar with the metric system  | Convert between metric and imperial sizes.                                       | I can use the tools I have without needing to convert elsewhere
-|        4 |          3 | User who usually prepares multiple dishes as sets | group dishes into sets                                                           | I can be more organised when cooking
-|        4 |          3 | User who is inexperienced with software           | view the recipe in a GUI                                                         | I have more visual feedback to work with
-|        4 |          4 | User who is experienced with the software         | use shorthand commands                                                           | I can navigate the software more efficiently
-|        5 |          4 | User who wants to challenge myself                | have a timer/stopwatch                                                           | time myself when I cook dishes and have a "best time" feature
-|        5 |          5 | User who doesn't like screens and prefers paper   | print recipes as pdf/paper                                                       | I can refer to it more easily
-|        5 |          5 | User who likes sharing my cooking                 | post my recipes and dishes on social media                                       | share recipes and images for others to use
-|        5 |          5 | User who appreciates efficiency                   | add a recipe directly from online                                                | I can be efficient
-|===
+// end::UserStories[]
 
 [appendix]
-== Use Cases
+== Use Cases [Done by Sharadh Rajaraman]
 
 (For all use cases below, the *System* is `CookBuddy` and the *Actor* is the `User`, unless specified otherwise)
 
@@ -505,7 +869,7 @@ Use case ends.
 
 
 [appendix]
-== Non Functional Requirements
+== Non Functional Requirements [Done by Zain Alam]
 
 .  Should work on any <<mainstream-os,mainstream OS>> as long as it has Java `11` or above installed.
 .  Should be able to hold up to 1000 recipes without noticeable sluggishness in performance for typical usage.
@@ -514,10 +878,9 @@ Use case ends.
 .  CookBuddy should be able to function without internet access.
 .  A user should be able to familiarise herself with less than 30 minutes of usage.
 
-_{More to be added}_
 
 [appendix]
-== Glossary
+== Glossary [Done by Zain Alam]
 
 [[attributes]] Attributes::
 The information of a recipe. For example, calories, ingredients or instructions etc.
@@ -538,7 +901,7 @@ A list of ingredients followed by a list of instructions, detailing how to prepa
 A (possibly custom) text marker that users can use to organise their recipes; examples include `vegetarian`, `spicy`, `Indian`. Tags can themselves be organised into groups, such as `cuisines`, `diet`, `ingredients`, `mealtime`, etc.
 
 [appendix]
-== Product Survey
+== Product Survey [Done by Zain Alam]
 
 *CookBuddy*
 
@@ -564,48 +927,257 @@ Cons:
 ** Non-functional requirements
 * slightly GUI-dependent, some buttons need to be clicked and screens traversed to perform a task
 
+
 [appendix]
-== Instructions for Manual Testing
+// tag::ManualTesting[]
+== Instructions for Manual Testing [Done by Kevin]
 
 Given below are instructions to test the app manually.
 
 [NOTE]
-These instructions only provide a starting point for testers to work on; testers are expected to do more _exploratory_ testing.
+These instructions only provide a starting point for testers to work on; testers are advised to do more _exploratory_ testing.
 
 === Launch and Shutdown
 
-. Initial launch
+. Launching *CookBuddy*
 
-.. Download the jar file and copy into an empty folder
-.. Double-click the jar file +
-   Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
+.. Ensure you are using *Java 11* by opening a Command Prompt / terminal and run `java -version`.
+.. Download the latest *CookBuddy* jar file https://github.com/AY1920S2-CS2103T-W12-4/main/releases[here] and copy it into an empty folder
+.. Launch Command Prompt / a terminal, navigate to the folder *CookBuddy* is in and enter `java -jar CookBuddy.jar`. Do not double-click CookBuddy.jar +
+   Expected: Shows *CookBuddy's* GUI with a set of sample recipes. The window size may not be optimum.
 
 . Saving window preferences
 
-.. Resize the window to an optimum size. Move the window to a different location. Close the window.
-.. Re-launch the app by double-clicking the jar file. +
+.. Resize *CookBuddy's* window to an optimum size. Move the window to a different location on the screen. Close the window.
+.. Re-launch *CookBuddy* by entering `java -jar CookBuddy.jar` in a Command Prompt / terminal. +
    Expected: The most recent window size and location is retained.
 
-_{ more test cases ... }_
+. Exiting *CookBuddy*
+
+.. On Windows, click the _Close Window_ button btn:[X] on the top-right corner of *CookBuddy's* GUI
+.. On Mac, click the _Close Window_ button btn:[X] on the top-left corner of *CookBuddy's* GUI
+.. Type `exit` in *CookBuddy's* command box and press kbd:[Enter]
++
+Expected: *CookBuddy* will shut down.
+
+=== Adding a recipe
+
+. Add a recipe with all mandatory fields present. Name (n/), Ingredients (ing/) and Instructions (ins/) are mandatory fields.
+
+.. Prerequisites: The recipe to be added is not present in the recipe book.
+.. Test case: `new n/Eggs on Toast ing/bread, 2 slices; egg, 1 ins/toast the 2 slices of bread; scramble the eggs;
+               put eggs on toasted bread; serve` +
+   Expected: The _Eggs on Toast_ recipe is added to the recipe list. Details of the newly added recipe is shown in the result pane.
+
+. Add a recipe with one mandatory field missing, Instructions in this case.
+
+.. Test case: `new n/Eggs on Toast ing/bread, 2 slices; egg, 1` +
+   Expected: No recipe is added. An _"Invalid command format"_ error message is shown in the result pane.
+
+. Add a recipe with a missing ingredient quantity (egg is missing its quantity)
+
+.. Test Case: `new n/Eggs on Toast ing/bread, 2 slices; egg ins/toast the 2 slices of bread; scramble the eggs;
+               put eggs on toasted bread; serve` +
+   Expected: No recipe is added. Error message _No quantity has been provided for one or more ingredients!_ is shown in the result pane.
+
+=== Modifying a recipe
+
+[NOTE]
+*CookBuddy* should contain at least one recipe.
+If no recipe exists, delete the _data_ folder and re-launch *CookBuddy*.
+The recipe book should contain two recipes, _Ham Sandwich_ & _Idiot Sandwich_.
+
+[TIP]
+The Modify command allows changing multiple attributes in one command.
+For example, `modify 1 n/Rice cal/250` updates both recipe 1's name and calories.
+
+. Modifying a recipe's name
+
+.. Test Case: `modify 1 n/Chicken Rice` +
+   Expected: The first recipe's name is updated to _Chicken Rice_.
+.. Test Case: `modify 1 n/` +
+   Expected: The first recipe's name is not updated. Error details are shown in in result pane.
+.. Test Case: `modify 1 n/!@#abc` +
+   Expected: The first recipe's name is not updated. Error details are shown in in result pane.
+
+. Modifying a recipe's ingredients
+
+.. Test Case: `modify 1 ing/ing1, qty1; ing2, qty2` +
+   Expected: The first recipe's original ingredients should be overwritten with ing1 & ing2.
+.. Test Case: `modify 1 ing/ing1, ; ing2, qty2` +
+   Expected: The first recipe's ingredients are not updated due to ing1 missing its quantity.
+.. Test Case: `modify 1 ing/, qty1; ing2, qty2` +
+   Expected: The first recipe's ingredients are not updated due to ing1 missing its name.
+
+. Modifying a recipe's instructions
+
+.. Test Case: `modify 1 ins/ins1; ins2` +
+   Expected: The first recipe's original instructions should be overwritten with ins1 & ins2.
+.. Test Case: `modify 1 ins/` +
+   Expected: The first recipe's instructions should not be updated. Error details are shown in in result pane.
+
+. Modifying a recipe's calories
+
+.. Test Case: `modify 1 cal/2000` +
+   Expected: The first recipe's calories should be updated to 2000 kCal.
+.. Test Case: `modify 1 cal/abc` +
+   Expected: The first recipe's calories is not updated. Error details are shown in in result pane.
+
+. Modifying a recipe's serving size
+
+.. Test Case: `modify 1 s/3` +
+   Expected: The first recipe's serving size should be updated to 3.
+.. Test Case: `modify 1 s/abc` +
+   Expected: The first recipe's serving size is not updated. Error details are shown in in result pane.
+
+. Modifying a recipe's difficulty
+
+.. Test Case: `modify 1 d/4` +
+   Expected: The first recipe's difficulty should be updated to 4 on a scale of 1 to 5.
+.. Test Case: `modify 1 d/6` +
+   Expected: The first recipe's difficulty is not updated. Error details are shown in in result pane.
+.. Test Case: `modify 1 d/abc` +
+   Expected: The first recipe's difficulty is not updated. Error details are shown in in result pane.
+
+. Modifying a recipe's rating
+
+.. Test Case: `modify 1 r/5` +
+   Expected: The first recipe's rating should be updated to 5 stars.
+.. Test Case: `modify 1 r/8` +
+   Expected: The first recipe's rating is not updated. Error details are shown in in result pane.
+.. Test Case: `modify 1 r/abc` +
+   Expected: The first recipe's rating is not updated. Error details are shown in in result pane.
+
+. Modifying a recipe's tags
+
+.. Test Case: `modify 1 t/breakfast` +
+   Expected: The first recipe's tags should be updated to contain *one* tag, _breakfast_.
+.. Test Case: `modify 1 t/breakfast, lunch` +
+   Expected: The first recipe's tags should be updated to contain *two* tags, _breakfast_ & _lunch_.
+.. Test Case: `modify 1 t/` +
+   Expected: The first recipe's tags should be updated to contain *zero* tags.
+
+=== Finding a recipe
+
+. Finding recipes by name
+
+.. Prerequisite: *CookBuddy* contains a recipe with _Ham_ in its name. +
+   Test Case: `find n/Ham` +
+   Expected: Recipes with the word _Ham_ in their name are listed.
+.. Prerequisite: *CookBuddy* contains _Ham Sandwich_ and _Idiot Sandwich_. +
+   Test Case: `find n/Ham Sandwich` +
+   Expected: Recipes whose name contains _Ham_ or _Sandwich_ are listed.
+   So both _Ham Sandwich_ and _Idiot Sandwich_ are listed.
+
+. Finding recipes by ingredient
+
+.. Prerequisite: *CookBuddy* contains a recipe with _bread_ in its ingredients. +
+   Test Case: `find ing/bread` +
+   Expected: Recipes whose ingredient names contain _bread_ are listed.
+
+. Finding recipes by instruction
+
+.. Prerequisite: *CookBuddy* contains a recipe with _ham_ in its instructions. +
+   Test Case: `find ins/bread` +
+   Expected: Recipes whose instructions contain _ham_ are listed.
+
+
+=== Marking a recipe as done / not done
+
+[NOTE]
+*CookBuddy* should contain at least one recipe.
+If no recipe exists, delete the `data` folder and re-launch *CookBuddy*.
+The recipe book should contain two recipes, _Ham Sandwich_ & _Idiot Sandwich_.
+
+. Marking a recipe as done
+
+.. Test Case: `done 1` +
+   Expected: The first recipe should be marked as done.
+.. Test Case: `done n` (where n is larger than the list size) +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.
+.. Test Case: `done abc` +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid integer.
+
+. Marking a recipe as not done
+
+.. Test Case: `undo 1` +
+   Expected: The first recipe should be marked as not done.
+.. Test Case: `undo n` (where n is larger than the list size) +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.
+.. Test Case: `undo abc` +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid integer.
+
+
+=== Marking a recipe as a favourite / not a favourite
+
+[NOTE]
+*CookBuddy* should contain at least one recipe.
+If no recipe exists, delete the `data` folder and re-launch *CookBuddy*.
+The recipe book should contain two recipes, _Ham Sandwich_ & _Idiot Sandwich_.
+
+. Marking a recipe as a favourite
+
+.. Test Case: `fav 1` +
+   Expected: The first recipe should be marked as favourite, indicated by the filled heart symbol.
+.. Test Case: `fav n` (where n is larger than the list size) +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.
+.. Test Case: `fav abc` +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid integer.
+
+. Un-marking a recipe as a favourite
+
+.. Test Case: `unfav 1` +
+   Expected: The first recipe should be un-marked as favourite, indicated by the un-filled heart symbol.
+.. Test Case: `unfav n` (where n is larger than the list size) +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.
+.. Test Case: `unfav abc` +
+   Expected: An error message is shown in the result pane prompting the user to enter a valid integer.
+
+=== Adding a prep time to a recipe
+
+[NOTE]
+*CookBuddy* should contain at least one recipe.
+If no recipe exists, delete the `data` folder and re-launch *CookBuddy*.
+The recipe book should contain two recipes, _Ham Sandwich_ & _Idiot Sandwich_.
+
+. Adding a prep time
+
+.. Test Case: `time 1 00:15` +
+   Expected: The first recipe's prep time should be updated to _15 minutes_.
+.. Test Case: `time 1 00:15:30` +
+   Expected: The first recipe's prep time should be updated to _15 minutes and 30 seconds_.
+.. Test Case: `time 1 00:63` +
+   Expected: An error message is shown in the result pane prompting the user to enter a _minutes_ value which is < 60.
+.. Test Case: `time 1 00:15:65` +
+   Expected: Expected: An error message is shown in the result pane prompting the user to enter a _seconds_ value which is < 60.
 
 === Deleting a recipe
 
 . Deleting a recipe while all recipes are listed
 
-.. Prerequisites: List all recipes using the `list` command. Multiple recipes in the list.
+.. Prerequisites: List all recipes using the `list` command. Have at least one recipe in the list.
 .. Test case: `delete 1` +
-   Expected: First recipe is deleted from the list. Details of the deleted recipe shown in the status message. Timestamp in the status bar is updated.
+   Expected: The first recipe is deleted from the list. Details of the deleted recipe is shown in the result pane.
 .. Test case: `delete 0` +
-   Expected: No recipe is deleted. Error details shown in the status message. Status bar remains the same.
-.. Other incorrect delete commands to try: `delete`, `delete x` (where x is larger than the list size) _{give more}_ +
+   Expected: No recipe is deleted. Error message _"The recipe index provided is invalid"_ is shown in the result pane.
+.. Test case: `delete n` (where n is larger than the list size) +
    Expected: Similar to previous.
+.. Test case: `delete` +
+   Expected: No recipe is deleted. An error message prompting the user to provide an index is shown in the result pane.
+.. Test case: `delete abc` +
+   Expected: No recipe is deleted. An error message prompting the user to provide a valid integer is shown in the result pane.
 
-_{ more test cases ... }_
 
 === Saving data
 
-. Dealing with missing/corrupted data files
+. Saving *CookBuddy's* recipe book to the save file.
 
-.. _{explain how to simulate a missing/corrupted file and the expected behavior}_
+.. Enter any valid command that modifies data in the recipe book.
+.. A file named _recipebook.json_ should be created in the _data/_ folder.
 
-_{ more test cases ... }_
+. Dealing with missing/corrupted data in *CookBuddy's* save file
+
+.. Edit _recipebook.json_ and delete any recipe's _difficulty_ parameter and re-launch *CookBuddy*.
+.. The recipe whose _difficulty_ was deleted will have defaulted back to 0 difficulty.
+
+// end::ManualTesting[]

@@ -1,0 +1,23 @@
+@startuml
+
+!include style.puml
+
+start
+
+:User inputs command;
+:Recipe book attempts to save data;
+:Recipe book attempts to save image data;
+
+if () then ([Image is the placeholder image])
+    :Write ""placeholder"" to recipe data "".json"" file;
+else ([else])
+    if () then ([Image file already exists on disk])
+    else ([else])
+    :Write byte data from ""Photograph""'s ""BufferedImage"" \n attribute to a file, called ""recipename_hashcode.png"";
+    :Write image file name, ""recipename_hashcode.png"" \n to recipe data "".json"" file;
+    endif
+endif
+
+stop
+
+@enduml

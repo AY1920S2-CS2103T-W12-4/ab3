@@ -9,41 +9,41 @@
 
 == Overview
 
-*CookBuddy* is a desktop recipe manager for students staying in university accommodation who enjoy cooking.
-They can interact with it through a Command Line Interface (CLI), and it has a Graphical User Interface (GUI) created with JavaFX.
-It is written in Java, and has about 10 kLoC.
+*CookBuddy* is a personal desktop recipe manager application for students staying in university accommodation who enjoy cooking.
+The user can interact with it through a Command Line Interface (CLI) along with a Graphical User Interface (GUI) created with JavaFX.
+It is written in Java and only supports Java 11. It also has close to 10 kLoC. With that being said, there are future plans to expand
+the application to an online version as well as for different platforms.
 
 == Summary of contributions
 
-* *Major enhancement*: added *the ability for a recipe to have a calorie*
-** What it does: allows the user to add a caloric amount to a recipe.
-** Justification: This feature improves the product significantly because a user can know the amount of calories in a recipe to meet his/ her daily caloric requirements.
-** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.
-** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_
+* *Major enhancement*:
+. Added a count command that allows the user to count the total number of recipes stored in CookBuddy.
+** What it does: It gives the user an ability to keep track of total number of recipes stored in CookBuddy.
+** Justification: This feature improves the product significantly because a user can know the number of recipes he/ she has. When a user have highly differentiated tastes and needs, knowing how many recipes he/ she has can let him/ her satisfy his/ her own particular wants.
+** Highlights: The user is able to view the number of recipes he/ she has. This enhancement also affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.
 
-* *Minor enhancement*: added a count command that allows the user to count the total number of recipes stored in CookBuddy.
+* *Minor enhancement*:
+. Added a calorie attribute to a recipe class with the necessary restraints.
 
-* *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false&tabOpen=true&tabType=authorship&tabAuthor=muhd97&tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D[Code Contributed]]
+* *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=muhd97&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false[Functional code and Test code contributed]]
 
 * *Other contributions*:
 
 ** Project management:
-*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub
+*** Helped in managing the team's repository and pull requests.  Commented on other's PR if there are any improvements or suggestions to make.
+*** Helped teammates with testing errors.
+*** Helped in the documentations of the overall code.
+*** Explained to teammates the flow of AB3 to better help them understand the code and therefore aiding them in implementing their own features.
 ** Enhancements to existing features:
-*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])
-*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])
+*** Wrote additional tests for existing features to increase coverage (Pull requests https://github.com/AY1920S2-CS2103T-W12-4/main/pull/301[#301], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/306[#306])
+*** Major refactoring of certain commands and packaging (Pull requests https://github.com/AY1920S2-CS2103T-W12-4/main/pull/17[#17], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/74[#74], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/147[#147], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/154[#154])
 ** Documentation:
-*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]
+*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com/AY1920S2-CS2103T-W12-4/main/pull/295[#295]
+*** Updated User Guide to include Product Information, Understanding CookBuddy's GUI, FAQs, Command Summary and the Glossary (Pull requests https://github.com/AY1920S2-CS2103T-W12-4/main/pull/171[#171], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/279[#279], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/295[#295], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/298[#298])
+*** Updated Developer Guide to include Introduction, About this Document, Overview of Features, Implementation details of Count feature, Value Proposition, Non Functional Requirements, Glossary and Product Survey  (Pull requests https://github.com/AY1920S2-CS2103T-W12-4/main/pull/297[#297], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/305[#305], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/313[#313])
 ** Community:
-*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]
-*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])
-*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])
-*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])
-** Tools:
-*** Integrated a third party library (Natty) to the project (https://github.com[#42])
-*** Integrated a new Github plugin (CircleCI) to the team repo
-
-_{you can add/remove categories in the list above}_
+*** PRs reviewed (with non-trivial review comments): https://github.com/AY1920S2-CS2103T-W12-4/main/pull/113[#113], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/114[#114], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/125[#125], https://github.com/AY1920S2-CS2103T-W12-4/main/pull/170[#170]
+*** Reported bugs and suggestions for other teams (examples: https://github.com/muhd97/ped[Practical Exam Dry Run]
 
 == Contributions to the User Guide
 
@@ -52,9 +52,11 @@ _{you can add/remove categories in the list above}_
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
 
-include::../UserGuide.adoc[tag=delete]
+include::../UserGuide.adoc[tag=productinformation]
 
-include::../UserGuide.adoc[tag=dataencryption]
+include::../UserGuide.adoc[tag=understandingcookBuddysgui]
+
+include::../UserGuide.adoc[tag=faqcmdsummaryglossary]
 
 == Contributions to the Developer Guide
 
@@ -62,13 +64,12 @@ include::../UserGuide.adoc[tag=dataencryption]
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
 
-include::../DeveloperGuide.adoc[tag=undoredo]
+include::../DeveloperGuide.adoc[tag=introductionabouththisdocumentoverviewoffeatures]
 
-include::../DeveloperGuide.adoc[tag=dataencryption]
+include::../DeveloperGuide.adoc[tag=countfeature]
+
+include::../DeveloperGuide.adoc[tag=productscope]
+
+include::../DeveloperGuide.adoc[tag=nonfuncreqglossarypdtsurvey]
 
 
-== PROJECT: PowerPointLabs
-
----
-
-_{Optionally, you may include other projects in your portfolio.}_
