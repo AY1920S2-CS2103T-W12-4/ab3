@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">CookBuddy</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-W12-4/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Kevin - Project Portfolio</h1></div><div id="content"><div class="sect1">
 <h2 id="project-cookbuddy"><a class="link" href="#project-cookbuddy">PROJECT: CookBuddy</a></h2>
 <div class="sectionbody">
-<hr>
+
 </div>
 </div>
 <div class="sect1">
@@ -22,11 +22,11 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Major enhancement</strong>: major enhancement 1</p>
+<p><strong>Major enhancement</strong>: Morphed addressbook-level3 into a basic version of <strong>CookBuddy</strong>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: explain major enhancement 1</p>
+<p>What it does: allows my teammates to start working on features to extend <strong>CookBuddy</strong>.</p>
 </li>
 <li>
 <p>Justification: justify major enhancement 1</p>
@@ -38,7 +38,7 @@ It is written in Java, and has about 10 kLoC.</p>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
+<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using the page up/ page down keys.</p>
 </li>
 <li>
 <p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=kevinswk94&amp;tabRepo=AY1920S2-CS2103T-W12-4%2Fmain%5Bmaster%5D">Code Contributed</a>]</p>
@@ -52,7 +52,7 @@ It is written in Java, and has about 10 kLoC.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Managed releases <code>v1.3</code> - <code>v1.5rc</code> (3 releases) on GitHub</p>
+<p>Reviewed pull requests opened by teammates for code quality and bugs (ex1, ex2)</p>
 </li>
 </ul>
 </div>
@@ -91,7 +91,7 @@ It is written in Java, and has about 10 kLoC.</p>
 <p>Contributed to forum discussions (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>, <a href="https://github.com">4</a>)</p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
+<p>Reported bugs and suggestions for other teams during the PE dry-run (examples:  <a href="https://github.com">1</a>, <a href="https://github.com">2</a>, <a href="https://github.com">3</a>)</p>
 </li>
 <li>
 <p>Some parts of the history feature I added was adopted by several other class mates (<a href="https://github.com">1</a>, <a href="https://github.com">2</a>)</p>
@@ -147,6 +147,532 @@ It is written in Java, and has about 10 kLoC.</p>
 </tr>
 </tbody>
 </table>
-<hr>
+<div class="sect2">
+<h3 id="finding-recipes-kevin"><a class="link" href="#finding-recipes-kevin">Finding recipes [Kevin]</a></h3>
+<div class="paragraph">
+<p>The following section describes how the <code>find</code> command is implemented as well as design considerations that were taken into account during its implementation.
+Some possible future improvements are also suggested to improve the functionality of the <code>find</code> command.</p>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 10:41:26 UTC</div></div></div></body></html>
+<div class="paragraph">
+<p>The <code>find</code> command is implemented in the <em>FindCommand</em> class.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram shows the possible paths <strong>CookBuddy</strong> can take when a <code>find</code> command is run.</p>
+</div>
+<div class="imageblock" style="text-align: "center">
+<div class="content">
+<img src="../images/FindCommandActivityDiagram.svg" alt="FindCommandActivityDiagram">
+</div>
+<div class="title">Figure 1. Activity diagram of finding recipes</div>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When entering the <code>find</code> command, the user will specify one attribute to search within as well as the search terms.<br>
+Possible attributes to search within are <em>name</em> (<code>n/</code>), <em>ingredients</em> (<code>ing/</code>) and <em>instructions</em> (<code>ins/</code>).</p>
+</li>
+<li>
+<p><em>FindCommandParser</em> ensures that only one attribute is specified and returns a <em>FindCommand</em> with the relevant <em>ContainsKeywordPredicate</em> class.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram summarizes the execution of the <code>find</code> command</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/FindCommandSequenceDiagram.svg" alt="FindCommandSequenceDiagram">
+</div>
+<div class="title">Figure 2. Sequence diagram for the execution of a <code>find</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="paragraph">
+<p>As the <em>FindCommand</em> class only takes in a single <em>ContainsKeywordsPredicate</em> object,
+CookBuddy can only search within a single attribute at a time.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="possible-improvements"><a class="link" href="#possible-improvements">Possible improvements</a></h4>
+<div class="paragraph">
+<p>As it is currently implemented, the <code>find</code> command only accepts finding via one attribute at a time.
+A possible future improvement would enable it to search for recipes using multiple attributes.
+This would greatly enhance the usefulness of the <code>find</code> function in <strong>CookBuddy</strong>.</p>
+</div>
+<div class="paragraph">
+<p>For example, running <code>find n/Ham ing/toast</code> will make <strong>CookBuddy</strong> search for recipes with <em>Ham</em> in its name, or <em>toast</em> in its ingredients.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="instructions-for-manual-testing-kevin"><a class="link" href="#instructions-for-manual-testing-kevin">Instructions for Manual Testing [Kevin]</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given below are instructions to test the app manually.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These instructions only provide a starting point for testers to work on; testers are advised to do more <em>exploratory</em> testing.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">Launch and Shutdown</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launching <strong>CookBuddy</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Ensure you are using <strong>Java 11</strong> by opening a Command Prompt / terminal and run <code>java -version</code>.</p>
+</li>
+<li>
+<p>Download the latest <strong>CookBuddy</strong> jar file <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/releases">here</a> and copy it into an empty folder</p>
+</li>
+<li>
+<p>Launch Command Prompt / a terminal, navigate to the folder <strong>CookBuddy</strong> is in and enter <code>java -jar CookBuddy.jar</code>. Do not double-click CookBuddy.jar<br>
+Expected: Shows <strong>CookBuddy&#8217;s</strong> GUI with a set of sample recipes. The window size may not be optimum.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Saving window preferences</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Resize <strong>CookBuddy&#8217;s</strong> window to an optimum size. Move the window to a different location on the screen. Close the window.</p>
+</li>
+<li>
+<p>Re-launch <strong>CookBuddy</strong> by entering <code>java -jar CookBuddy.jar</code> in a Command Prompt / terminal.<br>
+Expected: The most recent window size and location is retained.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Exiting <strong>CookBuddy</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>On Windows, click the <em>Close Window</em> button <b class="button">X</b> on the top-right corner of <strong>CookBuddy&#8217;s</strong> GUI</p>
+</li>
+<li>
+<p>On Mac, click the <em>Close Window</em> button <b class="button">X</b> on the top-left corner of <strong>CookBuddy&#8217;s</strong> GUI</p>
+</li>
+<li>
+<p>Type <code>exit</code> in <strong>CookBuddy&#8217;s</strong> command box and press <kbd>Enter</kbd></p>
+<div class="paragraph">
+<p>Expected: <strong>CookBuddy</strong> will shut down.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-recipe"><a class="link" href="#adding-a-recipe">Adding a recipe</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add a recipe with all mandatory fields present. Name (n/), Ingredients (ing/) and Instructions (ins/) are mandatory fields.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The recipe to be added is not present in the recipe book.</p>
+</li>
+<li>
+<p>Test case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg, 1 ins/toast the 2 slices of bread; scramble the eggs;
+            put eggs on toasted bread; serve</code><br>
+Expected: The <em>Eggs on Toast</em> recipe is added to the recipe list. Details of the newly added recipe is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a recipe with one mandatory field missing, Instructions in this case.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg, 1</code><br>
+Expected: No recipe is added. An <em>"Invalid command format"</em> error message is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a recipe with a missing ingredient quantity (egg is missing its quantity)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg ins/toast the 2 slices of bread; scramble the eggs;
+            put eggs on toasted bread; serve</code><br>
+Expected: No recipe is added. Error message <em>No quantity has been provided for one or more ingredients!</em> is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="modifying-a-recipe"><a class="link" href="#modifying-a-recipe">Modifying a recipe</a></h3>
+<div class="paragraph">
+<p>Prerequisites: <strong>CookBuddy</strong> should contain at least one recipe.
+If no recipe exists, delete the <code>data</code> folder and re-launch <strong>CookBuddy</strong>.
+The recipe book should contain two recipes, <em>Ham Sandwich</em> &amp; <em>Idiot Sandwich</em>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Modify command allows changing multiple attributes in one command.
+For example, <code>modify 1 n/Rice cal/250</code> updates both recipe 1&#8217;s name and calories.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modifying a recipe&#8217;s name</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 n/Chicken Rice</code><br>
+Expected: The first recipe&#8217;s name is updated to <em>Chicken Rice</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 n/</code><br>
+Expected: The first recipe&#8217;s name is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 n/!@#abc</code><br>
+Expected: The first recipe&#8217;s name is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s ingredients</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 ing/ing1, qty1; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s original ingredients should be overwritten with ing1 &amp; ing2.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ing/ing1, ; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s ingredients are not updated due to ing1 missing its quantity.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ing/, qty1; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s ingredients are not updated due to ing1 missing its name.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s instructions</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 ins/ins1; ins2</code><br>
+Expected: The first recipe&#8217;s original instructions should be overwritten with ins1 &amp; ins2.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ins/</code><br>
+Expected: The first recipe&#8217;s instructions should not be updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s calories</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 cal/2000</code><br>
+Expected: The first recipe&#8217;s calories should be updated to 2000 kCal.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 cal/abc</code><br>
+Expected: The first recipe&#8217;s calories is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s serving size</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 s/3</code><br>
+Expected: The first recipe&#8217;s serving size should be updated to 3.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 s/abc</code><br>
+Expected: The first recipe&#8217;s serving size is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s difficulty</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 d/4</code><br>
+Expected: The first recipe&#8217;s difficulty should be updated to 4 on a scale of 1 to 5.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 d/6</code><br>
+Expected: The first recipe&#8217;s difficulty is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 d/abc</code><br>
+Expected: The first recipe&#8217;s difficulty is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s rating</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 r/5</code><br>
+Expected: The first recipe&#8217;s rating should be updated to 5 stars.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 r/8</code><br>
+Expected: The first recipe&#8217;s rating is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 r/abc</code><br>
+Expected: The first recipe&#8217;s rating is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s tags</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 t/breakfast</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>one</strong> tag, <em>breakfast</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 t/breakfast, lunch</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>two</strong> tags, <em>breakfast</em> &amp; <em>lunch</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 t/</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>zero</strong> tags.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-recipe"><a class="link" href="#finding-a-recipe">Finding a recipe</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding recipes by name</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>Ham</em> in its name.<br>
+Test Case: <code>find n/Ham</code><br>
+Expected: Recipes with the word <em>Ham</em> in their name are listed.</p>
+</li>
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains <em>Ham Sandwich</em> and <em>Idiot Sandwich</em>.<br>
+Test Case: <code>find n/Ham Sandwich</code><br>
+Expected: Recipes whose name contains <em>Ham</em> or <em>Sandwich</em> are listed.
+So both <em>Ham Sandwich</em> and <em>Idiot Sandwich</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Finding recipes by ingredient</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>bread</em> in its ingredients.<br>
+Test Case: <code>find ing/bread</code><br>
+Expected: Recipes whose ingredient names contain <em>bread</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Finding recipes by instruction</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>ham</em> in its instructions.<br>
+Test Case: <code>find ins/bread</code><br>
+Expected: Recipes whose instructions contain <em>ham</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-a-recipe-as-done-not-done"><a class="link" href="#marking-a-recipe-as-done-not-done">Marking a recipe as done / not done</a></h3>
+<div class="paragraph">
+<p>Prerequisites: <strong>CookBuddy</strong> should contain at least one recipe.
+If no recipe exists, delete the <code>data</code> folder and re-launch <strong>CookBuddy</strong>.
+The recipe book should contain two recipes, <em>Ham Sandwich</em> &amp; <em>Idiot Sandwich</em>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Marking a recipe as done</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>done 1</code><br>
+Expected: The first recipe should be marked as done.</p>
+</li>
+<li>
+<p>Test Case: <code>done n</code> (where n is larger than the list size)<br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.</p>
+</li>
+<li>
+<p>Test Case: <code>done abc</code><br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid integer.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Marking a recipe as not done</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>undo 1</code><br>
+Expected: The first recipe should be marked as not done.</p>
+</li>
+<li>
+<p>Test Case: <code>undo n</code> (where n is larger than the list size)<br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.</p>
+</li>
+<li>
+<p>Test Case: <code>undo abc</code><br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid integer.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-a-recipe-as-a-favourite-not-favourite"><a class="link" href="#marking-a-recipe-as-a-favourite-not-favourite">Marking a recipe as a favourite / not favourite</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="adding-a-prep-time-to-a-recipe"><a class="link" href="#adding-a-prep-time-to-a-recipe">Adding a prep time to a recipe</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="deleting-a-recipe"><a class="link" href="#deleting-a-recipe">Deleting a recipe</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a recipe while all recipes are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all recipes using the <code>list</code> command. Have at least one recipe in the list.</p>
+</li>
+<li>
+<p>Test case: <code>delete 1</code><br>
+Expected: The first recipe is deleted from the list. Details of the deleted recipe is shown in the result pane.</p>
+</li>
+<li>
+<p>Test case: <code>delete 0</code><br>
+Expected: No recipe is deleted. Error message <em>"The recipe index provided is invalid"</em> is shown in the result pane.</p>
+</li>
+<li>
+<p>Test case: <code>delete n</code> (where n is larger than the list size)<br>
+Expected: Similar to previous.</p>
+</li>
+<li>
+<p>Test case: <code>delete</code><br>
+Expected: No recipe is deleted. An error message prompting the user to provide an index is shown in the result pane.</p>
+</li>
+<li>
+<p>Test case: <code>delete abc</code><br>
+Expected: No recipe is deleted. An error message prompting the user to provide a valid integer is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">Saving data</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Saving <strong>CookBuddy&#8217;s</strong> recipe book to the save file.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Enter any valid command that modifies data in the recipe book.</p>
+</li>
+<li>
+<p>A file named <em>recipebook.json</em> should be created in the <em>data/</em> folder.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Dealing with missing/corrupted data in <strong>CookBuddy&#8217;s</strong> save file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Edit <em>recipebook.json</em> and delete the <em>difficulty</em> parameter and re-launch <strong>CookBuddy</strong>.</p>
+</li>
+<li>
+<p>The recipe whose <em>difficulty</em> was deleted will have defaulted back to 0 difficulty.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 11:08:26 UTC</div></div></div></body></html>
