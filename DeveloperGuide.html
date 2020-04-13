@@ -40,11 +40,17 @@
 <li><a href="#non-functional-requirements-done-by-zain-alam">Appendix D: Non Functional Requirements [Done by Zain Alam &amp; ]</a></li>
 <li><a href="#glossary-done-by-zain-alam">Appendix E: Glossary [Done by Zain Alam]</a></li>
 <li><a href="#product-survey-done-by-zain-alam">Appendix F: Product Survey [Done by Zain Alam]</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
+<li><a href="#instructions-for-manual-testing-kevin">Appendix G: Instructions for Manual Testing [Kevin]</a>
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-recipe">G.2. Deleting a recipe</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
+<li><a href="#adding-a-recipe">G.2. Adding a recipe</a></li>
+<li><a href="#modifying-a-recipe">G.3. Modifying a recipe</a></li>
+<li><a href="#finding-a-recipe">G.4. Finding a recipe</a></li>
+<li><a href="#marking-a-recipe-as-done-not-done">G.5. Marking a recipe as done / not done</a></li>
+<li><a href="#marking-a-recipe-as-a-favourite-not-favourite">G.6. Marking a recipe as a favourite / not favourite</a></li>
+<li><a href="#adding-a-prep-time-to-a-recipe">G.7. Adding a prep time to a recipe</a></li>
+<li><a href="#deleting-a-recipe">G.8. Deleting a recipe</a></li>
+<li><a href="#saving-data">G.9. Saving data</a></li>
 </ul>
 </li>
 </ul>
@@ -872,397 +878,297 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <div class="sect1">
 <h2 id="user-stories-done-by"><a class="link" href="#user-stories-done-by">Appendix B: User Stories [Done by ]</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Priorities: <strong>High</strong> (must have), <strong>Medium</strong> (nice to have), <strong>Low</strong> (unlikely to have)</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 1.0989%;">
-<col style="width: 32.967%;">
-<col style="width: 65.9341%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Rating</th>
-<th class="tableblock halign-left valign-top">Priority</th>
-<th class="tableblock halign-left valign-top">Difficulty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Basic functionality—<strong>MUST HAVE</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Easy</strong>—Java basics + minor modifications to existing code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Secondary functionality—<strong>VERY IMPORTANT</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Some effort needed</strong>—Moderate Java concepts (<code>Collections</code>, <code>Streams</code>, etc); &lt; 5 <em>new</em> classes needed</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Recommended functionality</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>More effort needed</strong>—Obscure Java classes (<code>java.nio</code>, <code>java.time</code>, etc); new <em>package</em> of classes needed</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nice to have</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Difficult</strong>—Time-consuming, &gt;500+ LoC <em>just</em> for this feature</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quality of life features, and all unfeasible options</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Nearly impossible</strong>—not only everything in (4), but algorithmically challenging too, and approaching 1K LOC</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 1.0869%;">
-<col style="width: 1.0869%;">
-<col style="width: 32.6086%;">
-<col style="width: 32.6086%;">
-<col style="width: 32.609%;">
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 30%;">
+<col style="width: 30%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Priority</th>
-<th class="tableblock halign-left valign-top">Difficulty</th>
-<th class="tableblock halign-left valign-top">As a…</th>
-<th class="tableblock halign-left valign-top">I can…</th>
+<th class="tableblock halign-left valign-top">As a/an …</th>
+<th class="tableblock halign-left valign-top">I want to …</th>
 <th class="tableblock halign-left valign-top">So that…</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add a recipe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can keep track of the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">delete a recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">stop keeping track of the recipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can stop keeping track of the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list out all the recipies I have (names)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">easily see what recipies I have</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list out all the recipes I have</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can easily see what recipies I have</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view the recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">use the recipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can use the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">More experienced user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">duplicate a recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">modify a copy and keep the original</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can modify a copy and keep the original</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who is inexperienced with software</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use a helper command</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can see all the commands and how to use them</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add instructions for the recipe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know how to cook the dish</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add ingredient to recipe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know how much ingredients to use</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Health-focused user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">track the amount of calories a dish has</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know how healthy a dish is</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add time it takes to prepare / cook recipe</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know how long it takes to cook the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tag recipes based on meal time (breakfast/lunch/dinner)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can easily refer to them</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who likes experimenting</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">modify a recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">the recipe will be updated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can change the components of the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User cooking for a group</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">find out how much of each ingredient i need</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can get the ingredients at one go</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add a serving size of a dish</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know the serving size of the recipe</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Time-strapped user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">see the preparation and cooking time for each recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">plan my schedule around the time needed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can plan my schedule around the time needed</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Health-focused user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for a dish based on how many calories i want to consume</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eat healthily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can eat healthily</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who is new to cooking</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">tag recipes based on difficulty (beginner/intermediate/master)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">check if I am skilled enough to cook the dish</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can check if I am skilled enough to cook the dish</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>High</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User with many recipes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tag and search for recipes based on their cuisine (western, chinese, indian etc)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">find them easily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tag recipes based on their cuisine (western, chinese, indian etc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can find them easily</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who wants to be efficient</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">favourite recipes/dishes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can easily refer back to them</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who wants to get rid of ingredients</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for dishes based on ingredients</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can use up the ingredients that I want to get rid of</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tag and search dishes based on course (starter/main/dessert)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can easily search for them</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User with many recipes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for recipes based on a word in the dish name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can find it easily</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mark recipe as successfully done</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">keep track of the recipes I have successfully attempted</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can keep track of the recipes I have successfully attempted</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User cooking for a group/ occassion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scale up/down the recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can prepare food for different group sizes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inexperienced user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view the recipe in a GUI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I have more visual feedback to work with</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User on a budget</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">check the total price of the dish</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">check if it is within my budget</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User with a limited budget</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">find recipes within my budget</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I do not overspend</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User with allergies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tag the dish as dangerous for allergies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">avoid cooking the dish</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User who not experienced</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">highlight instructions in the recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">It is easier to follow the recipe</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sort my recipies based on criteria (tags)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can choose what order to view them</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inexperienced user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view an image of the final dish</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I know what dish I am cooking</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">add ingredient prices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can tabulate the total cost of cooking dishes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Health-focused user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tag a dish e.g (Paleo/Keto/Vegan)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can check if the dish matches my dietary requirements</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">have a counter of total recipies in the book</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have a counter of total recipes in the book</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can know how many recipes I have</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User with a limited budget</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">view the price of a specific ingredient</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I know how much a ingredient costs</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User with many friends</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">import and combine my friend&#8217;s recipes from a file (.txt perhaps)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can have access to their recipies</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User who enjoys challenging themselves</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">suggest dish to attempt based on my previous successful attempts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I can become more skillful</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">give a rating for the dish</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tag, search for and sort dishes based on my rating of the dish</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">choose to only see the basic information for the recipe</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">easily skim through the instructions and ingredients</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who likes experimenting</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">give me a random recipe that i have added</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can challenge myself to cook what has been given</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">give a rating for the dish</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can tag, search for and sort dishes based on my rating of the dish</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User with a limited budget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">find recipes within my budget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I do not overspend</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User with allergies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tag the dish as dangerous for allergies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can avoid cooking the dish</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User who not experienced</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highlight instructions in the recipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can follow the recipe more easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Organized user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sort my recipes based on criteria (tags)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can choose what order to view them</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Medium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">add ingredient prices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can tabulate the total cost of cooking dishes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User with a limited budget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">view the price of a specific ingredient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I know how much a ingredient costs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User with many friends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">import and combine my friend&#8217;s recipes from a file (.txt perhaps)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can have access to their recipies</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User who enjoys challenging themselves</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggest dish to attempt based on my previous successful attempts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can become more skillful</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Regular user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">choose to only see the basic information for the recipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can easily skim through the instructions and ingredients</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User on a budget</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">check the total price of the dish</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can check if it is within my budget</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User cooking for a group / occasion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scale up/down the recipe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can prepare food for different group sizes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User cooking for a group / occasion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">find out how much of each ingredient i need</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can get the ingredients at one go</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Health-focused user</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add nutrition facts</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can see how much sugar, salt, fat etc is in the dish prepared</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who is more familiar with the metric system</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Convert between metric and imperial sizes.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can use the tools I have without needing to convert elsewhere</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who usually prepares multiple dishes as sets</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">group dishes into sets</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can be more organised when cooking</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User who is inexperienced with software</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">view the recipe in a GUI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I have more visual feedback to work with</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who is experienced with the software</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">use shorthand commands</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can navigate the software more efficiently</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who wants to challenge myself</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have a timer/stopwatch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">time myself when I cook dishes and have a "best time" feature</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can time myself when I cook dishes and have a "best time" feature</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who doesn&#8217;t like screens and prefers paper</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">print recipes as pdf/paper</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can refer to it more easily</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who likes sharing my cooking</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">post my recipes and dishes on social media</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">share recipes and images for others to use</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I can share recipes and images for others to use</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Low</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User who appreciates efficiency</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add a recipe directly from online</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I can be efficient</p></td>
@@ -1561,7 +1467,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a></h2>
+<h2 id="instructions-for-manual-testing-kevin"><a class="link" href="#instructions-for-manual-testing-kevin">Appendix G: Instructions for Manual Testing [Kevin]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Given below are instructions to test the app manually.</p>
@@ -1573,7 +1479,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-These instructions only provide a starting point for testers to work on; testers are expected to do more <em>exploratory</em> testing.
+These instructions only provide a starting point for testers to work on; testers are advised to do more <em>exploratory</em> testing.
 </td>
 </tr>
 </table>
@@ -1583,15 +1489,18 @@ These instructions only provide a starting point for testers to work on; testers
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Initial launch</p>
+<p>Launching <strong>CookBuddy</strong></p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Download the jar file and copy into an empty folder</p>
+<p>Ensure you are using <strong>Java 11</strong> by opening a Command Prompt / terminal and run <code>java -version</code>.</p>
 </li>
 <li>
-<p>Double-click the jar file<br>
-Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.</p>
+<p>Download the latest <strong>CookBuddy</strong> jar file <a href="https://github.com/AY1920S2-CS2103T-W12-4/main/releases">here</a> and copy it into an empty folder</p>
+</li>
+<li>
+<p>Launch Command Prompt / a terminal, navigate to the folder <strong>CookBuddy</strong> is in and enter <code>java -jar CookBuddy.jar</code>. Do not double-click CookBuddy.jar<br>
+Expected: Shows <strong>CookBuddy&#8217;s</strong> GUI with a set of sample recipes. The window size may not be optimum.</p>
 </li>
 </ol>
 </div>
@@ -1601,23 +1510,356 @@ Expected: Shows the GUI with a set of sample contacts. The window size may not b
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Resize the window to an optimum size. Move the window to a different location. Close the window.</p>
+<p>Resize <strong>CookBuddy&#8217;s</strong> window to an optimum size. Move the window to a different location on the screen. Close the window.</p>
 </li>
 <li>
-<p>Re-launch the app by double-clicking the jar file.<br>
+<p>Re-launch <strong>CookBuddy</strong> by entering <code>java -jar CookBuddy.jar</code> in a Command Prompt / terminal.<br>
 Expected: The most recent window size and location is retained.</p>
 </li>
 </ol>
 </div>
 </li>
+<li>
+<p>Exiting <strong>CookBuddy</strong></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>On Windows, click the <em>Close Window</em> button <b class="button">X</b> on the top-right corner of <strong>CookBuddy&#8217;s</strong> GUI</p>
+</li>
+<li>
+<p>On Mac, click the <em>Close Window</em> button <b class="button">X</b> on the top-left corner of <strong>CookBuddy&#8217;s</strong> GUI</p>
+</li>
+<li>
+<p>Type <code>exit</code> in <strong>CookBuddy&#8217;s</strong> command box and press <kbd>Enter</kbd></p>
+<div class="paragraph">
+<p>Expected: <strong>CookBuddy</strong> will shut down.</p>
+</div>
+</li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-recipe"><a class="link" href="#deleting-a-recipe">G.2. Deleting a recipe</a></h3>
+<h3 id="adding-a-recipe"><a class="link" href="#adding-a-recipe">G.2. Adding a recipe</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add a recipe with all mandatory fields present. Name (n/), Ingredients (ing/) and Instructions (ins/) are mandatory fields.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: The recipe to be added is not present in the recipe book.</p>
+</li>
+<li>
+<p>Test case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg, 1 ins/toast the 2 slices of bread; scramble the eggs;
+            put eggs on toasted bread; serve</code><br>
+Expected: The <em>Eggs on Toast</em> recipe is added to the recipe list. Details of the newly added recipe is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a recipe with one mandatory field missing, Instructions in this case.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg, 1</code><br>
+Expected: No recipe is added. An <em>"Invalid command format"</em> error message is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add a recipe with a missing ingredient quantity (egg is missing its quantity)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>new n/Eggs on Toast ing/bread, 2 slices; egg ins/toast the 2 slices of bread; scramble the eggs;
+            put eggs on toasted bread; serve</code><br>
+Expected: No recipe is added. Error message <em>No quantity has been provided for one or more ingredients!</em> is shown in the result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="modifying-a-recipe"><a class="link" href="#modifying-a-recipe">G.3. Modifying a recipe</a></h3>
+<div class="paragraph">
+<p>Prerequisites: <strong>CookBuddy</strong> should contain at least one recipe.
+If no recipe exists, delete the <code>data</code> folder and re-launch <strong>CookBuddy</strong>.
+The recipe book should contain two recipes, <em>Ham Sandwich</em> &amp; <em>Idiot Sandwich</em>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Modify command allows changing multiple attributes in one command.
+For example, <code>modify 1 n/Rice cal/250</code> updates both recipe 1&#8217;s name and calories.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modifying a recipe&#8217;s name</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 n/Chicken Rice</code><br>
+Expected: The first recipe&#8217;s name is updated to <em>Chicken Rice</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 n/</code><br>
+Expected: The first recipe&#8217;s name is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 n/!@#abc</code><br>
+Expected: The first recipe&#8217;s name is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s ingredients</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 ing/ing1, qty1; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s original ingredients should be overwritten with ing1 &amp; ing2.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ing/ing1, ; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s ingredients are not updated due to ing1 missing its quantity.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ing/, qty1; ing2, qty2</code><br>
+Expected: The first recipe&#8217;s ingredients are not updated due to ing1 missing its name.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s instructions</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 ins/ins1; ins2</code><br>
+Expected: The first recipe&#8217;s original instructions should be overwritten with ins1 &amp; ins2.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 ins/</code><br>
+Expected: The first recipe&#8217;s instructions should not be updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s calories</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 cal/2000</code><br>
+Expected: The first recipe&#8217;s calories should be updated to 2000 kCal.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 cal/abc</code><br>
+Expected: The first recipe&#8217;s calories is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s serving size</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 s/3</code><br>
+Expected: The first recipe&#8217;s serving size should be updated to 3.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 s/abc</code><br>
+Expected: The first recipe&#8217;s serving size is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s difficulty</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 d/4</code><br>
+Expected: The first recipe&#8217;s difficulty should be updated to 4 on a scale of 1 to 5.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 d/6</code><br>
+Expected: The first recipe&#8217;s difficulty is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 d/abc</code><br>
+Expected: The first recipe&#8217;s difficulty is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s rating</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 r/5</code><br>
+Expected: The first recipe&#8217;s rating should be updated to 5 stars.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 r/8</code><br>
+Expected: The first recipe&#8217;s rating is not updated. Error details are shown in in result pane.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 r/abc</code><br>
+Expected: The first recipe&#8217;s rating is not updated. Error details are shown in in result pane.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Modifying a recipe&#8217;s tags</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>modify 1 t/breakfast</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>one</strong> tag, <em>breakfast</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 t/breakfast, lunch</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>two</strong> tags, <em>breakfast</em> &amp; <em>lunch</em>.</p>
+</li>
+<li>
+<p>Test Case: <code>modify 1 t/</code><br>
+Expected: The first recipe&#8217;s tags should be updated to contain <strong>zero</strong> tags.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-recipe"><a class="link" href="#finding-a-recipe">G.4. Finding a recipe</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding recipes by name</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>Ham</em> in its name.<br>
+Test Case: <code>find n/Ham</code><br>
+Expected: Recipes with the word <em>Ham</em> in their name are listed.</p>
+</li>
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains <em>Ham Sandwich</em> and <em>Idiot Sandwich</em>.<br>
+Test Case: <code>find n/Ham Sandwich</code><br>
+Expected: Recipes whose name contains <em>Ham</em> or <em>Sandwich</em> are listed.
+So both <em>Ham Sandwich</em> and <em>Idiot Sandwich</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Finding recipes by ingredient</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>bread</em> in its ingredients.<br>
+Test Case: <code>find ing/bread</code><br>
+Expected: Recipes whose ingredient names contain <em>bread</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Finding recipes by instruction</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: <strong>CookBuddy</strong> contains a recipe with <em>ham</em> in its instructions.<br>
+Test Case: <code>find ins/bread</code><br>
+Expected: Recipes whose instructions contain <em>ham</em> are listed.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-a-recipe-as-done-not-done"><a class="link" href="#marking-a-recipe-as-done-not-done">G.5. Marking a recipe as done / not done</a></h3>
+<div class="paragraph">
+<p>Prerequisites: <strong>CookBuddy</strong> should contain at least one recipe.
+If no recipe exists, delete the <code>data</code> folder and re-launch <strong>CookBuddy</strong>.
+The recipe book should contain two recipes, <em>Ham Sandwich</em> &amp; <em>Idiot Sandwich</em>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Marking a recipe as done</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>done 1</code><br>
+Expected: The first recipe should be marked as done.</p>
+</li>
+<li>
+<p>Test Case: <code>done n</code> (where n is larger than the list size)<br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.</p>
+</li>
+<li>
+<p>Test Case: <code>done abc</code><br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid integer.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Marking a recipe as not done</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test Case: <code>undo 1</code><br>
+Expected: The first recipe should be marked as not done.</p>
+</li>
+<li>
+<p>Test Case: <code>undo n</code> (where n is larger than the list size)<br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid list index number.</p>
+</li>
+<li>
+<p>Test Case: <code>undo abc</code><br>
+Expected: An error message is shown in the result pane prompting the user to enter a valid integer.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="marking-a-recipe-as-a-favourite-not-favourite"><a class="link" href="#marking-a-recipe-as-a-favourite-not-favourite">G.6. Marking a recipe as a favourite / not favourite</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="adding-a-prep-time-to-a-recipe"><a class="link" href="#adding-a-prep-time-to-a-recipe">G.7. Adding a prep time to a recipe</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="deleting-a-recipe"><a class="link" href="#deleting-a-recipe">G.8. Deleting a recipe</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1625,48 +1867,66 @@ Expected: The most recent window size and location is retained.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: List all recipes using the <code>list</code> command. Multiple recipes in the list.</p>
+<p>Prerequisites: List all recipes using the <code>list</code> command. Have at least one recipe in the list.</p>
 </li>
 <li>
 <p>Test case: <code>delete 1</code><br>
-Expected: First recipe is deleted from the list. Details of the deleted recipe shown in the status message. Timestamp in the status bar is updated.</p>
+Expected: The first recipe is deleted from the list. Details of the deleted recipe is shown in the result pane.</p>
 </li>
 <li>
 <p>Test case: <code>delete 0</code><br>
-Expected: No recipe is deleted. Error details shown in the status message. Status bar remains the same.</p>
+Expected: No recipe is deleted. Error message <em>"The recipe index provided is invalid"</em> is shown in the result pane.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+<p>Test case: <code>delete n</code> (where n is larger than the list size)<br>
 Expected: Similar to previous.</p>
 </li>
+<li>
+<p>Test case: <code>delete</code><br>
+Expected: No recipe is deleted. An error message prompting the user to provide an index is shown in the result pane.</p>
+</li>
+<li>
+<p>Test case: <code>delete abc</code><br>
+Expected: No recipe is deleted. An error message prompting the user to provide a valid integer is shown in the result pane.</p>
+</li>
 </ol>
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="saving-data"><a class="link" href="#saving-data">G.9. Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Dealing with missing/corrupted data files</p>
+<p>Saving <strong>CookBuddy&#8217;s</strong> recipe book to the save file.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+<p>Enter any valid command that modifies data in the recipe book.</p>
+</li>
+<li>
+<p>A file named <em>recipebook.json</em> should be created in the <em>data/</em> folder.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Dealing with missing/corrupted data in <strong>CookBuddy&#8217;s</strong> save file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Edit <em>recipebook.json</em> and delete the <em>difficulty</em> parameter and re-launch <strong>CookBuddy</strong>.</p>
+</li>
+<li>
+<p>The recipe whose <em>difficulty</em> was deleted will have defaulted back to 0 difficulty.</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 03:03:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 03:17:51 UTC</div></div></div></body></html>
