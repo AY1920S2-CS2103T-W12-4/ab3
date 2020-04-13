@@ -9,9 +9,9 @@
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#introduction">1. Introduction</a></li>
-<li><a href="#about-this-document">2. About this Document</a></li>
-<li><a href="#overview-of-features">3. Overview of Features</a></li>
+<li><a href="#introduction-done-by-zain-alam">1. Introduction [Done by Zain Alam]</a></li>
+<li><a href="#about-this-document-done-by-zain-alam">2. About this Document [Done by Zain Alam]</a></li>
+<li><a href="#overview-of-features-done-by-zain-alam">3. Overview of Features [Done by Zain Alam]</a></li>
 <li><a href="#setting-up">4. Setting up</a></li>
 <li><a href="#design">5. Design</a>
 <ul class="sectlevel2">
@@ -25,20 +25,21 @@
 </li>
 <li><a href="#implementation">6. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#proposed-undo-redo-feature">6.1. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#logging">6.2. Logging</a></li>
-<li><a href="#Implementation-Configuration">6.3. Configuration</a></li>
+<li><a href="#count-feature-done-by-zain-alam">6.1. Count feature [Done by Zain Alam]</a></li>
+<li><a href="#proposed-undo-redo-feature">6.2. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#logging">6.3. Logging</a></li>
+<li><a href="#Implementation-Configuration">6.4. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">7. Documentation</a></li>
 <li><a href="#testing">8. Testing</a></li>
 <li><a href="#dev-ops">9. Dev Ops</a></li>
-<li><a href="#product-scope">Appendix A: Product Scope</a></li>
-<li><a href="#user-stories">Appendix B: User Stories</a></li>
-<li><a href="#use-cases">Appendix C: Use Cases</a></li>
-<li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
-<li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
+<li><a href="#product-scope-done-by-zain-alam-sharadh-rajaraman">Appendix A: Product Scope [Done by Zain Alam &amp; Sharadh Rajaraman]</a></li>
+<li><a href="#user-stories-done-by">Appendix B: User Stories [Done by ]</a></li>
+<li><a href="#use-cases-done-by-sharadh-rajaraman">Appendix C: Use Cases [Done by Sharadh Rajaraman]</a></li>
+<li><a href="#non-functional-requirements-done-by-zain-alam">Appendix D: Non Functional Requirements [Done by Zain Alam &amp; ]</a></li>
+<li><a href="#glossary-done-by-zain-alam">Appendix E: Glossary [Done by Zain Alam]</a></li>
+<li><a href="#product-survey-done-by-zain-alam">Appendix F: Product Survey [Done by Zain Alam]</a></li>
 <li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
@@ -50,7 +51,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<h2 id="introduction-done-by-zain-alam"><a class="link" href="#introduction-done-by-zain-alam">1. Introduction [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Welcome to CookBuddy!</p>
@@ -72,7 +73,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="about-this-document"><a class="link" href="#about-this-document">2. About this Document</a></h2>
+<h2 id="about-this-document-done-by-zain-alam"><a class="link" href="#about-this-document-done-by-zain-alam">2. About this Document [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document is a Developer Guide written for developers who wish to contribute to or extend our CookBuddy project.
@@ -112,7 +113,7 @@ This icon denotes important details to take note of during development.
 </div>
 </div>
 <div class="sect1">
-<h2 id="overview-of-features"><a class="link" href="#overview-of-features">3. Overview of Features</a></h2>
+<h2 id="overview-of-features-done-by-zain-alam"><a class="link" href="#overview-of-features-done-by-zain-alam">3. Overview of Features [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section will provide you a short overview of CookBuddy&#8217;s features.</p>
@@ -441,9 +442,80 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Recipe Book</
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">6.1. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="count-feature-done-by-zain-alam"><a class="link" href="#count-feature-done-by-zain-alam">6.1. Count feature [Done by Zain Alam]</a></h3>
+<div class="paragraph">
+<p>We allow users to count the total number of recipes stored in CookBuddy. This section shows how we handle this request from the user.</p>
+</div>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">6.1.1. Proposed Implementation</a></h4>
+<h4 id="implementation-2"><a class="link" href="#implementation-2">6.1.1. Implementation</a></h4>
+<div class="paragraph">
+<p>We store every single <code>Recipe</code> added by the user into an <code>ObservableList&lt;Recipe&gt;</code>, which is a list object in <code>UniqueRecipeList</code>. We used an <code>ObservableList</code> to easily reflect changes to the list by any other component of CookBuddy using the list.</p>
+</div>
+<div class="paragraph">
+<p>The <code>count</code> command was implemented as a <code>CountCommand</code> in the <code>bookbuddy/logic/commands</code> package.</p>
+</div>
+<div class="paragraph">
+<p>The <code>count</code> has the following input format: <code>count</code></p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the count operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/count-command/CountSequenceDiagram.png" alt="CountSequenceDiagram">
+</div>
+<div class="title">Figure 9. Sequence diagram of how <code>count</code> command is processed.</div>
+</div>
+<div class="paragraph">
+<p>An incorrect syntax will cause a <code>ParseException</code> to be thrown by the parser.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Incorrect user input will display Unknown command message.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We will now demonstrate how a <code>count</code> command works in <code>CookBuddy</code>:</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user executes the command <strong>count</strong> to count the total number of recipes stored in CookBuddy.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The input is now checked and an attempt to parse the parameter occurs. The <code>CountCommand#execute(Model model)</code> method is executed.</p>
+</div>
+<div class="paragraph">
+<p>Step 3. The method `Model#count() will then be called to calculate the total number of recipes stored in CookBuddy.</p>
+</div>
+<div class="paragraph">
+<p>Step 4. If successful, a success message will be generated by <code>CommandResult</code> and it will be returned with the generated
+success message. Otherwise, an error message is thrown as <code>ParseException</code>.</p>
+</div>
+<div class="paragraph">
+<p>Since the user, input in this case, is valid,
+the <code>count</code> command is successfully executed and the total number of recipes currently stored in CookBuddy is displayed.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarizes what happens when the user executes <code>count</code> command to count the total number of recipes:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/count-command/CountActivityDiagram.png" alt="CountActivityDiagram" width="650">
+</div>
+<div class="title">Figure 10. Activity diagram of executing the `count`command.</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">6.2. [Proposed] Undo/Redo feature</a></h3>
+<div class="sect3">
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">6.2.1. Proposed Implementation</a></h4>
 <div class="paragraph">
 <p>The undo/redo mechanism is facilitated by <code>VersionedRecipeBook</code>.
 It extends <code>RecipeBook</code> with an undo/redo history, stored internally as an <code>RecipeBookStateList</code> and <code>currentStatePointer</code>.
@@ -586,7 +658,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">6.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">6.2.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -656,14 +728,14 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">6.2. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">6.3. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 6.3, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 6.4, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -694,7 +766,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">6.3. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">6.4. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -726,10 +798,10 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="product-scope"><a class="link" href="#product-scope">Appendix A: Product Scope</a></h2>
+<h2 id="product-scope-done-by-zain-alam-sharadh-rajaraman"><a class="link" href="#product-scope-done-by-zain-alam-sharadh-rajaraman">Appendix A: Product Scope [Done by Zain Alam &amp; Sharadh Rajaraman]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Target user profile</strong>:</p>
+<p><strong>Target user profile</strong>: [Done by Sharadh Rajaraman]</p>
 </div>
 <div class="ulist">
 <ul>
@@ -767,7 +839,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>:</p>
+<p><strong>Value proposition</strong>: [Done by Zain Alam]</p>
 </div>
 <div class="ulist">
 <ul>
@@ -798,7 +870,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="user-stories"><a class="link" href="#user-stories">Appendix B: User Stories</a></h2>
+<h2 id="user-stories-done-by"><a class="link" href="#user-stories-done-by">Appendix B: User Stories [Done by ]</a></h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -1200,7 +1272,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="use-cases"><a class="link" href="#use-cases">Appendix C: Use Cases</a></h2>
+<h2 id="use-cases-done-by-sharadh-rajaraman"><a class="link" href="#use-cases-done-by-sharadh-rajaraman">Appendix C: Use Cases [Done by Sharadh Rajaraman]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>(For all use cases below, the <strong>System</strong> is <code>CookBuddy</code> and the <strong>Actor</strong> is the <code>User</code>, unless specified otherwise)</p>
@@ -1352,7 +1424,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="non-functional-requirements"><a class="link" href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></h2>
+<h2 id="non-functional-requirements-done-by-zain-alam"><a class="link" href="#non-functional-requirements-done-by-zain-alam">Appendix D: Non Functional Requirements [Done by Zain Alam &amp; ]</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -1376,13 +1448,10 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="glossary"><a class="link" href="#glossary">Appendix E: Glossary</a></h2>
+<h2 id="glossary-done-by-zain-alam"><a class="link" href="#glossary-done-by-zain-alam">Appendix E: Glossary [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -1415,7 +1484,7 @@ If the <code>currentStatePointer</code> is at index <code>RecipeBookStateList.si
 </div>
 </div>
 <div class="sect1">
-<h2 id="product-survey"><a class="link" href="#product-survey">Appendix F: Product Survey</a></h2>
+<h2 id="product-survey-done-by-zain-alam"><a class="link" href="#product-survey-done-by-zain-alam">Appendix F: Product Survey [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>CookBuddy</strong></p>
@@ -1600,4 +1669,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 14:17:38 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 02:35:26 UTC</div></div></div></body></html>
