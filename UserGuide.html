@@ -35,9 +35,16 @@
 <li><a href="#exiting-strong-cookbuddy-strong-code-exit-code">4.14. Exiting <strong>CookBuddy</strong> — <code>exit</code></a></li>
 </ul>
 </li>
-<li><a href="#faq-done-by-zain-alam">5. FAQ [Done by Zain Alam]</a></li>
-<li><a href="#command-summary-done-by-zain-alam">6. Command Summary [Done by Zain Alam]</a></li>
-<li><a href="#glossary-done-by-zain-alam">7. Glossary [Done by Zain Alam]</a></li>
+<li><a href="#configuration-and-recipe-data-sharadh">5. Configuration and Recipe Data [Sharadh]</a>
+<ul class="sectlevel2">
+<li><a href="#configuration">5.1. Configuration</a></li>
+<li><a href="#recipe-data">5.2. Recipe data</a></li>
+<li><a href="#image-data">5.3. Image data</a></li>
+</ul>
+</li>
+<li><a href="#faq-done-by-zain-alam">6. FAQ [Done by Zain Alam]</a></li>
+<li><a href="#command-summary-done-by-zain-alam">7. Command Summary [Done by Zain Alam]</a></li>
+<li><a href="#glossary-done-by-zain-alam">8. Glossary [Done by Zain Alam]</a></li>
 </ul>
 </div>
 </div>
@@ -886,7 +893,94 @@ the current recipe list.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq-done-by-zain-alam"><a class="link" href="#faq-done-by-zain-alam">5. FAQ [Done by Zain Alam]</a></h2>
+<h2 id="configuration-and-recipe-data-sharadh"><a class="link" href="#configuration-and-recipe-data-sharadh">5. Configuration and Recipe Data [Sharadh]</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="configuration"><a class="link" href="#configuration">5.1. Configuration</a></h3>
+<div class="paragraph">
+<p>CookBuddy may be easily configured, by editing the key-value pairs in <code>preferences.json</code>, which is automatically created at the same folder where the CookBuddy <code>jar</code> file is. The key-value pairs are detailed in <a href="#configoptions">Table 1, &#8220;<code>preferences.json</code> key-value pairs&#8221;</a>.</p>
+</div>
+<table id="configoptions" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. <code>preferences.json</code> key-value pairs</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Default value</th>
+<th class="tableblock halign-left valign-top">Valid values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windowWidth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">740.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any positive floating-point (decimal) number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windowHeight</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any positive floating-point (decimal) number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windowCoordinates: x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">398</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any positive integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>windowCoordinates: y</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">88</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any positive integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dataFilePath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data/recipebook.json</code> on *nix, <code>\data\\recipebook.json</code> on Windows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any valid file path appropriate to the OS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"recipeImagePath"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data/images</code> on *nix, <code>data\\images</code> on Windows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any valid file path appropriate to the OS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="recipe-data"><a class="link" href="#recipe-data">5.2. Recipe data</a></h3>
+<div class="paragraph">
+<p>The recipe data is stored in the specified path above, as <em>another</em> <code>.json</code> file, with key-value pairs.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do <strong><em>not</em></strong> edit the <code>recipebook.json</code> file by hand, nor delete any lines from the file. CookBuddy may fail to read the file and may crash, or worse, overwrite the file with placeholder data.</p>
+</div>
+<div class="paragraph">
+<p>The file may be copied out elsewhere for editing, but adhere strictly to the format as written out by CookBuddy.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="image-data"><a class="link" href="#image-data">5.3. Image data</a></h3>
+<div class="paragraph">
+<p>Each recipe&#8217;s image is stored as a <code>.png</code> file in the pecified folder, with the recipe name, and a unique identifier (UID). If a given recipe does not have an image, CookBuddy will automatically use a placeholder instead, and denote so in <code>recipebook.json</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq-done-by-zain-alam"><a class="link" href="#faq-done-by-zain-alam">6. FAQ [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following section answers some questions you might have regarding <strong>CookBuddy</strong>.</p>
@@ -932,13 +1026,13 @@ command. The backup feature will be released soon in the near future.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary-done-by-zain-alam"><a class="link" href="#command-summary-done-by-zain-alam">6. Command Summary [Done by Zain Alam]</a></h2>
+<h2 id="command-summary-done-by-zain-alam"><a class="link" href="#command-summary-done-by-zain-alam">7. Command Summary [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following section gives a quick summary of all the commands you can use in CookBuddy arranged in an alphabetical order.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Various commands of CookBuddy.</caption>
+<caption class="title">Table 2. Various commands of CookBuddy.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1017,13 +1111,13 @@ command. The backup feature will be released soon in the near future.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="glossary-done-by-zain-alam"><a class="link" href="#glossary-done-by-zain-alam">7. Glossary [Done by Zain Alam]</a></h2>
+<h2 id="glossary-done-by-zain-alam"><a class="link" href="#glossary-done-by-zain-alam">8. Glossary [Done by Zain Alam]</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section will cover and explain certain technical/CookBuddy specific terms used in this user guide.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Explanation of various terms used in this user guide.</caption>
+<caption class="title">Table 3. Explanation of various terms used in this user guide.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1050,4 +1144,4 @@ command. The backup feature will be released soon in the near future.</p>
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 11:08:26 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 12:35:20 UTC</div></div></div></body></html>
