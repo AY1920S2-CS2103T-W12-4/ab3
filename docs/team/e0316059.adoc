@@ -15,12 +15,12 @@ It is written in Java, and has about 10 kLoC.
 
 == Summary of contributions
 
-* *Major enhancement*: added *the ability to duplicate a recipe*
+* *Major enhancement*: added *the ability to duplicate a recipe* (https://github.com/AY1920S2-CS2103T-W12-4/main/pull/293[#293])
 ** What it does: Generally the application does not allow duplicated recipe (recipes with the same names, ingredients and instructions are considered as the same). By adding duplicate command, a new recipe with the same content but a new name with perfix 'Duplicate of' can be added to the recipe list.
 ** Justification: This feature improves the product because a user can easily make two similar recipes by making small modification after duplication, instead of typing the whole content again.
 ** Highlights: The implementation allows the user to add duplicated recipe while pass the 'identical recipe' checking.
 
-* *Minor enhancement*: added a scale recipe command that allows the user to scale their recipes by a given size.
+* *Minor enhancement*: added a scale recipe command that allows the user to scale their recipes by a given size. (https://github.com/AY1920S2-CS2103T-W12-4/main/pull/294[#294])
 
 * *Code contributed*: [https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=e0316059&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false[Code Contribution]]
 
@@ -30,11 +30,9 @@ It is written in Java, and has about 10 kLoC.
 *** Participate in group discussion
 ** Enhancements to existing features:
 *** Added a method to convert the ingredient of a recipe from string to readable quantity
-*** Added command to mark a recipe as done
+*** Added command to mark a recipe as done (https://github.com/AY1920S2-CS2103T-W12-4/main/pull/114[#114])
 ** Community:
 *** Reported bugs and suggestions for other teams in the class (examples: https://github.com/e0316059/ped)
-
-_{you can add/remove categories in the list above}_
 
 == Contributions to the User Guide
 
@@ -57,9 +55,3 @@ include::../DeveloperGuide.adoc[tag=undoredo]
 
 include::../DeveloperGuide.adoc[tag=dataencryption]
 
-
-== PROJECT: PowerPointLabs
-
----
-
-_{Optionally, you may include other projects in your portfolio.}_
