@@ -5,15 +5,11 @@ package cookbuddy.model.recipe.attribute;
  */
 
 public class Unit {
-    private String unit;
     /**
      * UnitSymbol
      */
-    //public enum UnitSymbol {
+    public enum UnitSymbol {
 
-    //}
-
-    public Unit(String unit) {
-        this.unit = unit;
     }
+
 }

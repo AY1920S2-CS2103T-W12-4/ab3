@@ -66,8 +66,8 @@ public class Ingredient {
     }
 
     public Unit getUnit() {
-        String unit = this.quantity.split(" ")[1];
-        return new Unit(unit);
+        //String unit = this.quantity.split(" ")[1];
+        return new Unit();
     }
 
     public float getValue() {
